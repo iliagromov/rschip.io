@@ -5,17 +5,13 @@
             "width": "579px"
         },
         "sm": {
-            "width": "768px",
-            "fields": "15px"
+            "width": "768px"
         },
         "md": {
             "width": "992px"
         },
         "lg": {
             "width": "1135px"
-        },
-        "xl": {
-            "width": "1940px"
         }
     }
 }

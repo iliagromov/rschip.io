@@ -95,7 +95,7 @@ gulp.task('pug', function () {
             }))
             .pipe(pug())
 
-            .pipe(htmlValidator())
+            // .pipe(htmlValidator())
             // .pipe(htmlBemValidator())
             .pipe(gulp.dest(path.dist))
             .pipe(browserSync.stream());

@@ -1,5 +1,19 @@
 /*banner*/
 .banner
-    
+    overflow: hidden
+    .page__title-h1_big
+        +shift-right(-6)
+
 .bannerFlexContainer
     +row-flex()
+    align-items: center
+.bannerText
+    +col()
+    +size-lg(3)
+    position: relative
+.bannerImg
+    +col()
+    +size-lg(9)
+    +shift-right(-3)
+    img
+        // width: 100%

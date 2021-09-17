@@ -1,13 +1,29 @@
 /*header*/
 .header
-    
+    position: sticky
+    top: 0
+    height: 59px
+    margin-bottom: -70px
+
 .headerFlexContainer
     +row-flex()
+    align-items: center
 .headerLogo
     +col()
     +size(9/2)
     +size-lg(9/2)
-.headerNav
+.headerNavLinks
+    display: flex
+.headerLink
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 59px
+    color: rgba(255, 255, 255, 0.7)
+    text-decoration: none
+    margin: 0 10px
+.headerNavCart
+    // +sprite($icon-cart-png)
 .child
     /*child*/
     +col()

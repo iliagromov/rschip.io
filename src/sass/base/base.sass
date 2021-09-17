@@ -6,28 +6,71 @@
 
 +scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
 
-@font-face 
+@font-face
   +font($font, $fontBold)
 
-@font-face 
+@font-face
   +font($font, $fontRegular)
 
+@font-face
+  +font($SFUIDisplay, '#{$SFUIDisplay}-Regular')
 
-body 
+body
   font-family: $fontRegular
-  background: #eee
-  // background: $color_black
-  // color: $color_white
+  // background: #eee
+  background: $color_black
+  color: $color_white
 
 a, button
   cursor: pointer
   &:focus
-      outline: none
-  
+    outline: none
 
 input
   cursor: text
   &:focus
-      outline: none
+    outline: none
 
 /* __base__ */
+.page
+  &__title
+    &-h1
+      font-family: '#{$SFUIDisplay}-Regular'
+      font-weight: 800
+      font-size: 48px
+      line-height: 59px
+      letter-spacing: 0.05em
+      font-style: normal
+      font-weight: 800
+      font-size: 24px
+      line-height: 125%
+      +xs-block
+        font-size: 24px
+        line-height: 125%
+
+      +sm-block
+        font-size: 48px
+
+      +md-block
+        font-size: 48px
+
+      +lg-block
+        font-size: 48px
+      span
+        color: #ff472e
+      &_big
+        font-family: '#{$SFUIDisplay}-Regular'
+        font-size: 144px
+        line-height: 100%
+        letter-spacing: 0.05em
+        // color: rgba(255, 255, 255, 0.08)
+        font-weight: 800
+  &__text
+    font-family: SF UI Text
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 173%
+    text-transform: capitalize
+
+    color: #B2B2B2

@@ -1,4 +1,9 @@
-mixin picture(imgName, altName)
-    source(srcset="img/"imgName".webp" type="image/webp")
-    source(srcset="img/"imgName".jpg" type="image/jpeg")
-    img(src="img/"imgName".jpg", alt=altName")
+mixin picture(imgNameDefault, imgNameSource, altName, media)
+    source(type="image/webp" srcset="assets/images/webp/png/"+imgNameSource+".webp"  media="(min-width: "+media+"px)")
+    source(type="image/webp" srcset="assets/images/webp/jpg/"+imgNameSource+".webp" media="(min-width: "+media+"px)")
+    source(type="image/jpeg" srcset="assets/images/jpg/"+imgNameSource+".jpg" media="(min-width: "+media+"px)")
+    source( type="image/png" srcset="assets/images/png/"+imgNameSource+".png" media="(min-width: "+media+"px)")
+    img(src="assets/images/png/"+imgNameDefault+".png", alt=altName)
+
+mixin text()
+    div ss

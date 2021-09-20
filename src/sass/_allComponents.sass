@@ -4,7 +4,7 @@
     .page__title-h1
         margin-top: 46px
         &_big
-            +shift-right(-9)
+            +shift-md-right(-9)
     .pageText
         margin-top: 31px
 
@@ -13,20 +13,30 @@
     // align-items: center
 .bannerText
     +col()
+    +size(9)
+    +size-md(3)
     +size-lg(2.8)
     position: relative
     padding-top: 60px
 .bannerImg
     // +col()
+    width: 100%
+    +size-md(9)
     +size-lg(9.2)
-    +shift-right(-3)
+    +shift-md-right(-3)
     img
-        // width: 100%
+        width: 100%
+        +md-block
+            width: auto
+        +lg-block
+            width: auto
 .social
     display: flex
-    position: absolute
-    bottom: 85px
-    margin: 0 -15px
+    margin: 47px -15px 55px
+    +md-block
+        position: absolute
+        bottom: 85px
+        margin: 0 -15px
     .icon
         margin: 0 15px
 
@@ -46,6 +56,8 @@
     .childFlex
         +col()
         +size(1)
+        +size-md(1)
+        +size-lg(1)
         height: inherit
         outline:  1px solid #ff0
         background: rgba(0, 0, 0, 0.4)
@@ -55,25 +67,48 @@
 .header
     position: sticky
     top: 0
-    padding-top: 33px
-    // height: 59px
-    // margin-bottom: -70px
+    z-index: 10
+    background: #000
+    // padding-top: 31px
+    +md-block
+        background: transparent
+    +lg-block
+        background: transparent
+        // padding-top: 36px
 
 .headerFlexContainer
     +row-flex()
     align-items: center
 .headerLogo
     +col()
+    +size(9)
+    +size-sm(4.5)
+    +size-md(2.8)
     +size-lg(2.8)
+    text-align: center
+    padding-top: 28px
+    +sm-block
+        text-align: left
 .headerNav
     +col()
-    +size(6)
+    +size(9)
+    +size-sm(4.5)
+    +size-md(6.2)
     +size-lg(6.2)
     display: flex
     flex-wrap: wrap
     align-items: center
+    justify-content: space-between
+    padding-top: 28px
+    +sm-block
+        justify-content: flex-end
 .headerNavLinks
     margin: 0 9px
+    display: none
+    +md-block
+        display: flex
+    +lg-block
+        display: flex
 
 .headerLink
     font-family: '#{$SFUIText}-Regular'
@@ -87,7 +122,8 @@
 .headerNavCart
     display: flex
     align-items: center
-    margin-left: 32px
+    +sm-block
+        margin-left: 4%
     &__count
         display: flex
         align-items: center
@@ -100,8 +136,15 @@
         font-family: '#{$SFUIText}-Regular'
         background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) -210%, rgba(255, 56, 57, 0.9) 100%)
 .headerNavBtn
-    margin-left: 19px
-    // display: inline-flex
+    +sm-block
+        margin-left: 2%
+    
+.headerNavBurgerMenu
+    width: 35px
+    height: 22px
+    background: #fff
+    +md-block
+        display: none
 .child
     /*child*/
     +col()

@@ -68,13 +68,26 @@ input
         color: #ff472e
       &_big
         font-family: '#{$SFUIDisplay}-Bold'
-        font-size: 144px
+        font-size: 64px
         line-height: 100%
         letter-spacing: 0.05em
         color: rgba(255, 255, 255, 0.08)
         position: relative
-        top: 115px
-        right: 20px
+        
+        top: 80px
+        right: 0
+        +sm-block
+          top: 115px
+          right: 20px
+          font-size: 144px
+        +md-block
+          top: 115px
+          right: 20px
+          font-size: 144px
+        +lg-block
+          top: 115px
+          right: 20px
+          font-size: 144px
   &__text
     font-family: SF UI Text
     font-style: normal

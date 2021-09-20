@@ -8,10 +8,15 @@
             "width": "768px"
         },
         "md": {
-            "width": "992px"
+            "width": "992px",
+            "fields": "23px",
+            "offset": "46px"
+
         },
         "lg": {
-            "width": "1135px"
+            "width": "1135px",
+            "fields": "23px",
+            "offset": "46px"
         }
     }
 }

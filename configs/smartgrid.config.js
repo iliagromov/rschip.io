@@ -3,11 +3,11 @@ const options = require('./breakPoints.json');
 module.exports = {
     outputStyle: 'sass', /* less || scss || sass || styl */
     columns: 9, /* number of grid columns */
-    offset: '18px', /* gutter width px || % || rem */
+    offset: '46px', /* gutter width px || % || rem */
     mobileFirst: true, /* mobileFirst ? 'min-width' : 'max-width' */
     container: {
         maxWidth: '1135px', /* max-width оn very large screen */
-        fields: '18px' /* side fields */
+        fields: '23px' /* side fields */
     },
     breakPoints : options.breakPoints,
     // breakPoints: {

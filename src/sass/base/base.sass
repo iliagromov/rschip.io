@@ -15,6 +15,12 @@
 @font-face
   +font($SFUIDisplay, '#{$SFUIDisplay}-Regular')
 
+@font-face
+  +font($SFUIDisplay, '#{$SFUIDisplay}-Bold')
+@font-face
+  +font($SFUIDisplay, '#{$SFUIDisplay}-Black')
+@font-face
+  +font($SFUIText, '#{$SFUIText}-Regular')  
 body
   font-family: $fontRegular
   // background: #eee
@@ -33,17 +39,19 @@ input
 
 /* __base__ */
 .page
+  margin-top: -103px
   &__title
     &-h1
-      font-family: '#{$SFUIDisplay}-Regular'
+      font-family: '#{$SFUIDisplay}-Bold'
       font-weight: 800
       font-size: 48px
       line-height: 59px
-      letter-spacing: 0.05em
+      letter-spacing: 3px
       font-style: normal
       font-weight: 800
       font-size: 24px
       line-height: 125%
+      position: relative
       +xs-block
         font-size: 24px
         line-height: 125%
@@ -59,12 +67,14 @@ input
       span
         color: #ff472e
       &_big
-        font-family: '#{$SFUIDisplay}-Regular'
+        font-family: '#{$SFUIDisplay}-Bold'
         font-size: 144px
         line-height: 100%
         letter-spacing: 0.05em
-        // color: rgba(255, 255, 255, 0.08)
-        font-weight: 800
+        color: rgba(255, 255, 255, 0.08)
+        position: relative
+        top: 115px
+        right: 20px
   &__text
     font-family: SF UI Text
     font-style: normal
@@ -74,3 +84,23 @@ input
     text-transform: capitalize
 
     color: #B2B2B2
+  &__btn
+    border-radius: 30px
+    font-family: SF UI Text
+    font-family: '#{$SFUIText}-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 100%
+    /* identical to box height, or 421% */
+    letter-spacing: 0.05em
+    color: #FFFFFF
+    border: 2px solid #FF3838
+    padding: 14px 36px
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    text-transform: uppercase
+    text-decoration: none
+    background: transparent
+    // background: liner-gradient(#700ED2 #FF3838)

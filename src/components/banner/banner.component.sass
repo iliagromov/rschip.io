@@ -1,19 +1,31 @@
 /*banner*/
 .banner
     overflow: hidden
-    .page__title-h1_big
-        +shift-right(-6)
+    .page__title-h1
+        margin-top: 46px
+        &_big
+            +shift-right(-9)
+    .pageText
+        margin-top: 31px
 
 .bannerFlexContainer
     +row-flex()
-    align-items: center
+    // align-items: center
 .bannerText
     +col()
-    +size-lg(3)
+    +size-lg(2.8)
     position: relative
+    padding-top: 60px
 .bannerImg
-    +col()
-    +size-lg(9)
+    // +col()
+    +size-lg(9.2)
     +shift-right(-3)
     img
         // width: 100%
+.social
+    display: flex
+    position: absolute
+    bottom: 85px
+    margin: 0 -15px
+    .icon
+        margin: 0 15px

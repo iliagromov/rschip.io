@@ -1,9 +1,9 @@
 module.exports = {
     plugins: {
       'postcss-px-to-viewport': {
-        unitToConvert: 'px',
+        unitToConvert: 'em',
         unitPrecision: 5, // точки после запятой
-        propList: ['*', '!font-size'],//  Example: ['*', '!letter-spacing'] параметры например не перводить межбуквенный интервал или position
+        propList: ['*', '!font-size','!line-height','!margin',],//  Example: ['*', '!letter-spacing'] параметры например не перводить межбуквенный интервал или position
         viewportUnit: 'vw',
         fontViewportUnit: 'vw',
         selectorBlackList: ['icon'], // 'body'блокирует список тегов или css классов 

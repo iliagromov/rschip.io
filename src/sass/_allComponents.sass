@@ -63,6 +63,67 @@
         background: rgba(0, 0, 0, 0.4)
     @include debugBtn()
 /* __debugGrid__ */
+/*footer*/
+.footer
+    background: #111111
+    padding-top: 44px
+    h4
+        +col()
+        width: 100%
+    hr
+        +col()
+        width: 100%
+
+.footerFlexContainer
+    +row-flex()
+
+.footerLogo
+    +col()
+    +size(9)
+    +size-md(2)
+    +size-lg(2)
+.footerDealer
+    +col()
+    +size(9)
+    +size-md(2)
+    +size-lg(2)
+.footerContacts
+    +col()
+    +size(9)
+    +size-md(5)
+    +size-lg(5)
+    display: flex
+    flex-wrap: wrap
+
+.footerContactsItem
+    +col()
+    +size(9)
+    +size-md(4.5)
+    +size-lg(4.5)
+    display: flex
+    align-items: center
+    margin-bottom: 44px
+    .icon
+        margin-right: 23px
+        
+    &:last-child
+        +size(9)
+        +size-md(9)
+        +size-lg(9)
+.footerAdvantagesItem
+    +col()
+    +size(9)
+    +size-md(3)
+    +size-lg(3)
+    &__title
+        display: flex
+        align-items: center
+.footerLinks
+    +col()
+    +size(9)
+    +size-md(1)
+    +size-lg(1)
+
 /*header*/
 .header
     position: sticky

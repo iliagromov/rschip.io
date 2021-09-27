@@ -20,7 +20,7 @@
 @font-face
   +font($SFUIDisplay, '#{$SFUIDisplay}-Black')
 @font-face
-  +font($SFUIText, '#{$SFUIText}-Regular')  
+  +font($SFUIText, '#{$SFUIText}-Regular')
 body
   font-family: $fontRegular
   // background: #eee
@@ -37,35 +37,57 @@ input
   &:focus
     outline: none
 
+a
+  font-family: '#{$SFUIText}-Regular'
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 100%
+  color: rgba(255, 255, 255, 0.7)
+  text-decoration: none
+h1
+  font-family: '#{$SFUIDisplay}-Bold'
+  font-weight: 800
+  font-size: 48px
+  line-height: 59px
+  letter-spacing: 3px
+  font-style: normal
+  font-weight: 800
+  font-size: 24px
+  line-height: 125%
+  +xs-block
+    font-size: 24px
+    line-height: 125%
+
+  +sm-block
+    font-size: 48px
+
+  +md-block
+    font-size: 48px
+
+  +lg-block
+    font-size: 48px
+  span
+    color: #ff472e
+h2
+  font-size: 36px
+h3
+  font-size: 30px
+h4
+  font-size: 24px
+h5
+  font-size: 18px
+h5
+  font-size: 15px
+i 
+  display: inline-block
+address
+  display: inline-block
 /* __base__ */
 .page
-  margin-top: -103px
+  margin-top: -70px
   &__title
     &-h1
-      font-family: '#{$SFUIDisplay}-Bold'
-      font-weight: 800
-      font-size: 48px
-      line-height: 59px
-      letter-spacing: 3px
-      font-style: normal
-      font-weight: 800
-      font-size: 24px
-      line-height: 125%
-      position: relative
-      +xs-block
-        font-size: 24px
-        line-height: 125%
-
-      +sm-block
-        font-size: 48px
-
-      +md-block
-        font-size: 48px
-
-      +lg-block
-        font-size: 48px
-      span
-        color: #ff472e
       &_big
         font-family: '#{$SFUIDisplay}-Bold'
         font-size: 64px
@@ -73,7 +95,7 @@ input
         letter-spacing: 0.05em
         color: rgba(255, 255, 255, 0.08)
         position: relative
-        
+
         top: 80px
         right: 0
         +sm-block
@@ -88,8 +110,19 @@ input
           top: 115px
           right: 20px
           font-size: 144px
+    &-h2
+      font-size: 36px
+    &-h3
+      font-size: 30px
+    &-h4
+      font-size: 24px
+    &-h5
+      font-size: 18px
+    &-h5
+      font-size: 15px
+
   &__text
-    font-family: SF UI Text
+    font-family: '#{$SFUIText}-Regular'
     font-style: normal
     font-weight: normal
     font-size: 15px

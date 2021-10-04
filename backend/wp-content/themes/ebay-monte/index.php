@@ -2511,7 +2511,7 @@
             }
         }
 
-       
+
         .soft-content__item {
             display: flex;
             align-items: center;
@@ -2536,6 +2536,7 @@
 
 
         /* __soft__ */
+        /* __exposition__ */
 
         .exposition {
             padding-top: 118px
@@ -2553,10 +2554,6 @@
             }
 
         }
-
-       
-
-
 
         .exposition__image-wrap {
             display: block;
@@ -2697,8 +2694,9 @@
             font-weight: bold;
         }
 
-    
-       
+        /* __exposition__ */
+        /* __odds__ */
+
 
         @media screen and (max-width:576px) {
             .odds {
@@ -2892,118 +2890,16 @@
             }
         }
 
-        @media screen and (max-width:992px) {
-            .tech-specs {
-                padding-top: 110px
-            }
+        /* __odds__ */
+        /* __box__ */
+
+        .box {
+            padding-top: 160px;
         }
 
-        @media screen and (max-width:576px) {
-            .tech-specs {
-                padding-top: 70px
-            }
-        }
-
-        .tech-specs .container {
-            padding-left: 80px
-        }
-
-        @media screen and (max-width:992px) {
-            .tech-specs .container {
-                padding-left: 15px
-            }
-        }
-
-        .tech-specs__title {
-            margin-bottom: 65px;
-            font-size: 53.5px
-        }
-
-        @media screen and (max-width:992px) {
-            .tech-specs__title {
-                font-size: 32px;
-                line-height: 44px
-            }
-        }
-
-        .tech-specs__list {
-            font-size: 20px;
-            margin: -36px 0 0
-        }
-
-        @media (min-width:768px) {
-            .tech-specs__list {
-                display: table;
-                width: 100%;
-                margin: 0
-            }
-        }
-
-        .tech-specs__item {
-            margin-top: 36px
-        }
-
-        @media (min-width:768px) {
-            .tech-specs__item {
-                display: table-row;
-                margin: 0
-            }
-        }
-
-        @media (min-width:768px) {
-
-            .tech-specs__item-text,
-            .tech-specs__item-title {
-                display: table-cell;
-                padding: 14px 15px
-            }
-        }
-
-        .tech-specs__item-title {
-            font-weight: 700;
-            margin-bottom: 8px;
-            padding-left: 0;
-            margin: 0;
-            width: 210px
-        }
-
-        @media (min-width:768px) {
-            .tech-specs__item-text {
-                padding-right: 0
-            }
-        }
-
-        .tech-specs__col-img {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 55px
-        }
-
-        @media (min-width:768px) {
-            .tech-specs__col-img {
-                margin-bottom: 70px
-            }
-        }
-
-        @media (min-width:992px) {
-            .tech-specs__col-img {
-                order: 1;
-                justify-content: flex-end;
-                margin-bottom: 0
-            }
-        }
-
-        .tech-specs__img-wrap img {
-            max-width: 100%
-        }
-
-        .box{
-            padding-top:160px;
-        }
-        
         @media screen and (max-width:576px) {
             .box {
-                padding: 90px 0
+                padding: 90px 0 0
             }
         }
 
@@ -3103,7 +2999,94 @@
                 font-size: 20px
             }
         }
+        /* __box__ */
+        /* __tech-specs__ */
 
+        .tech-specs {
+            padding-top: 120px
+        }
+
+        @media screen and (min-width:992px) {
+            .tech-specs {
+                padding-top: 160px
+            }
+        }
+        .tech-specs__list{
+            margin-bottom: 60px;
+        }
+        .tech-specs__list-item{
+            padding-top: 18px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+           
+        }
+        .tech-specs__list-item:last-child{
+            border-bottom: none
+        }
+        .tech-specs__list-item-title {
+            color: #222222;
+            font-size: 24px;
+            line-height: 133%;
+            font-weight: 600;
+        }
+
+
+        .tech-specs__list-item-text {
+            color: #222222;
+            font-size: 16px;
+            line-height: 175%;
+        }
+        .tech-specs__img{
+            text-align: center;
+        }
+        
+
+
+        /* __tech-specs__ */
+
+        /* __perfromance__ */
+        
+        .perfromance {
+            padding-top: 120px
+        }
+
+        @media screen and (min-width:992px) {
+            .perfromance {
+                padding-top: 160px
+            }
+        }
+        .perfromance__list-item-title{
+            color: #000000;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 52px;
+        }
+        .perfromance__list-item{
+            margin-bottom: 50px;
+        }
+        .perfromance__list-item ul{
+            padding-left: 20px;
+        }
+        .perfromance__list-item li{
+            color: #222222;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        /* __perfromance__ */
+
+
+        /* __faq__ */
+        
+        
+        .faq {
+            padding-top: 120px
+        }
+
+        @media screen and (min-width:992px) {
+            .faq {
+                padding-top: 160px
+            }
+        }
         .faq__title {
             margin-bottom: 35px;
             text-align: center;
@@ -3121,6 +3104,12 @@
             max-width: 944px;
             margin: 0 auto;
             padding-top: .1px
+        }
+        .faq__item{
+            border: 1px solid #E9E9E9;
+            box-sizing: border-box;
+            border-radius: 12px;
+            padding: 22px 40px;
         }
 
         .faq__item:not(:last-child) {
@@ -3154,6 +3143,10 @@
                 margin-top: 60px
             }
         }
+
+        /* __faq__ */
+        /* __support__ */
+
 
         .support__banner {
             position: relative;
@@ -3657,88 +3650,166 @@
             </section>
 
 
-            <section class="section tech-specs">
+            <section class="tech-specs">
+
                 <div class="container">
-                    <h2 class="h1 tech-specs__title">Tech specs</h2>
+                    <h2 class="page__title">Tech specs</h2>
                     <div class="row">
-                        <div class="col">
-                            <dl class="tech-specs__list">
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Performance figures</dt>
-                                    <dd class="tech-specs__item-text">Up to +25% more HP*<br>Up to +25% more NM*<br>Up
-                                        to +18%* more fuel savings</dd>
+                        <div class="col-12 col-lg-6 ">
+                            <div class="tech-specs__list">
+                                <div class="tech-specs__list-item">
+                                    <h5 class="tech-specs__list-item-title">Software</h5>
+                                    <div class="tech-specs__list-item-text">
+                                        Monte GTR latest firmware core PC programmer with vehicle specific tuning
+                                        database
+                                    </div>
                                 </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Warranty and return</dt>
-                                    <dd class="tech-specs__item-text">30 days money back and lifetime warranty on
-                                        defects</dd>
+                                <div class="tech-specs__list-item">
+                                    <h5 class="tech-specs__list-item-title">Processor</h5>
+                                    <div class="tech-specs__list-item-text">
+                                        High speed 32-Bit 48 MHz + 2 dedicated CPUs
+                                    </div>
                                 </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Software</dt>
-                                    <dd class="tech-specs__item-text">Monte GTR firmware core<br>PC programmer with
-                                        vehicle specific tuning database</dd>
+                                <div class="tech-specs__list-item">
+                                    <h5 class="tech-specs__list-item-title">Temperature</h5>
+                                    <div class="tech-specs__list-item-text">
+                                        Operating t -40 C° +85C°, Operating voltage 7,5V - 20V, 3.5” Touch screen
+                                        display
+                                    </div>
                                 </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Hardware</dt>
-                                    <dd class="tech-specs__item-text">16 pin obdii connector,<br>Operating t -40 C\'b0
-                                        +85 C\'b0,<br>Operating voltage 7,5V - 20V,<br>Touch screen display</dd>
-                                </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Dimension</dt>
-                                    <dd class="tech-specs__item-text">Length 4.7 inches,<br>Width 2.6 inches,<br>Hight
-                                        0.6 inches</dd>
-                                </div>
-                            </dl>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="tech-specs__img">
+                                <picture class="tech-specs__img-wrap">
+                                    <source media="(min-width: 992px)"
+                                        srcset="
+                                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechMd.png, 
+                                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechMd-2x.png 2x">
+                                    <source media="(min-width: 768px)"
+                                        srcset="
+                                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechSm.png, 
+                                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechSm-2x.png 2x">
+
+                                    <source
+                                        srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechXs.png, 
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechXs-2x.png 2x">
+                                    <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgTechXs.png"
+                                        alt="alt">
+                                </picture>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
+            <section class="perfromance">
 
-            <section class="section faq">
+                <h2 class="page__title">Monte GTR perfromance tuner chip FAQ</h2>
                 <div class="container">
-                    <h2 class="h2 faq__title">Top questions and answers about Monte&nbsp;GTR</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="perfromance__list">
+                                <div class="perfromance__list-item">
+                                    <div class="perfromance__list-item-icon"></div>
+                                    <h5 class="perfromance__list-item-title">Features overview</h5>
+                                    <ul>
+                                        <li>
+                                            Full Color 3.5" Touch screen display
+                                        </li> 
+                                        <li>
+                                            Simple and safe Plag & Play installation 
+                                        </li> 
+                                        <li>
+                                            Customizable display 
+                                        </li> 
+                                        <li>
+                                            Magnet mount compatible 
+                                        </li> 
+                                        <li>
+                                            6 driving profiles 
+                                        </li> 
+                                        <li>
+                                            Perfromance meter and dyno 
+                                        </li> 
+                                        <li>
+                                            Diagnostic obd2 code reader
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="perfromance__list-item">
+                                    <div class="perfromance__list-item-icon"></div>
+                                    <h5 class="perfromance__list-item-title">Performance meter and dyno</h5>
+                                    <ul>
+                                        <li>
+                                            Measure horsepower and torque 
+                                        </li> 
+                                        <li>
+                                            Create and compare dyno charts 
+                                        </li> 
+                                        <li>
+                                            Test 0-60, 1/4 miles and more
+                                        </li> 
+                                    </ul>
+                                </div>
+                                <div class="perfromance__list-item">
+                                    <div class="perfromance__list-item-icon"></div>
+                                    <h5 class="perfromance__list-item-title">Satisfaction guaranteed</h5>
+                                    <ul>
+                                        <li>
+                                            If for any reason you aren’t happy with your Monte GTR tuning chip box, Just send it back and get your full purchase within 30 days.
+                                        </li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="faq">
+                <div class="container">
+                    <h2 class="page__title">Top questions and answers</h2>
                     <dl class="faq__list">
                         <div class="faq__item">
+                            <dt class="h3 faq__item-title">What is Monte GTR performance tuning?</dt>
+                            <dd class="faq__item-text">All tools for the car enthusiast in one single device! Monte GTR performance tuner Increases horsepower and torque up to +25%. save up to + 18% more fuel, perform acceleration or dyno runs, erase codes, clear check engine light and allows you to customize live data from your car sensors on and more.
+
+                            </dd>
+                        </div>
+                        <div class="faq__item">
                             <dt class="h3 faq__item-title">Is it safe to use Monte GTR?</dt>
-                            <dd class="faq__item-text">Yes, monte GTR is completely safe. Monte chip does not overwrite
-                                the ECU software, hence there is no risk of overloading the engine's components. All
-                                tuning is done on the device with by 3 dedicated CPUs. Monte chip runs vehicle specific
-                                software developed specifically for your car. Each map we create is tested on the road
-                                in real conditions, as well as on the dyno before uploaded to our server. Our products
-                                will not affect any other electronic systems such as dashboard displays, safety
-                                features, etc.</dd>
+                            <dd class="faq__item-text">
+                                Yes, monte GTR is completely safe. Monte tuning chip does not overwrite the ECU software, hence there is no risk of overloading the engine components. All tuning is done on the device by 3 dedicated CPUs.
+                            </div>
+                        <div class="faq__item">
+                            <dt class="h3 faq__item-title">
+                                Can Monte Chip be transferred to another vehicle?</dt>
+                            <dd class="faq__item-text">
+                                There are no limitations on how many vehicles you can install on your Monte Chip, as long as the software is supported in our database and your car brand is compatible with our tuning solution.</dd>
                         </div>
                         <div class="faq__item">
-                            <dt class="h3 faq__item-title">Can Monte Chip be transferred to another vehicle?</dt>
-                            <dd class="faq__item-text">There are no limitations on how many vehicles you can install on
-                                your Monte Chip, as long as the software is supported in our database and your car brand
-                                is compatible with our tuning solution. By purchasing Monte Chip you will be subscribed
-                                to our lifetime service of cloud updates, new car settings and new features.</dd>
-                        </div>
-                        <div class="faq__item">
-                            <dt class="h3 faq__item-title">What is Monte Programmer utility for?</dt>
-                            <dd class="faq__item-text">By purchasing Monte GTR you will get downloadable link for our
-                                software.Please use Monte Programmer, in case you decide to program your chip to a
-                                different car or update your Monte OS.</dd>
+                            <dt class="h3 faq__item-title">What is Monte PC Programmer utility for?</dt>
+                            <dd class="faq__item-text">
+                                By purchasing Monte GTR you will get downloadable link for our software. In case you decide to program your chip to a different car or update your Monte OS to receive a new feature, please use the Monte Programmer. (PC only)</dd>
                         </div>
                         <div class="faq__item">
                             <dt class="h3 faq__item-title">Is it compatible with my car?</dt>
-                            <dd class="faq__item-text">Monte GTR, is compatible with almost all engines and fuel types,
-                                except BEV and FCEV vehicles. Please contact our customer support in case your car is
-                                not listed.</dd>
+                            <dd class="faq__item-text">
+                                Monte GTR, is compatible with almost all engines and fuel types, except BEV and FCEV vehicles. Please contact our customer support in case your car is not listed.
+                            </dd>
                         </div>
                         <div class="faq__item">
-                            <dt class="h3 faq__item-title">What OS does the Monte Programmer support?</dt>
-                            <dd class="faq__item-text">The Monte Programmer is compatible only with PC (windows 10) If
-                                you have a different operating system please contact us so we could program your unit
-                                before shipping.</dd>
+                            <dt class="h3 faq__item-title">
+                                Does it come pre-loded with vehicle tune?</dt>
+                            <dd class="faq__item-text">
+                                Yes, the Monte will come pre-programmed for your vehicle. Please select yor Car, Engine size and Year so we could progam it for you. If the vehicel is not specified you can progam it later on with our Monte Programmer (PC only).
+                            </dd>
                         </div>
                     </dl>
-                    <div class="faq__footnote"><span style="font-family: Arial; font-size: 14pt;">*Real world gains may
-                            be less or more depending on a large number of contributing factors&nbsp;</span>
-                        <font face="Arial"><span style="font-size: 18.6667px;">such as: displacement, aspiration and
-                                selected tuning mode.&nbsp;</span></font>
+                    <div class="faq__footnote"><span style="font-family: Arial; font-size: 14pt;">*Real world gains may be less or more depending on a large number of contributing factors.</span>
+                       
                     </div>
                 </div>
             </section>

@@ -14,7 +14,7 @@
 
 .svg-icon-charts {
 	@extend %svg-common;
-	background-position: 0 99.25%;
+	background-position: 0 49.625%;
 }
 
 .svg-icon-charts-box {
@@ -24,7 +24,7 @@
 
 .svg-icon-cloud {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 33.333333333333336% 0;
 }
 
 .svg-icon-cloud-box {
@@ -34,11 +34,81 @@
 
 .svg-icon-infinity {
 	@extend %svg-common;
-	background-position: 99.23664122137404% 84.21153846153847%;
+	background-position: 33.248081841432224% 42.10576923076923%;
 }
 
 .svg-icon-infinity-box {
 	width: 51.6px;
+	height: 52px;
+}
+
+.svg-iconDiagnosticsAndCodeReader {
+	@extend %svg-common;
+	background-position: 66.66666666666667% 0;
+}
+
+.svg-iconDiagnosticsAndCodeReader-box {
+	width: 52px;
+	height: 50.25px;
+}
+
+.svg-iconFeatures {
+	@extend %svg-common;
+	background-position: 66.66666666666667% 48.31730769230769%;
+}
+
+.svg-iconFeatures-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-iconLifetimeWarranty {
+	@extend %svg-common;
+	background-position: 0 99.625%;
+}
+
+.svg-iconLifetimeWarranty-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-iconMonteProgrammer_ {
+	@extend %svg-common;
+	background-position: 33.333333333333336% 99.625%;
+}
+
+.svg-iconMonteProgrammer_-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-iconPerformanceMeter {
+	@extend %svg-common;
+	background-position: 66.66666666666667% 99.625%;
+}
+
+.svg-iconPerformanceMeter-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-iconPerformanceTunerandFuelSaver {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-iconPerformanceTunerandFuelSaver-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-iconSatisfactionGuaranteed {
+	@extend %svg-common;
+	background-position: 100% 50%;
+}
+
+.svg-iconSatisfactionGuaranteed-box {
+	width: 52px;
 	height: 52px;
 }
 

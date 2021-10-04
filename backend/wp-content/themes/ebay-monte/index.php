@@ -2343,231 +2343,43 @@
             object-fit: cover
         }
 
-        .header {
-            padding-bottom: 70px
+        img {
+            max-width: 100%;
         }
 
-        @media (min-width:768px) {
-            .header {
-                padding-bottom: 50px
-            }
-        }
-
-        @media (min-width:992px) {
-            .header {
-                padding-bottom: 80px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .header {
-                padding-bottom: 65px
-            }
-        }
-
-        .hero {
-            background-color: #f7f8fa;
-            padding: 45px 0 50px
-        }
-
-        @media screen and (max-width:992px) {
-            .hero {
-                padding: 45px 0 35px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .hero {
-                padding: 45px 0 35px
-            }
-        }
-
-        .hero__title {
-            line-height: 1;
-            font-size: 54.5px;
-            margin-bottom: 50px
-        }
-
-        @media screen and (max-width:992px) {
-            .hero__title {
-                margin-bottom: 35px;
-                font-size: 32px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .hero__title {
-                max-width: 275px
-            }
-        }
-
-        .hero__col-content {
-            margin-bottom: 80px
-        }
-
-        @media (min-width:768px) {
-            .hero__col-content {
-                margin-bottom: 0
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .hero__col-content {
-                margin-bottom: 35px
-            }
-        }
-
-        .hero__odds {
-            max-width: 100%
-        }
-
-        @media (min-width:992px) {
-            .hero__odds {
-                max-width: 650px
-            }
-        }
-
-        .hero__icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px
-        }
-
-        @media screen and (max-width:992px) {
-            .hero__icon {
-                width: 64px;
-                height: 64px;
-                margin: 0 auto 10px
-            }
-
-            .hero__icon svg {
-                width: 30px;
-                height: 24px
-            }
-        }
-
-        .hero__odds-list {
-            list-style: none
-        }
-
-        @media screen and (max-width:576px) {
-            .hero__odds-list {
-                flex-wrap: nowrap
-            }
-        }
-
-        .hero__odds-list .col {
-            padding: 0 10px
-        }
-
-        @media screen and (max-width:576px) {
-            .hero__odds-list .col {
-                padding: 0 5px
-            }
-        }
-
-        .hero__odd {
-            text-align: center
-        }
-
-        .hero__odd-icon {
+        /* __page__ */
+        .page__title {
+            color: #222222;
             font-size: 32px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            height: 1.38em
+            line-height: 137%;
+            padding-bottom: 35px;
+            margin: 0;
+            text-align: center;
+            font-weight: normal;
         }
 
         @media (min-width:992px) {
-            .hero__odd-icon {
-                font-size: 30px
+            .page__title {
+                font-size: 54px;
+                line-height: 133%;
+                padding-bottom: 80px;
             }
         }
 
-        .hero__odd-icon--motor svg,
-        .hero__odd-icon--motor-error svg {
-            font-size: 1.3em
-        }
-
-        .hero__odd-icon--speedometer svg {
-            font-size: 1.05em
-        }
-
-        .hero__odd-text {
-            font-size: 12px;
-            line-height: 1.2
-        }
-
-        @media (min-width:768px) {
-            .hero__odd-text {
-                font-size: 14px
-            }
+        /* __page__ */
+        /* __hero__ */
+        .hero {
+            padding-top: 69px;
         }
 
         @media (min-width:992px) {
-            .hero__odd-text {
-                font-size: 20px
-            }
-        }
-
-        .hero__col-img {
-            display: flex;
-            justify-content: center
-        }
-
-        @media (min-width:768px) {
-            .hero__col-img {
-                display: block
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .hero__col-img {
-                height: 275px
+            .hero {
+                padding-top: 145px;
             }
         }
 
         .hero__img-wrap {
-            width: 280px
-        }
-
-        @media (min-width:768px) {
-            .hero__img-wrap {
-                margin: -65px 0 0 -10px;
-                width: 380px
-            }
-        }
-
-        @media (min-width:992px) {
-            .hero__img-wrap {
-                width: 698px
-            }
-        }
-
-        @media screen and (max-width:1200px) {
-            .hero__img-wrap {
-                margin: -65px 0 0 -45px
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .hero__img-wrap {
-                margin: -40px 0 0 0;
-                position: absolute
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .hero__img-wrap {
-                width: 441px;
-                margin: 0;
-                left: 10%
-            }
+            text-align: center;
         }
 
         .hero__img-wrap img {
@@ -2575,545 +2387,30 @@
             object-fit: contain
         }
 
-        .hero__img-wrap:before {
-            padding-top: 62.17765%
-        }
+        /* __hero__ */
 
-        .hero-list {
-            display: flex
-        }
-
-        @media screen and (max-width:992px) {
-            .hero-list {
-                width: -webkit-fit-content;
-                width: -moz-fit-content;
-                width: fit-content;
-                margin: 65px auto 0
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .hero-list {
-                margin: 0;
-                display: flex;
-                flex-direction: column
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .hero-list {
-                margin-top: 30px
-            }
-        }
-
-        .hero-list__item {
-            display: flex;
-            align-items: center
-        }
-
-        .hero-list__item:not(:last-child) {
-            margin-right: 40px
-        }
-
-        @media screen and (max-width:768px) {
-            .hero-list__item:not(:last-child) {
-                margin: 0 0 15px
-            }
-        }
-
-        .hero-list svg {
-            margin-right: 10px
-        }
-
-        .hero-list p {
-            margin: 0;
-            font-weight: 700
-        }
-
-        .engine {
-            padding-top: 140px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine {
-                padding-top: 120px
-            }
-        }
-
-        .engine__col-img {
-            display: flex;
-            justify-content: center
-        }
-
-        @media (min-width:768px) {
-            .engine__col-img {
-                display: block
-            }
-        }
-
-        .engine-wrap {
-            width: 404px;
-            height: 404px;
-            background-color: #f7f8fa;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-wrap {
-                width: 340px;
-                height: 340px;
-                margin: 0 auto
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .engine-wrap {
-                width: 240px;
-                height: 240px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .engine-wrap {
-                margin-top: 50px
-            }
-        }
-
-        .engine__img-wrap {
-            width: 276px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine__img-wrap {
-                width: 232px;
-                margin: 0 auto
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .engine__img-wrap {
-                width: 163px
-            }
-        }
-
-        .engine__img-wrap img {
-            -o-object-fit: contain;
-            object-fit: contain;
-            margin-left: 15px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine__img-wrap img {
-                margin-left: 0
-            }
-        }
-
-        .engine__img-wrap:before {
-            padding-top: 78.26087%
-        }
-
-        .engine-content {
-            margin-left: 50px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-content {
-                margin-left: 0
-            }
-        }
-
-        .engine-title {
-            font-size: 50px;
-            line-height: 59px;
-            margin-bottom: 30px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-title {
-                margin-bottom: 25px;
-                font-size: 31.5px;
-                line-height: 44px
-            }
-        }
-
-        .engine-text {
-            max-width: 545px;
-            font-size: 30px;
-            line-height: 40px;
-            margin: 0
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-text {
-                font-size: 24px;
-                line-height: 36px
-            }
-        }
-
-        .engine-list {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 120px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-list {
-                margin-top: 80px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .engine-list {
-                flex-wrap: wrap;
-                justify-content: center
-            }
-        }
-
-        .engine-list__item {
-            position: relative
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-list__item {
-                flex: 0 0 25%;
-                text-align: center
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .engine-list__item {
-                flex: 0 0 50%
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .engine-list__item:nth-child(-n+2) {
-                margin-bottom: 60px
-            }
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-list__item svg {
-                width: 135px;
-                height: 92px
-            }
-        }
-
-        .engine-list__content {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            text-align: center
-        }
-
-        @media screen and (max-width:576px) {
-            .engine-list__content {
-                margin-bottom: -10px
-            }
-        }
-
-        .engine-list__content span {
-            font-weight: 500;
-            font-size: 32px;
-            line-height: 40px
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-list__content span {
-                font-size: 24px
-            }
-        }
-
-        .engine-list__content p {
-            max-width: 95px;
-            min-height: 35px;
-            margin: 10px auto 0;
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 16px;
-            color: #000;
-            opacity: .4
-        }
-
-        @media screen and (max-width:992px) {
-            .engine-list__content p {
-                margin: 0 auto
-            }
-        }
-
-        .customiz {
-            padding: 140px 0
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz {
-                padding: 70px 0 40px
-            }
-        }
-
-        .customiz__text {
-            margin: 20px 0 30px;
-            max-width: 600px;
-            line-height: 1.25em
-        }
-
-        @media screen and (max-width:992px) {
-            .customiz__text {
-                margin: 20px 0 100px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz__text {
-                margin: 20px 0 80px
-            }
-        }
-
-        .customiz-list {
-            display: flex;
-            justify-content: space-between;
-            align-items: center
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz-list {
-                flex-wrap: wrap
-            }
-        }
-
-        .customiz-list__item {
-            flex: 0 0 25%;
-            display: flex;
-            align-items: center;
-            position: relative;
-            min-height: 220px
-        }
-
-        @media screen and (max-width:992px) {
-            .customiz-list__item {
-                min-height: 152px
-            }
-
-            .customiz-list__item picture {
-                max-width: 65%
-            }
-
-            .customiz-list__item img {
-                max-width: 100%
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz-list__item {
-                flex: 0 0 50%
-            }
-        }
-
-        .customiz-list__item:not(:first-child) {
-            justify-content: center
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz-list__item:first-child {
-                justify-content: center
-            }
-        }
-
-        .customiz-list__item:last-child {
-            justify-content: flex-end
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz-list__item:last-child {
-                justify-content: center
-            }
-        }
-
-        .customiz-list__item:last-child svg {
-            display: none
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz-list__item:nth-child(even) svg {
-                display: none
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .customiz-list__item:nth-child(-n+2) {
-                margin-bottom: 30px
-            }
-        }
-
-        .customiz-list__item svg {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 93%
-        }
-
-        @media screen and (max-width:992px) {
-            .customiz-list__item svg {
-                height: 152px
-            }
-        }
-
-        .modes .col {
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        @media screen and (max-width:992px) {
-            .modes .col {
-                flex-direction: column;
-                align-items: start
-            }
-        }
-
-        @media screen and (max-width:992px) {
-            .modes-content {
-                display: flex;
-                width: 100%;
-                justify-content: space-around
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .modes-content {
-                justify-content: unset;
-                flex-direction: column;
-                margin-bottom: 50px
-            }
-        }
-
-        .modes-content__title {
-            max-width: 240px
-        }
-
-        .modes-content__text {
-            margin: 20px 0 80px;
-            max-width: 230px;
-            line-height: 1.75em
-        }
-
-        @media screen and (max-width:576px) {
-            .modes-content__text {
-                max-width: 90%;
-                margin: 30px 0 50px
-            }
-        }
-
-        .modes-content picture {
-            max-width: 290px
-        }
-
-        @media screen and (max-width:576px) {
-            .modes-content picture {
-                margin: 0 auto
-            }
-        }
-
-        .modes-content picture img {
-            max-width: 100%;
-            margin-left: -5px
-        }
-
-        @media screen and (max-width:992px) {
-            .modes-picture {
-                margin: 0 auto
-            }
-        }
-
-        .modes-picture__image-wrap {
-            width: 712px
-        }
-
-        @media screen and (max-width:992px) {
-            .modes-picture__image-wrap {
-                width: 690px
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .modes-picture__image-wrap {
-                width: 525px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .modes-picture__image-wrap {
-                width: 310px;
-                height: 500px
-            }
-        }
-
-        .modes-picture__image-wrap img {
-            -o-object-fit: contain;
-            object-fit: contain
-        }
-
-        .modes-picture__image-wrap:before {
-            padding-top: 70.22472%
-        }
-
-        .modes-picture picture.mob-img {
-            display: none
-        }
-
-        @media screen and (max-width:576px) {
-            .modes-picture picture.mob-img {
-                display: block
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .modes-picture picture.decktop-img {
-                display: none
-            }
-        }
-
+        /* __details__ */
         .details {
-            padding-top: 140px
+            padding-top: 121px;
         }
 
-        @media screen and (max-width:576px) {
+        @media (min-width:992px) {
             .details {
-                padding-top: 120px
+                padding-top: 157px;
             }
         }
 
-        .details__title {
-            text-align: center;
-            margin-bottom: 120px;
-            font-size: 40px
-        }
-
-        @media screen and (max-width:992px) {
-            .details__title {
-                margin-bottom: 100px
-            }
+        .details__item {
+            padding-top: 55px;
         }
 
         .details__img-wrap {
-            width: 433px
+            text-align: center;
         }
 
-        @media screen and (max-width:992px) {
+        @media (min-width:768px) {
             .details__img-wrap {
-                width: 324px
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .details__img-wrap {
-                max-width: 318px;
-                width: 100%
+                text-align: left;
             }
         }
 
@@ -3122,221 +2419,144 @@
             object-fit: contain
         }
 
-        .details__img-wrap:before {
-            padding-top: 59.5843%
-        }
-
-        .details__item:not(:last-child) {
-            margin-bottom: 80px
-        }
-
         .details-content {
-            margin: 40px 0 0
+            padding-top: 40px;
         }
 
         .details-content__title {
-            margin: 0 0 15px;
-            font-size: 32px;
+            color: #222222;
+            margin-bottom: 15px;
+            font-size: 24px;
+            line-height: 133%;
             font-weight: 500;
-            line-height: 52px
+
         }
 
-        @media screen and (max-width:992px) {
+        @media (min-width:992px) {
             .details-content__title {
-                line-height: 40px
+                font-size: 32px;
+                line-height: 125%;
             }
         }
 
+
         .details-content__text {
+            color: #222222;
             max-width: 440px;
             font-size: 16px;
+            line-height: 175%;
             margin: 0
         }
 
-        .stend {
-            padding: 60px 0 0;
-            overflow: hidden
+        /* __details__ */
+
+        /* __installation__ */
+
+        .installation {
+            padding-top: 118px;
         }
 
-        @media screen and (max-width:576px) {
-            .stend {
-                padding: 120px 0 0
+        @media screen and (min-width:992px) {
+            .installation {
+                padding-top: 160px;
             }
         }
 
-        .stend__title {
-            max-width: 475px;
-            font-size: 53.5px;
-            line-height: 72px;
-            margin: 0 0 25px
+        .installation__img-wrap {
+            text-align: center;
         }
 
-        @media screen and (max-width:992px) {
-            .stend__title {
-                max-width: 300px;
-                font-size: 32px;
-                line-height: 44px
+        /* __installation__ */
+
+        /* __soft__ */
+        .soft {
+            padding-top: 121px;
+        }
+
+        @media screen and (min-width:992px) {
+            .soft {
+                padding-top: 160px;
             }
         }
 
-        @media screen and (max-width:576px) {
-            .stend__title {
-                margin: 0 0 10px
-            }
-        }
-
-        .stend__text {
-            max-width: 500px;
-            font-size: 20px;
-            line-height: 32px
-        }
-
-        @media screen and (max-width:992px) {
-            .stend__text {
-                max-width: 370px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .stend__text {
-                margin-bottom: 0
-            }
-        }
-
-        .stend-list {
-            margin-top: 35px;
-            display: flex
-        }
-
-        @media screen and (max-width:992px) {
-            .stend-list {
-                margin-top: 40px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .stend-list {
-                justify-content: center
-            }
-        }
-
-        .stend-list__item {
-            width: 236px;
-            height: 220px;
-            border-radius: 16px;
+        .soft .container {
+            width: 90%;
             background-color: #f7f8fa;
+            border-radius: 12px;
+            position: relative;
+            padding-bottom: 39px;
+        }
+
+        @media screen and (min-width:768px) {
+            .soft .container {
+                padding-bottom: 0;
+            }
+        }
+
+
+        .soft-content {
+            padding: 43px 17px 0 17px;
+        }
+
+        @media screen and (min-width:768px) {
+            .soft-content {
+                padding: 90px 0 40px 30px;
+            }
+        }
+
+
+        @media screen and (min-width:992px) {
+            .soft-content {
+                padding: 80px 0 80px 65px;
+            }
+        }
+
+       
+        .soft-content__item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column
+            margin-bottom: 13px;
         }
 
-        @media screen and (max-width:992px) {
-            .stend-list__item {
-                width: 196px;
-                height: 196px
-            }
+        .soft-content__item svg {
+            min-width: 60px;
         }
 
-        @media screen and (max-width:576px) {
-            .stend-list__item {
-                width: 45%;
-                height: 228px
-            }
+        .soft-content__item p {
+            color: #222222;
+            font-size: 16px;
+            line-height: 150%;
+            font-weight: bold;
+            margin-left: 20px;
         }
 
-        .stend-list__item:not(:last-child) {
-            margin-right: 30px
-        }
 
-        @media screen and (max-width:992px) {
-            .stend-list__item:not(:last-child) {
-                margin-right: 20px
-            }
-        }
 
-        @media screen and (max-width:992px) {
-            .stend-list__item svg {
-                width: 76px;
-                height: 66px
-            }
-        }
+        .soft__img-wrap {}
 
-        .stend-list__item p {
-            max-width: 212px;
-            margin: 25px auto 0;
-            font-weight: 500;
-            text-align: center
-        }
 
-        @media screen and (max-width:992px) {
-            .stend-list__item p {
-                margin: 15px auto 0
-            }
-        }
-
-        .stend__img-wrap {
-            width: 887px;
-            margin: -50px 0 0
-        }
-
-        @media screen and (max-width:992px) {
-            .stend__img-wrap {
-                width: 823px;
-                margin: -55px 0 0 -70px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .stend__img-wrap {
-                width: 100%;
-                margin: 0
-            }
-        }
-
-        .stend__img-wrap source {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover
-        }
-
-        .stend__img-wrap:before {
-            padding-top: 80.0451%
-        }
+        /* __soft__ */
 
         .exposition {
-            padding: 10px 0 110px
+            padding-top: 118px
         }
 
-        @media screen and (max-width:992px) {
+        @media (min-width:768px) {
             .exposition {
-                padding: 10px 0 50px
+                padding-top: 120px
             }
         }
 
-        @media screen and (max-width:576px) {
+        @media (min-width:992px) {
             .exposition {
-                padding: 140px 0 70px
+                padding-top: 160px
             }
+
         }
 
-        .exposition__title {
-            font-size: 53.5px;
-            margin-bottom: 140px;
-            max-width: 840px
-        }
+       
 
-        @media screen and (max-width:992px) {
-            .exposition__title {
-                margin-bottom: 100px;
-                font-size: 32px;
-                line-height: 44px
-            }
-        }
+
 
         .exposition__image-wrap {
             display: block;
@@ -3471,179 +2691,14 @@
         }
 
         .exposition__list-item {
-            margin-top: 12px
+            margin-top: 12px;
+            font-size: 18px;
+            line-height: 100%;
+            font-weight: bold;
         }
 
-        @media screen and (max-width:992px) {
-            .steps {
-                padding-top: 50px
-            }
-        }
-
-        .steps__title {
-            max-width: 700px;
-            margin-bottom: 65px;
-            text-align: center;
-            margin: 0 auto 80px
-        }
-
-        @media screen and (max-width:992px) {
-            .steps__title {
-                max-width: 545px;
-                text-align: left;
-                margin: 0 0 65px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .steps__title {
-                margin: 0 0 40px
-            }
-        }
-
-        .steps__list {
-            list-style: none;
-            margin-top: -60px;
-            display: flex;
-            justify-content: space-around
-        }
-
-        @media screen and (max-width:576px) {
-            .steps__list {
-                flex-direction: column
-            }
-        }
-
-        .steps__item {
-            text-align: center;
-            margin-top: 60px
-        }
-
-        .steps__item-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 116px;
-            height: 116px;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            font-size: 50px;
-            background: #f7f8fa
-        }
-
-        .steps__item-text {
-            max-width: 233px;
-            margin: 0 auto;
-            line-height: 1.75
-        }
-
-        @media screen and (max-width:576px) {
-            .soft {
-                padding: 70px 0
-            }
-        }
-
-        .soft .container {
-            padding: 140px 0 105px 80px;
-            background-color: #f7f8fa;
-            border-radius: 12px;
-            position: relative
-        }
-
-        @media screen and (max-width:992px) {
-            .soft .container {
-                padding: 100px 15px 110px 20px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .soft .container {
-                width: 90%;
-                padding: 60px 15px 370px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .soft-content__list {
-                margin-bottom: 80px
-            }
-        }
-
-        .soft-content__item {
-            display: flex;
-            align-items: center
-        }
-
-        .soft-content__item:not(:last-child) {
-            margin-bottom: 45px
-        }
-
-        @media screen and (max-width:576px) {
-            .soft-content__item:not(:last-child) {
-                margin-bottom: 30px
-            }
-        }
-
-        @media screen and (max-width:992px) {
-            .soft-content__item svg {
-                width: 76px;
-                height: 54px
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .soft-content__item svg {
-                width: 70px;
-                height: 50px
-            }
-        }
-
-        .soft-content__item p {
-            max-width: 340px;
-            margin: 0 0 0 30px;
-            font-weight: 500;
-            font-size: 20px
-        }
-
-        @media screen and (max-width:992px) {
-            .soft-content__item p {
-                max-width: 230px;
-                margin: 0 0 0 25px
-            }
-        }
-
-        .soft__img-wrap {
-            width: 479px;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%)
-        }
-
-        @media screen and (max-width:992px) {
-            .soft__img-wrap {
-                width: 393px
-            }
-        }
-
-        @media screen and (max-width:768px) {
-            .soft__img-wrap {
-                right: unset;
-                left: 50%
-            }
-        }
-
-        @media screen and (max-width:576px) {
-            .soft__img-wrap {
-                left: unset;
-                right: 0;
-                transform: unset
-            }
-        }
-
-        .soft__img-wrap:before {
-            padding-top: 80.79332%
-        }
+    
+       
 
         @media screen and (max-width:576px) {
             .odds {
@@ -3942,6 +2997,10 @@
             max-width: 100%
         }
 
+        .box{
+            padding-top:160px;
+        }
+        
         @media screen and (max-width:576px) {
             .box {
                 padding: 90px 0
@@ -4240,361 +3299,273 @@
 </head>
 
 <body>
-
-
     <div class="wrap-site">
         <div class="main">
             <section class="hero">
-                <div class="header">
-                    <div class="container">
-                        <div class="header__logo"><svg width="185" height="30">
-                                <use xlink:href="#icon-logo"></use>
-                            </svg></div>
-                    </div>
-                </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-sm-12 hero__col-content">
-                            <h1 class="hero__title">Watch Monte GTR promo video</h1>
-                            <div class="hero__odds">
-                                <ul class="row hero__odds-list">
-                                    <li class="col hero__odd">
-                                        <div class="hero__icon"><i class="hero__odd-icon hero__odd-icon--energy"><svg
-                                                    width="1em" height="1em">
-                                                    <use xlink:href="#icon-energy"></use>
-                                                </svg></i></div>
-                                        <div class="hero__odd-text">Up to +25% more power and torque*</div>
-                                    </li>
-                                    <li class="col hero__odd">
-                                        <div class="hero__icon"><i class="hero__odd-icon hero__odd-icon--fuel"><svg
-                                                    width="1em" height="1em">
-                                                    <use xlink:href="#icon-fuel"></use>
-                                                </svg></i></div>
-                                        <div class="hero__odd-text">Up to+18% fuel saving. Improve your MPG</div>
-                                    </li>
-                                    <li class="col hero__odd">
-                                        <div class="hero__icon"><i
-                                                class="hero__odd-icon hero__odd-icon--motor-error"><svg width="1em"
-                                                    height="1em">
-                                                    <use xlink:href="#icon-motor-error"></use>
-                                                </svg></i></div>
-                                        <div class="hero__odd-text">Read codes and display up 130 gauges</div>
-                                    </li>
-                                    <li class="col hero__odd">
-                                        <div class="hero__icon"><i
-                                                class="hero__odd-icon hero__odd-icon--speedometer"><svg width="1em"
-                                                    height="1em">
-                                                    <use xlink:href="#icon-speedometer"></use>
-                                                </svg></i></div>
-                                        <div class="hero__odd-text">On-board dyno to measure hp and nm</div>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="col-12 col-sm-12">
+                            <h1 class="page__title">Watch Monte GTR promo video</h1>
                         </div>
-                        <div class="col-12 col-sm-4 hero__col-img">
-                            <picture class="responsive-media hero__img-wrap">
+                        <div class="col-12 col-sm-12 hero__col-img">
+                            <picture class="hero__img-wrap">
+                                <source media="(min-width: 992px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterMd.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterMd-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterSm.png, 
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterSm-2x.png 2x">
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/ebay-bg-offer.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/ebay-bg-offer-2x.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/ebay-bg-offer.png"
+                                    srcset="
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterXs.png, 
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterXs-2x.png 2x">
+
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPosterXs.png"
                                     alt="alt">
                             </picture>
-                        </div>
-                        <div class="col">
-                            <div class="hero-list">
-                                <div class="hero-list__item"><svg width="27" height="25">
-                                        <use xlink:href="#icon-protect"></use>
-                                    </svg>
-                                    <p class="hero-list__text">Lifetime warranty</p>
-                                </div>
-                                <div class="hero-list__item"><svg width="27" height="23">
-                                        <use xlink:href="#icon-return"></use>
-                                    </svg>
-                                    <p class="hero-list__text">100% return policy</p>
-                                </div>
-                                <div class="hero-list__item"><svg width="27" height="23">
-                                        <use xlink:href="#icon-return2"></use>
-                                    </svg>
-                                    <p class="hero-list__text">Free shipping and free return</p>
-                                </div>
-                                <div class="hero-list__item"><svg width="27" height="23">
-                                        <use xlink:href="#icon-medal"></use>
-                                    </svg>
-                                    <p class="hero-list__text">Official Monte Tuning Ebay store</p>
-                                </div>
-                            </div>
+                            <!-- <video controls src="https://www.youtube.com/watch?v=PLmjexxCssc&t=4s" poster="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgVideoPoster.png">
+                            </video> -->
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="engine">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-12 col-sm-6 col-lg-5 order-1 order-sm-0 engine__col-img">
-                            <div class="engine-wrap">
-                                <picture class="responsive-media engine__img-wrap">
-                                    <source
-                                        srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/engine.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/engine-2x.png 2x">
-                                    <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/engine.png"
-                                        alt="alt">
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-7 order-0 order-sm-1">
-                            <div class="engine-content">
-                                <h2 class="engine-title">You car can do a lot more than you think</h2>
-                                <p class="engine-text">Our state of art the performance tuning provides the driving
-                                    experience you&nbsp;deserve.</p>
-                            </div>
-                        </div>
-                        <div class="col order-2">
-                            <div class="engine-list">
-                                <div class="engine-list__item"><svg width="177" height="130">
-                                        <use xlink:href="#icon-balance1"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>+25%*</span>
-                                        <p>Up to +25% more power</p>
-                                    </div>
-                                </div>
-                                <div class="engine-list__item"><svg width="177" height="130">
-                                        <use xlink:href="#icon-balance2"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>+25%*</span>
-                                        <p>Up to +25% more torque</p>
-                                    </div>
-                                </div>
-                                <div class="engine-list__item"><svg width="177" height="130">
-                                        <use xlink:href="#icon-balance3"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>+18%*</span>
-                                        <p>Up to +18% better MPG</p>
-                                    </div>
-                                </div>
-                                <div class="engine-list__item"><svg width="177" height="130">
-                                        <use xlink:href="#icon-balance4"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>-1 sec*</span>
-                                        <p>Time saving from 0-60 mph</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="customiz">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h2 class="customiz__title">How does it work?</h2>
-                            <p class="customiz__text">Our car-specific tuning algorithm directly improves efficiency and
-                                performance.<br><br>When the ECU attempts to read the specific EPROM address your Monte
-                                GTR will safely replace the factory value with highly optimized performance settings to
-                                unleash the full power of your engine.</p>
-                            <div class="customiz-list">
-                                <div class="customiz-list__item">
-                                    <picture class="customiz-list__img-wrap">
-                                        <source
-                                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz1.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz1-2x.png 2x">
-                                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz1.png"
-                                            alt="alt">
-                                    </picture><svg width="31" height="220">
-                                        <use xlink:href="#icon-arrow-flat"></use>
-                                    </svg>
-                                </div>
-                                <div class="customiz-list__item">
-                                    <picture class="customiz-list__img-wrap">
-                                        <source
-                                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz2.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz2-2x.png 2x">
-                                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz2.png"
-                                            alt="alt">
-                                    </picture><svg width="31" height="220">
-                                        <use xlink:href="#icon-arrow-flat"></use>
-                                    </svg>
-                                </div>
-                                <div class="customiz-list__item">
-                                    <picture class="customiz-list__img-wrap">
-                                        <source
-                                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz3.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz3-2x.png 2x">
-                                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz3.png"
-                                            alt="alt">
-                                    </picture><svg width="31" height="220">
-                                        <use xlink:href="#icon-arrow-flat"></use>
-                                    </svg>
-                                </div>
-                                <div class="customiz-list__item">
-                                    <picture class="customiz-list__img-wrap">
-                                        <source
-                                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz4.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz4-2x.png 2x">
-                                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/customiz4.png"
-                                            alt="alt">
-                                    </picture><svg width="31" height="220">
-                                        <use xlink:href="#icon-arrow-flat"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="modes">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="modes-content">
-                                <div class="modes-content__wrap">
-                                    <h2 class="modes-content__title">Performance tailored for you</h2>
-                                    <p class="modes-content__text">Select from 6 driving modes. to get the most
-                                        performance or fuel efficiency out of your car.</p>
-                                </div>
-                                <picture>
-                                    <source
-                                        srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2-2x.png 2x">
-                                    <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2.png"
-                                        alt="alt">
-                                </picture>
-                            </div>
-                            <div class="modes-picture">
-                                <div class="responsive-media modes-picture__image-wrap">
-                                    <picture class="decktop-img">
-                                        <source
-                                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/modes-graph.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/modes-graph-2x.png 2x">
-                                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/modes-graph.png"
-                                            alt="alt">
-                                    </picture>
-                                    <picture class="mob-img">
-                                        <source
-                                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/modes-graph-mob.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/modes-graph-mob-2x.png 2x">
-                                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/modes-graph-mob.png"
-                                            alt="alt">
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+
+
             <section class="details">
                 <div class="container">
-                    <h2 class="details__title">A powerhouse full of features</h2>
+                    <h2 class="page__title">A powerhouse full of features</h2>
                     <div class="row details__list">
                         <div class="col-sm-6 details__item">
-                            <picture class="responsive-media details__img-wrap">
+                            <picture class="details__img-wrap">
+                                <source media="(min-width: 992px)" srcset="
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Md.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Md-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Sm.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Sm-2x.png 2x">
+
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1-2x.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1.png"
+                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Xs.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Xs-2x.png 2x">
+
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip1Xs.png"
                                     alt="alt">
                             </picture>
                             <div class="details-content">
                                 <h3 class="details-content__title">Increase power and save fuel</h3>
-                                <p class="details-content__text">With Monte GTR You can increase your engine power up to
-                                    +25%, make the car more agile and at the same time improve your milage by staggering
-                                    +18%*.</p>
+                                <p class="details-content__text">GTR Tuning Box increase hp and torque up to +25% gives
+                                    and up to +18%* MPG. </p>
                             </div>
                         </div>
                         <div class="col-sm-6 details__item">
-                            <picture class="responsive-media details__img-wrap">
-                                <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2-2x.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2.png"
+                            <picture class="details__img-wrap">
+                                <source media="(min-width: 992px)" srcset="
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Md.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Md-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Sm.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Sm-2x.png 2x">
+
+
+
+                                <source srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Xs.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Xs-2x.png 2x">
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip2Xs.png"
                                     alt="alt">
                             </picture>
                             <div class="details-content">
                                 <h3 class="details-content__title">Change driving mode</h3>
-                                <p class="details-content__text">Select out of 6 modes to achieve maximum power or fuel
-                                    efficiency right from your driver seat. Up to +25% more power or +18% MPG with Race
-                                    or Eco mode.</p>
+                                <p class="details-content__text">Power programmer with 6 driving modes 2x Race, 2x Eco
+                                    and 2x Mix.</p>
                             </div>
                         </div>
                         <div class="col-sm-6 details__item">
-                            <picture class="responsive-media details__img-wrap">
+                            <picture class="details__img-wrap">
+                                <source media="(min-width: 992px)" srcset="
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Md.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Md-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Sm.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Sm-2x.png 2x">
+
+
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3.png"
+                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Xs.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Xs-2x.png 2x">
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip3Xs.png"
                                     alt="alt">
                             </picture>
                             <div class="details-content">
                                 <h3 class="details-content__title">Read error codes</h3>
-                                <p class="details-content__text">Read and clear error codes. A diagnostic tool available
-                                    24/7. Save time and money on diagnostics.</p>
+                                <p class="details-content__text">Read and clear car trouble codes.</p>
                             </div>
                         </div>
                         <div class="col-sm-6 details__item">
-                            <picture class="responsive-media details__img-wrap">
+                            <picture class="details__img-wrap">
+                                <source media="(min-width: 992px)" srcset="
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Md.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Md-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Sm.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Sm-2x.png 2x">
+
+
+
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4-2x.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4.png"
+                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Xs.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Xs-2x.png 2x">
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip4Xs.png"
                                     alt="alt">
                             </picture>
                             <div class="details-content">
                                 <h3 class="details-content__title">Display live gauges</h3>
-                                <p class="details-content__text">Watch all car readings that important for you, and
-                                    display that right on the customizable touch screen display.</p>
+                                <p class="details-content__text">Customizable gauges for car parametrs.</p>
                             </div>
                         </div>
                         <div class="col-sm-6 details__item">
-                            <picture class="responsive-media details__img-wrap">
+                            <picture class="details__img-wrap">
+                                <source media="(min-width: 992px)" srcset="
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Md.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Md-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Sm.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Sm-2x.png 2x">
+
+
+
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5.png"
+                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Xs.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Xs-2x.png 2x">
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip5Xs.png"
                                     alt="alt">
                             </picture>
                             <div class="details-content">
                                 <h3 class="details-content__title">Measure horsepower and torque</h3>
                                 <p class="details-content__text">Test your performance in real time with built-in dyno
-                                    machine anywhere, anytime.</p>
+                                    machine.</p>
                             </div>
                         </div>
                         <div class="col-sm-6 details__item">
-                            <picture class="responsive-media details__img-wrap">
+                            <picture class="details__img-wrap">
+                                <source media="(min-width: 992px)" srcset="
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Md.png, 
+                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Md-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Sm.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Sm-2x.png 2x">
+
+
+
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6-2x.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6.png"
+                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Xs.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Xs-2x.png 2x">
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/chip6Xs.png"
                                     alt="alt">
                             </picture>
                             <div class="details-content">
                                 <h3 class="details-content__title">Test 0-60, 1/4 acceleration</h3>
-                                <p class="details-content__text">Perform accurate acceleration tests easily effortlessly
-                                    and compare your results.</p>
+                                <p class="details-content__text">Measur 0-60 or 1/4 accurately right from the driver
+                                    seat.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="stend">
+
+            <section class="installation">
                 <div class="container">
+                    <h1 class="page__title">Simple installation</h1>
+                    <picture class="installation__img-wrap">
+                        <source media="(min-width: 992px)"
+                            srcset="
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterMd.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterMd-2x.png 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterSm.png, 
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterSm-2x.png 2x">
+                        <source
+                            srcset="
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterXs.png, 
+                                        https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterXs-2x.png 2x">
+
+                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterXs.png"
+                            alt="alt">
+                    </picture>
+
+
+                    <!-- <video controls src="https://www.youtube.com/watch?v=gAe6y6PzWZg"
+                        poster="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgInstallationVideoPosterMd.png"></video> -->
+                </div>
+            </section>
+
+
+            <section class="soft">
+                <h1 class="page__title">Free software for your Tuning Box</h1>
+                <div class="container">
+
                     <div class="row">
-                        <div class="col-12 col-sm-8 col-lg-6 order-1 order-sm-0">
-                            <h2 class="stend__title">Your pocket-sized dyno machine</h2>
-                            <p class="stend__text">With Monte GTR on-board dyno you can measure your real engine
-                                horsepower and torque within 2% by performing a simple acceleration with your car.</p>
-                            <div class="stend-list">
-                                <div class="stend-list__item"><svg width="92" height="81">
-                                        <use xlink:href="#icon-graph"></use>
-                                    </svg>
-                                    <p>Create and compare unlimited dyno charts</p>
-                                </div>
-                                <div class="stend-list__item"><svg width="92" height="81">
-                                        <use xlink:href="#icon-screen"></use>
-                                    </svg>
-                                    <p>Transfer and share dyno charts with your PC</p>
+                        <div class="col-12 col-sm-6">
+                            <div class="soft-content">
+                                <div class="soft-content__list">
+                                    <div class="soft-content__item"><svg width="93" height="57">
+                                            <use xlink:href="#icon-infinity"></use>
+                                        </svg>
+                                        <p>Unlimited use. Buy once use on any out of over 8000 supported cars</p>
+                                    </div>
+                                    <div class="soft-content__item"><svg width="93" height="57">
+                                            <use xlink:href="#icon-cloud"></use>
+                                        </svg>
+                                        <p>Lifetime updates and new features gauranteed</p>
+                                    </div>
+                                    <div class="soft-content__item"><svg width="93" height="57">
+                                            <use xlink:href="#icon-car"></use>
+                                        </svg>
+                                        <p>Unrestricted access to all tuning database</p>
+                                    </div>
+                                    <div class="soft-content__item"><svg width="93" height="57">
+                                            <use xlink:href="#icon-car"></use>
+                                        </svg>
+                                        <p>Download and share dyno charts from your tuning chip.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-4 col-lg-6 order-0 order-sm-1">
-                            <picture class="responsive-media stend__img-wrap">
+                        <div class="col-12 col-sm-6">
+                            <picture class="soft__img-wrap">
+                                <source media="(min-width: 992px)"
+                                    srcset="
+                                            https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftMD.png, 
+                                            https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftMD-2x.png 2x">
+                                <source media="(min-width: 768px)"
+                                    srcset="
+                                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftSm.png, 
+                                                https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftSm-2x.png 2x">
+
                                 <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/stand.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/stand-2x.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/stand.png"
+                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftXs.png, 
+                                    https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftXs-2x.png 2x">
+                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/imgSoftXs.png"
                                     alt="alt">
                             </picture>
                         </div>
                     </div>
+
                 </div>
             </section>
-            <section class="section exposition">
+
+            <section class="exposition">
                 <div class="container">
-                    <h2 class="h1 exposition__title_xl exposition__title">Designed for the fastest ride and productivity
-                        everywhere you go</h2>
+                    <h2 class="page__title">Tuning chip box components overview</h2>
                     <div class="responsive-media exposition__image-wrap">
                         <picture>
                             <source
@@ -4617,208 +3588,12 @@
                     </ol>
                 </div>
             </section>
-            <section class="section steps">
-                <div class="container">
-                    <h2 class="h1 steps__title">Easy plug&amp;play installation in less than 5 minutes</h2>
-                    <ol class="steps__list">
-                        <li class="steps__item"><i class="steps__item-icon"><svg width="44" height="39">
-                                    <use xlink:href="#icon-screen2"></use>
-                                </svg></i>
-                            <div class="h3 steps__item-title">Step 1</div>
-                            <div class="steps__item-text">Upload your vehicle</div>
-                        </li>
-                        <li class="steps__item"><i class="steps__item-icon"><svg width="44" height="39">
-                                    <use xlink:href="#icon-connector"></use>
-                                </svg></i>
-                            <div class="h3 steps__item-title">Step 2</div>
-                            <div class="steps__item-text">Connect to OBDII</div>
-                        </li>
-                        <li class="steps__item"><i class="steps__item-icon"><svg width="44" height="39">
-                                    <use xlink:href="#icon-trinket"></use>
-                                </svg></i>
-                            <div class="h3 steps__item-title">Step 3</div>
-                            <div class="steps__item-text">Enjoy your new ride</div>
-                        </li>
-                    </ol>
-                </div>
-            </section>
-            <section class="section soft">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="soft-content">
-                                <div class="soft-content__list">
-                                    <div class="soft-content__item"><svg width="93" height="57">
-                                            <use xlink:href="#icon-infinity"></use>
-                                        </svg>
-                                        <p>Unlimited use. Buy once use on any out of over 8000 supported cars</p>
-                                    </div>
-                                    <div class="soft-content__item"><svg width="93" height="57">
-                                            <use xlink:href="#icon-cloud"></use>
-                                        </svg>
-                                        <p>Lifetime updates and new features gauranteed</p>
-                                    </div>
-                                    <div class="soft-content__item"><svg width="93" height="57">
-                                            <use xlink:href="#icon-car"></use>
-                                        </svg>
-                                        <p>Unrestricted access to all tuning database</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <picture class="responsive-media soft__img-wrap">
-                        <source
-                            srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/download.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/download-2x.png 2x">
-                        <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/download.png"
-                            alt="alt">
-                    </picture>
-                </div>
-            </section>
-            <section class="section odds">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-7">
-                            <h2 class="h1 odds__title">9 reasons to order Monte GTR for your car</h2>
-                            <ul class="row odds__list">
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-steering-wheel"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">6 driving<br>modes</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-manometer"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">Built-in Power<br>&amp; Acceleration Meter</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-monitor-filled"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">Monte<br>programmer</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-phone"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">Easy to<br>install</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-speedometer"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">130 real time<br>gauges</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-motor-filled"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">Read &amp; clear<br>error codes</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-infinity2"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">Unlimited<br>use</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-web-cloud"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">Cloud<br>updates</div>
-                                </li>
-                                <li class="col-6 col-md-3 col-lg-4 odds__item"><i class="odds__item-icon"><svg
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-processor"></use>
-                                        </svg></i>
-                                    <div class="odds__item-text">3x CPUs<br>system</div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-lg-5 odds__col-img">
-                            <picture class="responsive-media odds__img-wrap">
-                                <source
-                                    srcset="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/monte.png, https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/monte2.png 2x">
-                                <img src="https://rschipchiptuning.com/wp-content/themes/ebay-monte/images/monte.png"
-                                    alt="alt">
-                            </picture>
-                            <div class="engine-list">
-                                <div class="engine-list__item"><svg width="148" height="100">
-                                        <use xlink:href="#icon-balance1_1"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>+25%*</span>
-                                        <p>Up to +25% more power</p>
-                                    </div>
-                                </div>
-                                <div class="engine-list__item"><svg width="148" height="100">
-                                        <use xlink:href="#icon-balance2_2"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>+25%*</span>
-                                        <p>Up to +25% more torque</p>
-                                    </div>
-                                </div>
-                                <div class="engine-list__item"><svg width="148" height="100">
-                                        <use xlink:href="#icon-balance3_3"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>+18%*</span>
-                                        <p>Up to +18%<br>better MPG</p>
-                                    </div>
-                                </div>
-                                <div class="engine-list__item"><svg width="148" height="100">
-                                        <use xlink:href="#icon-balance4_4"></use>
-                                    </svg>
-                                    <div class="engine-list__content"><span>-1 sec*</span>
-                                        <p>Time saving from 0-60 mph</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section tech-specs">
-                <div class="container">
-                    <h2 class="h1 tech-specs__title">Tech specs</h2>
-                    <div class="row">
-                        <div class="col">
-                            <dl class="tech-specs__list">
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Performance figures</dt>
-                                    <dd class="tech-specs__item-text">Up to +25% more HP*<br>Up to +25% more NM*<br>Up
-                                        to +18%* more fuel savings</dd>
-                                </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Warranty and return</dt>
-                                    <dd class="tech-specs__item-text">30 days money back and lifetime warranty on
-                                        defects</dd>
-                                </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Software</dt>
-                                    <dd class="tech-specs__item-text">Monte GTR firmware core<br>PC programmer with
-                                        vehicle specific tuning database</dd>
-                                </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Hardware</dt>
-                                    <dd class="tech-specs__item-text">16 pin obdii connector,<br>Operating t -40 C\'b0
-                                        +85 C\'b0,<br>Operating voltage 7,5V - 20V,<br>Touch screen display</dd>
-                                </div>
-                                <div class="tech-specs__item">
-                                    <dt class="tech-specs__item-title">Dimension</dt>
-                                    <dd class="tech-specs__item-text">Length 4.7 inches,<br>Width 2.6 inches,<br>Hight
-                                        0.6 inches</dd>
-                                </div>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <section class="box">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h2 class="box__title">What's in the box?</h2>
+                            <h2 class="page__title">What's in the box?</h2>
                             <div class="box-list">
                                 <div class="box-list__item">
                                     <h4 class="box-list__title">OBD2 removable cable<br>Length - 60 inches ( 5 Feet)
@@ -4880,6 +3655,46 @@
                     </div>
                 </div>
             </section>
+
+
+            <section class="section tech-specs">
+                <div class="container">
+                    <h2 class="h1 tech-specs__title">Tech specs</h2>
+                    <div class="row">
+                        <div class="col">
+                            <dl class="tech-specs__list">
+                                <div class="tech-specs__item">
+                                    <dt class="tech-specs__item-title">Performance figures</dt>
+                                    <dd class="tech-specs__item-text">Up to +25% more HP*<br>Up to +25% more NM*<br>Up
+                                        to +18%* more fuel savings</dd>
+                                </div>
+                                <div class="tech-specs__item">
+                                    <dt class="tech-specs__item-title">Warranty and return</dt>
+                                    <dd class="tech-specs__item-text">30 days money back and lifetime warranty on
+                                        defects</dd>
+                                </div>
+                                <div class="tech-specs__item">
+                                    <dt class="tech-specs__item-title">Software</dt>
+                                    <dd class="tech-specs__item-text">Monte GTR firmware core<br>PC programmer with
+                                        vehicle specific tuning database</dd>
+                                </div>
+                                <div class="tech-specs__item">
+                                    <dt class="tech-specs__item-title">Hardware</dt>
+                                    <dd class="tech-specs__item-text">16 pin obdii connector,<br>Operating t -40 C\'b0
+                                        +85 C\'b0,<br>Operating voltage 7,5V - 20V,<br>Touch screen display</dd>
+                                </div>
+                                <div class="tech-specs__item">
+                                    <dt class="tech-specs__item-title">Dimension</dt>
+                                    <dd class="tech-specs__item-text">Length 4.7 inches,<br>Width 2.6 inches,<br>Hight
+                                        0.6 inches</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
             <section class="section faq">
                 <div class="container">
                     <h2 class="h2 faq__title">Top questions and answers about Monte&nbsp;GTR</h2>
@@ -4970,6 +3785,7 @@
         </div>
     </div>
     <div class="visually-hidden">
+
         <!--?xml version="1.0" encoding="utf-8"?--><svg xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <symbol fill="none" viewBox="0 0 33 223" id="icon-arrow-flat" xmlns="http://www.w3.org/2000/svg">
@@ -5376,7 +4192,7 @@
                 </path>
             </symbol>
         </svg>
-    </div>}
+    </div>
 </body>
 
 </html>

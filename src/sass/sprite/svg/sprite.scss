@@ -2,13 +2,43 @@
 	background: url("../assets/icons/svg/spriteSVG.svg") no-repeat;
 }
 
-.svg-mouse {
+.svg-icon-car {
 	@extend %svg-common;
 	background-position: 0 0;
 }
 
-.svg-mouse-box {
-	width: 35.09px;
+.svg-icon-car-box {
+	width: 52px;
+	height: 51.61px;
+}
+
+.svg-icon-charts {
+	@extend %svg-common;
+	background-position: 0 99.25%;
+}
+
+.svg-icon-charts-box {
+	width: 51.6px;
+	height: 52px;
+}
+
+.svg-icon-cloud {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-icon-cloud-box {
+	width: 52px;
+	height: 43.79px;
+}
+
+.svg-icon-infinity {
+	@extend %svg-common;
+	background-position: 99.23664122137404% 84.21153846153847%;
+}
+
+.svg-icon-infinity-box {
+	width: 51.6px;
 	height: 52px;
 }
 

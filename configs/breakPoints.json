@@ -1,9 +1,6 @@
 {
     "viewportWidth" : 320,
     "breakPoints": {
-        "xs": {
-            "width": "579px"
-        },
         "sm": {
             "width": "768px"
         },

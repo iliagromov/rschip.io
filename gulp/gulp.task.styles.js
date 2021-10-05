@@ -25,7 +25,7 @@ const path = require('../path.json');
 
 
 const sassFiles = [
-	path.src + 'sass/+(styles-sprites|base-styles|styles-calc|styles-percent).sass'
+	path.src + 'sass/+(styles-sprites|base-styles|styles-calc).sass'
 ];
 
 // gulp.task('stylesClean', function (done) {
@@ -44,7 +44,7 @@ gulp.task('stylesSass', function (done) {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(gcmq())
-		// .pipe(gulpif(isProd, cleanCSS({
+		// .pipe(gulpif(true, cleanCSS({
 		// 	level: {
 		// 		2: {
 		// 		all: true, // sets all values to `false`

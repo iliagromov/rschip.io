@@ -2,15 +2,32 @@
 .footer
     position: relative
     background: #111111
-    padding-top: 53px
+    padding: 60px 0 34px
+    +sm-block
+        padding: 90px 0 30px
+    +md-block
+        padding: 53px 0 66px
+    +lg-block
+        padding: 53px 0 66px
 
     &::before
         content: ''
         position: absolute
         background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
         filter: blur(500px)
-        width: 544px
-        height: 261px
+
+        width: 299px
+        height: 180px
+
+        +sm-block
+            width: 544px
+            height: 261px
+        +md-block
+            width: 544px
+            height: 261px
+        +lg-block
+            width: 544px
+            height: 261px
         
         left: 50%
         bottom: 0
@@ -32,9 +49,16 @@
     h4
         +col()
         width: 100%
-        margin-top: 66px
+        margin-top: 36px
+        
         margin-bottom: 14px
         font-weight: bold
+        +sm-block
+            margin-top: 36px
+        +md-block
+            margin-top: 66px
+        +lg-block
+            margin-top: 66px
     hr
         +col()
         width: 100%
@@ -43,24 +67,50 @@
 .footerFlexContainer
     +row-flex()
 
+
 .footerLogo
     +col()
     +size(9)
+    +size-sm(3)
     +size-md(1.8)
     +size-lg(1.8)
+    text-align: center
+    margin-bottom: 35px
 
+    +sm-block
+        text-align: left
+        margin-bottom: 0
     +md-block
+        text-align: left
         padding-top: 10px
+        margin-bottom: 0
     +lg-block
+        text-align: left
         padding-top: 10px
+        margin-bottom: 0
 .footerDealer
     +col()
-    +size(9)
+    +size(7)
+    +size-sm(3)
     +size-md(2)
     +size-lg(2)
+    text-align: center
+    margin: 0 auto 35px
+    +sm-block
+        position: absolute
+        top: 65px
+        left: 0
+    +md-block
+        position: relative
+        top: 0
+    +lg-block
+        position: relative
+        top: 0
+
 .footerContacts
     +col()
     +size(9)
+    +size-sm(6)
     +size-md(5)
     +size-lg(5)
     display: flex
@@ -69,40 +119,52 @@
     address
         font-family: #{$SFUIText}-Bold
         color: $color_white
+        line-height: 29px
     .email
         text-decoration: underline
 
 .footerContactsItem
     +col()
     +size(9)
+    +size-sm(4.5)
     +size-md(4.5)
     +size-lg(4.5)
     display: flex
     align-items: center
-    margin-bottom: 44px
+    margin-bottom: 20px
+  
     .icon
+        min-width: 20px
         margin-right: 23px
+    +sm-block
+        margin-bottom: 32px
+    +md-block
+        margin-bottom: 44px
+    +lg-block
+        margin-bottom: 44px
         
     &:last-child
         +size(9)
+        +size-sm(9)
         +size-md(9)
         +size-lg(9)
 .footerAdvantages
     display: none
     +md-block
-        display: block
+        display: flex
     +lg-block
-          display: block
+          display: flex
 
 .footerAdvantagesItem
     +col()
     +size(9)
     +size-md(3)
     +size-lg(3)
+    padding-top: 30px
     +md-block
-        padding-top: 30px
+        padding-top: 20px
     +lg-block
-        padding-top: 30px
+        padding-top: 20px
     a
         background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #700ED2 , #FF3838)
         background-clip: text
@@ -119,13 +181,20 @@
     .page__text
         padding: 12px 30px 0 46px
         min-height: 100px
-    
 .footerLinks
+    display: none
+    +sm-block
+        display: flex
+    +md-block
+        display: flex
+    +lg-block
+        display: flex
+.footerLinksItem
     +col()
     +size-sm(2.25)
     +size-md(1)
     +size-lg(1)
-    margin-bottom: 66px
+
 
     
     &:last-child
@@ -141,22 +210,54 @@
 
 .footerPrivacy
     +row-flex()
-    padding: 40px 0
+    text-align: center
+    padding: 30px 0
+    +sm-block
+        padding: 40px 0
+    +md-block
+        padding: 40px 0
+    +lg-block
+        padding: 40px 0
+
+    align-items: center
+    justify-content: space-between
 
     div
         +col()
     .item1
+        +size(9)
+        +size-sm(4)
         +size-md(4)
         +size-lg(4)
     .item2
+        +size(9)
+        +size-sm(2)
         +size-md(2)
         +size-lg(2)
+
+        display: flex
+        justify-content: center
+
     .item3
+        +size(9)
+        +size-sm(3)
         +size-md(3)
         +size-lg(3)
 
+        
+
         display: flex
         justify-content: flex-end
+
+        flex-direction: column
+        +sm-block
+            flex-direction: row
+        +md-block
+            flex-direction: row
+        +lg-block
+            flex-direction: row
+
+
         a
             margin: 0 15px
             &:last-child

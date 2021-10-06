@@ -4,7 +4,7 @@
         "sm": {
             "width": "768px",
             "fields": "30px",
-            "offset": "46px"
+            "offset": "30px"
         },
         "md": {
             "width": "992px",

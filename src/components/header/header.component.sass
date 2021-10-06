@@ -24,6 +24,10 @@
     padding-top: 28px
     +sm-block
         text-align: left
+    +md-block
+        text-align: left
+    +lg-block
+        text-align: left
 .headerNav
     +col()
     +size(9)
@@ -34,8 +38,13 @@
     flex-wrap: wrap
     align-items: center
     justify-content: space-between
-    padding-top: 28px
+    padding-top: 25px
     +sm-block
+        justify-content: flex-end
+         
+    +md-block
+        justify-content: flex-end
+    +lg-block
         justify-content: flex-end
 .headerNavLinks
     margin: 0 9px
@@ -55,10 +64,17 @@
     text-decoration: none
     margin: 0 11px
 .headerNavCart
+    +col()
     display: flex
     align-items: center
     +sm-block
         margin-left: 4%
+    +md-block
+        margin-left: 5%
+        margin-right: 0
+    +lg-block
+        margin-left: 5%
+        margin-right: 0
     &__count
         display: flex
         align-items: center
@@ -71,21 +87,28 @@
         font-family: '#{$SFUIText}-Regular'
         background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) -210%, rgba(255, 56, 57, 0.9) 100%)
 .headerNavBtn
+    +col()
+   
     +sm-block
         margin-left: 2%
-    
+    +md-block
+        margin-left: 2%
+        margin-right: 0 !important
+    +lg-block
+        margin-left: 2%
+         margin-right: 0 !important
 .headerNavBurgerMenu
+    +col()
+    +size(1)
+    margin-right: 0 !important
     width: 35px
     height: 22px
-    background: #fff
     +md-block
         display: none
-.child
-    /*child*/
-    +col()
-    +size(9)
-    +size-lg(9/2)
-    font-size: 40px
 
-    +sm-block
-        font-size: 60px
+    .line
+        height: 2px
+        width: 32px
+        background: #fff
+        margin-bottom: 8px
+    

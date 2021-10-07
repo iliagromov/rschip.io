@@ -127,6 +127,39 @@
     &__z-index-negative 
         z-index: -1
 /* __debugGrid__ */
+/*faq*/
+.faq
+    .page__title-h2_small
+        text-align: center
+    .page__title-h3
+        text-align: center
+
+.faqFlexContainer 
+    +row-flex
+
+.faqItem
+    +col
+    +size(9)
+    +size-md(4.5)
+    +size-lg(4.5)
+.faqItemDetails 
+    &__Summary
+        font-family: #{$SFUIText}-Regular
+        border-bottom: 1px solid #fff
+        font-size: 18px
+        letter-spacing: 0.02em 
+        padding-bottom: 15px
+        color: #fff
+    &__Content
+        display: none
+    &.active
+        
+        .faqItemDetails__Summary
+            color: transparent
+            background-image: linear-gradient(to right, #FF624A , #FF4686)
+            background-clip: text
+        .faqItemDetails__Content
+            display: block
 /*footer*/
 .footer
     position: relative

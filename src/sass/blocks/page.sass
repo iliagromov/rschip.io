@@ -1,0 +1,110 @@
+/* __page__ */
+.page
+    margin-top: -70px
+    &__title
+        &-h1
+        &_big
+            font-family: #{$SFUIDisplay}-Bold
+            font-size: 64px
+            line-height: 100%
+            letter-spacing: 0.05em
+            color: rgba(255, 255, 255, 0.08)
+            position: relative
+
+            top: 80px
+            right: 0
+            +sm-block
+            top: 115px
+            right: 20px
+            font-size: 144px
+            +md-block
+            top: 115px
+            right: 20px
+            font-size: 144px
+            +lg-block
+            top: 115px
+            right: 20px
+            font-size: 144px
+        &-h2
+
+            position: relative
+            text-align: center
+            &_big
+                font-family: #{$SFUIDisplay}-Bold
+                font-size: 96px
+                line-height: 100%
+                text-transform: uppercase
+                color: rgba(255, 255, 255, 0.04)
+            &_small
+                font-family: #{$SFUIText}-Regular
+                font-style: normal
+                font-weight: normal
+                font-size: 15px
+                line-height: 100%
+                background-image: linear-gradient(to right, #FF4587 , #FF5438)
+                background-clip: text
+                color: transparent
+
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                text-transform: capitalize
+                font-weight: bold
+
+        &-h3
+            font-family: #{$SFUIDisplay}-Bold
+            font-size: 30px
+            line-height: 59px
+            letter-spacing: 0.07em
+            font-style: normal
+        &-h4
+            font-size: 24px
+        &-h5
+            font-size: 18px
+        &-h5
+            font-size: 15px
+
+    &__text
+        font-family: #{$SFUIText}-Regular
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 173%
+        text-transform: capitalize
+
+        color: #B2B2B2
+    &__btn
+        border-radius: 30px
+        font-family: #{$SFUIText}-Regular
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 100%
+        /* identical to box height, or 421% */
+        letter-spacing: 0.05em
+        color: #FFFFFF
+
+        // border: 2px solid transparent
+        // border-radius: 123px
+        // border-image: linear-gradient(to right, #700ED2 , #FF3838)
+        // border-image-slice: 1
+        border: double 2px transparent
+        border-radius: 123px
+        background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #700ED2 , #FF3838)
+        background-origin: border-box
+        background-clip: content-box, border-box
+
+        padding: 14px 36px
+
+        display: flex
+        justify-content: center
+        align-items: center
+        box-sizing: border-box
+        text-transform: uppercase
+        text-decoration: none
+        background-color: transparent
+    &__link
+    &_purple
+
+    /* __page__ */

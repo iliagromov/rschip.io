@@ -1,0 +1,86 @@
+/*products*/
+.products
+    background: #111111
+    // text-align: center
+
+    +md-block
+        padding: 133px 122px
+    +lg-block
+        padding: 133px 122px
+
+    .page__title-h2
+
+        +md-block
+            margin-bottom: 42px
+        +lg-block
+            margin-bottom: 42px
+
+.productsFlexContainer
+    +row-flex()
+    justify-content: center
+
+.productsItem
+    +col()
+    +size-md(3.6)
+    +size-lg(3.6)
+    // width: 431px
+    // height: 735px
+    border: 1px solid #474747
+    border-radius: 15px
+    +md-block
+        padding: 70px 28px 46px
+    +lg-block
+        padding: 70px 28px 46px
+
+.productsItemTitle
+    text-align: center
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 30px
+    line-height: 59px
+    letter-spacing: 0.07em
+    font-style: normal
+    padding-bottom: 6px
+
+.productsItemTextBefore
+    font-family: #{$SFUIText}-Regular
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 173%
+    text-transform: capitalize
+
+    color: #B2B2B2
+    padding: 0 56px 30px
+    text-align: center
+
+.productsItemImg
+    display: flex
+    margin: 0 auto
+
+.productsItemGain
+    display: flex
+    justify-content: center
+    margin-top: -16px
+    padding-bottom: 48px
+    &__text
+        width: 50%
+
+        font-family: #{$SFUIText}-Bold
+        text-align: center
+        border-right: 2px solid #414141
+        &:last-child
+            border-right: none
+        .text
+            font-size: 15px
+            line-height: 136%
+        .number
+            font-size: 36px
+            line-height: 136%
+.productsItemTextAfter
+    padding: 0 33px 29px
+
+.productsItemActions 
+    display: flex
+    .page__btn
+        width: 50%
+        margin: 0 8px

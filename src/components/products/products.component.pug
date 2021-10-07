@@ -1,0 +1,28 @@
+//-products
+mixin item(titelH3, textBefore, imgSrc, productsItemGains, textAfter, textBtn1)
+    .productsItem
+        h3.productsItemTitle=titelH3
+        p.productsItemTextBefore=textBefore
+        img.productsItemImg(src=imgSrc, alt="product")
+
+       
+        .productsItemGain
+            each gain in productsItemGains
+                .productsItemGain__text
+                    div.text up to
+                    div.number=gain.number
+                    div.text=gain.text
+
+        
+        p.productsItemTextAfter=textAfter
+        .productsItemActions 
+            button.page__btn LEARN MORE
+            button.page__btn=textBtn1
+
+section.products 
+    h2.page__title-h2.page__title-h2_big shop 
+        span.page__title-h2_small.page_purple Product
+    .wrapper
+        .productsFlexContainer
+            +item("Performance Tuning", "Engine tuning on your smartphone with free IOS/Android apps", "assets/images/png/product1.png", [{"number": "20%", "text": "Power"}, {"number": "20%", "text": "Torque"}],"Comaptibility : ICE and hybrids engines", "USD 249")
+            +item("Gas Pedal Tuning", "Improve your acceleration, and customize your driving dynamic", "assets/images/png/product2.png", [{"number": "10%", "text": "Faster Acceleration"}],"Comaptibility : ICE and hybrids engines", "USD 249")

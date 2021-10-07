@@ -3,38 +3,45 @@
     margin-top: -70px
     &__title
         &-h1
-        &_big
-            font-family: #{$SFUIDisplay}-Bold
-            font-size: 64px
-            line-height: 100%
-            letter-spacing: 0.05em
-            color: rgba(255, 255, 255, 0.08)
-            position: relative
+            &_big
+                font-family: #{$SFUIDisplay}-Bold
+                font-size: 64px
+                line-height: 100%
+                letter-spacing: 0.05em
+                color: rgba(255, 255, 255, 0.08)
+                position: relative
 
-            top: 80px
-            right: 0
-            +sm-block
-            top: 115px
-            right: 20px
-            font-size: 144px
-            +md-block
-            top: 115px
-            right: 20px
-            font-size: 144px
-            +lg-block
-            top: 115px
-            right: 20px
-            font-size: 144px
+                top: 80px
+                right: 0
+                +sm-block
+                    top: 115px
+                    right: 20px
+                    font-size: 144px
+                +md-block
+                    top: 115px
+                    right: 20px
+                    font-size: 144px
+                +lg-block
+                    top: 115px
+                    right: 20px
+                    font-size: 144px
         &-h2
 
             position: relative
             text-align: center
             &_big
                 font-family: #{$SFUIDisplay}-Bold
-                font-size: 96px
+                font-size: 64px
+                
                 line-height: 100%
                 text-transform: uppercase
                 color: rgba(255, 255, 255, 0.04)
+                +sm-block
+                    font-size: 96px
+                +md-block
+                    font-size: 96px
+                +lg-block
+                    font-size: 96px
             &_small
                 font-family: #{$SFUIText}-Regular
                 font-style: normal

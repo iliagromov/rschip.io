@@ -7,7 +7,7 @@ module.exports = {
     mobileFirst: true, /* mobileFirst ? 'min-width' : 'max-width' */
     container: {
         maxWidth: '1135px', /* max-width оn very large screen */
-        fields: '10px' /* side fields 10*/
+        fields: '20px' /* side fields 10*/
     },
     breakPoints : options.breakPoints,
     // breakPoints: {

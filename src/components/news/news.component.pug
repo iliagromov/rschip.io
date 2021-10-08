@@ -1,0 +1,14 @@
+//-news
+mixin item(imgSrc, title)
+    .newsItem 
+        .newsItemImg
+            img(src=imgSrc, alt="imgNews")
+        h4.newsItemTitle=title
+section.news 
+    .wrapper 
+        h2.page__title-h2_small Our Blog
+        h3.page__title-h3 News & Events
+        .newsFlexContainer 
+            +item("assets/images/png/imgNews1.png", "BMW M5 tuned by RS chip at our dealer’s car repair shop")
+            +item("assets/images/png/imgNews2.png", "Jaguar F type tuned bt RSCHIP in South Korea")
+            +item("assets/images/png/imgNews3.png", "2020 Porsche Cayenne Turbo 4.0 tuned by RS CHIP")

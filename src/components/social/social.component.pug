@@ -1,0 +1,17 @@
+//-social
+section.social
+    .socialBg 
+        picture 
+            source(type="image/png" srcset="assets/images/png/imgBgSocial-Md.png" media="(min-width: 992px)")
+            source( type="image/png" srcset="assets/images/png/imgBgSocial-Sm.png" media="(min-width: 768px)")
+            img(src="assets/images/png/imgBgSocial.png", alt="imgBgSocial")
+
+    .socialText
+        h2.page__title-h2.page__title-h2_big Social 
+            span.page__title-h2_small.page__title-h2_absolute Connect
+        p.page__text 
+            span.page__text_underline Follow us 
+            | on social media
+    .socialBlockIcons 
+        include ../socialIcons/socialIcons.component.pug
+        

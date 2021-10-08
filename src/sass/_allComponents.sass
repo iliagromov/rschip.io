@@ -23,7 +23,7 @@
         +sm-block
             margin-bottom: 64px
 
-    .social
+    .socialIcons
         margin-bottom: 54px
         +sm-block
             margin-bottom: 66px
@@ -837,3 +837,91 @@
         +lg-block
             width: 50%
             margin: 0 8px
+/*social*/
+.social
+    position: relative
+    margin-bottom: 45px
+    .page__title-h2_big
+        color: rgba(255, 255, 255, 0.13)
+        letter-spacing: 0.05em
+        font-size: 64px
+        line-height: 100%
+        margin-top: 95px
+       
+        +sm-block
+            font-size: 144px
+            margin-top: 77px
+        +md-block
+            font-size: 144px
+            margin-top: 77px
+        +lg-block
+            font-size: 144px
+            margin-top: 77px
+        
+    .page__title-h2_small
+        letter-spacing: 0.05em
+        color: #fff
+    .page__title-h2_absolute
+        transform: translate(-50%, -100%)
+    &Bg
+        display: flex
+        picture
+            width: 100%
+        img
+            object-fit: cover
+            width: 100%
+    &Text
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        text-align: center
+        .page__text
+            font-family: #{$SFUIDisplay}-Bold
+            font-size: 24px
+            line-height: 128%
+            width: 70%
+            margin: -18px auto
+            
+            text-transform: inherit
+            letter-spacing: 0.07em
+            color: #fff
+            +sm-block
+                width: 100%
+                font-size: 36px
+                margin-top: -62px
+            +md-block
+                width: 100%
+                font-size: 36px
+                margin-top: -62px
+            +lg-block
+                width: 100%
+                font-size: 36px
+                line-height: 164%
+                margin-top: -62px
+            
+            &_underline
+                border-bottom: 1px solid #fff
+    &BlockIcons
+        position: absolute
+        bottom: -30px
+        left: 50%
+        transform: translateX(-50%)
+        border: 1.5px solid rgba(255, 255, 255, 0.15)
+        box-sizing: border-box
+        background: rgba(255, 255, 255, 0.15)
+        backdrop-filter: blur(35px)
+        border-radius: 15px
+        padding: 24px 46px
+        .socialIcons 
+            .icon
+                margin: 0px 26px
+
+/*socialIcons*/
+.socialIcons
+    display: flex
+    margin: 0 -15px
+       
+    .icon
+        margin: 0 15px

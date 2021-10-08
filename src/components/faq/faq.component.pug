@@ -1,18 +1,23 @@
 //-faq
+mixin item(title, desc)
+    .faqItem
+        .faqItemDetails
+            .faqItemDetails__Summary=title
+                div.icon-arrow-white-details
+            .faqItemDetails__Content=desc
+    
+
 section.faq
-    h2.page__title-h2_small Find Answers
-    h2.page__title-h3 Top questions and answers about 
-        span.page_red RS
     .wrapper 
+        h2.page__title-h2_small Find Answers
+        h3.page__title-h3 Top questions and answers about 
+            span.page_red RS
         .faqFlexContainer 
-            .faqItem
-                .faqItemDetails.active
-                    .faqItemDetails__Summary How does RSCHIP work?
-                    .faqItemDetails__Content The vehicle must be well-maintained and have OBDII diagnostic port.
-                  
-            .faqItem
-                .faqItemDetails
-                    .faqItemDetails__Summary How does RSCHIP work?
-                    .faqItemDetails__Content The vehicle must be well-maintained and have OBDII diagnostic port.
-                  
-            
+            .faqCol
+                +item("How does RSCHIP work?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("What is RSCHIP?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("Is RSCHIP vehicle specific?", "The vehicle must be well-maintained and have OBDII diagnostic port.")
+            .faqCol
+                +item("Does it affect my vehicle's warranty?", "No, it doesn't. The RS Chip is untraceable if it is removed. As opposed to re-mapping, the ECU is not overwritten. - Do I need special knowledge or experience to install the chip? No, RSCHIP is completely DIY and takes less than 10 minutes to install.")
+                +item("Do I need Internet connection to install RSCHIP?", "Yes – after the chip is plugged into OBDII port the Internet connection is required to download tune-file with the vehicle’s specific settings.")
+                +item("Can RSCHIP be transferred to another car if I sell my car in future?", "Yes, RSCHIP can be transferable to any vehicle available in our database of over 8000 vehicles.")

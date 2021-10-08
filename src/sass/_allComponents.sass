@@ -487,6 +487,51 @@
         font-size: 15px
         line-height: 29px
         letter-spacing: .6px
+/*gallary*/
+.gallary
+    padding: 54px 0 43px
+    +sm-block
+        padding: 69px 0 100px
+    +md-block   
+        padding: 120px 0
+    +lg-block   
+        padding: 120px 0
+
+.gallaryFlexContainer
+    +row-flex
+
+
+.gallaryCol
+    +col
+    +size(4.5)
+    +size-md(3)
+    +size-lg(3)
+    &:nth-child(1)
+        .gallaryItem
+            &:nth-of-type(2)
+                height: 290px
+    &:nth-child(2)
+        .gallaryItem
+            &:nth-of-type(1)
+                height: 290px
+    &:nth-child(3)
+        .gallaryItem
+            &:nth-of-type(1)
+                height: 339px
+            &:nth-of-type(2)
+                height: 359px
+        
+.gallaryItem
+    
+    margin-bottom: 49px
+    display: flex
+    height: 407px
+    picture
+        display: flex
+        width: 100%
+    img
+        object-fit: cover
+        width: 100%
 /*header*/
 .header
     position: sticky

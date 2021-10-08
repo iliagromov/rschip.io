@@ -1,0 +1,11 @@
+//-modals template
+//-upto add class js-modal-open and (data-modal="name")
+section.modal(data-modal="name")
+    //-add class js-modal-close
+    button.modalClose.icon-close.js-modal-close x
+    .modalContent 
+        div content
+
+//- to call your modal
+//- +modal("dataModalName", "dataModalClass")
+//-    div.class content

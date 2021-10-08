@@ -1,25 +1,17 @@
 //-gallary
+mixin item(imgSrc)
+    .gallaryItem.js-open-modal(data-modal="modal1")
+        picture 
+            img(src=imgSrc, alt="imgGallary")
 section.gallary
     .wrapper
         .gallaryFlexContainer
             .gallaryCol
-                .gallaryItem
-                    picture 
-                        img(src="assets/images/png/imgGallary1.png", alt="imgGallary")
-                .gallaryItem
-                    picture 
-                        img(src="assets/images/png/imgGallary2.png", alt="imgGallary")
+                +item("assets/images/png/imgGallary1.png")
+                +item("assets/images/png/imgGallary2.png")
             .gallaryCol
-                .gallaryItem
-                    picture 
-                        img(src="assets/images/png/imgGallary3.png", alt="imgGallary")
-                .gallaryItem
-                    picture 
-                        img(src="assets/images/png/imgGallary4.png", alt="imgGallary")
+                +item("assets/images/png/imgGallary3.png")
+                +item("assets/images/png/imgGallary4.png")
             .gallaryCol
-                .gallaryItem
-                    picture 
-                        img(src="assets/images/png/imgGallary5.png", alt="imgGallary")
-                .gallaryItem
-                    picture 
-                        img(src="assets/images/png/imgGallary6.png", alt="imgGallary")
+                +item("assets/images/png/imgGallary5.png")
+                +item("assets/images/png/imgGallary6.png")

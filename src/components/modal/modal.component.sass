@@ -1,0 +1,65 @@
+/*modal*/
+.overlay
+    opacity: 0
+    visibility: hidden
+
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .7)
+    z-index: 500
+    transition: .3s all
+    &.active
+        opacity: 1
+        visibility: visible
+
+.modal
+    position: fixed
+    top: 50%
+    left: 50%   
+    transform: translate(-50%, -50%)
+
+    max-width: 904px
+    max-height: 568px
+    width: 100%
+    height: 100%
+
+    background: #FFFFFF
+    border-radius: 15px
+
+    opacity: 0
+    visibility: hidden
+    overflow: scroll
+    z-index: 1000
+    &.active
+        opacity: 1
+        visibility: visible
+
+
+.modalContainer
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #FFFFFF
+    border-radius: 15px
+    max-width: 904px
+    max-height: 568px
+    width: 100%
+
+.modalTitle
+    font-family: #{$SFUIDisplay}-Bold
+    color: #000000
+    font-size: 32px
+    line-height: 125%
+    letter-spacing: 0.05em
+
+.modalClose
+    position: absolute
+    top: 0
+    right: 0
+
+.isModalShow
+    overflow: hidden

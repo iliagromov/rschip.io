@@ -1,6 +1,6 @@
 //-news
 mixin item(imgSrc, title)
-    .newsItem 
+    .newsItem.js-open-modal(data-modal="modal1")
         .newsItemImg
             img(src=imgSrc, alt="imgNews")
         h4.newsItemTitle=title

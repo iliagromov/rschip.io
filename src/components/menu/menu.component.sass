@@ -1,2 +1,101 @@
 /*menu*/
 .menu
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+    color: #000
+    background: #fff
+
+    padding: 32px 23px
+    +sm-block
+        padding: 47px 30px
+    box-sizing: border-box
+
+    z-index: 1000
+    display: none
+    flex-direction: column
+    justify-content: space-between
+
+
+    &.active
+        display: flex
+        +sm-block   
+            display: block
+
+    a
+        color: #000
+.menuHeader
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    +sm-block
+        justify-content: space-between
+    
+
+.menuLogo
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-bottom: 13%
+    +sm-block
+        margin: 0
+        width: auto
+
+
+.menuNav
+    display: flex
+    flex-wrap: wrap
+    +sm-block
+        padding-top: 24%
+
+.menuLink
+    width: 100%
+    font-size: 24px
+    line-height: 55px
+    +sm-block
+        font-size: 36px
+        line-height: 80px
+    text-align: center
+    letter-spacing: 0.02em
+.menuConacts 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +sm-block   
+        width: 65%
+        padding-top: 25%
+    margin: 0 auto
+
+.menuConactsItem
+    +col()
+    +size(9)
+    +size-sm(4.5)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 20px
+  
+    .icon
+        min-width: 20px
+        margin-right: 23px
+    +sm-block
+        margin-bottom: 32px
+        
+    &:nth-of-type(3)
+        display: none
+        +size-sm(9)
+        +sm-block
+            display: flex
+.menuClose
+    cursor: pointer
+.menuConactsIcons 
+    display: flex
+    justify-content: center
+    padding-top: 7%
+    +sm-block
+        padding-top: 11%
+.isMenuShow
+    overflow: hidden

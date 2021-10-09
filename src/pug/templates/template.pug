@@ -1,5 +1,5 @@
 doctype html
-html(lang="en") 
+html(lang="en" data-scroll='0') 
     head
         meta(charset="utf-8")
         meta(http-equiv="x-ua-compatible", content="ie=edge")
@@ -40,7 +40,15 @@ html(lang="en")
     body
         include ../data/useDataJSON.pug
         include ../mixins/mixins.pug
+        include ../modules/header-module.pug
+
         block content
+        include ../../components/footer/footer.component.pug
+
+        block modals
+        //- for modals overlay
+        .overlay.js-overlay-modal
+
         block style
             link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
             link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
@@ -50,6 +58,7 @@ html(lang="en")
             //- link(rel="stylesheet", href="css/styles-calc.css", type="text/css") // if you want use old style programming
            
         block script
+            script(src="/js/debuggrid/debuggrid.component.js")
             script(src="js/main.js")
             script(src="libs/js/store-scroll.js")
             script(src="libs/js/modal.js")

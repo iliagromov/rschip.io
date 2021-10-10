@@ -31,23 +31,23 @@
 
     opacity: 0
     visibility: hidden
-    overflow: scroll
+    // overflow: scroll
     z-index: 1000
+    
+    // padding: 24px 22px
+    padding: 60px 34px
+    box-sizing: border-box
     &.active
         opacity: 1
         visibility: visible
 
 
-.modalContainer
-    position: relative
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    background: #FFFFFF
-    border-radius: 15px
-    max-width: 904px
-    max-height: 568px
-    width: 100%
+.modalContent
+    overflow: scroll
+    height: inherit
+    margin: 0 -10px
+    img
+        margin: 0 10px 44px
 
 .modalTitle
     font-family: #{$SFUIDisplay}-Bold
@@ -55,11 +55,18 @@
     font-size: 32px
     line-height: 125%
     letter-spacing: 0.05em
+    margin: 0 10px 14px
 
+.modalDate
+    margin-bottom: 22px
+    color: #B2B2B2
+.page__text
+    color: #6C6C6C
+    margin: 0 10px 32px
 .modalClose
     position: absolute
-    top: 0
-    right: 0
+    top: 24px
+    right: 23px
     border: none
     background-color: transparent
 

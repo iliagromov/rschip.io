@@ -4,8 +4,8 @@ const btnMenuClose = document.querySelector('.menuClose');
 const menu = document.querySelector('.menu');
 
 
-[btnHeaderNavBurgerMenu, btnMenuClose].forEach(function (element) {
-    element.addEventListener("click", function () {
+[btnHeaderNavBurgerMenu, btnMenuClose].forEach(element => {
+    element.addEventListener("click", () => {
         menu.classList.toggle('active');
         document.querySelector('body').classList.toggle('isMenuShow');
     });

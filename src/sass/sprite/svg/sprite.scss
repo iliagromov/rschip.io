@@ -2,113 +2,153 @@
 	background: url("../assets/icons/svg/spriteSVG.svg") no-repeat;
 }
 
-.svg-icon-car {
+.svg-iconCart {
+	@extend %svg-common;
+	background-position: 32.05128205128205% 97.92857142857143%;
+}
+
+.svg-iconCart-box {
+	width: 47px;
+	height: 47px;
+}
+
+.svg-iconChat {
 	@extend %svg-common;
 	background-position: 0 0;
 }
 
-.svg-icon-car-box {
+.svg-iconChat-box {
 	width: 52px;
-	height: 51.61px;
-}
-
-.svg-icon-charts {
-	@extend %svg-common;
-	background-position: 0 49.625%;
-}
-
-.svg-icon-charts-box {
-	width: 51.6px;
 	height: 52px;
 }
 
-.svg-icon-cloud {
+.svg-iconChatGray {
 	@extend %svg-common;
-	background-position: 33.333333333333336% 0;
+	background-position: 34.437086092715234% 0;
 }
 
-.svg-icon-cloud-box {
+.svg-iconChatGray-box {
 	width: 52px;
-	height: 43.79px;
-}
-
-.svg-icon-infinity {
-	@extend %svg-common;
-	background-position: 33.248081841432224% 42.10576923076923%;
-}
-
-.svg-icon-infinity-box {
-	width: 51.6px;
 	height: 52px;
 }
 
-.svg-iconDiagnosticsAndCodeReader {
+.svg-iconEmailGray {
+	@extend %svg-common;
+	background-position: 0 99.87417218543047%;
+}
+
+.svg-iconEmailGray-box {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-iconEmalPurple {
+	@extend %svg-common;
+	background-position: 0 33.72462546209223%;
+}
+
+.svg-iconEmalPurple-box {
+	width: 52px;
+	height: 46.81px;
+}
+
+.svg-iconFacebookWhite {
+	@extend %svg-common;
+	background-position: 56.395348837209305% 93.0925925925926%;
+}
+
+.svg-iconFacebookWhite-box {
+	width: 31px;
+	height: 39px;
+}
+
+.svg-iconFreeShipping {
+	@extend %svg-common;
+	background-position: 34.437086092715234% 33.29065300896287%;
+}
+
+.svg-iconFreeShipping-box {
+	width: 52px;
+	height: 44.8px;
+}
+
+.svg-iconInstagramWhite {
+	@extend %svg-common;
+	background-position: 63.80368098159509% 32.298136645962735%;
+}
+
+.svg-iconInstagramWhite-box {
+	width: 40px;
+	height: 40px;
+}
+
+.svg-iconMarkLocationGray {
 	@extend %svg-common;
 	background-position: 66.66666666666667% 0;
 }
 
-.svg-iconDiagnosticsAndCodeReader-box {
-	width: 52px;
-	height: 50.25px;
-}
-
-.svg-iconFeatures {
-	@extend %svg-common;
-	background-position: 66.66666666666667% 48.31730769230769%;
-}
-
-.svg-iconFeatures-box {
-	width: 52px;
+.svg-iconMarkLocationGray-box {
+	width: 47px;
 	height: 52px;
 }
 
-.svg-iconLifetimeWarranty {
+.svg-iconMarkLocationPurple {
 	@extend %svg-common;
-	background-position: 0 99.625%;
+	background-position: 0 66.31543624161074%;
 }
 
-.svg-iconLifetimeWarranty-box {
-	width: 52px;
+.svg-iconMarkLocationPurple-box {
+	width: 45.6px;
 	height: 52px;
 }
 
-.svg-iconMonteProgrammer_ {
+.svg-iconMarkMapPurple {
 	@extend %svg-common;
-	background-position: 33.333333333333336% 99.625%;
+	background-position: 28.72983870967742% 66.31543624161074%;
 }
 
-.svg-iconMonteProgrammer_-box {
-	width: 52px;
+.svg-iconMarkMapPurple-box {
+	width: 44.28px;
 	height: 52px;
 }
 
-.svg-iconPerformanceMeter {
+.svg-iconPhoneGray {
 	@extend %svg-common;
-	background-position: 66.66666666666667% 99.625%;
+	background-position: 55.48148148148148% 66.31543624161074%;
 }
 
-.svg-iconPerformanceMeter-box {
-	width: 52px;
+.svg-iconPhoneGray-box {
+	width: 41px;
 	height: 52px;
 }
 
-.svg-iconPerformanceTunerandFuelSaver {
+.svg-iconReturnCircle {
 	@extend %svg-common;
 	background-position: 100% 0;
 }
 
-.svg-iconPerformanceTunerandFuelSaver-box {
+.svg-iconReturnCircle-box {
 	width: 52px;
 	height: 52px;
 }
 
-.svg-iconSatisfactionGuaranteed {
+.svg-iconShield {
 	@extend %svg-common;
-	background-position: 100% 50%;
+	background-position: 98.69281045751634% 34.899328859060404%;
 }
 
-.svg-iconSatisfactionGuaranteed-box {
-	width: 52px;
+.svg-iconShield-box {
+	width: 50px;
 	height: 52px;
+}
+
+.svg-iconYoutubeWhite {
+	@extend %svg-common;
+	background-position: 94.96855345911949% 63.80368098159509%;
+}
+
+.svg-iconYoutubeWhite-box {
+	width: 44px;
+	height: 38px;
 }
 

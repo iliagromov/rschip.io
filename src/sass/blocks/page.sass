@@ -1,6 +1,7 @@
 /* __page__ */
 .page
     // margin-top: -70px
+    overflow: hidden
     &__title
         &-h1
             &_big
@@ -81,7 +82,7 @@
         font-weight: normal
         font-size: 15px
         line-height: 173%
-        text-transform: capitalize
+        // text-transform: capitalize
 
         color: #B2B2B2
     &__btn
@@ -124,5 +125,48 @@
             background: linear-gradient(45deg,#700ED2,#FF3838) border-box
         &_notTransparent
             background: linear-gradient(45deg,#700ED2,#FF3838) border-box
+    &__from
+        margin: 0
+    &__input
+        font-family: #{$SFUIText}-Regular
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 193%
+        letter-spacing: 0.02em
+        color: #fff
+        background-color: transparent
 
-    /* __page__ */
+        padding-bottom: 5px
+        box-sizing: border-box
+        border: none
+        border-bottom: 1px solid #474747
+       
+
+        &::placeholder
+            color: #fff
+    
+    &__textarea
+        font-family: #{$SFUIText}-Regular
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 193%
+        letter-spacing: 0.02em
+        color: #fff
+        background-color: transparent
+
+        box-sizing: border-box
+        border: none
+        border-bottom: 1px solid #474747
+
+        resize: none
+        height: 116px
+        &::placeholder
+            color: #fff
+
+    &_red
+        color: transparent
+        background-image: linear-gradient(to right, #FF4587 , #FF5438)
+        background-clip: text
+/* __page__ */

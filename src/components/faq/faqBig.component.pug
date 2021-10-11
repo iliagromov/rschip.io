@@ -1,0 +1,30 @@
+//-faq
+mixin item(title, desc)
+    .faqItem
+        .faqItemDetails
+            .faqItemDetails__Summary=title
+                div.icon-arrow-white-details
+            .faqItemDetails__Content=desc
+    
+
+section.faq
+    .wrapper 
+        h2.page__title-h2_small Find Answers
+        h3.page__title-h3 Top questions and answers about 
+            span.page_red RS
+        .faqFlexContainer 
+            .faqCol
+                +item("How soon will I get my order?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("How much does delivery cost?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("Who pays the delivery if I return the chip?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("Who pays the delivery if I return the chip?", "If the reason for return is a technical problem or factory defect, we will pay the delivery expenses. In other cases the customer covers all the corresponding expenses.")
+                +item("Do you ship worldwide?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("What is the return process?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                +item("Can I return the chip if I’m not satisfied the results?", "RSCHIP is an additional control unit, which modifies engine factory settings, responsible for injected fuel quantity and ignition timing advance in order to maximize power and torque. Values vary dynamically depending on the engine load.")
+                
+            .faqCol
+                +item("When does the 30-day trial period begin?", "No, it doesn't. The RS Chip is untraceable if it is removed. As opposed to re-mapping, the ECU is not overwritten. - Do I need special knowledge or experience to install the chip? No, RSCHIP is completely DIY and takes less than 10 minutes to install.")
+                +item("What is the guarantee period for RSCHIP?", "No, it doesn't. The RS Chip is untraceable if it is removed. As opposed to re-mapping, the ECU is not overwritten. - Do I need special knowledge or experience to install the chip? No, RSCHIP is completely DIY and takes less than 10 minutes to install.")
+                +item("How do I get my money back if I return the chip?", "No, it doesn't. The RS Chip is untraceable if it is removed. As opposed to re-mapping, the ECU is not overwritten. - Do I need special knowledge or experience to install the chip? No, RSCHIP is completely DIY and takes less than 10 minutes to install.")
+                +item("Does RSCHIP void my vehicle’s warranty?", "No, it doesn't. The RS Chip is untraceable if it is removed. As opposed to re-mapping, the ECU is not overwritten. - Do I need special knowledge or experience to install the chip? No, RSCHIP is completely DIY and takes less than 10 minutes to install.")
+                +item("What is considered a warranty event?", "No, it doesn't. The RS Chip is untraceable if it is removed. As opposed to re-mapping, the ECU is not overwritten. - Do I need special knowledge or experience to install the chip? No, RSCHIP is completely DIY and takes less than 10 minutes to install.")

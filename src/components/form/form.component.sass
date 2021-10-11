@@ -1,0 +1,58 @@
+/*form*/
+.form
+    background: #111111
+    padding: 100px 0
+    .page__title-h2
+        font-size: 36px
+        line-height: 164%
+        letter-spacing: 0.05em
+        font-weight: bold
+        margin-bottom: 10px
+
+    .page__from
+        +row-flex
+    .page__input
+        +col
+        +size(9)
+        margin-bottom: 36px
+        &:nth-child(1)
+            +size-sm(4.5)
+            +size-md(4.5)
+            +size-lg(4.5)
+        &:nth-child(2)
+            +size-sm(4.5)
+            +size-md(4.5)
+            +size-lg(4.5)
+            
+    .page__textarea
+        +col
+        +size(9)
+        margin-bottom: 46px
+    .page__btn
+        +col
+
+.formFlexContaier
+    +row-flex
+
+.formAction
+    +col
+    +size(9)
+    +size-md(5.5)
+    +size-lg(5.5)
+    +shift-md-right(0.5)
+    +shift-lg-right(0.5)
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    
+
+.formImg
+    +col
+    +size(9)
+    +size-md(3)
+    +size-lg(3)
+    display: none
+    +md-block
+        display: flex
+    +lg-block
+        display: flex

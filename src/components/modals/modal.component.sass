@@ -18,12 +18,12 @@
 .modal
     position: fixed
     top: 50%
-    left: 50%   
+    left: 50%
     transform: translate(-50%, -50%)
 
     max-width: 904px
     max-height: 568px
-    width: 100%
+    width: 90%
     height: 100%
     color: #000
     background: #FFFFFF
@@ -33,14 +33,40 @@
     visibility: hidden
     // overflow: scroll
     z-index: 1000
-    
+
     // padding: 24px 22px
     padding: 60px 34px
     box-sizing: border-box
+    +md-block
+        width: 100%
+    +lg-block
+        width: 100%
     &.active
         opacity: 1
         visibility: visible
+.modalGallary
+    max-height: 502px
 
+    padding: 0
+    .modalContent
+        display: flex
+        justify-content: center
+        margin: 0
+        img
+            margin: 0
+            width: 100%
+            object-fit: cover
+        .sliderBtn     
+            position: absolute
+            top: 50%
+            left: -80px
+            transform: translateY(-50%)
+            width: calc(100% + 160px)
+            
+            display: flex
+            justify-content: space-between
+            
+            z-index: 10
 
 .modalContent
     overflow: scroll
@@ -69,6 +95,7 @@
     right: 23px
     border: none
     background-color: transparent
+    z-index: 100
 
 .isModalShow
     overflow: hidden

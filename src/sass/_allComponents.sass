@@ -1,5 +1,28 @@
+/*advantages*/
+.advantages
+    padding: 10px
+    +md-block
+        padding: 84px 0 63px
+    +lg-block
+        padding: 84px 0 63px
+
+.advantagesFlexContainer
+    +row-flex
+
+.advantagesItem 
+    +col
+    +size(9)
+    +size-md(9/4)
+    +size-lg(9/4)
+    &__text
+        font-family: #{$SFUIText}-Regular
+        font-weight: bold
+        font-size: 15px
+        line-height: 59px
+
 /*banner*/
 .banner
+    position: relative
     overflow: hidden
     .page__title-h1
         
@@ -38,6 +61,7 @@
 
 
 .bannerFlexContainer
+    position: relative
     +row-flex()
     // align-items: center
 .bannerText
@@ -65,8 +89,11 @@
             width: auto
         +lg-block
             width: auto
-
-
+.bannerSelect
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%)
 .bannerRs
 
 .bannerImg
@@ -850,6 +877,8 @@ html
         background: #fff
         margin-bottom: 8px
     
+/*howitwork*/
+/*installation*/
 /*menu*/
 .menu
     position: fixed
@@ -1127,6 +1156,94 @@ html
     font-size: 18px
     line-height: 178%
     letter-spacing: 0.06em
+/*product*/
+.product
+    background: #111111
+    padding: 92px 0 0
+    .page__title-h2_small
+        text-align: center
+
+    .page__title-h3
+        font-family: #{$SFUIDisplay}-Bold
+        text-align: center
+        width: 25%
+        margin: 0 auto -50px
+
+.productFlexContainer 
+    +row-flex
+
+.productImg
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+
+.productText
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+    .page__title-h4
+        font-size: 24px
+        line-height: 43px
+        letter-spacing: 0.05em
+        margin-top: 140px
+        margin-bottom: 60px
+        font-weight: bold
+    .page__ul 
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 70px
+        .page__li
+            width: 50%
+            display: flex
+            align-items: center
+            font-weight: bold
+            font-size: 15px
+            line-height: 59px
+.productPrice
+    display: flex
+    &__cost
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 59px
+        margin-left: 33px
+
+/*productRsControls*/
+/*productRsControls*/
+.productRsControls
+    padding: 100px 0 0
+
+.productRsControlsRowFlex
+    +row-flex
+    border-radius: 15px
+    background: #111111
+    backdrop-filter: blur(35px)
+
+.productRsControlsTitle
+    width: 29%
+    margin-top: 6%
+    margin-left: 7%
+    .page__title-h4 
+        font-family: #{$SFUIDisplay}-Bold
+        
+        font-size: 36px
+        line-height: 59px
+
+.productRsControlsImg
+    margin-left: -5%
+
+.productRsControlsToggles
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    height: 160px
+    margin-top: 10%
+
+.productRsControlsToggelsItem
+    display: flex
+    width: 100%
+/*productRsSlider*/
 /*products*/
 .products
     background: #111111
@@ -1291,7 +1408,42 @@ html
         +lg-block
             width: 50%
             margin: 0 8px
+/*safest*/
 /*select*/
+.selectBox
+    width: 100%
+.selectBoxText
+    font-family: #{$SFUIText}-Regular
+    font-size: 18px
+    line-height: 59px
+    letter-spacing: 0.02em
+    font-weight: bold
+    text-align: center
+.selectBoxLink
+    display: block
+    font-family: #{$SFUIText}-Regular
+    color: #FE3839
+    text-align: center
+    text-decoration: underline
+    font-size: 14px
+    line-height: 29px
+
+.selectBoxContainer
+    display: flex
+    align-items: center
+    width: 673px
+    height: 68px
+    background: rgba(255, 255, 255, 0.15)
+    backdrop-filter: blur(35px)
+    border: 1.5px solid rgba(255, 255, 255, 0.15)
+    box-sizing: border-box
+    border-radius: 15px
+    padding: 20px 25px
+    .select
+        font-size: 15px
+        line-height: 29px
+        border-right: 1px solid rgba(255, 255, 255, 0.15)
+        min-width: 178px
 /*social*/
 .social
     position: relative

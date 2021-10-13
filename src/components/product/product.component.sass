@@ -1,0 +1,52 @@
+/*product*/
+.product
+    background: #111111
+    padding: 92px 0 0
+    .page__title-h2_small
+        text-align: center
+
+    .page__title-h3
+        font-family: #{$SFUIDisplay}-Bold
+        text-align: center
+        width: 25%
+        margin: 0 auto -50px
+
+.productFlexContainer 
+    +row-flex
+
+.productImg
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+
+.productText
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+    .page__title-h4
+        font-size: 24px
+        line-height: 43px
+        letter-spacing: 0.05em
+        margin-top: 140px
+        margin-bottom: 60px
+        font-weight: bold
+    .page__ul 
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 70px
+        .page__li
+            width: 50%
+            display: flex
+            align-items: center
+            font-weight: bold
+            font-size: 15px
+            line-height: 59px
+.productPrice
+    display: flex
+    &__cost
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 59px
+        margin-left: 33px

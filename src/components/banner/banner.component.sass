@@ -1,5 +1,6 @@
 /*banner*/
 .banner
+    position: relative
     overflow: hidden
     .page__title-h1
         
@@ -38,6 +39,7 @@
 
 
 .bannerFlexContainer
+    position: relative
     +row-flex()
     // align-items: center
 .bannerText
@@ -65,4 +67,8 @@
             width: auto
         +lg-block
             width: auto
-
+.bannerSelect
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%)

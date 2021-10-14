@@ -1141,6 +1141,154 @@ html
     font-size: 18px
     line-height: 178%
     letter-spacing: 0.06em
+/*product*/
+.product
+    background: #111111
+    padding: 92px 0 62px
+    +sm-block
+        padding: 122px 0 110px
+    +md-block
+        padding: 114px 0 0
+    +lg-block
+        padding: 114px 0 0
+    .page__title-h2_small
+        text-align: center
+
+    .page__title-h3
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 30px
+       
+        width: 75%
+        text-align: center
+        margin: 15px auto 47px
+        +sm-block
+            width: 50%
+            margin: 10px auto 30px
+            font-size: 36px
+            line-height: 59px
+        +md-block
+            width: 30%
+            margin: 15px auto -40px
+            font-size: 36px
+            line-height: 59px
+        +lg-block
+            width: 30%
+            margin: 15px auto -40px
+            font-size: 36px
+            line-height: 59px
+
+.productFlexContainer 
+    +row-flex
+
+.productImg
+    +col
+    +size(9)
+    +size-md(4)
+    +size-lg(4)
+
+    text-align: center
+
+    +lg-block
+        padding-right: 6%
+    +md-block
+        padding-right: 6%
+   
+
+.productText
+    +col
+    +size(9)
+    +size-md(5)
+    +size-lg(5)
+    .page__title-h4
+        font-family: #{$SFUIDisplay}-Bold
+        
+        letter-spacing: 0.07em
+        font-weight: bold
+        font-size: 18px
+        line-height: 26px
+        width: 90%
+        margin: 58px auto 32px
+        text-align: center
+        +sm-block
+
+            margin-top: 50px
+            margin-bottom: 45px
+            font-size: 24px
+            line-height: 43px
+        +md-block
+
+            margin-top: 117px
+            margin-bottom: 60px
+            font-size: 24px
+            line-height: 43px
+            text-align: left
+        +lg-block
+            margin-top: 117px
+            margin-bottom: 60px
+            font-size: 24px
+            line-height: 43px
+            text-align: left
+        
+    .page__ul 
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 10px
+        padding-left: 10%
+        +sm-block
+            width: 74%
+            margin: 0 auto 8%
+            padding-left: 0
+        +md-block
+            width: 100%
+            padding-left: 0
+            margin-bottom: 58px
+        +lg-block
+            width: 100%
+            padding-left: 0
+            margin-bottom: 58px
+               
+        .page__li
+            display: flex
+            align-items: center
+            font-weight: bold
+            font-size: 15px
+            line-height: 59px
+            width: 100%
+            +sm-block
+                width: 50%
+            +md-block
+                width: 50%
+            +lg-block
+                width: 50%
+            
+
+.productPrice
+    text-align: center
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    +sm-block
+        display: block
+    +md-block
+        display: block
+        text-align: left
+    +lg-block
+        display: block
+        text-align: left
+
+    &__cost
+        display: inline-flex
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 59px
+        +sm-block
+            margin-left: 60px
+        +md-block
+            margin-left: 33px
+        +lg-block
+            margin-left: 33px
+
 /*productRsControls*/
 /*gallary*/
 .gallary
@@ -1320,33 +1468,136 @@ html
 
 .productRsControlsRowFlex
     +row-flex
+
+.productRsControlsContainer
+    overflow: hidden
+    position: relative
     border-radius: 15px
     background: #111111
     backdrop-filter: blur(35px)
-
-.productRsControlsTitle
-    width: 29%
-    margin-top: 6%
-    margin-left: 7%
-    .page__title-h4 
-        font-family: #{$SFUIDisplay}-Bold
-        
-        font-size: 36px
-        line-height: 59px
-
-.productRsControlsImg
-    margin-left: -5%
-
-.productRsControlsToggles
-    align-items: center
     display: flex
     flex-wrap: wrap
-    height: 160px
-    margin-top: 10%
+    +sm-block
+        margin-right: 4%
+    +md-block
+        margin: 0px 20px
+    +lg-block
+        margin: 0px 20px
+    &::after
+        content: ''
+        
+        position: absolute
+        width: 398.19px
+        height: 368.41px
+        top: 90%
+        right: 0
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+
+.productRsControlsTitle
+    width: 100%
+
+    display: block
+    padding-right: 22%
+    margin-top: 14%
+    margin-left: 9%
+    margin-bottom: 7%
+
+    +sm-block
+        padding-right: 24%
+        margin-top: 12%
+        margin-left: 7%
+        margin-bottom: 11%
+    +md-block
+        width: 33%
+        margin-top: 7%
+        margin-left: 6%
+        padding-right: 0
+    +lg-block
+        width: 33%
+        margin-top: 7%
+        margin-left: 6%
+        padding-right: 0
+
+    .page__title-h4 
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 36px
+
+        +sm-block
+            font-size: 36px
+            line-height: 59px
+            letter-spacing: 0.11em
+        +md-block
+            font-size: 36px
+            line-height: 59px
+            letter-spacing: 0.11em
+        +lg-block
+            font-size: 36px
+            line-height: 59px
+            letter-spacing: 0.11em
+        
+
+.productRsControlsImg
+    width: 100%
+    text-align: center
+    +sm-block
+        width: auto
+        margin-left: -3%
+    +md-block
+        width: auto
+        margin-left: -10%
+    +lg-block
+        width: auto
+        margin-left: -10%
+
+
+.productRsControlsToggles
+    display: block
+    width: 100%
+    font-size: 20px
+    line-height: 28px
+    font-weight: bold
+   
+    margin-top: 12%
+    margin-left: 11%
+
+    margin-bottom: 10%
+
+
+    +sm-block
+        width: 40%
+        margin-top: 7%
+        margin-left: 3%
+        margin-bottom: 0
+    +md-block  
+        width: 25%
+        margin-top: 8% 
+        margin-left: 0
+        margin-bottom: 0
+    +lg-block
+        width: 25%
+        margin-top: 8% 
+        margin-left: 0
+        margin-bottom: 0
+
 
 .productRsControlsToggelsItem
     display: flex
     width: 100%
+    padding: 11px 14px
+    opacity: 0.3
+    cursor: pointer
+    &:hover
+        background: rgba(196, 196, 196, 0.2)
+        border-radius: 20px 0px 0px 20px
+    &.active
+        background: rgba(196, 196, 196, 0.2)
+        border-radius: 20px 0px 0px 20px
+        opacity: 1
+    &.prev,
+    &.next
+        opacity: 0.7
 /*productRsSafest*/
 .productRsSafest
 
@@ -1370,154 +1621,6 @@ html
 
 .productRsSafestIcons 
     display: flex
-/*product*/
-.product
-    background: #111111
-    padding: 92px 0 62px
-    +sm-block
-        padding: 122px 0 110px
-    +md-block
-        padding: 114px 0 0
-    +lg-block
-        padding: 114px 0 0
-    .page__title-h2_small
-        text-align: center
-
-    .page__title-h3
-        font-family: #{$SFUIDisplay}-Bold
-        font-size: 24px
-        line-height: 30px
-       
-        width: 75%
-        text-align: center
-        margin: 15px auto 47px
-        +sm-block
-            width: 50%
-            margin: 10px auto 30px
-            font-size: 36px
-            line-height: 59px
-        +md-block
-            width: 30%
-            margin: 15px auto -40px
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            width: 30%
-            margin: 15px auto -40px
-            font-size: 36px
-            line-height: 59px
-
-.productFlexContainer 
-    +row-flex
-
-.productImg
-    +col
-    +size(9)
-    +size-md(4)
-    +size-lg(4)
-
-    text-align: center
-
-    +lg-block
-        padding-right: 6%
-    +md-block
-        padding-right: 6%
-   
-
-.productText
-    +col
-    +size(9)
-    +size-md(5)
-    +size-lg(5)
-    .page__title-h4
-        font-family: #{$SFUIDisplay}-Bold
-        
-        letter-spacing: 0.07em
-        font-weight: bold
-        font-size: 18px
-        line-height: 26px
-        width: 90%
-        margin: 58px auto 32px
-        text-align: center
-        +sm-block
-
-            margin-top: 50px
-            margin-bottom: 45px
-            font-size: 24px
-            line-height: 43px
-        +md-block
-
-            margin-top: 117px
-            margin-bottom: 60px
-            font-size: 24px
-            line-height: 43px
-            text-align: left
-        +lg-block
-            margin-top: 117px
-            margin-bottom: 60px
-            font-size: 24px
-            line-height: 43px
-            text-align: left
-        
-    .page__ul 
-        display: flex
-        flex-wrap: wrap
-        margin-bottom: 10px
-        padding-left: 10%
-        +sm-block
-            width: 74%
-            margin: 0 auto 8%
-            padding-left: 0
-        +md-block
-            width: 100%
-            padding-left: 0
-            margin-bottom: 58px
-        +lg-block
-            width: 100%
-            padding-left: 0
-            margin-bottom: 58px
-               
-        .page__li
-            display: flex
-            align-items: center
-            font-weight: bold
-            font-size: 15px
-            line-height: 59px
-            width: 100%
-            +sm-block
-                width: 50%
-            +md-block
-                width: 50%
-            +lg-block
-                width: 50%
-            
-
-.productPrice
-    text-align: center
-    display: flex
-    flex-direction: column-reverse
-    align-items: center
-    +sm-block
-        display: block
-    +md-block
-        display: block
-        text-align: left
-    +lg-block
-        display: block
-        text-align: left
-
-    &__cost
-        display: inline-flex
-        font-family: #{$SFUIDisplay}-Bold
-        font-size: 24px
-        line-height: 59px
-        +sm-block
-            margin-left: 60px
-        +md-block
-            margin-left: 33px
-        +lg-block
-            margin-left: 33px
-
 /*productRsSlider*/
 /*products*/
 .products

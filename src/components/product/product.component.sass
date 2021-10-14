@@ -1,7 +1,9 @@
 /*product*/
 .product
     background: #111111
-    padding: 92px 0 0
+    padding: 92px 0 62px
+    +sm-block
+        padding: 122px 0 110px
     +md-block
         padding: 114px 0 0
     +lg-block
@@ -11,11 +13,27 @@
 
     .page__title-h3
         font-family: #{$SFUIDisplay}-Bold
-        font-size: 36px
-        line-height: 59px
+        font-size: 24px
+        line-height: 30px
+       
+        width: 75%
         text-align: center
-        width: 30%
-        margin: 15px auto -40px
+        margin: 15px auto 47px
+        +sm-block
+            width: 50%
+            margin: 10px auto 30px
+            font-size: 36px
+            line-height: 59px
+        +md-block
+            width: 30%
+            margin: 15px auto -40px
+            font-size: 36px
+            line-height: 59px
+        +lg-block
+            width: 30%
+            margin: 15px auto -40px
+            font-size: 36px
+            line-height: 59px
 
 .productFlexContainer 
     +row-flex
@@ -25,8 +43,14 @@
     +size(9)
     +size-md(4)
     +size-lg(4)
-    padding-right: 6%
+
     text-align: center
+
+    +lg-block
+        padding-right: 6%
+    +md-block
+        padding-right: 6%
+   
 
 .productText
     +col
@@ -34,27 +58,90 @@
     +size-md(5)
     +size-lg(5)
     .page__title-h4
-        font-size: 24px
-        line-height: 43px
-        letter-spacing: 0.05em
-        margin-top: 117px
-        margin-bottom: 60px
+        font-family: #{$SFUIDisplay}-Bold
+        
+        letter-spacing: 0.07em
         font-weight: bold
+        font-size: 18px
+        line-height: 26px
+        width: 90%
+        margin: 58px auto 32px
+        text-align: center
+        +sm-block
+
+            margin-top: 50px
+            margin-bottom: 45px
+            font-size: 24px
+            line-height: 43px
+        +md-block
+
+            margin-top: 117px
+            margin-bottom: 60px
+            font-size: 24px
+            line-height: 43px
+            text-align: left
+        +lg-block
+            margin-top: 117px
+            margin-bottom: 60px
+            font-size: 24px
+            line-height: 43px
+            text-align: left
+        
     .page__ul 
         display: flex
         flex-wrap: wrap
-        margin-bottom: 58px
+        margin-bottom: 10px
+        padding-left: 10%
+        +sm-block
+            width: 74%
+            margin: 0 auto 8%
+            padding-left: 0
+        +md-block
+            width: 100%
+            padding-left: 0
+            margin-bottom: 58px
+        +lg-block
+            width: 100%
+            padding-left: 0
+            margin-bottom: 58px
+               
         .page__li
-            width: 50%
             display: flex
             align-items: center
             font-weight: bold
             font-size: 15px
             line-height: 59px
+            width: 100%
+            +sm-block
+                width: 50%
+            +md-block
+                width: 50%
+            +lg-block
+                width: 50%
+            
+
 .productPrice
+    text-align: center
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    +sm-block
+        display: block
+    +md-block
+        display: block
+        text-align: left
+    +lg-block
+        display: block
+        text-align: left
+
     &__cost
         display: inline-flex
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 59px
-        margin-left: 33px
+        +sm-block
+            margin-left: 60px
+        +md-block
+            margin-left: 33px
+        +lg-block
+            margin-left: 33px

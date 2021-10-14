@@ -7,7 +7,10 @@ section.product.productRs
             | made easy
         .productFlexContainer 
             .productImg
-                img(src="assets/images/png/imgRsChip1.png", alt="imgRsChip")
+                picture 
+                    source(type="image/png" srcset="assets/images/png/imgRsChip1.png" media="(min-width: 992px)")
+                    source( type="image/png" srcset="assets/images/png/imgRsChip1-sm.png" media="(min-width: 768px)")
+                    img(src="assets/images/png/imgRsChip1-xs.png", alt="imgRsChip")
             .productText
                 h4.page__title-h4 Improved acceleration and sportier drive
                 ul.page__ul 

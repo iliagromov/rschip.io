@@ -90,11 +90,13 @@
     transform: translateX(-50%)
 /*chat*/
 .chat
+    display: none
     position: fixed
     right: 60px
     bottom: 60px
 
 .btnChat
+    display: none
     cursor: pointer
     background-color: #fff
     border-radius: 100%
@@ -216,6 +218,94 @@
     &__z-index-negative 
         z-index: -1
 /* __debugGrid__ */
+/*faq*/
+.faq
+    padding: 86px 0 106px
+    +sm-block
+        padding: 135px 0 115px
+    +md-block
+        padding: 94px 0 120px
+    +lg-block
+        padding: 94px 0 120px
+    .page__title-h2_small
+        text-align: center
+    .page__title-h3
+        text-align: center
+        font-weight: 800
+        font-size: 24px
+        line-height: 125%
+        
+        width: 75%
+        margin: 9px auto 53px
+        +sm-block
+            font-size: 36px
+            margin-bottom: 32px
+            line-height: 164%
+        +md-block
+            width: 44%  
+            font-size: 36px
+            line-height: 164%
+            margin-bottom: 54px
+        +lg-block
+            width: 44%
+            font-size: 36px
+            line-height: 164%
+            margin-bottom: 54px
+       
+        span
+            color: #FF4C62
+
+.faqFlexContainer 
+    +row-flex
+.faqCol
+    +col
+    +size(9)
+    +size-md(4.5)
+    +size-lg(4.5)
+.faqItem
+    margin-bottom: 16px
+
+.faqItemDetails 
+    cursor: pointer
+    &__Summary
+        font-family: #{$SFUIText}-Regular
+        border-bottom: 1px solid #fff
+        font-size: 18px
+        line-height: 133%
+        letter-spacing: 0.05em 
+       
+        color: #fff
+        font-weight: bold
+
+        display: flex
+        justify-content: space-between
+        margin-bottom: 16px
+        padding-top: 23px
+        padding-bottom: 15px
+        .icon-arrow-white-details
+            margin-top: 8px
+            margin-right: 12px
+    
+    &__Content
+        display: none
+        font-size: 15px
+        line-height: 26px
+
+        /* or 173% */
+        letter-spacing: 0.025em
+
+        color: #B2B2B2
+        padding-top: 34px
+    &.active
+        
+        .faqItemDetails__Summary
+            color: transparent
+            background-image: linear-gradient(to right, #FF624A , #FF4686)
+            background-clip: text
+        .faqItemDetails__Content
+            display: block
+        .icon-arrow-white-details
+            transform: rotate(180deg)
 /*footer*/
 .footer
     position: relative
@@ -484,94 +574,6 @@
         font-size: 15px
         line-height: 29px
         letter-spacing: .6px
-/*faq*/
-.faq
-    padding: 86px 0 106px
-    +sm-block
-        padding: 135px 0 115px
-    +md-block
-        padding: 94px 0 120px
-    +lg-block
-        padding: 94px 0 120px
-    .page__title-h2_small
-        text-align: center
-    .page__title-h3
-        text-align: center
-        font-weight: 800
-        font-size: 24px
-        line-height: 125%
-        
-        width: 75%
-        margin: 9px auto 53px
-        +sm-block
-            font-size: 36px
-            margin-bottom: 32px
-            line-height: 164%
-        +md-block
-            width: 44%  
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
-        +lg-block
-            width: 44%
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
-       
-        span
-            color: #FF4C62
-
-.faqFlexContainer 
-    +row-flex
-.faqCol
-    +col
-    +size(9)
-    +size-md(4.5)
-    +size-lg(4.5)
-.faqItem
-    margin-bottom: 16px
-
-.faqItemDetails 
-    cursor: pointer
-    &__Summary
-        font-family: #{$SFUIText}-Regular
-        border-bottom: 1px solid #fff
-        font-size: 18px
-        line-height: 133%
-        letter-spacing: 0.05em 
-       
-        color: #fff
-        font-weight: bold
-
-        display: flex
-        justify-content: space-between
-        margin-bottom: 16px
-        padding-top: 23px
-        padding-bottom: 15px
-        .icon-arrow-white-details
-            margin-top: 8px
-            margin-right: 12px
-    
-    &__Content
-        display: none
-        font-size: 15px
-        line-height: 26px
-
-        /* or 173% */
-        letter-spacing: 0.025em
-
-        color: #B2B2B2
-        padding-top: 34px
-    &.active
-        
-        .faqItemDetails__Summary
-            color: transparent
-            background-image: linear-gradient(to right, #FF624A , #FF4686)
-            background-clip: text
-        .faqItemDetails__Content
-            display: block
-        .icon-arrow-white-details
-            transform: rotate(180deg)
 /*form*/
 .form
     background: #111111
@@ -1139,67 +1141,6 @@ html
     font-size: 18px
     line-height: 178%
     letter-spacing: 0.06em
-/*product*/
-.product
-    background: #111111
-    padding: 92px 0 0
-    +md-block
-        padding: 114px 0 0
-    +lg-block
-        padding: 114px 0 0
-    .page__title-h2_small
-        text-align: center
-
-    .page__title-h3
-        font-family: #{$SFUIDisplay}-Bold
-        font-size: 36px
-        line-height: 59px
-        text-align: center
-        width: 30%
-        margin: 15px auto -40px
-
-.productFlexContainer 
-    +row-flex
-
-.productImg
-    +col
-    +size(9)
-    +size-md(4)
-    +size-lg(4)
-    padding-right: 6%
-    text-align: center
-
-.productText
-    +col
-    +size(9)
-    +size-md(5)
-    +size-lg(5)
-    .page__title-h4
-        font-size: 24px
-        line-height: 43px
-        letter-spacing: 0.05em
-        margin-top: 117px
-        margin-bottom: 60px
-        font-weight: bold
-    .page__ul 
-        display: flex
-        flex-wrap: wrap
-        margin-bottom: 58px
-        .page__li
-            width: 50%
-            display: flex
-            align-items: center
-            font-weight: bold
-            font-size: 15px
-            line-height: 59px
-.productPrice
-    &__cost
-        display: inline-flex
-        font-family: #{$SFUIDisplay}-Bold
-        font-size: 24px
-        line-height: 59px
-        margin-left: 33px
-
 /*productRsControls*/
 /*gallary*/
 .gallary
@@ -1429,6 +1370,154 @@ html
 
 .productRsSafestIcons 
     display: flex
+/*product*/
+.product
+    background: #111111
+    padding: 92px 0 62px
+    +sm-block
+        padding: 122px 0 110px
+    +md-block
+        padding: 114px 0 0
+    +lg-block
+        padding: 114px 0 0
+    .page__title-h2_small
+        text-align: center
+
+    .page__title-h3
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 30px
+       
+        width: 75%
+        text-align: center
+        margin: 15px auto 47px
+        +sm-block
+            width: 50%
+            margin: 10px auto 30px
+            font-size: 36px
+            line-height: 59px
+        +md-block
+            width: 30%
+            margin: 15px auto -40px
+            font-size: 36px
+            line-height: 59px
+        +lg-block
+            width: 30%
+            margin: 15px auto -40px
+            font-size: 36px
+            line-height: 59px
+
+.productFlexContainer 
+    +row-flex
+
+.productImg
+    +col
+    +size(9)
+    +size-md(4)
+    +size-lg(4)
+
+    text-align: center
+
+    +lg-block
+        padding-right: 6%
+    +md-block
+        padding-right: 6%
+   
+
+.productText
+    +col
+    +size(9)
+    +size-md(5)
+    +size-lg(5)
+    .page__title-h4
+        font-family: #{$SFUIDisplay}-Bold
+        
+        letter-spacing: 0.07em
+        font-weight: bold
+        font-size: 18px
+        line-height: 26px
+        width: 90%
+        margin: 58px auto 32px
+        text-align: center
+        +sm-block
+
+            margin-top: 50px
+            margin-bottom: 45px
+            font-size: 24px
+            line-height: 43px
+        +md-block
+
+            margin-top: 117px
+            margin-bottom: 60px
+            font-size: 24px
+            line-height: 43px
+            text-align: left
+        +lg-block
+            margin-top: 117px
+            margin-bottom: 60px
+            font-size: 24px
+            line-height: 43px
+            text-align: left
+        
+    .page__ul 
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 10px
+        padding-left: 10%
+        +sm-block
+            width: 74%
+            margin: 0 auto 8%
+            padding-left: 0
+        +md-block
+            width: 100%
+            padding-left: 0
+            margin-bottom: 58px
+        +lg-block
+            width: 100%
+            padding-left: 0
+            margin-bottom: 58px
+               
+        .page__li
+            display: flex
+            align-items: center
+            font-weight: bold
+            font-size: 15px
+            line-height: 59px
+            width: 100%
+            +sm-block
+                width: 50%
+            +md-block
+                width: 50%
+            +lg-block
+                width: 50%
+            
+
+.productPrice
+    text-align: center
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    +sm-block
+        display: block
+    +md-block
+        display: block
+        text-align: left
+    +lg-block
+        display: block
+        text-align: left
+
+    &__cost
+        display: inline-flex
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 59px
+        +sm-block
+            margin-left: 60px
+        +md-block
+            margin-left: 33px
+        +lg-block
+            margin-left: 33px
+
 /*productRsSlider*/
 /*products*/
 .products

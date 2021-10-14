@@ -1,12 +1,17 @@
 //-howitwork
 section.howitwork
     .wrapper
-        .howitworkFlexContainer
-            h2.page__titel-h2 How does it 
-                span.page_red work?
-            .howitworkImg 
-                img(src="assets/images/png/imgGraphic.png", alt="imgGraphic")
-            .howitworkText 
-                p Unplug the wire from the throttle at the connector. 
-                p Insert the supplied wiring harness (adapter) between the throttle pedal and the original plug connection.
-            
+        .howitworkRowFlex
+            .howitworkContainer
+                h2.page__titel-h2 How does it 
+                    span.page_red work?
+                .howitworkImg 
+                    picture 
+                        source(type="image/png" srcset="assets/images/png/imgHowitwork-lg.png" media="(min-width: 992px)")
+                        source( type="image/png" srcset="assets/images/png/imgHowitwork-sm.png" media="(min-width: 768px)")
+                        img(src="assets/images/png/imgHowitwork-xs.png", alt="imgProductRsControls")
+
+                .howitworkText 
+                    p Unplug the wire from the throttle at the connector. 
+                    p Insert the supplied wiring harness (adapter) between the throttle pedal and the original plug connection.
+                

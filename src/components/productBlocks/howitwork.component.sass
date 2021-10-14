@@ -1,29 +1,63 @@
 /*howitwork*/
 .howitwork
+    padding: 84px 0
     
-.howitworkFlexContainer
+.howitworkRowFlex
     +row-flex
-    padding: 38px 68px
+   
+.howitworkContainer
+    padding: 60px 0
     border-radius: 15px
     background: #111111
     backdrop-filter: blur(35px)
+    display: flex
+    flex-wrap: wrap
+    +sm-block
+        padding: 60px 0
+    +md-block
+        padding: 60px 62px
+    +lg-block
+        padding: 60px 62px
     .page__titel-h2
+        width: 100%
+        font-family: #{$SFUIDisplay}-Bold
         text-align: center
         width: 100%
-
+        margin-bottom: 2%
 .howitworkImg 
     +col
     +size(12)
     +size-md(9/2)
     +size-lg(9/2)
+    order: 2
+    margin: 7% auto
+    text-align: center
+    +md-block
+        margin: auto
+        order: 0
+    +lg-block
+        margin: auto
+        order: 0
 
 .howitworkText
     +col
     +size(12)
     +size-md(9/2)
     +size-lg(9/2)
+    
+    +md-block
+        padding-left: 5%
+    +lg-block
+        padding-left: 5%
     p 
         font-family: #{$SFUIDisplay}-Bold
         font-size: 20px
         line-height: 31px
+
+        
+        margin-top: 10%
+        +md-block
+            width: 65%
+        +lg-block
+            width: 65%
     

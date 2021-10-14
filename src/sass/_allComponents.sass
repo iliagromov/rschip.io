@@ -1,25 +1,3 @@
-/*advantages*/
-.advantages
-    padding: 10px
-    +md-block
-        padding: 84px 0 63px
-    +lg-block
-        padding: 84px 0 63px
-
-.advantagesFlexContainer
-    +row-flex
-
-.advantagesItem 
-    +col
-    +size(9)
-    +size-md(9/4)
-    +size-lg(9/4)
-    &__text
-        font-family: #{$SFUIText}-Regular
-        font-weight: bold
-        font-size: 15px
-        line-height: 59px
-
 /*banner*/
 .banner
     position: relative
@@ -61,9 +39,9 @@
 
 
 .bannerFlexContainer
-    position: relative
     +row-flex()
     // align-items: center
+    // height: 769px
 .bannerText
     +col()
     +size(9)
@@ -79,29 +57,29 @@
         padding-left: 0
 .bannerImg
     // +col()
+    max-height: 770px
     width: 100%
     +size-md(9)
-    +size-lg(9.2)
+    +size-lg(9)
     +shift-md-right(-3)
+    
     img
         width: 100%
-        +md-block
-            width: auto
-        +lg-block
-            width: auto
+    .chip
+        width: auto
+
 .bannerSelect
     position: absolute
     left: 50%
     bottom: 0
     transform: translateX(-50%)
 .bannerRs
-
-.bannerImg
-    position: relative
-    .chip
-        position: absolute
-        top: 25%
-        right: 30%
+    .bannerImg
+        position: relative
+        .chip
+            position: absolute
+            top: 25%
+            right: 30%
 
 /*chat*/
 .chat
@@ -877,8 +855,6 @@ html
         background: #fff
         margin-bottom: 8px
     
-/*howitwork*/
-/*installation*/
 /*menu*/
 .menu
     position: fixed
@@ -1210,6 +1186,178 @@ html
         margin-left: 33px
 
 /*productRsControls*/
+/*gallary*/
+.gallary
+    padding: 54px 0 43px
+    +sm-block
+        padding: 69px 0 100px
+    +md-block   
+        padding: 120px 0
+    +lg-block   
+        padding: 120px 0
+
+.gallaryFlexContainer
+    +row-flex
+
+
+.gallaryCol
+    +col
+    +size(4.5)
+    +size-sm(3)
+    +size-md(3)
+    +size-lg(3)
+    &:nth-child(2)
+        .gallaryItem
+            &:nth-of-type(1)
+                height: 110px
+                +sm-block
+                    height: 180px
+                +md-block
+                    height: 290px
+                +lg-block
+                    height: 290px
+            &:nth-of-type(2)
+                height: 155px
+                +sm-block
+                    height: 253px
+                +md-block
+                    height: 407px
+                +lg-block
+                    height: 407px
+    &:nth-child(3)
+        +size(9)
+        +size-sm(3)
+        +size-md(3)
+        +size-lg(3)
+        display: flex
+        justify-content: space-between
+        +sm-block
+            flex-direction: column
+        .gallaryItem
+            width: calc(50% - 10px)
+            +sm-block
+                width: 100%
+            +md-block
+                width: 100%
+            +lg-block
+                width: 100%
+            &:nth-of-type(1)
+                height: 134px
+                +sm-block
+                    height: 211px
+                +md-block
+                    height: 339px
+                +lg-block
+                    height: 339px
+            &:nth-of-type(2)
+                height: 134px
+                +sm-block
+                    height: 223px
+                +md-block
+                    height: 359px
+                +lg-block
+                    height: 359px
+        
+.gallaryItem
+    display: flex
+    height: 155px
+    margin-bottom: 19px
+    +sm-block
+        height: 253px
+        margin-bottom: 29px
+    +md-block
+        height: 407px
+        margin-bottom: 49px
+    +lg-block
+        height: 407px
+        margin-bottom: 49px
+
+    &:nth-of-type(2)
+        height: 110px
+        +sm-block
+            height: 180px
+        +md-block
+            height: 290px
+        +lg-block
+            height: 290px
+    picture
+        display: flex
+        width: 100%
+    img
+        object-fit: cover
+        width: 100%
+/*howitwork*/
+.howitwork
+    
+.howitworkFlexContainer
+    +row-flex
+    padding: 38px 68px
+    border-radius: 15px
+    background: #111111
+    backdrop-filter: blur(35px)
+    .page__titel-h2
+        text-align: center
+        width: 100%
+
+.howitworkImg 
+    +col
+    +size(12)
+    +size-md(9/2)
+    +size-lg(9/2)
+
+.howitworkText
+    +col
+    +size(12)
+    +size-md(9/2)
+    +size-lg(9/2)
+    p 
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 20px
+        line-height: 31px
+    
+/*installation*/
+.installation
+
+.installationRowFlex 
+    +row-flex
+
+.installationImg
+    +col
+    +size(12)
+    +size-md(9/2)
+    +size-lg(9/2)
+.installationText
+    +col
+    +size(12)
+    +size-md(9/2)
+    +size-lg(9/2)
+    p 
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 20px
+        line-height: 31px
+    
+/*advantages*/
+.advantages
+    padding: 10px
+    +md-block
+        padding: 84px 0 63px
+    +lg-block
+        padding: 84px 0 63px
+
+.advantagesFlexContainer
+    +row-flex
+
+.advantagesItem 
+    +col
+    +size(9)
+    +size-md(9/4)
+    +size-lg(9/4)
+    &__text
+        font-family: #{$SFUIText}-Regular
+        font-weight: bold
+        font-size: 15px
+        line-height: 59px
+
 /*productRsControls*/
 .productRsControls
     padding: 100px 0 0
@@ -1243,6 +1391,29 @@ html
 .productRsControlsToggelsItem
     display: flex
     width: 100%
+/*productRsSafest*/
+.productRsSafest
+
+.productRsSafestRowFlex 
+    +row-flex
+.productRsSafestImg 
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+.productRsSafestText
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+    .page__title-h4 
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 36px
+        line-height: 59px
+        letter-spacing: 0.05em
+
+.productRsSafestIcons 
+    display: flex
 /*productRsSlider*/
 /*products*/
 .products
@@ -1408,7 +1579,6 @@ html
         +lg-block
             width: 50%
             margin: 0 8px
-/*safest*/
 /*select*/
 .selectBox
     width: 100%

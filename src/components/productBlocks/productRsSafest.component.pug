@@ -2,10 +2,14 @@ section.productRsSafest
     .wrapper
         .productRsSafestRowFlex 
             .productRsSafestImg 
-                img(src="assets/images/png/imgRsChip4.png", alt="imgRsChip")
+                picture 
+                    source(type="image/png" srcset="assets/images/png/imgProductRsSafest-lg.png" media="(min-width: 992px)")
+                    source( type="image/png" srcset="assets/images/png/imgProductRsSafest-md.png" media="(min-width: 768px)")
+                    img(src="assets/images/png/imgProductRsSafest-xs.png", alt="imgProductRsControls")
+
             .productRsSafestText
-                h4.page__title-h4 The safest throttle tuning <br> 
-                    span.page_red in the market
+                h4.page__title-h4 The safest throttle tuning  
+                    span.page_red  in the market
                 p.page__text The most important feature for your safety. Our engineers have developed an ingenious control mechanism, the logic of which ensures mutual control of both processors. This reduces the risk of default by 1.000 times.
                 .productRsSafestIcons 
                     .productRsSafestIconsItem

@@ -2,14 +2,20 @@
 .product
     background: #111111
     padding: 92px 0 0
+    +md-block
+        padding: 114px 0 0
+    +lg-block
+        padding: 114px 0 0
     .page__title-h2_small
         text-align: center
 
     .page__title-h3
         font-family: #{$SFUIDisplay}-Bold
+        font-size: 36px
+        line-height: 59px
         text-align: center
-        width: 25%
-        margin: 0 auto -50px
+        width: 30%
+        margin: 15px auto -40px
 
 .productFlexContainer 
     +row-flex
@@ -17,25 +23,27 @@
 .productImg
     +col
     +size(9)
-    +size-md(9/2)
-    +size-lg(9/2)
+    +size-md(4)
+    +size-lg(4)
+    padding-right: 6%
+    text-align: center
 
 .productText
     +col
     +size(9)
-    +size-md(9/2)
-    +size-lg(9/2)
+    +size-md(5)
+    +size-lg(5)
     .page__title-h4
         font-size: 24px
         line-height: 43px
         letter-spacing: 0.05em
-        margin-top: 140px
+        margin-top: 117px
         margin-bottom: 60px
         font-weight: bold
     .page__ul 
         display: flex
         flex-wrap: wrap
-        margin-bottom: 70px
+        margin-bottom: 58px
         .page__li
             width: 50%
             display: flex
@@ -44,8 +52,8 @@
             font-size: 15px
             line-height: 59px
 .productPrice
-    display: flex
     &__cost
+        display: inline-flex
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 59px

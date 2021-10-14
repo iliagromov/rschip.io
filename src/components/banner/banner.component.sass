@@ -2,10 +2,9 @@
 .banner
     position: relative
     overflow: hidden
+    
     .page__title-h1
-        
-        &_big
-            +shift-md-right(-9)
+       
         margin-top: 46px
         width: 85%
         +sm-block
@@ -15,8 +14,12 @@
             width: 100%
         +lg-block
             width: 100%
+         
+        &_big
+            +shift-md-right(-9)
             
     .pageText
+        
         margin-top: 31px
         padding-right: 15px
         margin-bottom: 58px
@@ -36,6 +39,15 @@
             margin-bottom: 0
             position: absolute
             bottom: 83px
+    &.bannerRs
+        .page__title-h1
+            width: 200%
+        .bannerImg
+            position: relative
+            .chip
+                position: absolute
+                top: 25%
+                right: 30%
 
 
 .bannerFlexContainer
@@ -47,7 +59,9 @@
     +size(9)
     +size-md(3)
     +size-lg(2.8)
+    background: #000
     position: relative
+    z-index: 1
     padding-top: 60px
     +sm-block
         padding-left: 63px
@@ -70,6 +84,7 @@
 
 .bannerSelect
     position: absolute
+    z-index: 3
     left: 50%
     bottom: 0
     transform: translateX(-50%)

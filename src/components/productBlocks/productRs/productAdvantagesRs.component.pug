@@ -1,0 +1,24 @@
+//-advantages
+include ../productAdvantages.mixin.pug
+
+section.advantages
+    .wrapper 
+        .advantagesFlexContainer
+            +itemsAdvantages([
+                {
+                    "icon":"iconSpeedometer", 
+                    "text":"Better throttle response"
+                }, 
+                {
+                    "icon":"iconArrowsUp", 
+                    "text": "5 stages"
+                },
+                {
+                    "icon":"iconPhoneWhite", 
+                    "text": "2nd backup CPU"
+                },
+                {
+                    "icon":"iconArrowsLR", 
+                    "text": "Сopatible wit ICE, BEV and hybrids"
+                },
+            ])

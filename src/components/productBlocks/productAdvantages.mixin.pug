@@ -1,0 +1,18 @@
+//- mixin advantages
+//- ex.
+//- +itemsAdvantages([
+        {
+            "icon":"iconSpeedometer", 
+            "text":"Better throttle response"
+        }
+    ])
+
+//- mixin advantages
+mixin itemsAdvantages(items)
+    each item in items
+        .advantagesItem 
+            .advantagesItem__icon
+                div(class=`svg-${item.icon} svg-${item.icon}-box`)
+            .advantagesItem__text=item.text
+
+

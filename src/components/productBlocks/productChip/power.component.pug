@@ -1,0 +1,44 @@
+mixin item(items)
+    each item in items
+        .powerTextItem
+            .powerTextItem__Perfomance Perfomance 
+                div
+                    each i in item.perfomance
+                        span
+
+            .powerTextItem__FuelSaving Fuel saving
+                div
+                    each i in item.fuelSaving
+                        span
+
+   
+
+section.power 
+    .wrapper 
+        .powerRowFlex
+            .powerContainer
+                .powerText
+                    h2.page__title-h2_small Mobile App
+                    h3.page__title-h3 More power or fuel saving right from your smartphone
+                    .powerTextItems
+                        +item([
+                            {
+                                "perfomance": [1,2,3],
+                                "fuelSaving": [1] 
+                            },
+                            {
+                                "perfomance": [1,2],
+                                "fuelSaving": [1,2]
+                            },
+                            {
+                                "perfomance": [1],
+                                "fuelSaving": [1,2,3]
+                            }
+                        ])
+                        
+                .powerImg 
+                    picture 
+                        source(type="image/png" srcset="assets/images/png/imgPowerBlockChip-lg.png" media="(min-width: 992px)")
+                        source( type="image/png" srcset="assets/images/png/imgPowerBlockChip-sm.png" media="(min-width: 768px)")
+                        img(src="assets/images/png/imgPowerBlockChip-xs.png", alt="imgPowerBlockChip")
+                

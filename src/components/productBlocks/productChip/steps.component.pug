@@ -1,0 +1,30 @@
+mixin items(items)
+    each item in items
+        .stepsItem
+            .stepsItem__Img
+                img(src=item.imgSrc, alt="imgSetps")
+            .stepsItem__Title=item.title
+            .stepsItem__Description=item.description
+
+section.setps   
+    .wrapper
+        h2.page__title-h2_small easy and fast
+        h3.page__title-h3 Easy plug&play installation in less than 5 minutes
+        .stepsItems
+            +items([
+                {
+                    "imgSrc":"assets/images/png/imgSetps1.png", 
+                    "title":"Step 1", 
+                    "description":"Locate your OBDll port & connect OBDll cable"
+                },
+                {
+                    "imgSrc":"assets/images/png/imgSetps2.png", 
+                    "title":"Step 2", 
+                    "description":"Start and warm up your engine"
+                },
+                {
+                    "imgSrc":"assets/images/png/imgSetps3.png", 
+                    "title":"Step 3", 
+                    "description":"Pair with RSCHIP & follow in-app guide"
+                },
+            ])

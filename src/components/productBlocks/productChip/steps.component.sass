@@ -1,0 +1,77 @@
+.setps
+    .page__title-h2_small
+        text-align: center
+        
+    .page__title-h3
+        font-family: #{$SFUIDisplay}-Bold
+        text-align: center
+        font-weight: 800
+
+        font-size: 24px
+        line-height: 30px
+
+        margin-bottom: 32px
+        
+        +sm-block
+            width: 75%
+            margin: 8px auto 50px
+            font-size: 36px
+            line-height: 59px
+        +md-block
+            margin: 8px auto 60px
+            width: 48%
+            font-size: 36px
+            line-height: 59px
+        +lg-block
+            margin: 8px auto 60px
+            width: 48%
+            font-size: 36px
+            line-height: 59px
+
+.stepsItems
+    +row-flex
+    flex-direction: column
+    align-items: center
+
+    +md-block
+        flex-direction: row
+        align-items: flex-start
+    +lg-block
+        flex-direction: row
+        align-items: flex-start
+
+.stepsItem
+    +col
+    +size(9)
+    +size-sm(9/2)
+    +size-md(3)
+    +size-lg(3)
+
+    margin-bottom: 8%
+    
+    &__Img
+        background: #FFFFFF
+        box-shadow: -15px 25px 30px rgba(0, 0, 0, 0.1)
+        border-radius: 15px
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        overflow: hidden
+        margin-bottom: 24px
+
+        img
+            object-fit: cover
+    &__Title
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 52px
+        margin-bottom: 16px
+        text-align: center
+
+    &__Description
+        color: #B2B2B2
+        font-size: 15px
+        line-height: 26px
+        text-align: center
+        width: 70%
+        margin: 0 auto

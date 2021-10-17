@@ -218,94 +218,6 @@
     &__z-index-negative 
         z-index: -1
 /* __debugGrid__ */
-/*faq*/
-.faq
-    padding: 86px 0 106px
-    +sm-block
-        padding: 135px 0 115px
-    +md-block
-        padding: 94px 0 120px
-    +lg-block
-        padding: 94px 0 120px
-    .page__title-h2_small
-        text-align: center
-    .page__title-h3
-        text-align: center
-        font-weight: 800
-        font-size: 24px
-        line-height: 125%
-        
-        width: 75%
-        margin: 9px auto 53px
-        +sm-block
-            font-size: 36px
-            margin-bottom: 32px
-            line-height: 164%
-        +md-block
-            width: 44%  
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
-        +lg-block
-            width: 44%
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
-       
-        span
-            color: #FF4C62
-
-.faqFlexContainer 
-    +row-flex
-.faqCol
-    +col
-    +size(9)
-    +size-md(4.5)
-    +size-lg(4.5)
-.faqItem
-    margin-bottom: 16px
-
-.faqItemDetails 
-    cursor: pointer
-    &__Summary
-        font-family: #{$SFUIText}-Regular
-        border-bottom: 1px solid #fff
-        font-size: 18px
-        line-height: 133%
-        letter-spacing: 0.05em 
-       
-        color: #fff
-        font-weight: bold
-
-        display: flex
-        justify-content: space-between
-        margin-bottom: 16px
-        padding-top: 23px
-        padding-bottom: 15px
-        .icon-arrow-white-details
-            margin-top: 8px
-            margin-right: 12px
-    
-    &__Content
-        display: none
-        font-size: 15px
-        line-height: 26px
-
-        /* or 173% */
-        letter-spacing: 0.025em
-
-        color: #B2B2B2
-        padding-top: 34px
-    &.active
-        
-        .faqItemDetails__Summary
-            color: transparent
-            background-image: linear-gradient(to right, #FF624A , #FF4686)
-            background-clip: text
-        .faqItemDetails__Content
-            display: block
-        .icon-arrow-white-details
-            transform: rotate(180deg)
 /*footer*/
 .footer
     position: relative
@@ -574,6 +486,94 @@
         font-size: 15px
         line-height: 29px
         letter-spacing: .6px
+/*faq*/
+.faq
+    padding: 86px 0 106px
+    +sm-block
+        padding: 135px 0 115px
+    +md-block
+        padding: 94px 0 120px
+    +lg-block
+        padding: 94px 0 120px
+    .page__title-h2_small
+        text-align: center
+    .page__title-h3
+        text-align: center
+        font-weight: 800
+        font-size: 24px
+        line-height: 125%
+        
+        width: 75%
+        margin: 9px auto 53px
+        +sm-block
+            font-size: 36px
+            margin-bottom: 32px
+            line-height: 164%
+        +md-block
+            width: 44%  
+            font-size: 36px
+            line-height: 164%
+            margin-bottom: 54px
+        +lg-block
+            width: 44%
+            font-size: 36px
+            line-height: 164%
+            margin-bottom: 54px
+       
+        span
+            color: #FF4C62
+
+.faqFlexContainer 
+    +row-flex
+.faqCol
+    +col
+    +size(9)
+    +size-md(4.5)
+    +size-lg(4.5)
+.faqItem
+    margin-bottom: 16px
+
+.faqItemDetails 
+    cursor: pointer
+    &__Summary
+        font-family: #{$SFUIText}-Regular
+        border-bottom: 1px solid #fff
+        font-size: 18px
+        line-height: 133%
+        letter-spacing: 0.05em 
+       
+        color: #fff
+        font-weight: bold
+
+        display: flex
+        justify-content: space-between
+        margin-bottom: 16px
+        padding-top: 23px
+        padding-bottom: 15px
+        .icon-arrow-white-details
+            margin-top: 8px
+            margin-right: 12px
+    
+    &__Content
+        display: none
+        font-size: 15px
+        line-height: 26px
+
+        /* or 173% */
+        letter-spacing: 0.025em
+
+        color: #B2B2B2
+        padding-top: 34px
+    &.active
+        
+        .faqItemDetails__Summary
+            color: transparent
+            background-image: linear-gradient(to right, #FF624A , #FF4686)
+            background-clip: text
+        .faqItemDetails__Content
+            display: block
+        .icon-arrow-white-details
+            transform: rotate(180deg)
 /*form*/
 .form
     background: #111111
@@ -1787,6 +1787,10 @@ html
     padding: 60px 0
     .page__title-h2_small
         text-align: center
+        +md-block   
+            text-align: left
+        +lg-block   
+            text-align: left
     .page__title-h3
         font-family: #{$SFUIDisplay}-Bold
         font-size: 36px
@@ -1798,8 +1802,10 @@ html
             margin-bottom: 40px
         +md-block   
             margin-bottom: 52px
+            text-align: left
         +lg-block   
             margin-bottom: 52px
+            text-align: left
 
 .howitworkChipRowFlex
     +row-flex
@@ -1833,6 +1839,102 @@ html
     +lg-block
         margin-top: 16%
 
+.performance
+    .page__title-h3
+        font-size: 36px
+        line-height: 59px
+        margin-top: 10px
+.performanceTable
+    padding-top: 38px
+    &__Header
+        display: flex
+        
+        color: #B2B2B2
+        margin-bottom: 16px
+
+        .performanceTableItemTd
+            font-size: 14px
+            line-height: 29px
+            
+    &__Body
+        display: flex
+        flex-wrap: wrap
+
+.performanceTableItemTd
+    +col
+    +size(9/2)
+    +size-sm(2)
+    +size-md(2)
+    +size-lg(2)
+
+    text-align: center
+
+    &:nth-child(1)
+        +size-sm(3)
+        +size-md(3)
+        +size-lg(3)
+        text-align: left
+        div
+            width: auto
+    div
+       
+        margin: 0 auto
+        height: 48px
+        +sm-block
+            width: 80%
+        +md-block
+            width: 60%
+        +lg-block
+            width: 60%
+        
+
+.performanceTableItem 
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+    padding: 8px 11px
+    margin-bottom: 20px
+
+    width: 100%
+
+    border: 1px solid #474747
+    box-sizing: border-box
+    border-radius: 15px
+    
+    &:last-child
+        margin-bottom: 0
+        
+    .stock 
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 15px
+        line-height: 59px
+
+    .carName
+        
+        color: #B2B2B2
+        font-size: 15px
+        line-height: 26px
+    div
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 18px
+        line-height: 50px
+
+       
+
+    &.withRs
+        .performanceTableItemTd:nth-child(1)
+            div
+                background: none
+
+        div > div
+            background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) 0%, rgba(255, 56, 57, 0.9) 100%);
+            mix-blend-mode: normal
+            border-radius: 8px
+
+.performanceImg
+    display: flex
+    justify-content: center
 .power
     padding: 100px 0
 

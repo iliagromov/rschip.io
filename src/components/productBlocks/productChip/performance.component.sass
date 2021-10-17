@@ -1,0 +1,96 @@
+.performance
+    .page__title-h3
+        font-size: 36px
+        line-height: 59px
+        margin-top: 10px
+.performanceTable
+    padding-top: 38px
+    &__Header
+        display: flex
+        
+        color: #B2B2B2
+        margin-bottom: 16px
+
+        .performanceTableItemTd
+            font-size: 14px
+            line-height: 29px
+            
+    &__Body
+        display: flex
+        flex-wrap: wrap
+
+.performanceTableItemTd
+    +col
+    +size(9/2)
+    +size-sm(2)
+    +size-md(2)
+    +size-lg(2)
+
+    text-align: center
+
+    &:nth-child(1)
+        +size-sm(3)
+        +size-md(3)
+        +size-lg(3)
+        text-align: left
+        div
+            width: auto
+    div
+       
+        margin: 0 auto
+        height: 48px
+        +sm-block
+            width: 80%
+        +md-block
+            width: 60%
+        +lg-block
+            width: 60%
+        
+
+.performanceTableItem 
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+    padding: 8px 11px
+    margin-bottom: 20px
+
+    width: 100%
+
+    border: 1px solid #474747
+    box-sizing: border-box
+    border-radius: 15px
+    
+    &:last-child
+        margin-bottom: 0
+        
+    .stock 
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 15px
+        line-height: 59px
+
+    .carName
+        
+        color: #B2B2B2
+        font-size: 15px
+        line-height: 26px
+    div
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 18px
+        line-height: 50px
+
+       
+
+    &.withRs
+        .performanceTableItemTd:nth-child(1)
+            div
+                background: none
+
+        div > div
+            background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) 0%, rgba(255, 56, 57, 0.9) 100%);
+            mix-blend-mode: normal
+            border-radius: 8px
+
+.performanceImg
+    display: flex
+    justify-content: center

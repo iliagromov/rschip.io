@@ -109,12 +109,7 @@ setTimeout(()=>{
     });
     if(myTabs){
         myTabs.init();
-        //hotFix
-        const tabLinks = document.querySelectorAll('.tab-link');
-        if(tabLinks){
-            tabLinks[1].click();
-        }
-      
+        
     }
  },100);
 

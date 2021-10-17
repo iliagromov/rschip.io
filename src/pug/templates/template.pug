@@ -56,11 +56,12 @@ html(lang="en" data-scroll='0')
                 link(rel="stylesheet", type="text/css" , media="screen and (min-width:"+breakPoint.width+"px)",  href="css/viewport/media/"+breakPoint.width+"/"+breakPoint.width+"px.css")
 	
             //- link(rel="stylesheet", href="css/styles-calc.css", type="text/css") // if you want use old style programming
-           
+        block scriptLibs 
+            script(src="libs/js/store-scroll.js")
+            script(src="libs/js/tabs.js")
+            script(src="libs/js/modal.js")
         block script
             script(src="js/menu/menu.component.js")
             script(src="js/chat/chat.component.js")
             script(src="js/debuggrid/debuggrid.component.js")
             script(src="js/main.js")
-            script(src="libs/js/store-scroll.js")
-            script(src="libs/js/modal.js")

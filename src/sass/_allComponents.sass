@@ -218,6 +218,94 @@
     &__z-index-negative 
         z-index: -1
 /* __debugGrid__ */
+/*faq*/
+.faq
+    padding: 86px 0 106px
+    +sm-block
+        padding: 135px 0 115px
+    +md-block
+        padding: 94px 0 120px
+    +lg-block
+        padding: 94px 0 120px
+    .page__title-h2_small
+        text-align: center
+    .page__title-h3
+        text-align: center
+        font-weight: 800
+        font-size: 24px
+        line-height: 125%
+        
+        width: 75%
+        margin: 9px auto 53px
+        +sm-block
+            font-size: 36px
+            margin-bottom: 32px
+            line-height: 164%
+        +md-block
+            width: 44%  
+            font-size: 36px
+            line-height: 164%
+            margin-bottom: 54px
+        +lg-block
+            width: 44%
+            font-size: 36px
+            line-height: 164%
+            margin-bottom: 54px
+       
+        span
+            color: #FF4C62
+
+.faqFlexContainer 
+    +row-flex
+.faqCol
+    +col
+    +size(9)
+    +size-md(4.5)
+    +size-lg(4.5)
+.faqItem
+    margin-bottom: 16px
+
+.faqItemDetails 
+    cursor: pointer
+    &__Summary
+        font-family: #{$SFUIText}-Regular
+        border-bottom: 1px solid #fff
+        font-size: 18px
+        line-height: 133%
+        letter-spacing: 0.05em 
+       
+        color: #fff
+        font-weight: bold
+
+        display: flex
+        justify-content: space-between
+        margin-bottom: 16px
+        padding-top: 23px
+        padding-bottom: 15px
+        .icon-arrow-white-details
+            margin-top: 8px
+            margin-right: 12px
+    
+    &__Content
+        display: none
+        font-size: 15px
+        line-height: 26px
+
+        /* or 173% */
+        letter-spacing: 0.025em
+
+        color: #B2B2B2
+        padding-top: 34px
+    &.active
+        
+        .faqItemDetails__Summary
+            color: transparent
+            background-image: linear-gradient(to right, #FF624A , #FF4686)
+            background-clip: text
+        .faqItemDetails__Content
+            display: block
+        .icon-arrow-white-details
+            transform: rotate(180deg)
 /*footer*/
 .footer
     position: relative
@@ -486,94 +574,6 @@
         font-size: 15px
         line-height: 29px
         letter-spacing: .6px
-/*faq*/
-.faq
-    padding: 86px 0 106px
-    +sm-block
-        padding: 135px 0 115px
-    +md-block
-        padding: 94px 0 120px
-    +lg-block
-        padding: 94px 0 120px
-    .page__title-h2_small
-        text-align: center
-    .page__title-h3
-        text-align: center
-        font-weight: 800
-        font-size: 24px
-        line-height: 125%
-        
-        width: 75%
-        margin: 9px auto 53px
-        +sm-block
-            font-size: 36px
-            margin-bottom: 32px
-            line-height: 164%
-        +md-block
-            width: 44%  
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
-        +lg-block
-            width: 44%
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
-       
-        span
-            color: #FF4C62
-
-.faqFlexContainer 
-    +row-flex
-.faqCol
-    +col
-    +size(9)
-    +size-md(4.5)
-    +size-lg(4.5)
-.faqItem
-    margin-bottom: 16px
-
-.faqItemDetails 
-    cursor: pointer
-    &__Summary
-        font-family: #{$SFUIText}-Regular
-        border-bottom: 1px solid #fff
-        font-size: 18px
-        line-height: 133%
-        letter-spacing: 0.05em 
-       
-        color: #fff
-        font-weight: bold
-
-        display: flex
-        justify-content: space-between
-        margin-bottom: 16px
-        padding-top: 23px
-        padding-bottom: 15px
-        .icon-arrow-white-details
-            margin-top: 8px
-            margin-right: 12px
-    
-    &__Content
-        display: none
-        font-size: 15px
-        line-height: 26px
-
-        /* or 173% */
-        letter-spacing: 0.025em
-
-        color: #B2B2B2
-        padding-top: 34px
-    &.active
-        
-        .faqItemDetails__Summary
-            color: transparent
-            background-image: linear-gradient(to right, #FF624A , #FF4686)
-            background-clip: text
-        .faqItemDetails__Content
-            display: block
-        .icon-arrow-white-details
-            transform: rotate(180deg)
 /*form*/
 .form
     background: #111111
@@ -1684,6 +1684,7 @@ html
     align-items: center
     width: 673px
     height: 68px
+    margin: 0 auto
     background: rgba(255, 255, 255, 0.15)
     backdrop-filter: blur(35px)
     border: 1.5px solid rgba(255, 255, 255, 0.15)
@@ -1839,6 +1840,136 @@ html
     +lg-block
         margin-top: 16%
 
+.optimizeBlock
+    padding: 64px 0
+    .page__title-h2_small
+        padding-left: 6%
+        +md-block
+            padding-left: 6%
+        +lg-block
+            padding-left: 6%
+    .page__title-h3
+        font-size: 24px
+        line-height: 30px
+        
+        margin-top: 2%
+        padding-left: 6%
+        +sm-block
+            letter-spacing: 0.06em
+            padding-left: 6%
+            margin-top: 1%
+            margin-bottom: 6%
+            font-size: 36px
+            line-height: 59px
+        +md-block
+            padding-left: 6%
+            margin-bottom: 4%
+            margin-top: 1%
+            font-size: 36px
+            line-height: 59px
+        +lg-block
+            padding-left: 6%
+            margin-bottom: 4%
+            margin-top: 1%
+            font-size: 36px
+            line-height: 59px
+.optimizeBlockTextDescription
+    margin-top: 11%
+    padding-left: 6%
+
+.optimizeRowFlex
+    +row-flex
+
+.optimizeBlockContainer
+    
+    position: relative
+    border-radius: 15px
+    background: #111111
+    backdrop-filter: blur(35px)
+    
+
+    display: flex
+    padding: 17% 0
+    +sm-block
+        margin-right: 28px
+        padding: 8% 0
+    +md-block
+        margin-right: 40px
+        padding: 6% 4% 0 0 
+    +lg-block
+        margin-right: 40px
+        padding: 6% 4% 0 0
+    
+.optimizeBlockChart
+
+    background: rgba(255, 255, 255, 0.15)
+    backdrop-filter: blur(35px)
+    border-radius: 15px
+    
+    margin: 13% 0 0 0
+    padding: 35px 17px
+    +sm-block
+        margin: 13% -15px -50px -15px
+    +md-block
+        margin: 8% 0 -50px 6%
+    +lg-block
+        margin: 8% 0 -50px 6%
+
+    .tab-nav
+        display: inline-flex
+        background: rgba(255, 255, 255, 0.11)
+        mix-blend-mode: normal
+        border-radius: 10px
+        padding: 5px 4px
+
+    .tab-link
+        cursor: pointer
+        font-family: #{$SFUIDisplay}-Bold
+        mix-blend-mode: normal
+        border-radius: 8px
+        font-size: 18px
+        line-height: 60px
+        
+        letter-spacing: 0.05em
+
+        padding: 0px 18px
+        +sm-block   
+            padding: 0px 42px
+            line-height: 42px
+        +md-block   
+            padding: 0px 42px
+            line-height: 42px
+        +lg-block   
+            padding: 0px 42px
+            line-height: 42px
+        &.is-active
+            background: linear-gradient(90deg, #710FD1 0%, #FF3839 100%)
+    .tab-content
+        margin-top: 4%
+    
+
+.optimizeBlockText 
+    +col
+    +size(9)
+    +size-sm(9)
+    +size-md(7)
+    +size-lg(7)
+
+.optimizeBlockImg
+    +col
+    +size-md(3)
+    +size-lg(3)
+
+    +shift-md-left(-.7)
+    +shift-lg-left(-.7)
+    display: none
+    text-align: right
+    padding-top: 4%
+    +md-block
+        display: block
+    +lg-block
+        display: block
+   
 .performance
     .page__title-h3
         font-size: 36px

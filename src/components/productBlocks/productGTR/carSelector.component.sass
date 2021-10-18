@@ -1,0 +1,54 @@
+.carSelector
+    padding: 60px 0 150px
+
+.carSelectorRowFlex
+    +row-flex
+
+.carSelectorContainer
+    position: relative
+    display: flex
+    border-radius: 15px
+    background: #111111
+    backdrop-filter: blur(35px)
+    margin-right: 3%
+
+
+.carSelectorImg
+    position: relative
+    left: -10%
+    top: 16%
+    // width: 76%
+    +size(9)
+    +size-md(7)
+    +size-lg(7)
+    +shift-md-right(-2.2)
+    +shift-lg-right(-2.2)
+
+
+.carSelectorIcons
+    +col
+    +size(9)
+    +size-md(3.5)
+    +size-lg(3.5)
+
+    padding-top: 7%
+    .page__btn
+        margin-top: 8%
+        margin-left: 6%
+        margin-bottom: 2%
+
+.carSelectorIconsItem 
+    display: flex
+    margin-bottom: 6%
+    &__Icon 
+        margin-right: 28px
+    &__Text
+        padding-top: 2%
+
+.carSelectorTextAfter
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 14px
+    line-height: 59px
+    color: #B2B2B2
+    text-transform: uppercase
+    text-align: center

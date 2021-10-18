@@ -42,10 +42,10 @@ gulp.task('sprite', function () {
 
 	const svgSpriteConfig = {
 		shape: {
-			dimension: {
-				maxWidth: 32,
-				maxHeight: 32
-			},
+			// dimension: {
+			// 	maxWidth: 32,
+			// 	maxHeight: 32
+			// },
 			spacing: {
 				padding: 10
 			}

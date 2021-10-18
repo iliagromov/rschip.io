@@ -100,7 +100,7 @@ gulp.task('sprite', function () {
 				.pipe(webp())
 				.pipe(gulp.dest(path.dist + path.iconsWEBP))
 				.pipe(gulp.dest(path.src + path.sprite + 'webp'))
-		}, 1000);
+		}, 2000);
 
 	}
 

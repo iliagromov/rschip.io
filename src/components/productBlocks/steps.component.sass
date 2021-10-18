@@ -27,6 +27,14 @@
             width: 48%
             font-size: 36px
             line-height: 59px
+    &.productGTR  
+        .page__title-h3
+            +sm-block
+                margin: 8px auto 50px
+            +md-block
+                margin: 8px auto 100px
+            +lg-block
+                margin: 8px auto 100px
 
 .stepsItems
     +row-flex
@@ -75,3 +83,40 @@
         text-align: center
         width: 70%
         margin: 0 auto
+
+.stepsItemGTR
+    +col
+    +size(9)
+    +size-sm(6)
+    +size-md(3)
+    +size-lg(3)
+
+    margin-bottom: 8%
+    background: #111111
+    border-radius: 15px
+    position: relative
+    padding: 2% 4%
+    &__Icon
+        position: absolute
+        right: 9%
+        top: -26%
+
+        width: 87px
+        height: 87px
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) 0%, rgba(255, 56, 57, 0.9) 100%)
+        mix-blend-mode: normal
+    &__Title
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 52px
+        margin-bottom: 16px
+        margin-top: 2%
+    &__Description
+        color: #B2B2B2
+        font-size: 15px
+        line-height: 26px
+        margin-bottom: 3%

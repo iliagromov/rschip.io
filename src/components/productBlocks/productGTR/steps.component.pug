@@ -1,0 +1,31 @@
+mixin items(items)
+    each item in items
+        .stepsItemGTR
+            .stepsItemGTR__Icon
+                div(class=`svg-${item.icon} svg-${item.icon}-box`)
+            .stepsItemGTR__Title=item.title
+            .stepsItemGTR__Description=item.description
+
+section.setps.productGTR   
+    .wrapper
+        h2.page__title-h2_small easy and fast
+        h3.page__title-h3 Easy plug&play installation in less than 5 minutes
+        .stepsItems
+            +items([
+                    {
+                        "icon":"iconDesktop", 
+                        "title":"Step 1", 
+                        "description":"Upload your vehicle"
+                    },
+                    {
+                        "icon":"iconKeyboard", 
+                        "title":"Step 2", 
+                        "description":"Connect to OBDll"
+                    },
+                    {
+                        "icon":"iconChip", 
+                        "title":"Step 3", 
+                        "description":"Enjoy your new ride"
+                    },
+            ])
+        

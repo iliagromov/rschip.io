@@ -1,9 +1,46 @@
+mixin item(items)
+    each item in items
+        .accomplishmentsItem 
+            .accomplishmentsItemImg
+                img(src=item.imgSrc, alt="imgAccomplishments")
+            h4.accomplishmentsItemTitle=item.title
+            p.accomplishmentsItemDescription=item.description
+
 section.accomplishments
     .wrapper 
         h2.page__title-h2_small accomplishments
         h3.page__title-h3 A powerhouse full of features
         .accomplishmentsRowFlex 
-            .accomplishmentsItem 
-                img(src="assets/images/png/", alt="")
-                h4.accomplishmentsItemTitle Increase power and save fuel
-                p.accomplishmentsItemDescription With GTR You can increase your engine power , make the car more agile and at the same time improve your MPG
+            +item([
+                {
+                    "imgSrc":"assets/images/png/imgAccomplishments1.png",
+                    "title":"Increase power and save fuel",
+                    "description":"With GTR You can increase your engine power , make the car more agile and at the same time improve your MPG"
+                },
+                {
+                    "imgSrc":"assets/images/png/imgAccomplishments2.png",
+                    "title":"Customize your driving",
+                    "description":"Select your mode to achieve maximum power or fuel efficiency right from your driver seat."
+                },
+                {
+                    "imgSrc":"assets/images/png/imgAccomplishments3.png",
+                    "title":"Read & clear codes",
+                    "description":"Read and clear error codes. A diagnostic tool available 24/7. Save time and money on diagnostics."
+                },
+                {
+                    "imgSrc":"assets/images/png/imgAccomplishments4.png",
+                    "title":"Display live data",
+                    "description":"Watch all car readings that important for you, and display that right on the customizable touch screen display."
+                },
+                {
+                    "imgSrc":"assets/images/png/imgAccomplishments5.png",
+                    "title":"Create dyno charts",
+                    "description":"Test your performance in real time with built-in dyno machine anywhere, anytime."
+                },
+                {
+                    "imgSrc":"assets/images/png/imgAccomplishments6.png",
+                    "title":"Test 0-60, 1/4-miles",
+                    "description":"Perform accurate acceleration tests easily effortlessly and compare your results."
+                }
+
+            ])

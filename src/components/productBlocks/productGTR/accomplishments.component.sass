@@ -1,2 +1,78 @@
 .accomplishments
+    padding: 60px 0
+    position: relative
+    .page__title-h2_small
+        text-align: center
+    .page__title-h3
+        text-align: center
+        font-size: 36px
+        line-height: 59px
+        margin-top: 10px
+        margin-bottom: 3%
+    &::before, 
+    &::after
+        content: ''
+        transform: translate(-50%, -50%)
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+        position: absolute
+        width: 0
+        height: 0
+
+        +sm-block
+            width: 497px
+            height: 497px
+        +md-block
+            width: 497px
+            height: 497px
+        +lg-block
+            width: 497px
+            height: 497px
+    &::before
+        bottom: 0
+        left: 20%
+        
+        // bottom: -68%
+       
+    &::after
+        top: 43%
+        right: -53%
+
+.accomplishmentsRowFlex 
+    +row-flex
+    justify-content: center
+
+.accomplishmentsItem
+    +col
+    +size(9)
+    +size-md(3.6)
+    +size-lg(3.6)
+
+    text-align: center
+    padding-top: 11%
+    margin-bottom: 3%
+    &:nth-child(odd)
+        .accomplishmentsItemImg
+            justify-content: flex-end
+            padding-right: 50px
+    &:nth-child(even)
+        .accomplishmentsItemImg
+            justify-content: flex-start
+            padding-left: 50px
+
+.accomplishmentsItemImg
+    display: flex
+    margin-bottom: 50px
     
+        
+.accomplishmentsItemTitle
+    font-family: #{$SFUIDisplay}-Bold
+    margin-bottom: 16px
+    font-size: 24px
+    line-height: 52px
+
+.accomplishmentsItemDescription
+    color: #B2B2B2
+    font-size: 15px
+    line-height: 26px
+    letter-spacing: 0.02em

@@ -2,6 +2,7 @@
 .news 
     background: #111111
     padding: 67px 0 0
+    position: relative
     +sm-block
         padding: 104px 0 100px
     +md-block
@@ -9,6 +10,22 @@
     +lg-block
         padding: 104px 0 100px
 
+    &::after
+        content: ''
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+       
+        position: absolute
+        left: -500px
+        bottom: -191px
+        // transform: translate(-95%, 40%)
+        +md-block
+            width: 544px
+            height: 544px
+        +lg-block
+            width: 544px
+            height: 544px
+            
     .page__title-h2_small
         text-align: center
     .page__title-h3

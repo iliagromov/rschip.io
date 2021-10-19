@@ -220,6 +220,7 @@
 /* __debugGrid__ */
 /*faq*/
 .faq
+    position: relative
     padding: 86px 0 106px
     +sm-block
         padding: 135px 0 115px
@@ -227,6 +228,23 @@
         padding: 94px 0 120px
     +lg-block
         padding: 94px 0 120px
+    &::after
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        // bottom: -70%
+        bottom: -462px
+        
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+        +md-block
+            width: 442px
+            height: 442px
+        +lg-block
+            width: 442px
+            height: 442px
+
     .page__title-h2_small
         text-align: center
     .page__title-h3
@@ -234,7 +252,7 @@
         font-weight: 800
         font-size: 24px
         line-height: 125%
-        
+
         width: 75%
         margin: 9px auto 53px
         +sm-block
@@ -242,7 +260,7 @@
             margin-bottom: 32px
             line-height: 164%
         +md-block
-            width: 44%  
+            width: 44%
             font-size: 36px
             line-height: 164%
             margin-bottom: 54px
@@ -251,11 +269,11 @@
             font-size: 36px
             line-height: 164%
             margin-bottom: 54px
-       
+
         span
             color: #FF4C62
 
-.faqFlexContainer 
+.faqFlexContainer
     +row-flex
 .faqCol
     +col
@@ -265,15 +283,15 @@
 .faqItem
     margin-bottom: 16px
 
-.faqItemDetails 
+.faqItemDetails
     cursor: pointer
     &__Summary
         font-family: #{$SFUIText}-Regular
         border-bottom: 1px solid #fff
         font-size: 18px
         line-height: 133%
-        letter-spacing: 0.05em 
-       
+        letter-spacing: 0.05em
+
         color: #fff
         font-weight: bold
 
@@ -285,7 +303,7 @@
         .icon-arrow-white-details
             margin-top: 8px
             margin-right: 12px
-    
+
     &__Content
         display: none
         font-size: 15px
@@ -297,7 +315,7 @@
         color: #B2B2B2
         padding-top: 34px
     &.active
-        
+
         .faqItemDetails__Summary
             color: transparent
             background-image: linear-gradient(to right, #FF624A , #FF4686)
@@ -306,6 +324,7 @@
             display: block
         .icon-arrow-white-details
             transform: rotate(180deg)
+
 /*footer*/
 .footer
     position: relative
@@ -1071,6 +1090,7 @@ html
 .news 
     background: #111111
     padding: 67px 0 0
+    position: relative
     +sm-block
         padding: 104px 0 100px
     +md-block
@@ -1078,6 +1098,22 @@ html
     +lg-block
         padding: 104px 0 100px
 
+    &::after
+        content: ''
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+       
+        position: absolute
+        left: -500px
+        bottom: -191px
+        // transform: translate(-95%, 40%)
+        +md-block
+            width: 544px
+            height: 544px
+        +lg-block
+            width: 544px
+            height: 544px
+            
     .page__title-h2_small
         text-align: center
     .page__title-h3

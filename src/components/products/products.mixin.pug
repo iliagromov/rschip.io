@@ -1,0 +1,32 @@
+//-products mixn
+//-{
+    "title":"",
+    "textBefore":"",
+    "imgSrc":"",
+    "productsItemGains": [
+        {"number": "", "text": ""}, 
+        {"number": "", "text": ""}
+    ],
+    "textAfter":"",
+    "bttextBtn":""
+    },
+mixin item(items)
+    each item in items
+        .productsItem
+            h3.productsItemTitle=item.titel
+            p.productsItemTextBefore=item.textBefore
+            img.productsItemImg(src=item.imgSrc, alt="product")
+
+        
+            .productsItemGain
+                each gain in item.productsItemGains
+                    .productsItemGain__text
+                        div.text up to
+                        div.number=gain.number
+                        div.text=gain.text
+
+            
+            p.productsItemTextAfter=item.textAfter
+            .productsItemActions 
+                button.page__btn LEARN MORE
+                button.page__btn.page__btn_notTransparent=item.textBtn

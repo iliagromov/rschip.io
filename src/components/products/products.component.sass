@@ -15,9 +15,20 @@
         +sm-block
             margin-bottom: 62px
         +md-block
-            margin-bottom: 42px
+            margin-bottom: 30px
         +lg-block
-            margin-bottom: 42px
+            margin-bottom: 30px
+
+.productsCart
+    background: #000
+    position: relative
+    .wrapper
+        position: relative
+.productsBg
+    position: absolute
+    top: 11%
+    width: 100%
+    text-align: center
 
 .productsFlexContainer
     +row-flex()
@@ -37,7 +48,7 @@
     border-radius: 10px
     margin-bottom: 21px
     padding: 42px 17px 30px
-    
+
     +sm-block
         padding: 48px 17px 30px
         margin-bottom: 0
@@ -51,8 +62,7 @@
         // border: 1px solid #FF3838
         padding: 61px 19px 37px
         border-width: 10px
-        border-image-source:  url('data:image/png;base64,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') 
-     
+        border-image-source: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAtCAYAAAB/G08YAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAeWSURBVHgB7VzdbtxEFD5nvJs2qkodJLjtlhdgg6oqFaDsIpCKhNSUB2gSXiBBAqoW0DqVQOoF6uYJsn0BGu5QJVhHAjUlgWyfIM4VF1SNC4rys+sZzpmxvd40aRLalLU0X7Kydzwznp3P54x9PPMhPCe+ee1eGUCMCpBlQFkWoFwEdZa+I20BUYJAAISIPryVOo2PCT7OW1SK0hAVH9PpdICSKK8DoDgNdH1cl9J5dD1gto6gelXEBbgOzo/mPFyXVEKXV8j7aMrTf9w2PhfVbdoYl1FJPuAynB7XqeI66VxgjqdtSvIBJOfRWzC/j1LpHHQuzLYDIKR+eYhChQKlD0IsvL4034LnAMJ/gOc2S0LAODVqin6Eqxuf6eRkH+IfmxAHpgPjTotJTPaFREhITvJxeU7EmExNbtox5sLgcxMB+gJILx4Zl1VdcsGQm5DQe7F1v2N63syFk/kN2QuFyUkuwDg9Jhh66zL1xG027dV5OV0l5Ju20k8MmFwRRTNDrR8DOCKORCgTqRwxRyev0IlV3OlP6DNPBC+QNbWidhReDz8MwOJA/FkeK9FGf+giqFA/jhL5pcSLOaAaMoIjEXsoQolIV4qBKbI4j64eSlHsKu7Q/vzXjz7wweKF4a/zH1XIY42TsUxg7FHIG3inl+/NHKb8gYR67v1SJFSTKi+xVZK/mMVONOOF1RAsjg3r5Usl4UCN+nyc+ly74qjtVA+y1mcSes29XymguovmRmfVUeoTL3zXB4uXBk1sUTbJ/ZbIQ4ZSwuQrv/80v19+sd+B6+6DcYHYpFHSpeuj8Y9qv2XJfPlgi5TtnWFyjnWyUrcg1N3NC5Xx/fLvaaFfuMtj5Le/pzGSPLjyvn188VD+2+J4sXH+vRrdCXv6iUFBdXDZ93fneYpQcrMlgMIKlTgDIrp56/FFDyz6BkSqJ4Sq0T1NqHa2hwdbi0H2+FMuV8FAkx61z9Bd1qwls/9wavlnj9xvg3Zd5wRxVa642eM9hH7mrtQUDb5k1mubMGDdbJ9iqw2f0iagT2lnoDOdPZa63GvuSilSctVENZxzt8LhACz6FpsjlYojZZMDEIXtzjmMXW9qoR3Jzzwce8KGJbP/Mbjo+xR0qPN+dMKZS9I1oWydZJYTOqwJwrranKCwTVwp4ABPRY2MlDhNE7ojwQMdPLfWmSdgyw/p/UCDw0j0CmCC0zShFPYf1XF/6NwBi3zBUT/wOEn2OMVfcfrUSlkUcIXuhVa/+7v8BljkDp0Lb69TvNcVUXtYoCNGiV0OPSyARS5BN0fzzCC9IB/ld8sV4pNMVvhgkUvQO/IFMx3EKQti1dU3t45cA4tcQhahpQMKSvEUIFXm/WhLRx4scoiilKEeNpHGUWLWJR8M9S37uJJX4OJiwHe6xGhJMK1gkX/w5EWlzEQ6+rek5h1owvIcWAg4hDt9ksJ/FrlEEvYjrxvyGBoqHlBPggsWuUQHCiWzp1o0hqoWTxUsApTBIpcoSHVWh4YQnvAY+pDH00jCKFjkEpGepK14/YEvIAJfBxkQxsAip+BoH6CQHV/UN4Z5ccw6meyZz90/rJXmDO2Rd8g68SwZ5SouLbXiGQs4y7dISqK10pxBRUrP0VUo9MsVTagU0rwHRTkx7a7Yu92cYHOkUqJ32ePa3UKkZ5poQut6loLyadcdAFkDi1xASOmBXh4JDQ7/6bTkYIQ4yZPECFPX3KUKWPQ1NstknaCu8r7AKJ0HlhLKVoqobjLjZK1z1vX2L3hyNQ6oJrtaupn1Eutk9Ey0boOo0+MMHcTSSWjfBou+xGaRp9wCjZ8iKP72S88szR5CyUopFtipAocDAcZvuA/seNpn2NQLlmCap2/SMFndffyptS23wosBRQev8Hp/+vNuvHrfkton2Dj/fo3Ce56ZcYuTg4t+sDvPvgt+eX0o3SM1zHp/qG/I7Zm6XbX9v2CdxsxisXibuBjXT5yOZDIbe+V95gruL92ly4DthlnBLQNHdapeWA3A4qVh/fylioNyjqI+JQFyXYL8+PQe60ITHKixwOtFCyibwqxKY1mWBkZaYyEAi2MDW6UoDNJwJ6djqaCg7bSrQ3u42SwOLWvzlftrTYjI07pB9O+guhPRx3tU9cHihYFVUEDJsQLAVdaA4tWA9DcjOzuzQ7z04QAcWadIOsJzgOOHRqeIPmscZUKIfES5Bp2t4Hp4JQCLA8E6RU4R3CiCMlnhaAHUZerLoVR4C6WvOjD5wnWKdoOJpTPWyEordFKOWKhUQYtiTrEUW6ygFUu9cTolGmk3LRvHZVDLwoGWXTN5MJWLA8goeiXqZMZDRImCF6RqZRlVrlTfp1cZTBl1M6N61pVnyyqExWXSunSMVCVlEhWxRJUsKzkHRg0M9mqX3s8qhnE7EkUzOu5olbGkbniihJotdDqNY1cS2wta6y8So0LIipGJgzcpFDUEGYk4zJBr9mWX6IzsG2CEsdVzZ8bEy24dWtNP7iktp+vJaPc5sV5geiHwL1Uy7WAnlpnrytdpXT5M5OCcrlSbaW+PhJshv6tN2NUCpLymnrScqSfbF6adWhdwjaVqhMAWxWVbUITn1vr7F+Ts9FBv6H24AAAAAElFTkSuQmCC')
 
 .productsItemTitle
     text-align: center
@@ -70,8 +80,6 @@
     +lg-block
         font-size: 30px
         padding-bottom: 6px
-    
-  
 
 .productsItemTextBefore
     font-family: #{$SFUIText}-Regular
@@ -82,15 +90,15 @@
     text-transform: capitalize
 
     color: #B2B2B2
-    
+
     text-align: center
+   
     +sm-block
         padding: 0 0 34px
     +md-block
         padding: 0 56px 30px
     +lg-block
         padding: 0 56px 30px
-
 
 .productsItemImg
     display: flex
@@ -99,7 +107,7 @@
 .productsItemGain
     display: flex
     justify-content: center
-    
+
     padding-bottom: 48px
     +sm-block
         margin-top: 11px
@@ -122,11 +130,11 @@
         .number
             font-size: 18px
             line-height: 136%
-            +sm-block   
+            +sm-block
                 font-size: 36px
-            +md-block   
+            +md-block
                 font-size: 36px
-            +lg-block   
+            +lg-block
                 font-size: 36px
 .productsItemTextAfter
     font-size: 15px
@@ -139,9 +147,8 @@
         padding: 0 33px 29px
     +lg-block
         padding: 0 33px 29px
-    
 
-.productsItemActions 
+.productsItemActions
     display: flex
     flex-wrap: wrap
     justify-content: center
@@ -158,7 +165,193 @@
         +md-block
             width: 50%
             margin: 0 8px
-            
+
         +lg-block
             width: 50%
             margin: 0 8px
+.productsItemCart
+    text-align: center
+
+    padding: 42px 17px 30px
+
+    +sm-block
+        padding: 34px 50px 38px
+        margin-bottom: 43px
+    +md-block
+        padding: 34px 50px 38px
+        margin-bottom: 43px
+    +lg-block
+        padding: 34px 50px 38px
+        margin-bottom: 43px
+
+    &:hover
+        padding: 25px 41px 29px
+
+    &__Big
+        +size(9)
+        +size-md(7.15)
+        +size-lg(7.15)
+
+        display: flex
+        flex-wrap: wrap
+
+        .productsItemCartTextBefore
+            font-family: #{$SFUIDisplay}-Bold
+            color: #fff
+            width: 100%
+            margin-top: 18%
+            span
+                margin-right: 5%
+
+        .productsItemCartImg
+            margin-top: 16%
+            margin-left: 18%
+        
+        .productsItemCartActions
+            justify-content: center
+
+            .productPrice
+                margin-right: 25%
+            
+        
+    &__text
+        +size(9)
+        +size-md(9/2)
+        +size-lg(9/2)
+        text-align: left
+        padding-top: 7%
+        padding-left: 5%
+    &__img
+        +size(9)
+        +size-md(9/2)
+        +size-lg(9/2)
+
+.productsItemCartLabel
+    font-family: #{$SFUIDisplay}-Bold
+    background: linear-gradient(45deg,#700ED2,#FF3838) border-box
+    display: inline-flex
+    padding: 5px 15px
+    border-radius: 8px
+    margin-bottom: 25px
+
+.productsItemCartTitle
+    font-family: #{$SFUIDisplay}-Bold
+    margin-bottom: 10px
+    font-size: 36px
+    line-height: 43px
+
+.productsItemCartTextBefore
+    color: #B2B2B2
+    margin-bottom: 20px
+    font-size: 15px
+    line-height: 26px
+    width: 80%
+    margin: 0 auto 37px
+    span
+        font-size: 36px
+        line-height: 59px
+
+.productsItemCartImg
+    margin-bottom: 8%
+
+
+.productsItemCartGain
+    padding-bottom: 23%
+    ul
+        color: #B2B2B2
+        font-size: 15px
+        line-height: 26px
+        width: 55%
+        margin: 33px auto 0
+        text-align: left
+        li
+            list-style: disc
+
+.productsItemCartGainTitle
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 36px
+    line-height: 59px
+
+.productsItemCartGainDesc
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 15px
+    line-height: 30px
+    display: flex
+    justify-content: center
+    div
+        &:nth-child(1)
+            border-right: 2px solid
+            padding-right: 60px
+        &:nth-child(2)
+            padding-left: 60px
+
+.productsItemCartActions
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    .productPrice
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 59px
+
+.productsCartAdvatages
+    +row-flex
+
+.productsCartAdvatagesItem
+    +col
+    +size(9)
+    +size-md(9/2)
+    +size-lg(9/2)
+    display: flex
+    margin-bottom: 4%
+    &__icon
+        margin-right: 3%
+
+    &__title
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 15px
+        line-height: 50px
+        color: #fff
+    &__text
+        font-size: 15px
+        line-height: 26px
+        color: #B2B2B2
+        text-align: left
+
+    p
+
+        font-size: 15px
+        line-height: 26px
+
+.productsTabs
+    display: flex
+    justify-content: center
+    width: 42%
+
+    margin: 0 auto
+
+    position: relative
+    top: -50px
+    padding: 26px 0
+
+    background: rgba(255, 255, 255, 0.15)
+    backdrop-filter: blur(35px)
+    border-radius: 15px
+    border: 1.5px solid rgba(255, 255, 255, 0.15)
+
+.productsTabsItem
+
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+
+    padding: 0 9.5%
+    border-right: 1px solid rgba(255, 255, 255, 0.15)
+
+    &__text
+        white-space: nowrap
+
+    &:last-child
+        border: none

@@ -10,14 +10,22 @@ block append style
 
 block content
 	main.page.pageCart
-		div Cart
+		.wrapper
+			.pageCartTitle
+				h2.page__title-h2.page__title-h2_big ORDERS 
+					span.page__title-h2_small.page__title-h2_absolute Shopping
+				h3 Cart 
+			.cartEmpty
+				.cartEmptyTitle Your Cart is 
+					span.page_red empty
+				.cartEmptyDesc Once selected your item well appear here
+				button.page__btn CONTINUE SHOPPING 
+
+			.cartTable
+				include ../../components/cartProducts/cartProducts.component.pug
+				include ../../components/cartDetails/cartDetails.component.pug
 block modals
 	
 block append style
-	link(rel="stylesheet", href="libs/css/swiper-bundle.min.css", type="text/css")
-      
 
 block append script
-	script(src="libs/js/swiper-bundle.min.js")
-	script(src="js/productBlocks/productSlider.component.js")
-	script(src="js/faq/faq.component.js")

@@ -135,6 +135,195 @@
     left: 50%
     bottom: 0
     transform: translateX(-50%)
+/*cartDetails*/
+
+
+.cartDetails
+    +col
+    +size(9)
+    +size-md(3)
+    +size-lg(3)
+    +shift-md-left(-.2)
+    +shift-lg-left(-.2)
+    background: #111111
+    border-radius: 15px
+    text-align: center
+    font-family: #{$SFUIDisplay}-Bold
+    padding: 30px 44px
+    align-self: flex-start
+    .name
+        font-size: 15px
+        line-height: 23px
+    .price
+        font-size: 18px
+        line-height: 23px
+
+.cartDetailsTitle
+    font-size: 24px
+    line-height: 48px
+    margin-bottom: 13%
+
+.cartDetailsBagTotal
+    display: flex
+    justify-content: space-between
+    margin-bottom: 6%
+    
+
+.cartDetailsDiscount
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20%
+
+.cartDetailsTotal
+    display: flex
+    justify-content: space-between
+    padding-bottom: 12%
+    border-bottom: 1px solid
+
+    .name
+        font-size: 18px
+        line-height: 23px
+    .price
+        font-size: 24px
+        line-height: 23px
+
+.cartDetailsSafty 
+    padding-top: 11%
+    padding-bottom: 11%
+    text-align: left
+    p   
+        padding-bottom: 9%
+/*cartForm*/
+
+.cartForm
+    +col
+    +size(9)
+    +size-md(6.2)
+    +size-lg(6.2)
+    border: 1px solid #474747
+    border-radius: 15px
+    padding: 25px 51px
+    .page__input
+        +col
+        +size(9)
+        +size-md(9)
+        +size-lg(9)
+        margin-bottom: 40px
+    
+    .name,
+    .country,
+    .code,
+    .phone,
+    .year
+        +col
+        +size(9)
+        +size-md(9/2)
+        +size-lg(9/2)
+        
+.cartFormRow
+    +row-flex
+
+.cartFormTitle
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 24px
+    line-height: 59px
+    margin-bottom: 24px
+/*cartProducts*/
+
+
+.cartProducts
+    +col
+    +size(9)
+    +size-md(6.2)
+    +size-lg(6.2)
+
+.cartProductsHeader
+    +row-flex
+    margin-bottom: 2%
+    div
+        +col
+        +size(3)
+        +size-md(3)
+        +size-lg(3)
+        padding-left: 6%
+
+        &:nth-child(2)
+            display: flex
+            justify-content: flex-end
+.cartProductsFooter 
+    display: flex
+    justify-content: space-between
+.cartProductsCode
+    display: flex
+    align-items: center
+    input
+        color: #fff
+        background: transparent
+        border: none
+        border-bottom: 1px solid #474747
+.cartProduct
+    border: 1px solid #474747
+    border-radius: 15px
+    padding: 28px 33px
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    margin-bottom: 28px
+
+.cartProductName
+    +col
+    +size(9)
+    +size-md(4)
+    +size-lg(4)
+    .productName
+        font-family: #{$SFUIDisplay}-Bold
+        margin-bottom: 4%
+    .carName
+
+.cartProductQuantity
+    +col
+    +size(9)
+    +size-md(2)
+    +size-lg(2)
+    .quantity
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin-top: 4%
+
+        margin-left: -20px
+
+        margin-right: 20px
+
+        background: #111111
+        border-radius: 123px
+        height: 44px
+
+.cartProductPrice
+    +col
+    +size(9)
+    +size-md(2)
+    +size-lg(2)
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 18px
+    line-height: 59px
+
+.cartProductRemove
+    position: absolute
+    right: 0
+    right: 35px
+.cartProductSelect
+    border: 1.5px solid rgba(255, 255, 255, 0.15)
+    border-radius: 15px
+    background: rgba(255, 255, 255, 0.15)
+    backdrop-filter: blur(35px)
+    height: 68px
+    display: flex
+    width: 100%
+    margin-top: 3%
+    align-items: center
+    justify-content: space-around
+
 /*chat*/
 .chat
     display: none

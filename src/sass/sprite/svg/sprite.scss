@@ -2,6 +2,16 @@
 	background: url("../assets/icons/svg/spriteSVG.svg") no-repeat;
 }
 
+.svg-iconArrowSelect {
+	@extend %svg-common;
+	background-position: 52.359550561797754% 42.31738035264484%;
+}
+
+.svg-iconArrowSelect-box {
+	width: 27px;
+	height: 25px;
+}
+
 .svg-iconArrowsLR {
 	@extend %svg-common;
 	background-position: 72.88135593220339% 43.54838709677419%;

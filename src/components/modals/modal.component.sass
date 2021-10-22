@@ -68,6 +68,32 @@
             
             z-index: 10
 
+.modalCarCantfind 
+    text-align: center
+    .page__btn
+        color: #000
+    p
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 18px
+        line-height: 59px
+    form 
+        margin-bottom: 10%
+    .formRow
+        +row-flex
+        align-items: center
+        margin-bottom: 5%
+    img 
+        margin: 0
+
+    .page__input
+        +col
+        +size(9)
+        +size-md(2)
+        +size-lg(2)
+        &:first-child
+            flex-grow: 1
+
+
 .modalContent
     overflow: scroll
     height: inherit

@@ -1,1 +1,16 @@
 //-modals
++modal("modalCarCantfind")
+    h2.modalTitle Can’t find 
+        span.page_red my car
+    p Please fill in the fields below and we will call you back
+    form(action="")
+        .formRow
+            input.page__input(type="text" placeholder="Your Car") 
+            input.page__input(type="text" placeholder="Year") 
+            input.page__input(type="text" placeholder="Horsepower") 
+            input.page__input(type="text" placeholder="Torque") 
+        .formRow
+            input.page__input(type="email" placeholder="Email") 
+            img(src="assets/images/png/imgCodeCaptcha.png", alt="imgCodeCaptcha")
+            input.page__input(type="text" placeholder="code") 
+    button.page__btn SUBMIT

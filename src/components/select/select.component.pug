@@ -1,6 +1,5 @@
 //-select
 mixin SelectBox(name, options)
-  .select-box
     .select-box__current(tabindex="1")
         .select-box__value
             input.select-box__input(type="radio" id=`id_${name}` value=name name=name checked)
@@ -20,12 +19,21 @@ mixin SelectBox(name, options)
 .selectBox 
     .selectBoxText Find out how many Horsepowers you can add to your Car
     .selectBoxContainer
-        .select 
-            +SelectBox('Brands', ['Acura','Alfa Romeo','Alpina','Aston Martin','Audi','BAIC'])
-        .select 
-            +SelectBox('Model', ['CL','MDX','RDX','RSX','TL','TLX', 'ZDX'])
-        .select
-            +SelectBox('Modification', ['3.5i V6 24V 263HP 339NM','3.5i V6 24V 240HP 332NM','3.7i V6 305HP 370NM','II 3.7i V6 300HP 372NM','III 3.5i V6 24V 290HP 267NM'])
+        #brands.select 
+            .select-box 
+                .select-box__icon
+                    .svg-iconArrowSelect.svg-iconArrowSelect-box
+                .select-box__empty 
+                    .svg-iconSelectEmpty.svg-iconSelectEmpty-box
+        #models.select 
+            .select-box 
+                .select-box__icon
+                    .svg-iconArrowSelect.svg-iconArrowSelect-box
+        #Modification.select
+            .select-box 
+                .select-box__icon
+                    .svg-iconArrowSelect.svg-iconArrowSelect-box
+            
         .selectBoxSearch
             .svg-iconSearch.svg-iconSearch-box
     a.selectBoxLink.js-open-modal(href="javascript:void(0)" data-modal="modalCarCantfind") Can’t find my Car

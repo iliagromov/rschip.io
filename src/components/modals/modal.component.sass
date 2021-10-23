@@ -69,30 +69,37 @@
             z-index: 10
 
 .modalCarCantfind 
+    padding: 60px 70px
     text-align: center
+
     .page__btn
         color: #000
+
     p
         font-family: #{$SFUIDisplay}-Bold
         font-size: 18px
         line-height: 59px
-    form 
-        margin-bottom: 10%
+
+
     .formRow
-        +row-flex
+        display: flex
         align-items: center
         margin-bottom: 5%
-    img 
-        margin: 0
+    .modalContent
+        img 
+            margin: 0
 
     .page__input
-        +col
-        +size(9)
-        +size-md(2)
-        +size-lg(2)
+        margin: 0 10px
+        width: 100%
+        max-width: 109px
+        &::placeholder
+            color: #B2B2B2
         &:first-child
-            flex-grow: 1
+            max-width: 370px
 
+    .modalTitle
+        margin: 0
 
 .modalContent
     overflow: scroll

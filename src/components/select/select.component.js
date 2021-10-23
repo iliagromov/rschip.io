@@ -100,6 +100,8 @@ brands.then((responseJson) => {
   const brandsBox = document.querySelector('#brands');
   const arrayBrands = responseJson.results;
   selectBox(brandsBox, 'Brands', arrayBrands);
+  selectBox(brandsBox, 'Brands', arrayBrands);
+  selectBox(brandsBox, 'Brands', arrayBrands);
 
   const selectBoxInput = brandsBox.querySelectorAll(".select-box__input");
   selectBoxInput.forEach((input) => {
@@ -108,5 +110,4 @@ brands.then((responseJson) => {
       getModels(dataId);
     });
   });
-
 });

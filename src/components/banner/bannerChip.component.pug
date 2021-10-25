@@ -9,8 +9,18 @@ section.banner.bannerChip
                 p.pageText Unleash your engine hidden potential with RSCHIP plug & Play performance Tuner
                 include ../socialIcons/socialIcons.component.pug
                 
-            .bannerImg
-                img(src="assets/images/png/imgBannerChipBg.png", alt="imgBannerChip")
-                img.chip(src="assets/images/png/imgBannerChip.png", alt="imgBannerChip")
+            .bannerImgBg
+                picture 
+                    source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_1920.png" media="(min-width: 1441px)")
+                    source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_1440.png" media="(min-width: 1440px)")
+                    source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_992.png" media="(min-width: 992px)")
+                    source( type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_768.png" media="(min-width: 768px)")
+                    img(src="assets/images/png/chip/imgBannerChipBg-xs.png", alt="imgBannerChipBg_320")
+            .bannerImgChip
+                picture 
+                    source(type="image/png" srcset="assets/images/png/chip/imgBannerRsChipLg@1x.png 1x, assets/images/png/chip/imgBannerRsChipLg@2x 2x" media="(min-width: 992px)")
+                    source(type="image/png" srcset="assets/images/png/chip/imgBannerRsChipSm@1x.png 1x, assets/images/png/chip/imgBannerRsChipSm@2x.png 2x" media="(min-width: 768px)")
+                    img(src="assets/images/png/chip/imgBannerRsChipXs@1x.png" srcset="assets/images/png/chip/imgBannerChipXs@2x.png 2x" alt="imgBannerRsChipXs")
+                
             .bannerSelect
                 include ../select/select.component.pug

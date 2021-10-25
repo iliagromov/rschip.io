@@ -42,8 +42,63 @@
     position: relative
     // overflow: hidden
     // max-height: 768px
+    &.bannerGtr
+
+        .bannerText
+            padding-top: 94px
+
+        .page__title-h1
+            right: 43px
+
+        .bannerImgChip
+
+            +md-block
+                right: 22px
+                top: 162px
+            +lg-block
+                right: 22px
+                top: 162px
+
+    &.bannerChip
+
+        .page__title-h1
+            padding-left: 5%
+            .page_red
+                display: block
+        .bannerText
+            padding-top: 100px
+            
+        .pageText
+            padding-left: 4%
+        .bannerImgBg
+            +md-block
+                left: 35.5%
+
+            +lg-block
+                left: 35.5%
+        .bannerImgChip
+
+            +md-block
+                right: -53px
+                top: 175px
+            +lg-block
+                right: -53px
+                top: 175px
+            
+    &.bannerRs
+        .page__title-h1
+            padding-left: 4%
+        .bannerText
+            padding-top: 94px
+        .bannerImgBg
+            +md-block
+                left: 33%
+
+            +lg-block
+                left: 33%
+
     .page__title-h1
-       
+
         margin-top: 46px
         width: 85%
         padding-left: 1%
@@ -54,17 +109,17 @@
             width: 100%
         +lg-block
             width: 100%
-         
+
         &_big
             // +shift-md-right(-12)
             // +shift-lg-right(-12)
         span.block
             display: block
             color: #fff
-            
+
     .pageText
-        
-        margin-top: 31px
+        width: 50%
+        margin-top: 26px
         padding-right: 15px
         margin-bottom: 58px
 
@@ -72,73 +127,38 @@
             margin-bottom: 64px
 
     .socialIcons
+        position: absolute
+        width: 155px
         margin-bottom: 54px
         +sm-block
             margin-bottom: 66px
         +md-block
             margin-bottom: 0
             // position: absolute
-            bottom: 83px
+            bottom: 70px
         +lg-block
             margin-bottom: 0
             // position: absolute
-            bottom: 83px
-    &.bannerRs
-        .page__title-h1
-            width: 200%
-    &.bannerGtr
-        .page__title-h1
-            width: 200%
-    &.bannerChip
-        .page__title-h1
-            width: 200%
-
-    .bannerImg
-        position: relative
-        .chip
-            position: absolute
-            top: 25%
-            right: 30%
-
+            bottom: 70px
 
 .bannerFlexContainer
     +row-flex()
-    // align-items: center
-    
     position: relative
+    // align-items: center
 
-.bannerImgTwo
-    display: flex
-    width: 100%
-    height: 100%
-    max-height: 768px
-
-    +md-block
-        position: absolute
-        top: 0
-        left: 31%
-
-    +lg-block
-        position: absolute
-        top: 0
-        left: 31%
-
-    picture
-        display: flex
-    img
-        
 .bannerText
     +col()
     +size(9)
+    +size-md(6)
+    +size-lg(6)
     // +size-md(3)
     // +size-lg(2.8)
-    +size-md(5)
-    +size-lg(5)
     // background: #000
-   
+
     position: relative
     z-index: 1
-    padding-top: 60px
+    padding-top: 75px
+
     +sm-block
         padding-left: 63px
     +md-block
@@ -147,25 +167,46 @@
     +lg-block
         padding-left: 0
         height: 768px
-.bannerImg
-    // +col()
-   
+
+.bannerImgBg
+    display: flex
     width: 100%
-    +size-md(9)
-    +size-lg(9)
-    +shift-md-right(-3)
-    
-    img
-        width: 100%
-    .chip
-        width: auto
+    height: 100%
+    max-height: 768px
+
+    +md-block
+        position: absolute
+        top: 0
+        left: 31.5%
+
+    +lg-block
+        position: absolute
+        top: 0
+        left: 31.5%
+
+    picture
+        display: flex
+.bannerImgChip
+
+    position: absolute
+    top: 56%
+    right: 28%
+        
+
+    +md-block
+        right: -10px
+        top: 135px
+    +lg-block
+        right: -10px
+        top: 135px
 
 .bannerSelect
     position: absolute
     z-index: 3
-    left: 50%
-    bottom: 0
     transform: translateX(-50%)
+    left: 52%
+    bottom: 33px
+
 /*cartDetails*/
 
 

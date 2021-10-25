@@ -9,8 +9,17 @@ section.banner.bannerGtr
                 p.pageText Performance tuning, on-board diagnostics, Acceleration and power meter, all in one device
                 include ../socialIcons/socialIcons.component.pug
                 
-            .bannerImg
-                img(src="assets/images/png/imgBannerGtrBg.png", alt="imgBannerGtrChip")
-                img.chip(src="assets/images/png/imgBannerGtrChip.png", alt="imgBannerGtrChip")
+            .bannerImgBg
+                picture 
+                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1920.png" media="(min-width: 1441px)")
+                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1440.png" media="(min-width: 1440px)")
+                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_992.png" media="(min-width: 992px)")
+                    source( type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_768.png" media="(min-width: 768px)")
+                    img(src="assets/images/png/gtr/imgBannerGtrBg_320.png", alt="imgBannerGtrBg")
+            .bannerImgChip
+                picture 
+                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrChipSm@1x.png 1x, assets/images/png/gtr/imgBannerGtrChipSm@2x.png 2x" media="(min-width: 768px)")
+                    img(src="assets/images/png/gtr/imgBannerGtrChipXs@1x.png"  alt="imgBannerGtrChipXs")
+                
             .bannerSelect
                 include ../select/select.component.pug

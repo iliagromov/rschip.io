@@ -1,3 +1,5 @@
+include ../advantages/advantages.mixin.pug
+
 section.banner.bannerChip
     .wrapper
         .bannerFlexContainer
@@ -8,7 +10,24 @@ section.banner.bannerChip
                     | RS CHIP
                 p.pageText Unleash your engine hidden potential with RSCHIP plug & Play performance Tuner
                 include ../socialIcons/socialIcons.component.pug
-                
+
+            .advantages
+                .advantagesFlexContainer
+                    +itemsAdvantages([
+                        {
+                            "icon":"iconSpeedometer", 
+                            "text":"More power and torque"
+                        }, 
+                        {
+                            "icon":"iconPhoneWhite", 
+                            "text": "App controllable"
+                        },
+                        {
+                            "icon":"iconArrowsLR", 
+                            "text": "Сopatible wit ICE, BEV and hybrids"
+                        },
+                    ])
+
             .bannerImgBg
                 picture 
                     source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_1920.png" media="(min-width: 1441px)")

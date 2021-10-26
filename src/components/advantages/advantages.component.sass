@@ -2,7 +2,10 @@
 .advantages
     position: relative
     background: #000
-    padding: 10px
+    width: 100%
+    padding: 13px 16px 50px
+    +sm-block
+        padding: 15px 80px 50px
     +md-block
         padding: 84px 0 63px
     +lg-block
@@ -14,10 +17,14 @@
 .advantagesItem 
     +col
     +size(9)
+    +size-sm(9/2)
     +size-md(9/4)
     +size-lg(9/4)
+    display: flex
+    align-items: center
+    margin-bottom: 3%
     &__text
         font-family: #{$SFUIText}-Regular
         font-weight: bold
         font-size: 15px
-        line-height: 59px
+        line-height: 28px

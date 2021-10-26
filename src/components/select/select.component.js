@@ -59,6 +59,10 @@ function selectBox(currenSelect, selectName, options) {
   return renderBox(selectName, options);
 }
 
+const brandsBox = document.querySelector('#brands');
+const modelsBox = document.querySelector('#models');
+const ModificationBox = document.querySelector('#Modification');
+
 function getModels(id) {
   // responseJson 
   // 0: {"id": 99915741,"title": "CL","brand": 99915436}
@@ -66,10 +70,10 @@ function getModels(id) {
   const models = api(`${APP_DOMAIN}/api/v0/models/?brand=${id}`); //${brand}
 
   models.then((responseJson) => {
-    const modelsBox = document.querySelector('#models');
+
     const arrayModels = responseJson.results;
     selectBox(modelsBox, 'Model', arrayModels);
-
+    selectBox(ModificationBox, 'Modification', []);
     const selectBoxInput = modelsBox.querySelectorAll(".select-box__input");
     selectBoxInput.forEach((input) => {
       input.addEventListener('click', function (e) {
@@ -85,9 +89,8 @@ function getModifications(id) {
   //{"id": 99998832,"title": "3.0 D Biturbo","model": 99915766,"hp": 245,"nm": 500}
   const model = api(`${APP_DOMAIN}/api/v0/modifications/?model=${id}`); // model
   model.then((responseJson) => {
-    const ModificationBox = document.querySelector('#Modification');
     const arrayModification = responseJson.results;
-    selectBox(ModificationBox, 'Modification',arrayModification);
+    selectBox(ModificationBox, 'Modification', arrayModification);
   });
 }
 
@@ -97,10 +100,7 @@ brands.then((responseJson) => {
   // responseJson 
   // 0: {id: 99915436, title: 'Acura'}
 
-  const brandsBox = document.querySelector('#brands');
   const arrayBrands = responseJson.results;
-  selectBox(brandsBox, 'Brands', arrayBrands);
-  selectBox(brandsBox, 'Brands', arrayBrands);
   selectBox(brandsBox, 'Brands', arrayBrands);
 
   const selectBoxInput = brandsBox.querySelectorAll(".select-box__input");
@@ -111,3 +111,7 @@ brands.then((responseJson) => {
     });
   });
 });
+
+selectBox(brandsBox, 'Brands', []);
+selectBox(modelsBox, 'Model', []);
+selectBox(ModificationBox, 'Modification', []);

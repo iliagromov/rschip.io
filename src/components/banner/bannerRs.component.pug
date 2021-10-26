@@ -1,3 +1,5 @@
+include ../advantages/advantages.mixin.pug
+
 section.banner.bannerRs
     .wrapper
         .bannerFlexContainer
@@ -8,7 +10,28 @@ section.banner.bannerRs
                     | <br> with RS Response 
                 p.pageText Better acceleration and sportier thotlle response for your Car
                 include ../socialIcons/socialIcons.component.pug
-                
+            
+            .advantages
+                .advantagesFlexContainer
+                    +itemsAdvantages([
+                        {
+                            "icon":"iconSpeedometer", 
+                            "text":"Better throttle response"
+                        }, 
+                        {
+                            "icon":"iconArrowsUp", 
+                            "text": "5 stages"
+                        },
+                        {
+                            "icon":"iconPhoneWhite", 
+                            "text": "2nd backup CPU"
+                        },
+                        {
+                            "icon":"iconArrowsLR", 
+                            "text": "Сopatible wit ICE, BEV and hybrids"
+                        },
+                    ])
+
             .bannerImgBg
                 picture 
                     source(type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1920.png" media="(min-width: 1441px)")

@@ -1,3 +1,5 @@
+include ../advantages/advantages.mixin.pug
+
 section.banner.bannerGtr
     .wrapper
         .bannerFlexContainer
@@ -8,7 +10,28 @@ section.banner.bannerGtr
                     | <br> stand out 
                 p.pageText Performance tuning, on-board diagnostics, Acceleration and power meter, all in one device
                 include ../socialIcons/socialIcons.component.pug
-                
+
+            .advantages
+                .advantagesFlexContainer
+                    +itemsAdvantages([
+                        {
+                            "icon":"iconPower", 
+                            "text":"More power and torque"
+                        }, 
+                        {
+                            "icon":"iconFuel", 
+                            "text": "Better fuel economy"
+                        },
+                        {
+                            "icon":"iconErrors", 
+                            "text": "Error code reader"
+                        },
+                        {
+                            "icon":"iconSpeedometrLight", 
+                            "text": "Performance meter"
+                        },
+                    ])
+
             .bannerImgBg
                 picture 
                     source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1920.png" media="(min-width: 1441px)")

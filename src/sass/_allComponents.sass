@@ -37,11 +37,49 @@
     font-family: #{$SFUIDisplay}-Bold
     font-size: 18px
     line-height: 59px
+/*advantages*/
+.advantages
+    position: relative
+    background: #000
+    width: 100%
+    padding: 13px 16px 50px
+    +sm-block
+        padding: 15px 80px 50px
+    +md-block
+        padding: 84px 0 63px
+    +lg-block
+        padding: 84px 0 63px
+
+.advantagesFlexContainer
+    +row-flex
+    justify-content: center
+.advantagesItem 
+    +col
+    +size(9)
+    +size-sm(9/2)
+    +size-md(9/4)
+    +size-lg(9/4)
+    display: flex
+    align-items: center
+    margin-bottom: 3%
+    &__text
+        font-family: #{$SFUIText}-Regular
+        font-weight: bold
+        font-size: 15px
+        line-height: 28px
+
 /*banner*/
 .banner
     position: relative
     // overflow: hidden
     // max-height: 768px
+    padding-bottom: 75%
+    +sm-block
+        padding-bottom: 0
+    +md-block
+        padding-bottom: 0
+    +lg-block
+        padding-bottom: 0
     &.bannerGtr
 
         .bannerText
@@ -87,9 +125,14 @@
             
     &.bannerRs
         .page__title-h1
-            padding-left: 4%
+            padding-left: 3%
+
+        .pageText
+            padding-left: 3%
+
         .bannerText
             padding-top: 94px
+            
         .bannerImgBg
             +md-block
                 left: 33%
@@ -100,50 +143,68 @@
     .page__title-h1
 
         margin-top: 46px
-        width: 85%
         padding-left: 1%
         +sm-block
-            margin-top: 28px
-            width: 78%
-        +md-block
-            width: 100%
-        +lg-block
-            width: 100%
+            margin-top: 105px
 
         &_big
-            // +shift-md-right(-12)
-            // +shift-lg-right(-12)
+            +sm-block
+                top: 177px
+            +md-block
+                top: 115px
+            +lg-block
+                top: 115px
+            
         span.block
             display: block
             color: #fff
 
     .pageText
-        width: 50%
+     
         margin-top: 26px
         padding-right: 15px
-        margin-bottom: 58px
-
+        margin-bottom: 33px
+        padding-left: 1%
         +sm-block
-            margin-bottom: 64px
+            margin-bottom: 58px
+        +md-block
+           width: 50%
+        +lg-block
+           width: 50%
+
 
     .socialIcons
-        position: absolute
+        display: none
         width: 155px
         margin-bottom: 54px
         +sm-block
-            margin-bottom: 66px
+            margin-bottom: 55px
         +md-block
+            display: flex
             margin-bottom: 0
-            // position: absolute
+            position: absolute
             bottom: 70px
         +lg-block
+            display: flex
             margin-bottom: 0
-            // position: absolute
+            position: absolute
             bottom: 70px
 
 .bannerFlexContainer
-    +row-flex()
+    display: flex
+    flex-wrap: wrap
     position: relative
+    margin-left: -20px
+    margin-right: -20px
+    +sm-block
+        margin-left: -30px
+        margin-right: -30px
+    +md-block
+        margin-left: -25px
+        margin-right: -25px
+    +lg-block
+        margin-left: -25px
+        margin-right: -25px
     // align-items: center
 
 .bannerText
@@ -160,7 +221,9 @@
     padding-top: 75px
 
     +sm-block
-        padding-left: 63px
+        padding-top: 12px
+        padding-left: 50px
+        
     +md-block
         padding-left: 0
         height: 768px
@@ -186,26 +249,53 @@
 
     picture
         display: flex
+        width: 100%
+    img
+        width: 100%
+        +md-block
+            width: auto
+        +lg-block
+            width: auto
 .bannerImgChip
 
     position: absolute
-    top: 56%
-    right: 28%
-        
+    width: 100%
+    top: 65%
+    right: 0
+
+    picture
+        display: flex
+        width: 100%
+        justify-content: center
+
+    +sm-block
+        top: 61%
 
     +md-block
         right: -10px
         top: 135px
+        width: auto
     +lg-block
         right: -10px
         top: 135px
+        width: auto
 
 .bannerSelect
     position: absolute
     z-index: 3
+
+    top: 95%
+    left: 50%
     transform: translateX(-50%)
-    left: 52%
-    bottom: 33px
+
+    +sm-block
+        top: 82%
+    +md-block
+        top: 58%
+        left: 52%
+    +lg-block
+        top: 58%
+        left: 52%
 
 /*cartDetails*/
 
@@ -1093,7 +1183,7 @@ html
     +col()
     +size(9)
     +size-sm(4.5)
-    +size-md(2.8)
+    +size-md(2)
     +size-lg(2.8)
     text-align: center
     padding-top: 28px
@@ -1107,7 +1197,7 @@ html
     +col()
     +size(9)
     +size-sm(4.5)
-    +size-md(6.2)
+    +size-md(7)
     +size-lg(6.2)
     display: flex
     flex-wrap: wrap
@@ -1518,6 +1608,7 @@ html
     font-size: 18px
     line-height: 178%
     letter-spacing: 0.06em
+/*productRsSlider*/
 .performance
     .page__title-h3
         font-size: 36px
@@ -1767,30 +1858,6 @@ html
             margin-left: 33px
         +lg-block
             margin-left: 33px
-
-/*advantages*/
-.advantages
-    position: relative
-    background: #000
-    padding: 10px
-    +md-block
-        padding: 84px 0 63px
-    +lg-block
-        padding: 84px 0 63px
-
-.advantagesFlexContainer
-    +row-flex
-    justify-content: center
-.advantagesItem 
-    +col
-    +size(9)
-    +size-md(9/4)
-    +size-lg(9/4)
-    &__text
-        font-family: #{$SFUIText}-Regular
-        font-weight: bold
-        font-size: 15px
-        line-height: 59px
 
 .productSlider
     background: #111111
@@ -2093,7 +2160,6 @@ html
         line-height: 26px
         margin-bottom: 3%
 
-/*productRsSlider*/
 /*products*/
 .products
     position: relative
@@ -2459,12 +2525,21 @@ html
 .selectBox
     width: 100%
 .selectBoxText
+    display: none
     font-family: #{$SFUIText}-Regular
     font-size: 18px
-    line-height: 59px
+    line-height: 28px
+    margin-bottom: 20px
     letter-spacing: 0.02em
     font-weight: bold
     text-align: center
+    +sm-block
+        display: block
+    +md-block
+        display: block
+    +lg-block
+        display: block
+
 .selectBoxLink
     display: block
     font-family: #{$SFUIText}-Regular
@@ -2473,21 +2548,35 @@ html
     text-decoration: underline
     font-size: 14px
     line-height: 29px
+    letter-spacing: 0.04em
 
 .selectBoxContainer
+    position: relative
     display: flex
-    align-items: center
-    width: 673px
-    height: 68px
-    margin: 0 auto
+    flex-wrap: wrap
+    width: 280px
+    height: 189px
+
+    margin: 0 auto 2%
     background: rgba(255, 255, 255, 0.15)
-    
+
     border: 1.5px solid rgba(255, 255, 255, 0.15)
     box-sizing: border-box
     border-radius: 15px
-    // padding: 20px 25px
-    position: relative
-   
+
+    +sm-block
+        width: 673px
+        height: 68px
+        padding: 20px 0px
+    +md-block
+        width: 673px
+        height: 68px
+        padding: 20px 0px
+    +lg-block
+        width: 673px
+        height: 68px
+        padding: 20px 0px
+
     &::after
         content: ''
         position: absolute
@@ -2502,8 +2591,45 @@ html
     .select
         font-size: 15px
         line-height: 29px
-        border-right: 1px solid rgba(255, 255, 255, 0.15)
-        min-width: 178px
+
+        display: flex
+        
+        height: 68px
+        align-items: center
+        width: 100%
+        &:nth-of-type(3)
+            width: 75%
+            +sm-block 
+                width: 200px
+            +md-block 
+                width: 200px
+            +lg-block 
+                width: 200px
+            
+        +sm-block
+            height: 100%
+            width: 200px
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+        +md-block
+            height: 100%
+            width: 200px
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+        +lg-block
+            height: 100%
+            width: 200px
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+
+    .selectBoxSearch
+        margin-left: 2%
+        display: flex
+        align-items: center
+        height: 68px
+        +sm-block
+            height: 100%
+        +md-block
+            height: 100%
+        +lg-block
+            height: 100%
 
 .select-box
     position: relative
@@ -2583,8 +2709,6 @@ html
         // background: rgba(255, 255, 255, 0.15)
         background: #000
         border: 1.5px solid rgba(255, 255, 255, 0.15)
-     
-
 
     &__option
         display: block

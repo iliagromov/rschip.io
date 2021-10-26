@@ -4,10 +4,10 @@ section.banner
             .bannerText
                 h1.page__title-h1_big POWER
                 h1.page__title-h1
-                    span More power     
+                    span.page_red More power     
                     | for 
                     span.block your car with RSCHIP
-                p.pageText AIncrease power, save fuel, create dyno charts, Measure acceleration and more
+                p.pageText Increase power, save fuel, create dyno charts, Measure acceleration and more
                 include ../socialIcons/socialIcons.component.pug
             .bannerImgBg
                 picture 
@@ -16,3 +16,6 @@ section.banner
                     source(type="image/png" srcset="assets/images/png/main/imgBannerBg_992.png" media="(min-width: 992px)")
                     source( type="image/png" srcset="assets/images/png/main/imgBannerBg_768.png" media="(min-width: 768px)")
                     img(src="assets/images/png/main/imgBannerBg_320.png", alt="imgBannerBg")
+            .bannerSelect
+                include ../select/select.component.pug
+        

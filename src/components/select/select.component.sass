@@ -2,12 +2,21 @@
 .selectBox
     width: 100%
 .selectBoxText
+    display: none
     font-family: #{$SFUIText}-Regular
     font-size: 18px
-    line-height: 59px
+    line-height: 28px
+    margin-bottom: 20px
     letter-spacing: 0.02em
     font-weight: bold
     text-align: center
+    +sm-block
+        display: block
+    +md-block
+        display: block
+    +lg-block
+        display: block
+
 .selectBoxLink
     display: block
     font-family: #{$SFUIText}-Regular
@@ -16,21 +25,35 @@
     text-decoration: underline
     font-size: 14px
     line-height: 29px
+    letter-spacing: 0.04em
 
 .selectBoxContainer
+    position: relative
     display: flex
-    align-items: center
-    width: 673px
-    height: 68px
-    margin: 0 auto
+    flex-wrap: wrap
+    width: 280px
+    height: 189px
+
+    margin: 0 auto 2%
     background: rgba(255, 255, 255, 0.15)
-    
+
     border: 1.5px solid rgba(255, 255, 255, 0.15)
     box-sizing: border-box
     border-radius: 15px
-    // padding: 20px 25px
-    position: relative
-   
+
+    +sm-block
+        width: 673px
+        height: 68px
+        padding: 20px 0px
+    +md-block
+        width: 673px
+        height: 68px
+        padding: 20px 0px
+    +lg-block
+        width: 673px
+        height: 68px
+        padding: 20px 0px
+
     &::after
         content: ''
         position: absolute
@@ -45,8 +68,45 @@
     .select
         font-size: 15px
         line-height: 29px
-        border-right: 1px solid rgba(255, 255, 255, 0.15)
-        min-width: 178px
+
+        display: flex
+        
+        height: 68px
+        align-items: center
+        width: 100%
+        &:nth-of-type(3)
+            width: 75%
+            +sm-block 
+                width: 200px
+            +md-block 
+                width: 200px
+            +lg-block 
+                width: 200px
+            
+        +sm-block
+            height: 100%
+            width: 200px
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+        +md-block
+            height: 100%
+            width: 200px
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+        +lg-block
+            height: 100%
+            width: 200px
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+
+    .selectBoxSearch
+        margin-left: 2%
+        display: flex
+        align-items: center
+        height: 68px
+        +sm-block
+            height: 100%
+        +md-block
+            height: 100%
+        +lg-block
+            height: 100%
 
 .select-box
     position: relative
@@ -126,8 +186,6 @@
         // background: rgba(255, 255, 255, 0.15)
         background: #000
         border: 1.5px solid rgba(255, 255, 255, 0.15)
-     
-
 
     &__option
         display: block

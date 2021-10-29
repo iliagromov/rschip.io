@@ -23,7 +23,7 @@ const api = async (url) => {
 
 
 
-function selectBox(currenSelect, selectName, options) {
+function renderSelectBox(currenSelect, selectName, options) {
 
   const selectBox = currenSelect.querySelector('.select-box');
 
@@ -59,9 +59,9 @@ function selectBox(currenSelect, selectName, options) {
   return renderBox(selectName, options);
 }
 
-const brandsBox = document.querySelector('#brands');
-const modelsBox = document.querySelector('#models');
-const ModificationBox = document.querySelector('#Modification');
+
+
+const selectBoxes = document.querySelectorAll('.selectBox');
 
 function getModels(id) {
   // responseJson 
@@ -72,8 +72,8 @@ function getModels(id) {
   models.then((responseJson) => {
 
     const arrayModels = responseJson.results;
-    selectBox(modelsBox, 'Model', arrayModels);
-    selectBox(ModificationBox, 'Modification', []);
+    renderSelectBox(modelsBox, 'Model', arrayModels);
+    renderSelectBox(ModificationBox, 'Modification', []);
     const selectBoxInput = modelsBox.querySelectorAll(".select-box__input");
     selectBoxInput.forEach((input) => {
       input.addEventListener('click', function (e) {
@@ -90,7 +90,7 @@ function getModifications(id) {
   const model = api(`${APP_DOMAIN}/api/v0/modifications/?model=${id}`); // model
   model.then((responseJson) => {
     const arrayModification = responseJson.results;
-    selectBox(ModificationBox, 'Modification', arrayModification);
+    renderSelectBox(ModificationBox, 'Modification', arrayModification);
   });
 }
 
@@ -101,17 +101,29 @@ brands.then((responseJson) => {
   // 0: {id: 99915436, title: 'Acura'}
 
   const arrayBrands = responseJson.results;
-  selectBox(brandsBox, 'Brands', arrayBrands);
+  selectBoxes.forEach((selectBox) => {
+    const brandsBox = selectBox.querySelector('.Brands');
+    renderSelectBox(brandsBox, 'Brands', arrayBrands);
 
-  const selectBoxInput = brandsBox.querySelectorAll(".select-box__input");
-  selectBoxInput.forEach((input) => {
-    input.addEventListener('click', function (e) {
-      const dataId = e.target.dataset.id;
-      getModels(dataId);
+    const selectBoxInput = brandsBox.querySelectorAll(".select-box__input");
+    selectBoxInput.forEach((input) => {
+      input.addEventListener('click', function (e) {
+        const dataId = e.target.dataset.id;
+        getModels(dataId);
+      });
     });
+    
   });
+
+
 });
 
-selectBox(brandsBox, 'Brands', []);
-selectBox(modelsBox, 'Model', []);
-selectBox(ModificationBox, 'Modification', []);
+selectBoxes.forEach((selectBox) => {
+  const brandsBox = selectBox.querySelector('.Brands');
+  const modelsBox = selectBox.querySelector('.Models');
+  const modificationBox = selectBox.querySelector('.Modification');
+  renderSelectBox(brandsBox, 'Brands', []);
+  renderSelectBox(modelsBox, 'Model', []);
+  renderSelectBox(modificationBox, 'Modification', []);
+})
+

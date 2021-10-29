@@ -3,15 +3,16 @@
     position: relative
     // overflow: hidden
     // max-height: 768px
-    padding-bottom: 75%
-    +sm-block
-        padding-bottom: 0
-    +md-block
-        padding-bottom: 0
-    +lg-block
-        padding-bottom: 0
+  
     &.bannerGtr
-
+        padding-bottom: 75%
+        +sm-block
+            padding-bottom: 0
+        +md-block
+            padding-bottom: 0
+        +lg-block
+            padding-bottom: 0
+            
         .bannerText
             padding-top: 94px
 
@@ -27,7 +28,26 @@
                 right: 22px
                 top: 162px
 
+        .bannerSelect
+            top: 95%
+
+            +sm-block
+                top: 82%
+            +md-block
+                top: 58%
+                left: 52%
+            +lg-block
+                top: 58%
+                left: 52%
+
     &.bannerChip
+        padding-bottom: 75%
+        +sm-block
+            padding-bottom: 0
+        +md-block
+            padding-bottom: 0
+        +lg-block
+            padding-bottom: 0
 
         .page__title-h1
             padding-left: 5%
@@ -52,8 +72,28 @@
             +lg-block
                 right: -53px
                 top: 175px
+
+        .bannerSelect
+                top: 95%
+
+                +sm-block
+                    top: 82%
+                +md-block
+                    top: 58%
+                    left: 52%
+                +lg-block
+                    top: 58%
+                    left: 52%
             
     &.bannerRs
+        padding-bottom: 75%
+        +sm-block
+            padding-bottom: 0
+        +md-block
+            padding-bottom: 0
+        +lg-block
+            padding-bottom: 0
+
         .page__title-h1
             padding-left: 3%
 
@@ -69,6 +109,18 @@
 
             +lg-block
                 left: 33%
+
+        .bannerSelect
+            top: 95%
+
+            +sm-block
+                top: 82%
+            +md-block
+                top: 58%
+                left: 52%
+            +lg-block
+                top: 58%
+                left: 52%
 
     .page__title-h1
 
@@ -214,15 +266,15 @@
     position: absolute
     z-index: 3
 
-    top: 95%
+    top: 63%
     left: 50%
     transform: translateX(-50%)
 
     +sm-block
-        top: 82%
+        top: 72%
     +md-block
-        top: 58%
+        top: 68%
         left: 52%
     +lg-block
-        top: 58%
+        top: 68%
         left: 52%

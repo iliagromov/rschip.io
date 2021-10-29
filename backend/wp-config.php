@@ -2,9 +2,9 @@
 /**
  * The base configuration for WordPress
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
  *
  * This file contains the following configurations:
  *
@@ -17,9 +17,11 @@
  *
  * @package WordPress
  */
+
 define('WP_HOME','http://rschip.io/');
 define('WP_SITEURL','http://rschip.io/');
 define( 'FS_METHOD', 'direct' );
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'rschip_local' );
@@ -33,34 +35,36 @@ define( 'DB_PASSWORD', 'password' );
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
 
-/** Database Charset to use in creating database tables. */
+/** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 
-/** The Database Collate type. Don't change this if in doubt. */
+/** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
 /**#@+
- * Authentication Unique Keys and Salts.
+ * Authentication unique keys and salts.
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'yFx1mNzNk1Xe6%,w>qjAX8PAZ9,lz;Wr.uNW!%|=u]b6[/XJAkzFY9(gv_|y0hl,' );
-define( 'SECURE_AUTH_KEY',  'hGd0<n!$Gd2yMbB)-vw-0P~qT]9evZ8W)z@Ejr>].Y^3-~403seM[zno1iYq@8mE' );
-define( 'LOGGED_IN_KEY',    'pM_3aO=~KB[T%s}J1^=Y:APl<3t&x4BNq`0GM$$Vrg=O%|8qrpRS8ux7BN4b oq9' );
-define( 'NONCE_KEY',        'V[J}R!SYk{%uL_[sr;?,FShq]++Xs0yP3;0@7m=CC(xd?cIz/| zAN%l34BrH+n4' );
-define( 'AUTH_SALT',        '0:Wp;X<3J3?Xswa/a#+47&aqyrI=TX`nM3CUgY;f[<#=0d>ieH]X|#,j~%s7)1-W' );
-define( 'SECURE_AUTH_SALT', ' LD--nv^D.3pjL[_=H 2@B`ehup_ cBoNY>V-5lZA.#@6i_8ZaN[~`W8ZpWNurD#' );
-define( 'LOGGED_IN_SALT',   '-t%c.5<&^DKcH4Q2H(/X97mg2LLLe(NYFg9X:K5W&MSUl69 9awS<`hq~f}~ksi0' );
-define( 'NONCE_SALT',       'r|7Ov%bV6zl>9SXCO2MH42X$B5K6$C^`{@veulXjwk55`.$HC*Cw`:Gk4)(BhohU' );
+define( 'AUTH_KEY',         'w]2LnZ;/K8=Dxh*O>q=]c.YE>b0txJh%XF,XHYLTly,kB1<NKJ}haE]^g#3:YYLZ' );
+define( 'SECURE_AUTH_KEY',  '0]<o0^?7&B=L9V9FAGOyU ]yUUYH6A6E[J#nBtw6pKkZ98SV0g+YPkXe=;3Dq(nz' );
+define( 'LOGGED_IN_KEY',    'J6C=<[Gm#OFYl{jAi2C)&}clYYXUvjdC*?8uHgow;Rj[crHL&/N2]ozs?uCad{qX' );
+define( 'NONCE_KEY',        '}CrV]l~I)c!uYZx#?^.ZzZt3wAAtM:N$~+ Pv:p$*<]]wx.)@>lkW_{A|~/[Hf)j' );
+define( 'AUTH_SALT',        'L*+|rK`9cV6h6Tf/a+QH(/1rQ])a<>VuckSZAFFm{;(6}jkh/e,*:1A]yLk#YP5[' );
+define( 'SECURE_AUTH_SALT', '=[p!iUc0I]hHW2]NhUxKUWbR|n<d%Y.aoO8]k^ji&b`O|=y7r>bs8s/OMXR)9&SO' );
+define( 'LOGGED_IN_SALT',   'yGM!N3[9-gvN/{dBJ|V=ZxjH ]6PHmRAo]{MHk6]!i7-AP*Mf6L b>@ x)0z4JCE' );
+define( 'NONCE_SALT',       'obl!.lT{X)Y6X6 rynBeh;WuSdz7H[*EZ(y</h>~`0}m_-p*cNRqP&u$)8v.U|a^' );
 
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * WordPress database table prefix.
  *
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
@@ -80,6 +84,10 @@ $table_prefix = 'rs_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+
 
 /* That's all, stop editing! Happy publishing. */
 

@@ -1,0 +1,36 @@
+.debugGrid .childFlex {
+  width: -webkit-calc(11.11111% - 20px);
+  width: calc(11.11111% - 20px);
+}
+
+.footerLinks {
+  width: -webkit-calc(25% - 20px);
+  width: calc(25% - 20px);
+}
+
+.headerLogo {
+  width: -webkit-calc(50% - 20px);
+  width: calc(50% - 20px);
+  text-align: left;
+}
+
+.headerNav {
+  width: -webkit-calc(50% - 20px);
+  width: calc(50% - 20px);
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.headerNavCart {
+  margin-left: 4%;
+}
+
+.headerNavBtn {
+  margin-left: 2%;
+}
+
+.child {
+  font-size: 60px;
+}

@@ -444,13 +444,15 @@
     margin-bottom: 24px
 /*cartProducts*/
 
-
 .cartProducts
     +col
     +size(9)
     +size-md(6.2)
     +size-lg(6.2)
 
+.cartProductThumbnails
+    display: flex
+    width: 65px
 .cartProductsHeader
     +row-flex
     margin-bottom: 2%
@@ -464,7 +466,7 @@
         &:nth-child(2)
             display: flex
             justify-content: flex-end
-.cartProductsFooter 
+.cartProductsFooter
     display: flex
     justify-content: space-between
 .cartProductsCode
@@ -499,19 +501,46 @@
     +size(9)
     +size-md(2)
     +size-lg(2)
-    .quantity
+    .quantityBox
         display: flex
         justify-content: space-around
         align-items: center
-        margin-top: 4%
 
-        margin-left: -20px
-
-        margin-right: 20px
+        margin-top: 2%
+        margin-left: -26px
+        margin-right: 15px
 
         background: #111111
         border-radius: 123px
         height: 44px
+        padding: 0px 20px
+
+        button
+            display: flex
+            align-items: center
+            border: none
+            background: transparent
+            color: #fff
+            font-size: 25px
+            width: 20px
+            height: 20px
+            padding: 0
+           
+            &.bt_minus
+               
+                padding-top: 5px
+                span
+                    width: 13px
+                    height: 2px
+                    background: #fff
+        .quantity
+            font-family: #{$SFUIDisplay}-Bold
+            background: #111
+            color: #fff
+            border: none
+            text-align: center
+            width: 100%
+            font-size: 18px
 
 .cartProductPrice
     +col
@@ -527,6 +556,7 @@
     right: 0
     right: 35px
 .cartProductSelect
+    margin-top: 3%
     // border: 1.5px solid rgba(255, 255, 255, 0.15)
     // border-radius: 15px
     // background: rgba(255, 255, 255, 0.15)
@@ -2639,7 +2669,9 @@ html
         backdrop-filter: blur(35px)
         z-index: -1
         border-radius: inherit
-
+    div
+        &:last-child
+            border: none
     .select
         font-size: 15px
         line-height: 29px
@@ -2657,6 +2689,8 @@ html
                 width: 200px
             +lg-block 
                 width: 200px
+        
+            
             
         +sm-block
             height: 100%

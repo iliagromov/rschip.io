@@ -1,0 +1,47 @@
+.exposition__image-wrap {
+  margin: -30px 0 0 -175px;
+}
+
+.exposition__num--3 {
+  bottom: 25px;
+  left: 170px;
+}
+
+.exposition__num--4 {
+  top: 112px;
+  left: 176px;
+}
+
+.odds__col-img {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.odds__col-img .engine-list {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.odds__col-img .engine-list__item:nth-child(-n+2) {
+  margin-bottom: 0;
+}
+
+.odds__col-img .engine-list__item:nth-child(odd) {
+  margin-right: 0;
+}
+
+.box-list__item {
+  margin-bottom: 20px;
+  padding: 25px;
+}
+
+.box-list__item img {
+  max-width: 100%;
+}
+
+.support__title {
+  position: relative;
+}

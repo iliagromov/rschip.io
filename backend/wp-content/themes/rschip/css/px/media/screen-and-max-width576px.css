@@ -1,0 +1,65 @@
+.box-list,
+.footer-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.exposition__list {
+  margin-top: 35px;
+}
+
+.odds {
+  padding: 70px 0;
+}
+
+.odds__col-img {
+  margin-top: 60px;
+}
+
+.footer-list__item:not(:last-child),
+.odds__col-img .engine-list__item:nth-child(-n+2) {
+  margin-bottom: 60px;
+}
+
+.odds__img-wrap {
+  max-width: 315px;
+  width: 100%;
+}
+
+.box {
+  padding: 90px 0 0;
+}
+
+.box__title {
+  margin-bottom: 50px;
+}
+
+.box-list {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.box-list__item {
+  max-width: 318px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding-bottom: 120px;
+}
+
+.footer-list {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

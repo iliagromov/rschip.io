@@ -20,25 +20,97 @@ const api = async (url) => {
   }
 }
 
+const brandsApiUrl = `${APP_DOMAIN}/api/v0/brands/`;
+const modelsApiUrl = `${APP_DOMAIN}/api/v0/models/?brand=`;
+const modificationsApiUrl = `${APP_DOMAIN}/api/v0/modifications/?model=`;
 
+
+function addClick(url, selectBox, selectName, idx) {
+
+  const selectBoxInput = selectBox.querySelectorAll(".select-box__input");
+  selectBoxInput.forEach((input) => {
+    input.addEventListener('click', (e) => {
+      const dataId = e.target.dataset.id;
+      getResponse(`${url}${dataId}`, selectBox, `${selectName}${index}`)
+    });
+  });
+}
+
+function getResponse(url, selectBox, selectName) {
+  const apiRequest = api(url);
+  apiRequest.then((responseJson) => {
+    const arrayResults = responseJson.results;
+    renderSelectBox(selectBox, selectName, arrayResults);
+  });
+}
 
 
 function renderSelectBox(currenSelect, selectName, options) {
 
   const selectBox = currenSelect.querySelector('.select-box');
-  const selectBoxChildCur =  currenSelect.querySelector('.select-box__current');
-  const selectBoxChildList =  currenSelect.querySelector('.select-box__list');
+  const selectBoxChildCur = currenSelect.querySelector('.select-box__current');
+  const selectBoxChildList = currenSelect.querySelector('.select-box__list');
   function renderBox(name, options) {
+
     const selectBoxCurrent = document.createElement('div');
     selectBoxCurrent.classList.add('select-box__current');
     selectBoxCurrent.setAttribute('tabindex', 1);
 
-    selectBoxCurrent.innerHTML = `<div class="select-box__value"><input class="select-box__input" type="radio" id="${name}" value="${name}" name="${name}" checked><p class="select-box__input-text">${name}</p></div>`;
+
+    selectBoxCurrent.innerHTML = `<div class="select-box__value">
+                                    <input class="select-box__input" 
+                                    type="radio" 
+                                    id="${name}" 
+                                    value="${name}" 
+                                    name="${name}" 
+                                    checked><p class="select-box__input-text">${name}</p>
+                                  </div>`;
 
     options && options.forEach((option) => {
       const selectBoxValue = document.createElement('div');
       selectBoxValue.classList.add('select-box__value');
-      selectBoxValue.innerHTML = `<input class="select-box__input" type="radio" id="${name}_id_${option.id}" data-id="${option.id}" value="${option.title}" name="${name}"><p class="select-box__input-text">${option.title}</p>`;
+
+
+      //
+      const selectBoxInput = document.createElement('input');
+      selectBoxInput.classList.add('select-box__input');
+      selectBoxInput.setAttribute('type', 'radio');
+      selectBoxInput.setAttribute('id', `${name}_id_${option.id}`);
+      selectBoxInput.setAttribute('data-id', `${option.id}`);
+      selectBoxInput.setAttribute('data-role', `${name}`);
+      selectBoxInput.setAttribute('value', `${option.title}`);
+      selectBoxInput.setAttribute('name', `${name}`);
+      selectBoxInput.addEventListener('click', (e) => {
+        const dataId = e.target.dataset.id;
+        const dataRole = e.target.dataset.role;
+        let thisSelectBox = e.target.closest('.selectBox');
+        const modelsBox = thisSelectBox.querySelector('.Models');
+        const modificationBox = thisSelectBox.querySelector('.Modification');
+        switch (dataRole) {
+          case 'Brands0':
+            getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Models0`);
+            break;
+          case 'Brands1':
+            getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Models1`);
+            break;
+          case 'Models0':
+            getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification0`);
+            break;
+          case 'Models1':
+            getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification1`);
+            break;
+          default:
+            return;
+        }
+      });
+      //
+      const selectBoxInputText = document.createElement('p');
+      selectBoxInputText.classList.add('select-box__input-text');
+      selectBoxInputText.textContent = option.title;
+
+      selectBoxValue.appendChild(selectBoxInput);
+      selectBoxValue.appendChild(selectBoxInputText);
+
       selectBoxCurrent.appendChild(selectBoxValue);
     });
 
@@ -61,46 +133,7 @@ function renderSelectBox(currenSelect, selectName, options) {
   return renderBox(selectName, options);
 }
 
-
-
 const selectBoxes = document.querySelectorAll('.selectBox');
-
-function getModels(id) {
-  // responseJson 
-  // 0: {"id": 99915741,"title": "CL","brand": 99915436}
-
-  const models = api(`${APP_DOMAIN}/api/v0/models/?brand=${id}`); //${brand}
-
-  models.then((responseJson) => {
-    const arrayModels = responseJson.results;
-    selectBoxes.forEach((selectBox, index) => {
-      const modelsBox = selectBox.querySelector('.Models');
-      const modificationBox = selectBox.querySelector('.Modification');
-      renderSelectBox(modelsBox, `Model${index}`, arrayModels);
-      renderSelectBox(modificationBox, `Modification${index}`, []);
-
-      const selectBoxInput = modelsBox.querySelectorAll(".select-box__input");
-      selectBoxInput.forEach((input) => {
-        input.addEventListener('click', function (e) {
-          const dataId = e.target.dataset.id;
-          getModifications(dataId);
-        });
-      });
-    });
-  });
-}
-
-function getModifications(id) {
-  //{"id": 99998832,"title": "3.0 D Biturbo","model": 99915766,"hp": 245,"nm": 500}
-  const model = api(`${APP_DOMAIN}/api/v0/modifications/?model=${id}`); // model
-  model.then((responseJson) => {
-    const arrayModification = responseJson.results;
-    selectBoxes.forEach((selectBox, index) => {
-      const modificationBox = selectBox.querySelector('.Modification');
-      renderSelectBox(modificationBox, `Modification${index}`, arrayModification);
-    })
-  });
-}
 
 selectBoxes.forEach((selectBox, index) => {
   const brandsBox = selectBox.querySelector('.Brands');
@@ -111,24 +144,6 @@ selectBoxes.forEach((selectBox, index) => {
   renderSelectBox(modificationBox, `Modification${index}`, []);
 });
 
-
-const brands = api(`${APP_DOMAIN}/api/v0/brands/`);
-
-brands.then((responseJson) => {
-  // responseJson 
-  // 0: {id: 99915436, title: 'Acura'}
-
-  const arrayBrands = responseJson.results;
-  selectBoxes.forEach((selectBox, index) => {
-    const brandsBox = selectBox.querySelector('.Brands');
-    renderSelectBox(brandsBox, `Brands${index}`, arrayBrands);
-
-    const selectBoxInput = brandsBox.querySelectorAll(".select-box__input");
-    selectBoxInput.forEach((input) => {
-      input.addEventListener('click', function (e) {
-        const dataId = e.target.dataset.id;
-        getModels(dataId);
-      });
-    });
-  });
+selectBoxes.forEach((selectBox, index) => {
+  getResponse(brandsApiUrl, selectBox, `Brands${index}`)
 });

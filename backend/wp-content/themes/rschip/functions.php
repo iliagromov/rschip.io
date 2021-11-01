@@ -59,15 +59,6 @@ add_action('widgets_init', function () {
 		'after_title'   => "",
 	]);
 	register_sidebar([
-		'name'          => 'Телефон2',
-		'id'            => 'phone-link2',
-		'description'   => 'Выводится в подвале сайта',
-		'before_widget' => '<div class="page__text_19">',
-		'after_widget'  => "</div>\n",
-		'before_title'  => '',
-		'after_title'   => "",
-	]);
-	register_sidebar([
 		'name'          => 'Почта',
 		'id'            => 'mail1',
 		'description'   => 'Выводится в подвале сайта',
@@ -76,46 +67,11 @@ add_action('widgets_init', function () {
 		'before_title'  => '',
 		'after_title'   => "",
 	]);
-	register_sidebar([
-		'name'          => 'График работы',
-		'id'            => 'works-hours1',
-		'description'   => 'Выводится в шапке',
-		'before_widget' => '<p class="page__text_sm">',
-		'after_widget'  => "</p>\n",
-		'before_title'  => '',
-		'after_title'   => "",
-	]);
-	register_sidebar([
-		'name'          => 'График работы',
-		'id'            => 'works-hours2',
-		'description'   => 'Выводится в подвале сайта',
-		'before_widget' => '<div class="page__text">',
-		'after_widget'  => "</div>\n",
-		'before_title'  => '',
-		'after_title'   => "",
-	]);
+
 	register_sidebar([
 		'name'          => 'Соц.сети',
-		'id'            => 'footer-social',
+		'id'            => 'footerSocial',
 		'description'   => 'Выводится в подвале сайта',
-		'before_widget' => '',
-		'after_widget'  => "\n",
-		'before_title'  => '',
-		'after_title'   => "",
-	]);
-	register_sidebar([
-		'name'          => 'Фильтр по Категориям',
-		'id'            => 'filter-categories',
-		'description'   => 'Фильтр товаров по Категориям',
-		'before_widget' => '',
-		'after_widget'  => "\n",
-		'before_title'  => '',
-		'after_title'   => "",
-	]);
-	register_sidebar([
-		'name'          => 'Фильтр по Категориям mob',
-		'id'            => 'filter-categories-mob',
-		'description'   => 'Фильтр товаров по Категориям mob',
 		'before_widget' => '',
 		'after_widget'  => "\n",
 		'before_title'  => '',

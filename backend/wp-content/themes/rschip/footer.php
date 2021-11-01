@@ -119,10 +119,16 @@
                         <p>© Copyright 2016 - 2021 RSCHIP. All Rights Reserved.</p>
                     </div>
                     <div class="item2">
-                        <div class="socialIcons"><a class="icon svg-iconInstagramGray svg-iconInstagramGray-box"
-                                href="javascript:void(0)"></a><a
+                        <div class="socialIcons">
+                        <?php if (is_active_sidebar('footerSocial')) : ?>
+                            <?php dynamic_sidebar('footerSocial') ?>
+                        <?php endif; ?>
+                            <a class="icon svg-iconInstagramGray svg-iconInstagramGray-box"
+                                href="javascript:void(0)"></a>
+                            <a
                                 class="icon svg-iconFacebookGray svg-iconFacebookGray-box"
-                                href="javascript:void(0)"></a><a
+                                href="javascript:void(0)"></a>
+                            <a
                                 class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
                         </div>
                     </div>
@@ -157,6 +163,7 @@
   
    
     <div class="overlay js-overlay-modal"></div>
+
     <link rel="stylesheet" href="css/viewport/mobileFirst-320px.css" type="text/css">
     <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="css/viewport/media/768/768px.css">
@@ -164,14 +171,20 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1135px)"
         href="css/viewport/media/1135/1135px.css">
     <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
+
     <script src="libs/js/store-scroll.js"></script>
     <script src="libs/js/tabs.js"></script>
     <script src="libs/js/modal.js"></script>
+
     <script src="js/menu/menu.component.js"></script>
     <script src="js/chat/chat.component.js"></script>
-    <script src="js/debuggrid/debuggrid.component.js"></script>
+
+
     <script src="js/main.js"></script>
+
     <script src="libs/js/swiper-bundle.min.js"></script>
+
+    <script src="js/productBlocks/productSlider.component.js"></script>
     <script src="js/faq/faq.component.js"></script>
     <script src="js/modals/modalGallary.component.js"></script>
     <script src="js/select/select.component.js"></script>

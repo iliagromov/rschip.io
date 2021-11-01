@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8755 8755" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+  <defs>
+    <style>
+<![CDATA[
+    .fil1 {fill:#FEFEFE}
+    .fil0 {fill:#2B2A29}
+   ]]>
+    </style>
+  </defs>
+  <g id="Слой_x0020_1">
+    <g id="_2344410164032">
+      <rect class="fil0" width="8755" height="8755" rx="620" ry="620"/>
+      <path class="fil1" d="M4173 1969v2122l2865-23V1553zM4175 6452l2864 403-1-2504-2657-7-213 2zM1755 4106c366 0 718-5 1087-5 184 0 354-5 541-5 62 0 535 13 535-16V2011l-2163 290v1805zM1755 6124c135 0 403 52 546 73l1358 186c41 6 259 46 259 22l-6-2075c-663 0-1314-10-1980-10-136 0-170-15-177 5v70c5 225 0 505 0 731v998z"/>
+    </g>
+  </g>
+</svg>

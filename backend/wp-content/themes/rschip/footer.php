@@ -2,7 +2,9 @@
         <div class="footer">
             <div class="wrapper">
                 <div class="footerFlexContainer">
-                    <div class="footerLogo"><img src="assets/images/svg/logoWhite.svg" alt="logo"></div>
+                    <div class="footerLogo">
+                        <img src="assets/images/svg/logoWhite.svg" alt="logo">
+                    </div>
                     <div class="footerDealer"><a class="page__btn" href="javascript:void(0)">Become a dealer</a></div>
                     <div class="footerContacts">
                         <div class="footerContactsItem"><i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i><a

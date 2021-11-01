@@ -2,7 +2,7 @@
         <div class="footer">
             <div class="wrapper">
                 <div class="footerFlexContainer">
-                    <div class="footerLogo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/logoWhite.svg" alt="logo"></div>
+                    <div class="footerLogo"><img src="assets/images/svg/logoWhite.svg" alt="logo"></div>
                     <div class="footerDealer"><a class="page__btn" href="javascript:void(0)">Become a dealer</a></div>
                     <div class="footerContacts">
                         <div class="footerContactsItem"><i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i><a
@@ -44,7 +44,9 @@
                 <div class="footerFlexContainer footerLinks">
                     <h4>Tuning </h4>
                     <hr>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Acura </a><a
+                    <div class="footerLinksItem">
+                        <a href="javascript:void(0)">Acura </a>
+                        <a
                             href="javascript:void(0)">Alfa Romeo </a><a href="javascript:void(0)">Alpina </a><a
                             href="javascript:void(0)">Aston Martin</a><a href="javascript:void(0)">Audi </a><a
                             href="javascript:void(0)">Baojun </a><a href="javascript:void(0)">Beiben </a><a
@@ -122,7 +124,8 @@
                                 class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
                         </div>
                     </div>
-                    <div class="item3"> <a href="javascript:void(0)">Privacy PolicyApp </a><a
+                    <div class="item3"> 
+                        <a href="javascript:void(0)">Privacy PolicyApp </a><a
                             href="javascript:void(0)">Privacy Policy</a></div>
                 </div>
             </div>
@@ -149,60 +152,28 @@
             </div><a class="chatBtn page__btn page__btn_notTransparent" href="javascript:void(0)">CHAT VIA FACEBOOK</a>
         </div>
     </section>
-    <section class="modal modalNews" data-modal="modalNews"> <button
-            class="modalClose icon-close js-modal-close"></button>
-        <div class="modalContent">
-            <h3 class="modalTitle">BMW M5 tuned by RS chip at our dealer’s car repair shop</h3>
-            <div class="modalDate">12 june 2021</div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgNewsPopup.png" alt="imgGallary">
-            <p class="page__text">Developing the best possible ECU remap (chiptuning) for a car requires time and
-                intimate knowledge of the vehicle you’re tuning. In order to provide high quality ECU remaps, our
-                mappings are developed exclusively for BMW and MINI cars. Before we add an ECU remap to our line-up, we
-                make sure it’s tested thoroughly on our dyno. Our software is engineered to create a smooth power
-                delivery that keeps going till the redline, without putting your engine at risk. Besides that our Stage
-                2 and Stage 3 software are designed to get the most out of our Mosselman high-end performance parts.</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgNewsPopup2.png" alt="imgGallary"><img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgNewsPopup3.png" alt="imgGallary">
-            <p class="page__text">Developing the best possible ECU remap (chiptuning) for a car requires time and
-                intimate knowledge of the vehicle you’re tuning. In order to provide high quality ECU remaps, our
-                mappings are developed exclusively for BMW and MINI cars.</p>
-        </div>
-    </section>
-    <section class="modal modalGallary" data-modal="modalGallary"> <button
-            class="modalClose icon-close js-modal-close"></button>
-        <div class="modalContent">
-            <div class="sliderBtn"><button class="btnSlider prev"> <i class="icon-arrow-left"></i></button><button
-                    class="btnSlider next"> <i class="icon-arrow-right"></i></button></div>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallaryPopup1.png" alt="imgGallaryPopup">
-                    </div>
-                    <div class="swiper-slide"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallaryPopup1.png" alt="imgGallaryPopup">
-                    </div>
-                    <div class="swiper-slide"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallaryPopup1.png" alt="imgGallaryPopup">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
+   
     <div class="overlay js-overlay-modal"></div>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/viewport/mobileFirst-320px.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles-sprites.css" type="text/css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/viewport/media/768/768px.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:992px)" href="<?php echo get_template_directory_uri(); ?>/css/viewport/media/992/992px.css">
+    <link rel="stylesheet" href="css/viewport/mobileFirst-320px.css" type="text/css">
+    <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="css/viewport/media/768/768px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:992px)" href="css/viewport/media/992/992px.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1135px)"
-        href="<?php echo get_template_directory_uri(); ?>/css/viewport/media/1135/1135px.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/css/swiper-bundle.min.css" type="text/css">
-    <script src="<?php echo get_template_directory_uri(); ?>/libs/js/store-scroll.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/libs/js/tabs.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/libs/js/modal.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/menu/menu.component.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/chat/chat.component.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/debuggrid/debuggrid.component.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/libs/js/swiper-bundle.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/faq/faq.component.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/modals/modalGallary.component.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/select/select.component.js"></script>
+        href="css/viewport/media/1135/1135px.css">
+    <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
+    <script src="libs/js/store-scroll.js"></script>
+    <script src="libs/js/tabs.js"></script>
+    <script src="libs/js/modal.js"></script>
+    <script src="js/menu/menu.component.js"></script>
+    <script src="js/chat/chat.component.js"></script>
+    <script src="js/debuggrid/debuggrid.component.js"></script>
+    <script src="js/main.js"></script>
+    <script src="libs/js/swiper-bundle.min.js"></script>
+    <script src="js/faq/faq.component.js"></script>
+    <script src="js/modals/modalGallary.component.js"></script>
+    <script src="js/select/select.component.js"></script>
+    <?php wp_footer(); ?>
 </body>
 
 </html>

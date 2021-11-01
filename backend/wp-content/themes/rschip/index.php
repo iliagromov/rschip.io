@@ -14,10 +14,10 @@
                 </div>
                 <div class="bannerImgBg">
                     <picture>
-                        <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/png/main/imgBannerBg_1920.png" media="(min-width: 1441px)">
-                        <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/png/main/imgBannerBg_1440.png" media="(min-width: 1440px)">
-                        <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/png/main/imgBannerBg_992.png" media="(min-width: 992px)">
-                        <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/png/main/imgBannerBg_768.png" media="(min-width: 768px)"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/main/imgBannerBg_320.png" alt="imgBannerBg">
+                        <source type="image/png" srcset="assets/images/png/main/imgBannerBg_1920.png" media="(min-width: 1441px)">
+                        <source type="image/png" srcset="assets/images/png/main/imgBannerBg_1440.png" media="(min-width: 1440px)">
+                        <source type="image/png" srcset="assets/images/png/main/imgBannerBg_992.png" media="(min-width: 992px)">
+                        <source type="image/png" srcset="assets/images/png/main/imgBannerBg_768.png" media="(min-width: 768px)"><img src="assets/images/png/main/imgBannerBg_320.png" alt="imgBannerBg">
                     </picture>
                 </div>
                 <div class="bannerSelect">
@@ -64,7 +64,7 @@
                 <div class="productsItem">
                     <h3 class="productsItemTitle">Performance Tuning</h3>
                     <p class="productsItemTextBefore">Engine tuning on your smartphone with free IOS/Android apps
-                    </p><img class="productsItemImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/png/product1.png" alt="product">
+                    </p><img class="productsItemImg" src="assets/images/png/product1.png" alt="product">
                     <div class="productsItemGain">
                         <div class="productsItemGain__text">
                             <div class="text">up to</div>
@@ -83,7 +83,7 @@
                 <div class="productsItem">
                     <h3 class="productsItemTitle">Gas Pedal Tuning</h3>
                     <p class="productsItemTextBefore">Improve your acceleration, and customize your driving dynamic
-                    </p><img class="productsItemImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/png/product2.png" alt="product">
+                    </p><img class="productsItemImg" src="assets/images/png/product2.png" alt="product">
                     <div class="productsItemGain">
                         <div class="productsItemGain__text">
                             <div class="text">up to</div>
@@ -172,15 +172,15 @@
             <h3 class="page__title-h3">News & Events</h3>
             <div class="newsFlexContainer">
                 <div class="newsItem js-open-modal" data-modal="modalNews">
-                    <div class="newsItemImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgNews1.png" alt="imgNews"></div>
+                    <div class="newsItemImg"><img src="assets/images/png/imgNews1.png" alt="imgNews"></div>
                     <h4 class="newsItemTitle">BMW M5 tuned by RS chip at our dealer’s car repair shop</h4>
                 </div>
                 <div class="newsItem js-open-modal" data-modal="modalNews">
-                    <div class="newsItemImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgNews2.png" alt="imgNews"></div>
+                    <div class="newsItemImg"><img src="assets/images/png/imgNews2.png" alt="imgNews"></div>
                     <h4 class="newsItemTitle">Jaguar F type tuned bt RSCHIP in South Korea</h4>
                 </div>
                 <div class="newsItem js-open-modal" data-modal="modalNews">
-                    <div class="newsItemImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgNews3.png" alt="imgNews"></div>
+                    <div class="newsItemImg"><img src="assets/images/png/imgNews3.png" alt="imgNews"></div>
                     <h4 class="newsItemTitle">2020 Porsche Cayenne Turbo 4.0 tuned by RS CHIP</h4>
                 </div>
             </div>
@@ -189,9 +189,9 @@
     <section class="social">
         <div class="socialBg">
             <picture>
-                <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgBgSocial-Md.png" media="(min-width: 992px)">
-                <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgBgSocial-Sm.png" media="(min-width: 768px)">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgBgSocial.png" alt="imgBgSocial">
+                <source type="image/png" srcset="assets/images/png/imgBgSocial-Md.png" media="(min-width: 992px)">
+                <source type="image/png" srcset="assets/images/png/imgBgSocial-Sm.png" media="(min-width: 768px)">
+                <img src="assets/images/png/imgBgSocial.png" alt="imgBgSocial">
             </picture>
         </div>
         <div class="socialText">
@@ -207,30 +207,32 @@
             <div class="gallaryFlexContainer">
                 <div class="gallaryCol">
                     <div class="gallaryItem js-open-modal" data-modal="modalGallary">
-                        <picture> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallary1.png" alt="imgGallary"></picture>
+                        <picture> <img src="assets/images/png/imgGallary1.png" alt="imgGallary"></picture>
                     </div>
                     <div class="gallaryItem js-open-modal" data-modal="modalGallary">
-                        <picture> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallary2.png" alt="imgGallary"></picture>
-                    </div>
-                </div>
-                <div class="gallaryCol">
-                    <div class="gallaryItem js-open-modal" data-modal="modalGallary">
-                        <picture> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallary3.png" alt="imgGallary"></picture>
-                    </div>
-                    <div class="gallaryItem js-open-modal" data-modal="modalGallary">
-                        <picture> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallary4.png" alt="imgGallary"></picture>
+                        <picture> <img src="assets/images/png/imgGallary2.png" alt="imgGallary"></picture>
                     </div>
                 </div>
                 <div class="gallaryCol">
                     <div class="gallaryItem js-open-modal" data-modal="modalGallary">
-                        <picture> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallary5.png" alt="imgGallary"></picture>
+                        <picture> <img src="assets/images/png/imgGallary3.png" alt="imgGallary"></picture>
                     </div>
                     <div class="gallaryItem js-open-modal" data-modal="modalGallary">
-                        <picture> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgGallary6.png" alt="imgGallary"></picture>
+                        <picture> <img src="assets/images/png/imgGallary4.png" alt="imgGallary"></picture>
+                    </div>
+                </div>
+                <div class="gallaryCol">
+                    <div class="gallaryItem js-open-modal" data-modal="modalGallary">
+                        <picture> <img src="assets/images/png/imgGallary5.png" alt="imgGallary"></picture>
+                    </div>
+                    <div class="gallaryItem js-open-modal" data-modal="modalGallary">
+                        <picture> <img src="assets/images/png/imgGallary6.png" alt="imgGallary"></picture>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
+<?php include(TEMPLATEPATH . '/includes/modalNews.php'); ?>
+<?php include(TEMPLATEPATH . '/includes/modalGallary.php'); ?>
 <?php get_footer(); ?>

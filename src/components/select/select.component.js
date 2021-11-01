@@ -89,9 +89,11 @@ function renderSelectBox(currenSelect, selectName, options) {
         switch (dataRole) {
           case 'Brands0':
             getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Models0`);
+            getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification0`);
             break;
           case 'Brands1':
             getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Models1`);
+            getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification1`);
             break;
           case 'Models0':
             getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification0`);

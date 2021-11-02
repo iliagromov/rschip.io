@@ -1,4 +1,48 @@
 //-products
+mixin productOld()
+    .productsItem.productsItemCart
+        .productsItemCartLabel BEST SELLER
+        h3.productsItemCartTitle RS
+        p.productsItemCartTextBefore Engine tuning on your smartphone with free IOS/Android apps
+        img.productsItemCartImg(src="assets/images/png/productCart1.png", alt="product")
+
+    
+        .productsItemCartGain
+            .productsItemCartGainTitle up to +20%
+            .productsItemCartGainDesc 
+                div Power 
+                div Torque
+            ul 
+                li ICE end hybrid engiens 
+                li iOS, Android apps 
+                li 18%* fuel saving 
+                li 3 driving modes
+
+        .productsItemCartActions
+            .productPrice $229
+            button.page__btn.page__btn_notTransparent ADD TO BAG
+
+    .productsItem.productsItemCart
+        .productsItemCartLabel BEST SELLER
+        h3.productsItemCartTitle Gtr
+        p.productsItemCartTextBefore Tune your engine and dispaly car readings on 3.5 inch touch screen
+        img.productsItemCartImg(src="assets/images/png/productCart2.png", alt="product")
+
+    
+        .productsItemCartGain
+            .productsItemCartGainTitle up to +25%
+            .productsItemCartGainDesc 
+                div Power 
+                div Torque
+            ul 
+                li ICE end hybrid engiens 
+                li PC programmer 
+                li 18%* fuel saving 
+                li 6 driving modes 
+
+        .productsItemCartActions
+            .productPrice $369
+            button.page__btn.page__btn_notTransparent ADD TO BAG
 include ./products.mixin.pug
 
 section.products.productsCart
@@ -25,6 +69,7 @@ section.products.productsCart
 
     .wrapper
         .productsFlexContainer
+            
             .productsItem.productsItemCart
                 .productsItemCartLabel BEST SELLER
                 h3.productsItemCartTitle RS
@@ -33,10 +78,15 @@ section.products.productsCart
 
             
                 .productsItemCartGain
-                    .productsItemCartGainTitle up to +20%
-                    .productsItemCartGainDesc 
-                        div Power 
-                        div Torque
+                    .productsItemGain
+                        .productsItemGain__text
+                            div.text up to
+                            div.number 10
+                            div.text Power
+                        .productsItemGain__text
+                            div.text up to
+                            div.number 10
+                            div.text Torque
                     ul 
                         li ICE end hybrid engiens 
                         li iOS, Android apps 
@@ -55,10 +105,15 @@ section.products.productsCart
 
             
                 .productsItemCartGain
-                    .productsItemCartGainTitle up to +25%
-                    .productsItemCartGainDesc 
-                        div Power 
-                        div Torque
+                    .productsItemGain
+                        .productsItemGain__text
+                            div.text up to
+                            div.number 10
+                            div.text Power
+                        .productsItemGain__text
+                            div.text up to
+                            div.number 10
+                            div.text Torque
                     ul 
                         li ICE end hybrid engiens 
                         li PC programmer 
@@ -68,7 +123,7 @@ section.products.productsCart
                 .productsItemCartActions
                     .productPrice $369
                     button.page__btn.page__btn_notTransparent ADD TO BAG
-
+                    
             .productsItem.productsItemCart.productsItemCart__Big
                 .productsItemCart__text
                     h3.productsItemCartTitle RS RESPONSE gas pedal tuning

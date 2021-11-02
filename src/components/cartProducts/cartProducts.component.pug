@@ -11,7 +11,7 @@
             img(src="assets/images/png/cartProductThumbnails1.png", alt="cartProductThumbnails")
         .cartProductName 
             div.productName RS Chip 
-            div.carName Toyota Mark ll
+            div.carName
         .cartProductQuantity
             .quantityBox
                 button.bt_minus
@@ -23,13 +23,15 @@
         .cartProductRemove 
             .svg-iconTrash.svg-iconTrash-box
         .cartProductSelect
-            include ../select/selectBoxCart.component.pug
+            .selectBox.selectBoxCart(data-productname="Rs")
+                .selectBoxContainer
+                    include ../select/select.component.pug
     .cartProduct
         .cartProductThumbnails
             img(src="assets/images/png/cartProductThumbnails2.png", alt="cartProductThumbnails")
         .cartProductName 
-            div.productName RS Chip 
-            div.carName Toyota Mark ll
+            div.productName GTR Chip 
+            div.carName 
         .cartProductQuantity
             .quantityBox
                 button.bt_minus
@@ -41,7 +43,29 @@
         .cartProductRemove 
             .svg-iconTrash.svg-iconTrash-box
         .cartProductSelect
-            include ../select/selectBoxCart.component.pug
+            .selectBox.selectBoxCart(data-productname="Gtr")
+                .selectBoxContainer
+                    include ../select/select.component.pug
+    .cartProduct
+        .cartProductThumbnails
+            img(src="assets/images/png/cartProductThumbnails2.png", alt="cartProductThumbnails")
+        .cartProductName 
+            div.productName Chip 
+            div.carName 
+        .cartProductQuantity
+            .quantityBox
+                button.bt_minus
+                    span
+                input.quantity(type="number" min="0" max="10" step="1" value="1" title="Кол-во")
+                button.bt_plus +
+        .cartProductPrice 
+            div 199 $
+        .cartProductRemove 
+            .svg-iconTrash.svg-iconTrash-box
+        .cartProductSelect
+            .selectBox.selectBoxCart(data-productname="Chip")
+                .selectBoxContainer
+                    include ../select/select.component.pug
     .cartProductsFooter 
         button.page__btn CONTINUE SHOPPING
         .cartProductsCode

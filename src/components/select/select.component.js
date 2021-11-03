@@ -1,5 +1,7 @@
 // const brands = ['Acura','Alfa Romeo','Alpina','Aston Martin','Audi','BAIC']
 // const APP_DOMAIN = 'https://montetuning.app/api/v0/brands'
+
+
 const APP_DOMAIN = 'https://montetuning.app';
 
 const api = async (url) => {
@@ -26,9 +28,9 @@ const modificationsApiUrl = `${APP_DOMAIN}/api/v0/modifications/?model=`;
 
 
 function getResponse(url, selectBox, selectName) {
-  const apiRequest = api(url);
+  let apiRequest = api(url);
   apiRequest.then((responseJson) => {
-    const arrayResults = responseJson.results;
+    let arrayResults = responseJson.results;
     renderSelectBox(selectBox, selectName, arrayResults);
   });
 }
@@ -36,36 +38,34 @@ function getResponse(url, selectBox, selectName) {
 
 function renderSelectBox(currenSelect, selectName, options) {
 
-
-  const carName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.carName');
+  // render name car for productCart
+  let carName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.carName');
   getCarName = localStorage.getItem(selectName) ? localStorage.getItem(selectName) : false;
-  if(getCarName && carName && carName.textContent.indexOf(getCarName) == -1 ){
-    carName.textContent +=  `${getCarName} `;
+  if (getCarName && carName && carName.textContent.indexOf(getCarName) == -1) {
+    carName.textContent += `${getCarName} `;
   }
 
-  const selectBox = currenSelect.querySelector('.select-box');
- 
+  function renderBox(name, value, options) {
+    let selectBox = currenSelect.querySelector('.select-box');
+    // render icon
+    let isSelectBoxIcon = currenSelect.querySelector('.select-box__icon');
+    isSelectBoxIcon && selectBox.removeChild(isSelectBoxIcon);
 
-  const selectBoxChildCur = currenSelect.querySelector('.select-box__current');
-  const selectBoxChildList = currenSelect.querySelector('.select-box__list');
-  const selectBoxIcon = currenSelect.querySelector('.select-box__icon');
-
-
-  function renderBox(name, value, options ) {
-    
-    let inputValueDefault = localStorage.getItem(name) ? localStorage.getItem(name) : value;
-    // console.log(inputValueDefault);
-
-    const selectBoxIcon = document.createElement('div');
+    let selectBoxIcon = document.createElement('div');
     selectBoxIcon.classList.add('select-box__icon');
-    selectBoxIcon.innerHTML = localStorage.getItem(name) ? '<i class="iconSuccess"></i>' :   '<i class="iconArrowSelect"></i>'; 
-
+    selectBoxIcon.innerHTML = localStorage.getItem(name) ? '<i class="iconSuccess"></i>' : '<i class="iconArrowSelect"></i>';
     
-    const selectBoxCurrent = document.createElement('div');
+    selectBox.appendChild(selectBoxIcon);
+
+    // render inputs & input default
+    let inputValueDefault = localStorage.getItem(name) ? localStorage.getItem(name) : value;
+    
+    let isSelectBoxCurrentChild = currenSelect.querySelector('.select-box__current');
+    isSelectBoxCurrentChild && selectBox.removeChild(isSelectBoxCurrentChild);
+
+    let selectBoxCurrent = document.createElement('div');
     selectBoxCurrent.classList.add('select-box__current');
     selectBoxCurrent.setAttribute('tabindex', 1);
-
-    
     selectBoxCurrent.innerHTML = `<div class="select-box__value">
                                     <input class="select-box__input" 
                                     type="radio" 
@@ -75,13 +75,11 @@ function renderSelectBox(currenSelect, selectName, options) {
                                     checked><p class="select-box__input-text">${inputValueDefault}</p>
                                   </div>`;
 
-    options && options.forEach((option) => {
-      const selectBoxValue = document.createElement('div');
+    options && options.forEach(option => {
+      let selectBoxValue = document.createElement('div');
       selectBoxValue.classList.add('select-box__value');
-
-
       //
-      const selectBoxInput = document.createElement('input');
+      let selectBoxInput = document.createElement('input');
       selectBoxInput.classList.add('select-box__input');
       selectBoxInput.setAttribute('type', 'radio');
       selectBoxInput.setAttribute('id', `${name}_id_${option.id}`);
@@ -89,116 +87,117 @@ function renderSelectBox(currenSelect, selectName, options) {
       selectBoxInput.setAttribute('value', `${option.title}`);
       selectBoxInput.setAttribute('data-id', `${option.id}`);
       selectBoxInput.setAttribute('data-selectname', `${value}`);
-     
-      
-      selectBoxInput.addEventListener('click', (e) => {
+      selectBoxInput.addEventListener('click', e => {
         let dataId = e.target.dataset.id,
-        dataSelectName = e.target.dataset.selectname,
-        dataProductName = e.target.closest('.selectBox').dataset.productname ? e.target.closest('.selectBox').dataset.productname : 'default',
-        thisSelectBox = e.target.closest('.selectBox'),
-        thisCartProduct = e.target.closest('.cartProduct'),
-        modelsBox = thisSelectBox.querySelector('.Models'),
-        modificationBox = thisSelectBox.querySelector('.Modification'),
-        carName = thisCartProduct && thisCartProduct.querySelector('.carName');
+          dataSelectName = e.target.dataset.selectname,
+          dataProductName = e.target.closest('.selectBox').dataset.productname ? e.target.closest('.selectBox').dataset.productname : 'default',
+          thisSelectBox = e.target.closest('.selectBox'),
+          thisCartProduct = e.target.closest('.cartProduct'),
+          modelsBox = thisSelectBox.querySelector('.Models'),
+          modificationBox = thisSelectBox.querySelector('.Modification'),
+          carName = thisCartProduct && thisCartProduct.querySelector('.carName');
 
         switch (dataSelectName) {
           case 'Brand':
-
-
-            getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Model_${dataProductName}`);
-            renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
-            // localStorage.setItem('productName', dataProductName);
             localStorage.setItem(`Brand_${dataProductName}`, e.target.value);
-
-            // localStorage.setItem('productCar', `[{${dataProductName}:[ {"Brand": ${e.target.value} } ] }]`);
-
+            localStorage.setItem(`Brand_${dataProductName}_id`, dataId);
+            localStorage.removeItem(`Model_${dataProductName}`);
+            localStorage.removeItem(`Model_${dataProductName}_id`);
+            localStorage.removeItem(`Modification_${dataProductName}`);
+            localStorage.removeItem(`Modification_${dataProductName}_id`);
+            
+            renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
+            getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Model_${dataProductName}`);
             carName && (carName.textContent = localStorage.getItem(`Brand_${dataProductName}`));
-
-
             thisSelectBox.querySelector('.Brands .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
-            thisSelectBox.querySelector('.Models .select-box__icon').innerHTML = '<i class="iconArrowSelect"></i>';
-            thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconArrowSelect"></i>';
-
+           
             break;
+
           case 'Model':
+            localStorage.setItem(`Model_${dataProductName}`, e.target.value);
+            localStorage.setItem(`Model_${dataProductName}_id`, dataId);
+
+            localStorage.removeItem(`Modification_${dataProductName}`);
+            localStorage.removeItem(`Modification_${dataProductName}_id`);
 
             getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification_${dataProductName}`);
-
-            localStorage.setItem(`Model_${dataProductName}`, e.target.value);
-
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)}`);
-            
             thisSelectBox.querySelector('.Models .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
-            thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconArrowSelect"></i>';
-
+           
             break;
+
           case 'Modification':
-
             localStorage.setItem(`Modification_${dataProductName}`, e.target.value);
-            
-            carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
+            localStorage.setItem(`Modification_${dataProductName}_id`, dataId);
 
+            carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
             thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
+
             break;
+
           default:
             break;
         }
 
       });
-
+      selectBoxValue.appendChild(selectBoxInput);
       //
-      const selectBoxInputText = document.createElement('p');
+      let selectBoxInputText = document.createElement('p');
       selectBoxInputText.classList.add('select-box__input-text');
       selectBoxInputText.textContent = option.title;
-
-      selectBoxValue.appendChild(selectBoxInput);
       selectBoxValue.appendChild(selectBoxInputText);
-
+      //
       selectBoxCurrent.appendChild(selectBoxValue);
     });
-
-    selectBoxChildCur && selectBox.removeChild(selectBoxChildCur);
-    selectBox.appendChild(selectBoxIcon);
     selectBox.appendChild(selectBoxCurrent);
 
-    const selectListBox = document.createElement('ul');
+    //render lists
+    let selectBoxChildList = currenSelect.querySelector('.select-box__list');
+    selectBoxChildList && selectBox.removeChild(selectBoxChildList);
+
+    let selectListBox = document.createElement('ul');
     selectListBox.classList.add('select-box__list');
+
     if (options && options.length !== 0) {
       options.forEach((option) => {
-        const li = document.createElement('li');
+        let li = document.createElement('li');
         li.innerHTML = `<label class="select-box__option" for="${name}_id_${option.id}" aria-hidden>${option.title}</label>`;
         selectListBox.appendChild(li);
       });
     } else {
-      const empty = document.createElement('div');
+      let empty = document.createElement('div');
       empty.classList.add('select-box__empty');
       empty.textContent = 'no data';
 
       selectListBox.appendChild(empty);
     }
-    selectBoxChildList && selectBox.removeChild(selectBoxChildList);
+   
     selectBox.appendChild(selectListBox);
-
   }
   let selectValue = selectName.slice(0, selectName.indexOf('_'));
   return renderBox(selectName, selectValue, options);
 }
 
-const selectBoxes = document.querySelectorAll('.selectBox');
+let selectBoxes = document.querySelectorAll('.selectBox');
 
 selectBoxes.forEach(selectBox => {
-  const dataProductName = selectBox.dataset.productname ? selectBox.dataset.productname : 'default';
-  const brandsBox = selectBox.querySelector('.Brands');
-  const modelsBox = selectBox.querySelector('.Models');
-  const modificationBox = selectBox.querySelector('.Modification');
+  //get product name for select name, if product name empty then return 'Name_default'
+  let dataProductName = selectBox.dataset.productname ? selectBox.dataset.productname : 'default';
+  let brandsBox = selectBox.querySelector('.Brands');
+  let modelsBox = selectBox.querySelector('.Models');
+  let modificationBox = selectBox.querySelector('.Modification');
 
+  //init selects
   renderSelectBox(brandsBox, `Brand_${dataProductName}`, []);
   renderSelectBox(modelsBox, `Model_${dataProductName}`, []);
   renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
-});
 
-selectBoxes.forEach(selectBox => {
-  const dataProductName = selectBox.dataset.productname;
-  getResponse(brandsApiUrl, selectBox, `Brand_${dataProductName}`)
-});
+  //init selects brands
+  getResponse(brandsApiUrl, brandsBox, `Brand_${dataProductName}`)
 
+  let isBrandId = localStorage.getItem(`Brand_${dataProductName}_id`);
+  isBrandId && getResponse(`${modelsApiUrl}${isBrandId}`, modelsBox, `Model_${dataProductName}`);
+  let idModelId = localStorage.getItem(`Model_${dataProductName}_id`);
+  idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
+            
+});

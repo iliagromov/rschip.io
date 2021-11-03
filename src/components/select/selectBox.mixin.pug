@@ -1,0 +1,15 @@
+mixin selectBox(productname)
+    .selectBox(data-productname=productname)
+        .selectBoxText Find out how many Horsepowers you can add to your Car
+        .selectBoxContainer
+            include ./select.component.pug
+            
+            .selectBoxAction
+                .selectBoxSearch
+                    .svg-iconSearch.svg-iconSearch-box
+               
+                //- .selectBoxActionSelected
+                //-     .selectBoxActionPrice $369
+                //-     button.page__btn.page__btn_notTransparent To cart
+                        
+        a.selectBoxLink.js-open-modal(href="javascript:void(0)" data-modal="modalCarCantfind") Can’t find my Car

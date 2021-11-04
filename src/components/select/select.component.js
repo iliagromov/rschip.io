@@ -496,16 +496,16 @@ function renderSelectBox(currenSelect, selectName, options) {
   // render name car for productCart
   let carName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.carName');
   getCarName = localStorage.getItem(selectName) ? localStorage.getItem(selectName) : false;
-  
+  let selectBox = currenSelect.closest('.selectBox');
   if( localStorage.getItem(selectName) ){
     currenSelect.classList.add('Selected');
   } else {
     currenSelect.classList.remove('Selected');
   }
-  if(currenSelect.closest('.selectBox').querySelector('.Modification').classList.contains('Selected')){
-    currenSelect.closest('.selectBox').querySelector('.selectBoxAction').classList.add('Selected')
+  if(selectBox.querySelector('.Modification').classList.contains('Selected')){
+    selectBox.querySelector('.selectBoxAction') && selectBox.querySelector('.selectBoxAction').classList.add('Selected')
   } else {
-    currenSelect.closest('.selectBox').querySelector('.selectBoxAction').classList.remove('Selected')
+    selectBox.querySelector('.selectBoxAction') && selectBox.querySelector('.selectBoxAction').classList.remove('Selected')
   }
   if (getCarName && carName && carName.textContent.indexOf(getCarName) == -1) {
     carName.textContent += `${getCarName} `;
@@ -562,7 +562,8 @@ function renderSelectBox(currenSelect, selectName, options) {
           thisCartProduct = e.target.closest('.cartProduct'),
           modelsBox = thisSelectBox.querySelector('.Models'),
           modificationBox = thisSelectBox.querySelector('.Modification'),
-          carName = thisCartProduct && thisCartProduct.querySelector('.carName');
+          carName = thisCartProduct && thisCartProduct.querySelector('.carName'),
+          selectBoxAction = thisSelectBox.querySelector('.selectBoxAction');
 
         switch (dataSelectName) {
           case 'Brand':
@@ -599,7 +600,7 @@ function renderSelectBox(currenSelect, selectName, options) {
 
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
             thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
-           
+            selectBoxAction && thisSelectBox.closest('.selectBox').querySelector('.selectBoxAction').classList.add('Selected')
             break;
 
           default:

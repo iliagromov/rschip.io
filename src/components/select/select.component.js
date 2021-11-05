@@ -532,12 +532,14 @@ function renderSelectBox(currenSelect, selectName, options) {
     let selectBoxCurrent = document.createElement('div');
     selectBoxCurrent.classList.add('select-box__current');
     selectBoxCurrent.setAttribute('tabindex', 1);
+   
+    let thisName =  document.getElementById(name) ? name+1 : name;
     selectBoxCurrent.innerHTML = `<div class="select-box__value">
                                     <input class="select-box__input" 
                                     type="radio" 
-                                    id="${name}" 
+                                    id="${thisName}" 
                                     value="${inputValueDefault}" 
-                                    name="${name}" 
+                                    name="${thisName}" 
                                     checked/>
                                     <p class="select-box__input-text">${inputValueDefault}</p>
                                   </div>`;
@@ -549,8 +551,8 @@ function renderSelectBox(currenSelect, selectName, options) {
       let selectBoxInput = document.createElement('input');
       selectBoxInput.classList.add('select-box__input');
       selectBoxInput.setAttribute('type', 'radio');
-      selectBoxInput.setAttribute('id', `${name}_id_${option.id}`);
-      selectBoxInput.setAttribute('name', `${name}`);
+      selectBoxInput.setAttribute('id', `${thisName}_id_${option.id}`);
+      selectBoxInput.setAttribute('name', `${thisName}`);
       selectBoxInput.setAttribute('value', `${option.title}`);
       selectBoxInput.setAttribute('data-id', `${option.id}`);
       selectBoxInput.setAttribute('data-selectname', `${value}`);
@@ -629,7 +631,7 @@ function renderSelectBox(currenSelect, selectName, options) {
     if (options && options.length !== 0) {
       options.forEach((option) => {
         let li = document.createElement('li');
-        li.innerHTML = `<label class="select-box__option" for="${name}_id_${option.id}" aria-hidden>${option.title}</label>`;
+        li.innerHTML = `<label class="select-box__option" for="${thisName}_id_${option.id}" aria-hidden>${option.title}</label>`;
         selectListBox.appendChild(li);
       });
     } else {
@@ -664,6 +666,7 @@ selectBoxes.forEach(selectBox => {
 
   let isBrandId = localStorage.getItem(`Brand_${dataProductName}_id`);
   isBrandId && getResponse(`${modelsApiUrl}${isBrandId}`, modelsBox, `Model_${dataProductName}`);
+  
   let idModelId = localStorage.getItem(`Model_${dataProductName}_id`);
   idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
 

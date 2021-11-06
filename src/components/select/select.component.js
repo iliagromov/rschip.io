@@ -513,15 +513,11 @@ function renderSelectBox(currenSelect, selectName, options) {
 
   function renderBox(name, value, options) {
     let selectBox = currenSelect.querySelector('.select-box');
-    // render icon
-    let isSelectBoxIcon = currenSelect.querySelector('.select-box__icon');
-    isSelectBoxIcon && selectBox.removeChild(isSelectBoxIcon);
 
-    let selectBoxIcon = document.createElement('div');
-    selectBoxIcon.classList.add('select-box__icon');
-    selectBoxIcon.innerHTML = localStorage.getItem(name) ? '<i class="iconSuccess"></i>' : '<i class="iconArrowSelect"></i>';
+    let selectBoxCurrent = document.createElement('div');
+    selectBoxCurrent.classList.add('select-box__current');
 
-    selectBox.appendChild(selectBoxIcon);
+    
 
     // render inputs & input default
     let inputValueDefault = localStorage.getItem(name) ? localStorage.getItem(name) : value;
@@ -529,8 +525,7 @@ function renderSelectBox(currenSelect, selectName, options) {
     let isSelectBoxCurrentChild = currenSelect.querySelector('.select-box__current');
     isSelectBoxCurrentChild && selectBox.removeChild(isSelectBoxCurrentChild);
 
-    let selectBoxCurrent = document.createElement('div');
-    selectBoxCurrent.classList.add('select-box__current');
+    
     selectBoxCurrent.setAttribute('tabindex', 1);
    
     let thisName =  document.getElementById(name) ? name+1 : name;
@@ -619,6 +614,18 @@ function renderSelectBox(currenSelect, selectName, options) {
       //
       selectBoxCurrent.appendChild(selectBoxValue);
     });
+
+    // render icon
+    let isSelectBoxIcon = currenSelect.querySelector('.select-box__icon');
+    isSelectBoxIcon && selectBox.removeChild(isSelectBoxIcon);
+
+    let selectBoxIcon = document.createElement('div');
+    selectBoxIcon.classList.add('select-box__icon');
+    selectBoxIcon.innerHTML = localStorage.getItem(name) ? '<i class="iconSuccess"></i>' : '<i class="iconArrowSelect"></i>';
+
+    selectBoxCurrent.appendChild(selectBoxIcon);
+
+    
     selectBox.appendChild(selectBoxCurrent);
 
     //render lists

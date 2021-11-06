@@ -12,6 +12,13 @@
 .cartProductsHeader
     +row-flex
     margin-bottom: 2%
+    display: none
+    +sm-block
+        display: flex
+    +md-block
+        display: flex
+    +lg-block
+        display: flex
     div
         +col
         +size(3)
@@ -117,6 +124,13 @@
     .selectBoxContainer
         width: 100%
         .select
-            width: 33%
+            width: 100%
+            +sm-block
+                width: 33%
+            +md-block
+                width: 33%
+            +lg-block
+                width: 33%
+            
             &:nth-of-type(3)
                 border-right: none

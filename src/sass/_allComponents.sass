@@ -332,23 +332,38 @@
         width: auto
 
 .bannerSelect
+    // position: absolute
+    // top: 63%
+    // left: 50%
+
     position: absolute
+    bottom: 0
     z-index: 3
 
-    top: 63%
-    left: 50%
-    transform: translateX(-50%)
-    width: 100%
+    width: 90%
+    
+    margin-left: 4%
 
     +sm-block
+       
         top: 72%
+        width: 100%
+        transform: translateX(-50%)
+        margin: 0
+        
     +md-block
         top: 68%
         left: 52%
+        width: 100%
+        transform: translateX(-50%)
+        margin: 0
+
     +lg-block
         top: 68%
         left: 52%
-
+        width: 100%
+        transform: translateX(-50%)
+        margin: 0
 /*cartDetails*/
 
 
@@ -456,6 +471,13 @@
 .cartProductsHeader
     +row-flex
     margin-bottom: 2%
+    display: none
+    +sm-block
+        display: flex
+    +md-block
+        display: flex
+    +lg-block
+        display: flex
     div
         +col
         +size(3)
@@ -561,7 +583,14 @@
     .selectBoxContainer
         width: 100%
         .select
-            width: 33%
+            width: 100%
+            +sm-block
+                width: 33%
+            +md-block
+                width: 33%
+            +lg-block
+                width: 33%
+            
             &:nth-of-type(3)
                 border-right: none
 
@@ -2610,7 +2639,7 @@ html
 /*select*/
 .selectBox
     width: 100%
-    
+
 .selectBoxText
     display: none
     font-family: #{$SFUIText}-Regular
@@ -2640,6 +2669,8 @@ html
 
 .selectBoxContainer
     position: relative
+    position: static
+
     display: flex
     align-items: center
     flex-wrap: wrap
@@ -2651,9 +2682,11 @@ html
     margin: 0 auto
 
     // margin: 0 auto 2%
-    background: rgba(255, 255, 255, 0.15)
+    // background: rgba(255, 255, 255, 0.25)
+    background: #363636
 
-    border: 1.5px solid rgba(255, 255, 255, 0.15)
+    border: 1.5px solid rgba(255, 255, 255, 0.25)
+
     box-sizing: border-box
     border-radius: 15px
 
@@ -2672,6 +2705,7 @@ html
 
     &::after
         content: ''
+        display: none
         position: absolute
         top: 0
         left: 0
@@ -2680,7 +2714,7 @@ html
         backdrop-filter: blur(35px)
         z-index: -1
         border-radius: inherit
-    
+
     .select
         font-size: 15px
         line-height: 29px
@@ -2689,25 +2723,30 @@ html
         display: flex
         align-items: center
         flex-grow: 1
-        
+
         border-bottom: 1px solid rgba(255, 255, 255, 0.15)
 
-        
-        
+        +sm-block
+            border-bottom: 0
+        +md-block
+            border-bottom: 0
+        +lg-block
+            border-bottom: 0
+
         &:nth-of-type(2)
-            border-right: 0
+            .select-box
+                border-right: 0
 
         &:nth-of-type(3)
+            border-bottom: 0
             // width: 75%
-            +sm-block 
+            +sm-block
                 // width: 200px
-            +md-block 
+            +md-block
                 // width: 30%
-            +lg-block 
+            +lg-block
                 // width: 30%
-        
-            
-            
+
         +sm-block
             height: 100%
         +md-block
@@ -2721,17 +2760,17 @@ html
     .selectBoxAction
         display: flex
         align-items: center
-       
+
         height: 100%
 
         margin: 0 15px
         &.Selected
             .selectBoxActionSelected
                 display: flex
-                
+
             .selectBoxSearch
                 display: none
-        
+
     .selectBoxSearch
         display: flex
         align-items: center
@@ -2747,17 +2786,15 @@ html
         width: 100%
         margin: 0 7px
 
-        
-        .selectBoxActionPrice 
+        .selectBoxActionPrice
             font-size: 18px
             margin-right: 15%
         .page__btn
             padding: 12px 10px
 
-       
-
 .select-box
-    position: relative
+
+    position: static
     display: flex
 
     align-items: center
@@ -2767,11 +2804,18 @@ html
     font-size: 18px
     color: #fff
 
-
     padding: 0 28px 0 11px
 
-    border-right: 1px solid rgba(255, 255, 255, 0.15)
+    margin: 10px 0
 
+    +sm-block
+        position: relative
+
+    +md-block
+        position: relative
+
+    +lg-block
+        position: relative
 
     &__empty
         padding: 18px
@@ -2804,12 +2848,11 @@ html
                 .select-box__option
                     cursor: pointer
 
-
     &__icon
         display: flex
         position: absolute
         top: 50%
-        right: 15px
+        right: -15px
         transform: translateY(-50%)
         transition: 0.2s ease
 
@@ -2830,18 +2873,20 @@ html
         background-color: transparent
 
     &__list
-        position: absolute
-        top: 50px
-        left: -12px
+        position: fixed
+        bottom: 0
+        left: 0
+        height: 70%
+        max-height: initial
+        background: #fff
+        color: #000
+
         z-index: 100
-        width: calc(100% + 20px)
+        width: 100%
 
-
-
-        max-height: 200px
+        // max-height: 200px
         overflow: scroll
 
-       
         padding: 0
         list-style: none
         opacity: 0
@@ -2854,10 +2899,28 @@ html
         box-shadow: 0 15px 30px -10px transparentize(#000, 0.9)
         border-radius: 16px
 
-        background: #000
+        // background: #000
         border: 1.5px solid rgba(255, 255, 255, 0.15)
+        +sm-block
+            position: absolute
+            top: 50px
+            left: -12px
+            width: calc(100% + 20px)
+            height: 200px
 
+        +md-block
+            position: absolute
+            top: 50px
+            left: -12px
+            width: calc(100% + 20px)
+            height: 200px
 
+        +lg-block
+            position: absolute
+            top: 50px
+            left: -12px
+            width: calc(100% + 20px)
+            height: 200px
 
     &__option
         display: block
@@ -2865,6 +2928,8 @@ html
         // background-color: #fff
         background: rgba(255, 255, 255, 0.15)
         white-space: nowrap
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
         &:hover,
         &:focus
             color: #546c84

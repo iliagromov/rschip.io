@@ -5,7 +5,7 @@
     // max-height: 768px
   
     &.bannerGtr
-        padding-bottom: 75%
+        padding-bottom: 25%
         +sm-block
             padding-bottom: 0
         +md-block
@@ -29,7 +29,7 @@
                 top: 162px
 
         .bannerSelect
-            top: 95%
+            bottom: -7%
 
             +sm-block
                 top: 82%
@@ -41,7 +41,7 @@
                 left: 52%
 
     &.bannerChip
-        padding-bottom: 75%
+        padding-bottom: 25%
         +sm-block
             padding-bottom: 0
         +md-block
@@ -74,7 +74,7 @@
                 top: 175px
 
         .bannerSelect
-                top: 95%
+                bottom: -7%
 
                 +sm-block
                     top: 82%
@@ -86,7 +86,7 @@
                     left: 52%
             
     &.bannerRs
-        padding-bottom: 75%
+        padding-bottom: 25%
         +sm-block
             padding-bottom: 0
         +md-block
@@ -111,7 +111,7 @@
                 left: 33%
 
         .bannerSelect
-            top: 95%
+            bottom: -7%
 
             +sm-block
                 top: 82%
@@ -264,33 +264,32 @@
 .bannerSelect
     // position: absolute
     // top: 63%
-    // left: 50%
+    //
 
     position: absolute
-    bottom: 0
+    
+   
+    bottom: 10%
     z-index: 3
 
     width: 90%
-    
-    margin-left: 4%
+    margin: 0 auto
+    left: 4%
 
     +sm-block
-       
+        
+        left: 50%
+        transform: translateX(-50%)
         top: 72%
         width: 100%
-        transform: translateX(-50%)
-        margin: 0
         
     +md-block
         top: 68%
         left: 52%
         width: 100%
         transform: translateX(-50%)
-        margin: 0
-
     +lg-block
         top: 68%
         left: 52%
         width: 100%
         transform: translateX(-50%)
-        margin: 0

@@ -75,7 +75,7 @@
     // max-height: 768px
   
     &.bannerGtr
-        padding-bottom: 75%
+        padding-bottom: 25%
         +sm-block
             padding-bottom: 0
         +md-block
@@ -99,7 +99,7 @@
                 top: 162px
 
         .bannerSelect
-            top: 95%
+            bottom: -7%
 
             +sm-block
                 top: 82%
@@ -111,7 +111,7 @@
                 left: 52%
 
     &.bannerChip
-        padding-bottom: 75%
+        padding-bottom: 25%
         +sm-block
             padding-bottom: 0
         +md-block
@@ -144,7 +144,7 @@
                 top: 175px
 
         .bannerSelect
-                top: 95%
+                bottom: -7%
 
                 +sm-block
                     top: 82%
@@ -156,7 +156,7 @@
                     left: 52%
             
     &.bannerRs
-        padding-bottom: 75%
+        padding-bottom: 25%
         +sm-block
             padding-bottom: 0
         +md-block
@@ -181,7 +181,7 @@
                 left: 33%
 
         .bannerSelect
-            top: 95%
+            bottom: -7%
 
             +sm-block
                 top: 82%
@@ -334,36 +334,35 @@
 .bannerSelect
     // position: absolute
     // top: 63%
-    // left: 50%
+    //
 
     position: absolute
-    bottom: 0
+    
+   
+    bottom: 10%
     z-index: 3
 
     width: 90%
-    
-    margin-left: 4%
+    margin: 0 auto
+    left: 4%
 
     +sm-block
-       
+        
+        left: 50%
+        transform: translateX(-50%)
         top: 72%
         width: 100%
-        transform: translateX(-50%)
-        margin: 0
         
     +md-block
         top: 68%
         left: 52%
         width: 100%
         transform: translateX(-50%)
-        margin: 0
-
     +lg-block
         top: 68%
         left: 52%
         width: 100%
         transform: translateX(-50%)
-        margin: 0
 /*cartDetails*/
 
 
@@ -2677,7 +2676,7 @@ html
     padding: 10px
     // width: 280px
     // height: 69px
-    max-height: 189px
+    // max-height: 189px
     max-width: 670px
     margin: 0 auto
 
@@ -2716,55 +2715,93 @@ html
         border-radius: inherit
 
     .select
-        font-size: 15px
-        line-height: 29px
+        width: 50%
         // height: 68px
-
+        flex-grow: 1
         display: flex
         align-items: center
-        flex-grow: 1
 
+        height: 100%
         border-bottom: 1px solid rgba(255, 255, 255, 0.15)
 
-        +sm-block
-            border-bottom: 0
-        +md-block
-            border-bottom: 0
-        +lg-block
-            border-bottom: 0
-
-        &:nth-of-type(2)
+        &:nth-child(2)
             .select-box
                 border-right: 0
+                +sm-block
+                    border-right: 1px solid rgba(255, 255, 255, 0.15)
+                +md-block
+                    border-right: 1px solid rgba(255, 255, 255, 0.15)
+                +lg-block
+                    border-right: 1px solid rgba(255, 255, 255, 0.15)
 
-        &:nth-of-type(3)
+        &:nth-child(3)
             border-bottom: 0
-            // width: 75%
-            +sm-block
-                // width: 200px
-            +md-block
-                // width: 30%
-            +lg-block
-                // width: 30%
 
         +sm-block
-            height: 100%
+            width: auto
+            border-bottom: 0
         +md-block
-            height: 100%
+            width: auto
+            border-bottom: 0
         +lg-block
-            height: 100%
-            // width: 30%
+            width: auto
+            border-bottom: 0
+
+        .select-box
             border-right: 1px solid rgba(255, 255, 255, 0.15)
-        &.Selected
-            flex-grow: 1
+
+        &.Modification
+
+            &.Selected
+                margin-top: 2%
+                +sm-block
+                    margin: 0
+                +md-block
+                    margin: 0
+                +lg-block
+                    margin: 0
+
     .selectBoxAction
         display: flex
         align-items: center
 
         height: 100%
+        width: auto
 
-        margin: 0 15px
+        +sm-block
+            margin: 0 15px
+            width: auto
+            margin: 0
+
+        +md-block
+            margin: 0 15px
+            width: auto
+            margin: 0
+
+        +lg-block
+            margin: 0 15px
+            width: auto
+            margin: 0
+
         &.Selected
+            width: 50%
+            margin-top: 2%
+
+            +sm-block
+                margin: 0 15px
+                width: auto
+                margin: 0
+
+            +md-block
+                margin: 0 15px
+                width: auto
+                margin: 0
+
+            +lg-block
+                margin: 0 15px
+                width: auto
+                margin: 0
+
             .selectBoxActionSelected
                 display: flex
 
@@ -2784,13 +2821,19 @@ html
         justify-content: space-around
         height: 100%
         width: 100%
-        margin: 0 7px
+        // margin: 0 7px
+        padding: 0 10px
 
         .selectBoxActionPrice
             font-size: 18px
-            margin-right: 15%
+            // margin-right: 15%
+            margin-right: 10px
         .page__btn
-            padding: 12px 10px
+            padding: 10px
+            background: linear-gradient(90deg, #FF4487 0%, #FF5439 100%)
+            border: none
+            +sm-block
+                padding: 12px 10px
 
 .select-box
 
@@ -2801,7 +2844,7 @@ html
     width: 100%
     margin: 0 auto
     font-family: #{$SFUIText}-Regular
-    font-size: 18px
+    font-size: 14px
     color: #fff
 
     padding: 0 28px 0 11px
@@ -2809,12 +2852,15 @@ html
     margin: 10px 0
 
     +sm-block
+        font-size: 18px
         position: relative
 
     +md-block
+        font-size: 18px
         position: relative
 
     +lg-block
+        font-size: 18px
         position: relative
 
     &__empty
@@ -2831,6 +2877,7 @@ html
         display: flex
         justify-content: center
         align-items: center
+        white-space: nowrap
 
         margin-right: 20px
         min-width: 88px
@@ -2881,6 +2928,7 @@ html
         background: #fff
         color: #000
 
+        font-size: 18px
         z-index: 100
         width: 100%
 

@@ -679,3 +679,17 @@ selectBoxes.forEach(selectBox => {
   idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
 
 });
+let banner = document.querySelector('.banner');
+document.addEventListener('scroll', function(e){
+  let y =  window.scrollY;
+  let clientHeight = banner.clientHeight;
+  let getBoundingClientRect = banner.getBoundingClientRect();
+  let bannerPositionBottom = getBoundingClientRect.bottom;
+  // console.log(getBoundingClientRect);
+  // console.log(y);
+  if( y >= bannerPositionBottom){
+    banner.querySelector('.bannerSelect').classList.add('fixed')
+  } else {
+    banner.querySelector('.bannerSelect').classList.remove('fixed')
+  }
+})

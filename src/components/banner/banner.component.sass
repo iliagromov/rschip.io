@@ -3,7 +3,7 @@
     position: relative
     // overflow: hidden
     // max-height: 768px
-  
+
     &.bannerGtr
         padding-bottom: 25%
         +sm-block
@@ -12,7 +12,7 @@
             padding-bottom: 0
         +lg-block
             padding-bottom: 0
-            
+
         .bannerText
             padding-top: 94px
 
@@ -55,7 +55,7 @@
                 display: block
         .bannerText
             padding-top: 100px
-            
+
         .pageText
             padding-left: 4%
         .bannerImgBg
@@ -74,17 +74,17 @@
                 top: 175px
 
         .bannerSelect
-                bottom: -7%
+            bottom: -7%
 
-                +sm-block
-                    top: 82%
+            +sm-block
+                top: 82%
                 +md-block
                     top: 58%
                     left: 52%
                 +lg-block
                     top: 58%
                     left: 52%
-            
+
     &.bannerRs
         padding-bottom: 25%
         +sm-block
@@ -102,7 +102,7 @@
 
         .bannerText
             padding-top: 94px
-            
+
         .bannerImgBg
             +md-block
                 left: 33%
@@ -136,13 +136,13 @@
                 top: 115px
             +lg-block
                 top: 115px
-            
+
         span.block
             display: block
             color: #fff
 
     .pageText
-     
+
         margin-top: 26px
         padding-right: 15px
         margin-bottom: 33px
@@ -150,10 +150,9 @@
         +sm-block
             margin-bottom: 58px
         +md-block
-           width: 50%
+            width: 50%
         +lg-block
-           width: 50%
-
+            width: 50%
 
     .socialIcons
         display: none
@@ -204,7 +203,7 @@
     +sm-block
         padding-top: 12px
         padding-left: 50px
-        
+
     +md-block
         padding-left: 0
         height: 768px
@@ -267,22 +266,52 @@
     //
 
     position: absolute
-    
-   
+
     bottom: 10%
-    z-index: 3
+    z-index: 
 
     width: 90%
     margin: 0 auto
     left: 4%
-
+    &.fixed
+        position: fixed
+        bottom: 0
+        width: 100%
+        left: 0
+        z-index: 100
+        +sm-block
+            left: 90%
+        +md-block
+            left: 90%
+        +lg-block
+            left: 90%
+        .selectBoxText
+            display: none
+        .selectBoxContainer
+            
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+            +sm-block
+                flex-direction: column
+                width: 10%
+                border-radius: 16px 
+            +md-block
+                flex-direction: column
+                width: 10%
+                border-radius: 16px 
+            +lg-block
+                flex-direction: column
+                width: 10%
+                border-radius: 16px 
+        .selectBoxLink
+            display: none
     +sm-block
-        
+
         left: 50%
         transform: translateX(-50%)
         top: 72%
         width: 100%
-        
+
     +md-block
         top: 68%
         left: 52%

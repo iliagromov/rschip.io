@@ -31,6 +31,7 @@
             justify-content: flex-end
 .cartProductsFooter
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
 .cartProductsCode
     display: flex
@@ -125,12 +126,22 @@
         width: 100%
         .select
             width: 100%
+            
             +sm-block
                 width: 33%
             +md-block
                 width: 33%
             +lg-block
                 width: 33%
-            
-            &:nth-of-type(3)
+
+            .select-box
                 border-right: none
+                +sm-block
+                    border-right: 1px solid rgba(255, 255, 255, 0.15)
+                +md-block
+                    border-right: 1px solid rgba(255, 255, 255, 0.15)
+                +lg-block
+                    border-right: 1px solid rgba(255, 255, 255, 0.15)
+            &:nth-of-type(3)
+                .select-box
+                    border-right: none

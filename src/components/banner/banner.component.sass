@@ -1,9 +1,45 @@
 /*banner*/
 .banner
     position: relative
-    // overflow: hidden
-    // max-height: 768px
+    
+    &.bannerRs
+        padding-bottom: 25%
+        +sm-block
+            padding-bottom: 0
+        +md-block
+            padding-bottom: 0
+        +lg-block
+            padding-bottom: 0
 
+        .page__title-h1
+            padding-left: 3%
+
+        .pageText
+            padding-left: 3%
+
+        .bannerText
+            padding-top: 94px
+
+        .bannerImgBg
+            +md-block
+                left: 33%
+
+            +lg-block
+                left: 33%
+
+        .bannerSelect
+            // bottom: -7%
+            bottom: 0
+
+            +sm-block
+                top: 82%
+            +md-block
+                top: 58%
+                // left: 52%
+            +lg-block
+                top: 58%
+                // left: 52%
+                
     &.bannerGtr
         padding-bottom: 25%
         +sm-block
@@ -74,43 +110,7 @@
                 top: 175px
 
         .bannerSelect
-            bottom: -7%
-
-            +sm-block
-                top: 82%
-                +md-block
-                    top: 58%
-                    left: 52%
-                +lg-block
-                    top: 58%
-                    left: 52%
-
-    &.bannerRs
-        padding-bottom: 25%
-        +sm-block
-            padding-bottom: 0
-        +md-block
-            padding-bottom: 0
-        +lg-block
-            padding-bottom: 0
-
-        .page__title-h1
-            padding-left: 3%
-
-        .pageText
-            padding-left: 3%
-
-        .bannerText
-            padding-top: 94px
-
-        .bannerImgBg
-            +md-block
-                left: 33%
-
-            +lg-block
-                left: 33%
-
-        .bannerSelect
+            // top: 98%
             bottom: -7%
 
             +sm-block
@@ -121,6 +121,7 @@
             +lg-block
                 top: 58%
                 left: 52%
+
 
     .page__title-h1
 
@@ -170,6 +171,107 @@
             position: absolute
             bottom: 70px
 
+    .bannerSelect
+        position: absolute
+        bottom: 10%
+        z-index: 100
+
+        width: 90%
+        margin: 0 auto
+        left: 4%
+        +sm-block
+
+            // left: 50%
+            // transform: translateX(-50%)
+            top: 72%
+            width: 100%
+
+        +md-block
+            top: 68%
+            // left: 52%
+            width: 100%
+            // transform: translateX(-50%)
+        +lg-block
+            top: 68%
+            // left: 52%
+            width: 100%
+            // transform: translateX(-50%)
+
+        &.fixed
+            position: fixed
+            bottom: 0
+            width: 100%
+            left: 0
+            +sm-block
+                width: auto
+                left: 100%
+                top: 50%
+                transform: translate(-100%, -50%)
+                height: 20%
+            +md-block
+                width: auto
+                left: 100%
+                top: 50%
+                transform: translate(-100%, -50%)
+                height: 20%
+            +lg-block
+                width: auto
+                left: 100%
+                top: 50%
+                transform: translate(-100%, -50%)
+                height: 20%
+            
+                
+            .selectBoxActionSelected
+
+                +sm-block
+                    flex-direction: column
+                +md-block
+                    flex-direction: column
+                +lg-block
+                    flex-direction: column
+            .selectBoxText
+                display: none
+            
+            .selectBoxContainer
+
+                border-bottom-left-radius: 0
+                border-bottom-right-radius: 0
+                +sm-block
+                    flex-direction: column
+                    border-radius: 16px
+                    padding: 0
+                +md-block
+                    flex-direction: column
+                    border-radius: 16px
+                    padding: 0
+                +lg-block
+                    flex-direction: column
+                    border-radius: 16px
+                    padding: 0
+                .select 
+                    .select-box
+
+                        +sm-block
+                            border-right: 0
+                        +md-block
+                            border-right: 0
+                        +lg-block
+                            border-right: 0
+
+                        &__list
+                            +sm-block
+                                top: 25px
+                            +md-block
+                                top: 25px
+                            +lg-block
+                                top: 25px
+
+            .selectBoxLink
+                display: none
+    
+
+
 .bannerFlexContainer
     display: flex
     flex-wrap: wrap
@@ -185,16 +287,12 @@
     +lg-block
         margin-left: -25px
         margin-right: -25px
-    // align-items: center
 
 .bannerText
     +col()
     +size(9)
     +size-md(6)
     +size-lg(6)
-    // +size-md(3)
-    // +size-lg(2.8)
-    // background: #000
 
     position: relative
     z-index: 1
@@ -260,65 +358,3 @@
         top: 135px
         width: auto
 
-.bannerSelect
-    // position: absolute
-    // top: 63%
-    //
-
-    position: absolute
-
-    bottom: 10%
-    z-index: 
-
-    width: 90%
-    margin: 0 auto
-    left: 4%
-    &.fixed
-        position: fixed
-        bottom: 0
-        width: 100%
-        left: 0
-        z-index: 100
-        +sm-block
-            left: 90%
-        +md-block
-            left: 90%
-        +lg-block
-            left: 90%
-        .selectBoxText
-            display: none
-        .selectBoxContainer
-            
-            border-bottom-left-radius: 0
-            border-bottom-right-radius: 0
-            +sm-block
-                flex-direction: column
-                width: 10%
-                border-radius: 16px 
-            +md-block
-                flex-direction: column
-                width: 10%
-                border-radius: 16px 
-            +lg-block
-                flex-direction: column
-                width: 10%
-                border-radius: 16px 
-        .selectBoxLink
-            display: none
-    +sm-block
-
-        left: 50%
-        transform: translateX(-50%)
-        top: 72%
-        width: 100%
-
-    +md-block
-        top: 68%
-        left: 52%
-        width: 100%
-        transform: translateX(-50%)
-    +lg-block
-        top: 68%
-        left: 52%
-        width: 100%
-        transform: translateX(-50%)

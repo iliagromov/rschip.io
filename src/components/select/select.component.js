@@ -670,13 +670,13 @@ selectBoxes.forEach(selectBox => {
   renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
 
   //init selects brands
-  // getResponse(brandsApiUrl, brandsBox, `Brand_${dataProductName}`);
+  getResponse(brandsApiUrl, brandsBox, `Brand_${dataProductName}`);
 
-  // let isBrandId = localStorage.getItem(`Brand_${dataProductName}_id`);
-  // isBrandId && getResponse(`${modelsApiUrl}${isBrandId}`, modelsBox, `Model_${dataProductName}`);
+  let isBrandId = localStorage.getItem(`Brand_${dataProductName}_id`);
+  isBrandId && getResponse(`${modelsApiUrl}${isBrandId}`, modelsBox, `Model_${dataProductName}`);
   
-  // let idModelId = localStorage.getItem(`Model_${dataProductName}_id`);
-  // idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
+  let idModelId = localStorage.getItem(`Model_${dataProductName}_id`);
+  idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
 
 });
 let banner = document.querySelector('.banner');

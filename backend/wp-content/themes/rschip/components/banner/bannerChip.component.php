@@ -46,7 +46,7 @@
                 </picture>
             </div>
             <div class="bannerSelect">
-            <?php include(TEMPLATEPATH . '/components/selectBox/selectBox.component.php'); ?>
+                <?php include(TEMPLATEPATH . '/components/selectBox/selectBoxChip.component.php'); ?>
     
             </div>
         </div>

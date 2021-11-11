@@ -10,8 +10,7 @@
     <?php include(TEMPLATEPATH . '/components/power/power.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/setps/setps.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/howitworkChip/howitworkChip.component.php'); ?>
-    <?php include(TEMPLATEPATH . '/components/performance/performance.component.php'); ?>
-    <?php include(TEMPLATEPATH . '/components/selectBox/selectBox.component.php'); ?>
+    <?php include(TEMPLATEPATH . '/components/performance/performanceChip.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/optimizeBlock/optimizeBlock.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/productSlider/productSlider.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/faq/faqShort.component.php'); ?>

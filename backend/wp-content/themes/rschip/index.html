@@ -42,9 +42,6 @@
 </head>
 
 <body>
-    <button class="debugGrid-btn debugGrid-btn__create" onclick="debugGridCreate()"></button><button
-        class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden" onclick="debugGridRemove()"></button>
-    <div class="debugGrid debugGrid__z-index-negative"></div>
     <header class="header">
         <div class="wrapper">
             <div class="headerFlexContainer">
@@ -126,35 +123,26 @@
                         </picture>
                     </div>
                     <div class="bannerSelect">
-                        <div class="selectBox">
+                        <div class="selectBox" data-productname="Rs">
                             <div class="selectBoxText">Find out how many Horsepowers you can add to your Car</div>
                             <div class="selectBoxContainer">
                                 <div class="select Brands">
-                                    <div class="select-box">
-                                        <div class="select-box__icon">
-                                            <div class="svg-iconArrowSelect svg-iconArrowSelect-box"></div>
-                                        </div>
-                                        <div class="select-box__empty">
-                                            <div class="svg-iconSelectEmpty svg-iconSelectEmpty-box"></div>
-                                        </div>
-                                    </div>
+                                    <div class="select-box"></div>
                                 </div>
                                 <div class="select Models">
-                                    <div class="select-box">
-                                        <div class="select-box__icon">
-                                            <div class="svg-iconArrowSelect svg-iconArrowSelect-box"></div>
-                                        </div>
-                                    </div>
+                                    <div class="select-box"> </div>
                                 </div>
                                 <div class="select Modification">
-                                    <div class="select-box">
-                                        <div class="select-box__icon">
-                                            <div class="svg-iconArrowSelect svg-iconArrowSelect-box"></div>
-                                        </div>
-                                    </div>
+                                    <div class="select-box"> </div>
                                 </div>
-                                <div class="selectBoxSearch">
-                                    <div class="svg-iconSearch svg-iconSearch-box"></div>
+                                <div class="selectBoxAction">
+                                    <div class="selectBoxSearch">
+                                        <div class="svg-iconSearch svg-iconSearch-box"></div>
+                                    </div>
+                                    <div class="selectBoxActionSelected">
+                                        <div class="selectBoxActionPrice">$369</div><a
+                                            class="page__btn page__btn_notTransparent" href="cart/cart.html">To cart</a>
+                                    </div>
                                 </div>
                             </div><a class="selectBoxLink js-open-modal" href="javascript:void(0)"
                                 data-modal="modalCarCantfind">Can’t find my Car</a>
@@ -536,6 +524,21 @@
             </div>
         </div>
     </section>
+    <section class="modal modalCarCantfind" data-modal="modalCarCantfind"> <button
+            class="modalClose icon-close js-modal-close"></button>
+        <div class="modalContent">
+            <h2 class="modalTitle">Can’t find <span class="page_red">my car</span></h2>
+            <p>Please fill in the fields below and we will call you back</p>
+            <form action="">
+                <div class="formRow"><input class="page__input" type="text" placeholder="Your Car"><input
+                        class="page__input" type="text" placeholder="Year"><input class="page__input" type="text"
+                        placeholder="Horsepower"><input class="page__input" type="text" placeholder="Torque"></div>
+                <div class="formRow"><input class="page__input" type="email" placeholder="Email"><img
+                        src="assets/images/png/imgCodeCaptcha.png" alt="imgCodeCaptcha"><input class="page__input"
+                        type="text" placeholder="code"></div><button class="page__btn">SUBMIT</button>
+            </form>
+        </div>
+    </section>
     <div class="overlay js-overlay-modal"></div>
     <link rel="stylesheet" href="css/viewport/mobileFirst-320px.css" type="text/css">
     <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
@@ -552,8 +555,8 @@
     <script src="js/debuggrid/debuggrid.component.js"></script>
     <script src="js/main.js"></script>
     <script src="libs/js/swiper-bundle.min.js"></script>
-    <script src="/js/faq/faq.component.js"></script>
-    <script src="/js/modals/modalGallary.component.js"></script>
+    <script src="js/faq/faq.component.js"></script>
+    <script src="js/modals/modalGallary.component.js"></script>
     <script src="js/select/select.component.js"></script>
 </body>
 

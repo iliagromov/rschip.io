@@ -9,6 +9,7 @@
 
    
 </main>
+<?php include(TEMPLATEPATH . '/components/modals/modalCarCantfind.php'); ?>
 <?php include(TEMPLATEPATH . '/components/modals/modalNews.php'); ?>
 <?php include(TEMPLATEPATH . '/components/modals/modalGallary.php'); ?>
 <?php get_footer(); ?>

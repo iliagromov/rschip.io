@@ -1,144 +1,144 @@
 <footer>
-        <div class="footer">
-            <div class="wrapper">
-                <div class="footerFlexContainer">
-                    <div class="footerLogo">
-                        <img src="assets/images/svg/logoWhite.svg" alt="logo">
-                    </div>
-                    <div class="footerDealer"><a class="page__btn" href="javascript:void(0)">Become a dealer</a></div>
-                    <div class="footerContacts">
-                        <div class="footerContactsItem"><i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i><a
-                                href="tel:+1 800 796 16 17">+1 800 796 16 17</a></div>
-                        <div class="footerContactsItem"><i class="svg-iconEmailGray svg-iconEmailGray-box"></i><a
-                                class="email" href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a></div>
-                        <div class="footerContactsItem"><i
-                                class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
-                            <address>1201 East 5th Street North Little Rock, Arkansas USA, 72114</address>
-                        </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="footerFlexContainer">
+                <div class="footerLogo">
+                    <img src="assets/images/svg/logoWhite.svg" alt="logo">
+                </div>
+                <div class="footerDealer"><a class="page__btn" href="javascript:void(0)">Become a dealer</a></div>
+                <div class="footerContacts">
+                    <div class="footerContactsItem"><i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i><a
+                            href="tel:+1 800 796 16 17">+1 800 796 16 17</a></div>
+                    <div class="footerContactsItem"><i class="svg-iconEmailGray svg-iconEmailGray-box"></i><a
+                            class="email" href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a></div>
+                    <div class="footerContactsItem"><i
+                            class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
+                        <address>1201 East 5th Street North Little Rock, Arkansas USA, 72114</address>
                     </div>
                 </div>
-                <div class="footerFlexContainer footerAdvantages">
-                    <div class="footerAdvantagesItem">
-                        <div class="footerAdvantagesItem__title"><i class="svg-iconShield svg-iconShield-box"></i>
-                            <h5>Lifetime warranty</h5>
-                        </div>
-                        <p class="page__text">We are confident in longevity and reliability of our products, and happy
-                            to provide you with best possible terms and guarantees!</p><a href="javascript:void(0)">Read
-                            more </a>
+            </div>
+            <div class="footerFlexContainer footerAdvantages">
+                <div class="footerAdvantagesItem">
+                    <div class="footerAdvantagesItem__title"><i class="svg-iconShield svg-iconShield-box"></i>
+                        <h5>Lifetime warranty</h5>
                     </div>
-                    <div class="footerAdvantagesItem">
-                        <div class="footerAdvantagesItem__title"><i
-                                class="svg-iconReturnCircle svg-iconReturnCircle-box"></i>
-                            <h5>30 days return policy</h5>
-                        </div>
-                        <p class="page__text">Not convinced after the 30 days? Just send the produt back No questions
-                            asked.</p><a href="javascript:void(0)">Read more </a>
-                    </div>
-                    <div class="footerAdvantagesItem">
-                        <div class="footerAdvantagesItem__title"><i
-                                class="svg-iconFreeShipping svg-iconFreeShipping-box"></i>
-                            <h5>Free shipping worldwide</h5>
-                        </div>
-                        <p class="page__text">Free shipping worldwide to any location with DHL express and USPS.</p><a
-                            href="javascript:void(0)">Read more </a>
-                    </div>
+                    <p class="page__text">We are confident in longevity and reliability of our products, and happy
+                        to provide you with best possible terms and guarantees!</p><a href="javascript:void(0)">Read
+                        more </a>
                 </div>
-                <div class="footerFlexContainer footerLinks">
-                    <h4>Tuning </h4>
-                    <hr>
-                    <div class="footerLinksItem">
-                        <a href="javascript:void(0)">Acura </a>
-                        <a
-                            href="javascript:void(0)">Alfa Romeo </a><a href="javascript:void(0)">Alpina </a><a
-                            href="javascript:void(0)">Aston Martin</a><a href="javascript:void(0)">Audi </a><a
-                            href="javascript:void(0)">Baojun </a><a href="javascript:void(0)">Beiben </a><a
-                            href="javascript:void(0)">Beijing </a><a href="javascript:void(0)">Bentley </a><a
-                            href="javascript:void(0)">BMW </a><a href="javascript:void(0)">Borgward </a><a
-                            href="javascript:void(0)">Buick </a><a href="javascript:void(0)">BYD </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Cadillac </a><a
-                            href="javascript:void(0)">Changan </a><a href="javascript:void(0)">Changfeng </a><a
-                            href="javascript:void(0)">Chery </a><a href="javascript:void(0)">Chevrolet </a><a
-                            href="javascript:void(0)">Chrysler </a><a href="javascript:void(0)">Chrysler </a><a
-                            href="javascript:void(0)">Citroen </a><a href="javascript:void(0)">Cupra </a><a
-                            href="javascript:void(0)">Dacia </a><a href="javascript:void(0)">Daewoo </a><a
-                            href="javascript:void(0)">Daihatsu </a><a href="javascript:void(0)">DFSK </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Dodge </a><a
-                            href="javascript:void(0)">Dongfeng </a><a href="javascript:void(0)">FAW </a><a
-                            href="javascript:void(0)">Ferrari </a><a href="javascript:void(0)">Fiat </a><a
-                            href="javascript:void(0)">Ford </a><a href="javascript:void(0)">Foton </a><a
-                            href="javascript:void(0)">GAC </a><a href="javascript:void(0)">Geely </a><a
-                            href="javascript:void(0)">GMC </a><a href="javascript:void(0)">GMW </a><a
-                            href="javascript:void(0)">Great Wall</a><a href="javascript:void(0)">Guangqi </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Haval </a><a
-                            href="javascript:void(0)">Hino </a><a href="javascript:void(0)">Holden </a><a
-                            href="javascript:void(0)">Honda </a><a href="javascript:void(0)">Hummer </a><a
-                            href="javascript:void(0)">Hyundai </a><a href="javascript:void(0)">Infiniti </a><a
-                            href="javascript:void(0)">Isuzu </a><a href="javascript:void(0)">Iveco </a><a
-                            href="javascript:void(0)">Jac </a><a href="javascript:void(0)">Jaguar </a><a
-                            href="javascript:void(0)">Jeep </a><a href="javascript:void(0)">KIA</a></div>
-                    <div class="footerLinksItem"> <a href="javascript:void(0)">Kowloon </a><a
-                            href="javascript:void(0)">KTM </a><a href="javascript:void(0)">Lada </a><a
-                            href="javascript:void(0)">Lamborghini </a><a href="javascript:void(0)">Lancia </a><a
-                            href="javascript:void(0)">Land Rover</a><a href="javascript:void(0)">Landwind </a><a
-                            href="javascript:void(0)">Lexus </a><a href="javascript:void(0)">Lifan </a><a
-                            href="javascript:void(0)">Lincoln </a><a href="javascript:void(0)">Lotus </a><a
-                            href="javascript:void(0)">Luxgen </a><a href="javascript:void(0)">Lynk </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Mahindra </a><a
-                            href="javascript:void(0)">Maruti </a><a href="javascript:void(0)">Maserati </a><a
-                            href="javascript:void(0)">Maybach </a><a href="javascript:void(0)">Mazda </a><a
-                            href="javascript:void(0)">McLaren </a><a href="javascript:void(0)">Mercedes </a><a
-                            href="javascript:void(0)">MG </a><a href="javascript:void(0)">Mini </a><a
-                            href="javascript:void(0)">Mitsubishi </a><a href="javascript:void(0)">Nissan </a><a
-                            href="javascript:void(0)">Opel </a><a href="javascript:void(0)">Pagani </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Pontiac </a><a
-                            href="javascript:void(0)">Porsche </a><a href="javascript:void(0)">Proton </a><a
-                            href="javascript:void(0)">Qoros </a><a href="javascript:void(0)">Renault </a><a
-                            href="javascript:void(0)">Roewe </a><a href="javascript:void(0)">Rolls-Royce </a><a
-                            href="javascript:void(0)">Rover </a><a href="javascript:void(0)">Saab </a><a
-                            href="javascript:void(0)">Sag </a><a href="javascript:void(0)">SAIC </a><a
-                            href="javascript:void(0)">Sany </a><a href="javascript:void(0)">Saturn </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Scion </a><a
-                            href="javascript:void(0)">Seat </a><a href="javascript:void(0)">Sino Truck</a><a
-                            href="javascript:void(0)">Skoda </a><a href="javascript:void(0)">Smart </a><a
-                            href="javascript:void(0)">Soueast </a><a href="javascript:void(0)">SsangYong </a><a
-                            href="javascript:void(0)">Subaru </a><a href="javascript:void(0)">Suzuki </a><a
-                            href="javascript:void(0)">TATA </a><a href="javascript:void(0)">Toyota </a><a
-                            href="javascript:void(0)">Troller </a><a href="javascript:void(0)">UAZ </a></div>
-                    <div class="footerLinksItem"><a href="javascript:void(0)">Vauxhall </a><a
-                            href="javascript:void(0)">Vinfast </a><a href="javascript:void(0)">Volvo </a><a
-                            href="javascript:void(0)">Vortex </a><a href="javascript:void(0)">VW </a><a
-                            href="javascript:void(0)">Wey </a><a href="javascript:void(0)">XCMG </a><a
-                            href="javascript:void(0)">Zotye</a></div>
+                <div class="footerAdvantagesItem">
+                    <div class="footerAdvantagesItem__title"><i
+                            class="svg-iconReturnCircle svg-iconReturnCircle-box"></i>
+                        <h5>30 days return policy</h5>
+                    </div>
+                    <p class="page__text">Not convinced after the 30 days? Just send the produt back No questions
+                        asked.</p><a href="javascript:void(0)">Read more </a>
                 </div>
+                <div class="footerAdvantagesItem">
+                    <div class="footerAdvantagesItem__title"><i
+                            class="svg-iconFreeShipping svg-iconFreeShipping-box"></i>
+                        <h5>Free shipping worldwide</h5>
+                    </div>
+                    <p class="page__text">Free shipping worldwide to any location with DHL express and USPS.</p><a
+                        href="javascript:void(0)">Read more </a>
+                </div>
+            </div>
+            <div class="footerFlexContainer footerLinks">
+                <h4>Tuning </h4>
+                <hr>
+                <div class="footerLinksItem">
+                    <a href="javascript:void(0)">Acura </a>
+                    <a
+                        href="javascript:void(0)">Alfa Romeo </a><a href="javascript:void(0)">Alpina </a><a
+                        href="javascript:void(0)">Aston Martin</a><a href="javascript:void(0)">Audi </a><a
+                        href="javascript:void(0)">Baojun </a><a href="javascript:void(0)">Beiben </a><a
+                        href="javascript:void(0)">Beijing </a><a href="javascript:void(0)">Bentley </a><a
+                        href="javascript:void(0)">BMW </a><a href="javascript:void(0)">Borgward </a><a
+                        href="javascript:void(0)">Buick </a><a href="javascript:void(0)">BYD </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Cadillac </a><a
+                        href="javascript:void(0)">Changan </a><a href="javascript:void(0)">Changfeng </a><a
+                        href="javascript:void(0)">Chery </a><a href="javascript:void(0)">Chevrolet </a><a
+                        href="javascript:void(0)">Chrysler </a><a href="javascript:void(0)">Chrysler </a><a
+                        href="javascript:void(0)">Citroen </a><a href="javascript:void(0)">Cupra </a><a
+                        href="javascript:void(0)">Dacia </a><a href="javascript:void(0)">Daewoo </a><a
+                        href="javascript:void(0)">Daihatsu </a><a href="javascript:void(0)">DFSK </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Dodge </a><a
+                        href="javascript:void(0)">Dongfeng </a><a href="javascript:void(0)">FAW </a><a
+                        href="javascript:void(0)">Ferrari </a><a href="javascript:void(0)">Fiat </a><a
+                        href="javascript:void(0)">Ford </a><a href="javascript:void(0)">Foton </a><a
+                        href="javascript:void(0)">GAC </a><a href="javascript:void(0)">Geely </a><a
+                        href="javascript:void(0)">GMC </a><a href="javascript:void(0)">GMW </a><a
+                        href="javascript:void(0)">Great Wall</a><a href="javascript:void(0)">Guangqi </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Haval </a><a
+                        href="javascript:void(0)">Hino </a><a href="javascript:void(0)">Holden </a><a
+                        href="javascript:void(0)">Honda </a><a href="javascript:void(0)">Hummer </a><a
+                        href="javascript:void(0)">Hyundai </a><a href="javascript:void(0)">Infiniti </a><a
+                        href="javascript:void(0)">Isuzu </a><a href="javascript:void(0)">Iveco </a><a
+                        href="javascript:void(0)">Jac </a><a href="javascript:void(0)">Jaguar </a><a
+                        href="javascript:void(0)">Jeep </a><a href="javascript:void(0)">KIA</a></div>
+                <div class="footerLinksItem"> <a href="javascript:void(0)">Kowloon </a><a
+                        href="javascript:void(0)">KTM </a><a href="javascript:void(0)">Lada </a><a
+                        href="javascript:void(0)">Lamborghini </a><a href="javascript:void(0)">Lancia </a><a
+                        href="javascript:void(0)">Land Rover</a><a href="javascript:void(0)">Landwind </a><a
+                        href="javascript:void(0)">Lexus </a><a href="javascript:void(0)">Lifan </a><a
+                        href="javascript:void(0)">Lincoln </a><a href="javascript:void(0)">Lotus </a><a
+                        href="javascript:void(0)">Luxgen </a><a href="javascript:void(0)">Lynk </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Mahindra </a><a
+                        href="javascript:void(0)">Maruti </a><a href="javascript:void(0)">Maserati </a><a
+                        href="javascript:void(0)">Maybach </a><a href="javascript:void(0)">Mazda </a><a
+                        href="javascript:void(0)">McLaren </a><a href="javascript:void(0)">Mercedes </a><a
+                        href="javascript:void(0)">MG </a><a href="javascript:void(0)">Mini </a><a
+                        href="javascript:void(0)">Mitsubishi </a><a href="javascript:void(0)">Nissan </a><a
+                        href="javascript:void(0)">Opel </a><a href="javascript:void(0)">Pagani </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Pontiac </a><a
+                        href="javascript:void(0)">Porsche </a><a href="javascript:void(0)">Proton </a><a
+                        href="javascript:void(0)">Qoros </a><a href="javascript:void(0)">Renault </a><a
+                        href="javascript:void(0)">Roewe </a><a href="javascript:void(0)">Rolls-Royce </a><a
+                        href="javascript:void(0)">Rover </a><a href="javascript:void(0)">Saab </a><a
+                        href="javascript:void(0)">Sag </a><a href="javascript:void(0)">SAIC </a><a
+                        href="javascript:void(0)">Sany </a><a href="javascript:void(0)">Saturn </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Scion </a><a
+                        href="javascript:void(0)">Seat </a><a href="javascript:void(0)">Sino Truck</a><a
+                        href="javascript:void(0)">Skoda </a><a href="javascript:void(0)">Smart </a><a
+                        href="javascript:void(0)">Soueast </a><a href="javascript:void(0)">SsangYong </a><a
+                        href="javascript:void(0)">Subaru </a><a href="javascript:void(0)">Suzuki </a><a
+                        href="javascript:void(0)">TATA </a><a href="javascript:void(0)">Toyota </a><a
+                        href="javascript:void(0)">Troller </a><a href="javascript:void(0)">UAZ </a></div>
+                <div class="footerLinksItem"><a href="javascript:void(0)">Vauxhall </a><a
+                        href="javascript:void(0)">Vinfast </a><a href="javascript:void(0)">Volvo </a><a
+                        href="javascript:void(0)">Vortex </a><a href="javascript:void(0)">VW </a><a
+                        href="javascript:void(0)">Wey </a><a href="javascript:void(0)">XCMG </a><a
+                        href="javascript:void(0)">Zotye</a></div>
             </div>
         </div>
-        <section class="privacy">
-            <div class="wrapper">
-                <div class="footerPrivacy">
-                    <div class="item1">
-                        <p>© Copyright 2016 - 2021 RSCHIP. All Rights Reserved.</p>
-                    </div>
-                    <div class="item2">
-                        <div class="socialIcons">
-                        <?php if (is_active_sidebar('footerSocial')) : ?>
-                            <?php dynamic_sidebar('footerSocial') ?>
-                        <?php endif; ?>
-                            <a class="icon svg-iconInstagramGray svg-iconInstagramGray-box"
-                                href="javascript:void(0)"></a>
-                            <a
-                                class="icon svg-iconFacebookGray svg-iconFacebookGray-box"
-                                href="javascript:void(0)"></a>
-                            <a
-                                class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
-                        </div>
-                    </div>
-                    <div class="item3"> 
-                        <a href="javascript:void(0)">Privacy PolicyApp </a><a
-                            href="javascript:void(0)">Privacy Policy</a></div>
+    </div>
+    <section class="privacy">
+        <div class="wrapper">
+            <div class="footerPrivacy">
+                <div class="item1">
+                    <p>© Copyright 2016 - 2021 RSCHIP. All Rights Reserved.</p>
                 </div>
+                <div class="item2">
+                    <div class="socialIcons">
+                    <?php if (is_active_sidebar('footerSocial')) : ?>
+                        <?php dynamic_sidebar('footerSocial') ?>
+                    <?php endif; ?>
+                        <a class="icon svg-iconInstagramGray svg-iconInstagramGray-box"
+                            href="javascript:void(0)"></a>
+                        <a
+                            class="icon svg-iconFacebookGray svg-iconFacebookGray-box"
+                            href="javascript:void(0)"></a>
+                        <a
+                            class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="item3"> 
+                    <a href="javascript:void(0)">Privacy PolicyApp </a><a
+                        href="javascript:void(0)">Privacy Policy</a></div>
             </div>
-        </section>
-    </footer>
+        </div>
+    </section>
+</footer>
     <section class="chat">
         <div class="btnChat">
             <div class="iconChat svg-iconChat svg-iconChat-box"></div>

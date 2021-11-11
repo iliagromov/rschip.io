@@ -1,9 +1,9 @@
 <section class="social">
     <div class="socialBg">
         <picture>
-            <source type="image/png" srcset="assets/images/png/imgBgSocial-Md.png" media="(min-width: 992px)">
-            <source type="image/png" srcset="assets/images/png/imgBgSocial-Sm.png" media="(min-width: 768px)">
-            <img src="assets/images/png/imgBgSocial.png" alt="imgBgSocial">
+            <source type="image/png" srcset="assets/images/png/shared/imgBgSocial-Md.png" media="(min-width: 992px)">
+            <source type="image/png" srcset="assets/images/png/shared/imgBgSocial-Sm.png" media="(min-width: 768px)">
+            <img src="assets/images/png/shared/imgBgSocial.png" alt="imgBgSocial">
         </picture>
     </div>
     <div class="socialText">

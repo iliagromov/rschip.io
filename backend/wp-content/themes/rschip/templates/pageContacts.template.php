@@ -39,7 +39,7 @@
 	</section>
 	
 	<?php include(TEMPLATEPATH . '/components/form/form.component.php'); ?>
-	<section class="map"> <img src="assets/images/png/imgContactMap.png" alt="imgContactMap"></section>
+	<section class="map"> <img src="assets/images/png/shared/imgContactMap.png" alt="imgContactMap"></section>
 	<?php include(TEMPLATEPATH . '/components/social/social.component.php'); ?>
 
 </main>

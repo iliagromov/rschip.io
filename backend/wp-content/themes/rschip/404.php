@@ -6,7 +6,8 @@
 <br>
 <main class="page">
     <div class="wrapper">
-    404 not found
+        <h1>404 not found</h1>
+    
     </div>
    
 </main>

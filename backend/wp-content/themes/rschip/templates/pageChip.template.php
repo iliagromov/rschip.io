@@ -13,6 +13,6 @@
     <?php include(TEMPLATEPATH . '/components/performance/performanceChip.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/optimizeBlock/optimizeBlock.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/productSlider/productSlider.component.php'); ?>
-    <?php include(TEMPLATEPATH . '/components/faq/faqShort.component.php'); ?>
+    <?php include(TEMPLATEPATH . '/components/faq/faq.component.php'); ?>
 </main>
 <?php get_footer(); ?>

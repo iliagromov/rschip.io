@@ -6,7 +6,10 @@
 <br>
 <main class="page">
     <div class="wrapper">
-        Main page template
+        <div>
+            <h1><?php the_title() ?></h1>
+            <div><?php the_content() ?></div>
+        </div>
     </div>
    
 </main>

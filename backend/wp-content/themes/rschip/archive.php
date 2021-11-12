@@ -6,9 +6,12 @@
 <br>
 <main class="page">
     <div class="wrapper">
-    Archive Page template
+        <div>
+            <h1><?php the_title() ?></h1>
+            <div><?php the_content() ?></div>
+        </div>
     </div>
-   
+
 </main>
 <br>
 <br>

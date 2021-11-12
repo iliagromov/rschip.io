@@ -12,6 +12,6 @@
     <?php include(TEMPLATEPATH . '/components/howitwork/howitwork.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/installation/installation.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/productSlider/productSlider.component.php'); ?>
-    <?php include(TEMPLATEPATH . '/components/faq/faqShort.component.php'); ?>
+    <?php include(TEMPLATEPATH . '/components/faq/faq.component.php'); ?>
 </main>
 <?php get_footer(); ?>

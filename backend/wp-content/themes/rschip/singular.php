@@ -1,12 +1,11 @@
 <?php get_header(); ?>
-<!-- index -->
 <br>
 <br>
 <br>
 <br>
 <main class="page">
     <div class="wrapper">
-        Main page template
+    Singular template
     </div>
    
 </main>
@@ -14,5 +13,4 @@
 <br>
 <br>
 <br>
-<!-- /index -->
 <?php get_footer(); ?>

@@ -35,7 +35,7 @@ add_action('init', function(){
 	register_post_type('faq', [
 		'labels' => [
 			'name'               => 'Faq',
-			'singular_name'      => 'faq',
+			'singular_name'      => 'Faq',
 			'add_new'            => 'Add new',
 			'add_new_item'       => 'Add new faq',
 			'edit_item'          => 'Edit new faq',
@@ -54,10 +54,10 @@ add_action('init', function(){
 		]
 	]);
 
-	register_post_type('news', [
+	register_post_type('newsPostType', [
 		'labels' => [
 			'name'               => 'News',
-			'singular_name'      => 'news',
+			'singular_name'      => 'News',
 			'add_new'            => 'Add new',
 			'add_new_item'       => 'Add new news',
 			'edit_item'          => 'Edit new news',

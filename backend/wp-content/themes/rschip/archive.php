@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<!-- index -->
+<!-- archive -->
 <br>
 <br>
 <br>
 <br>
 <main class="page">
     <div class="wrapper">
-        Main page template
+    Archive Page template
     </div>
    
 </main>
@@ -14,5 +14,5 @@
 <br>
 <br>
 <br>
-<!-- /index -->
+<!-- /archive -->
 <?php get_footer(); ?>

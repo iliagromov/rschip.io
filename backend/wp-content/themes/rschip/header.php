@@ -17,19 +17,19 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ilia Gromov">
-    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/png/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/png/shared/favicon.ico">
     <!-- <title>Chiptuning for you, +20% power and torque – RSchip chiptuning</title> -->
-    <title><?php bloginfo('name') ?></title>
+    <title><?php echo wp_get_document_title(); ?></title>
     <meta name="description" content="<?php bloginfo('description') ?>" />
     <!-- <meta name="description" content="Get extra 20% power and torque for your car. RSCHIP provides fuel saving and better MPG numbers. Try safe chiptuning today with free delivery for US and Canada."> -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/base-styles.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/css/swiper-bundle.min.css" type="text/css">
+    <link rel="stylesheet" href="css/base-styles.css" type="text/css">
+    <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
     <meta property="fb:app_id" content="">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="RSchip chiptuning">
-    <meta property="og:title" content="Chiptuning for you, +20% power and torque – RSchip chiptuning">
-    <meta property="og:description" content="Get extra 20% power and torque for your car. RSCHIP provides fuel saving and better MPG numbers. Try safe chiptuning today with free delivery for US and Canada.">
+    <meta property="og:title" content="<?php echo wp_get_document_title(); ?>">
+    <meta property="og:description" content="<?php bloginfo('description') ?>">
     <meta property="og:url" content="https://rschipchiptuning.com/">
     <meta property="og:image" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
     <meta property="vk:image" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
@@ -41,8 +41,8 @@
     <meta property="og:image:height" content="300">
     <meta property="twitter:card" content="summary">
     <meta property="twitter:site" content="https://rschipchiptuning.com/">
-    <meta property="twitter:title" content="Chiptuning for you, +20% power and torque – RSchip chiptuning">
-    <meta property="twitter:description" content="Get extra 20% power and torque for your car. RSCHIP provides fuel saving and better MPG numbers. Try safe chiptuning today with free delivery for US and Canada.">
+    <meta property="twitter:title" content="<?php echo wp_get_document_title(); ?>">
+    <meta property="twitter:description" content="<?php bloginfo('description') ?>">
     <meta property="twitter:creator" content="Ilia Gromov">
     <?php wp_head(); ?>
 </head>

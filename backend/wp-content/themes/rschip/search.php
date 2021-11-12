@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<!-- index -->
+<!-- search -->
 <br>
 <br>
 <br>
 <br>
 <main class="page">
     <div class="wrapper">
-        Main page template
+    Search Page template
     </div>
    
 </main>
@@ -14,5 +14,5 @@
 <br>
 <br>
 <br>
-<!-- /index -->
+<!-- /search -->
 <?php get_footer(); ?>

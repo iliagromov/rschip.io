@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<!-- index -->
+<!-- 404 -->
 <br>
 <br>
 <br>
 <br>
 <main class="page">
     <div class="wrapper">
-        Main page template
+    404 not found
     </div>
    
 </main>
@@ -14,5 +14,5 @@
 <br>
 <br>
 <br>
-<!-- /index -->
+<!-- /404 -->
 <?php get_footer(); ?>

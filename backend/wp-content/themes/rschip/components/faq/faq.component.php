@@ -2,9 +2,11 @@
 // $faqACF = get_fields();
 // echo $faqACF['faq_items'];
 // echo get_field('faq_items');
-$items = get_field_object('faq_items')["value"];
 
-if (!empty($items)) : ?>
+$faqPosts = get_field_object('faq_items')["value"];
+
+
+if (!empty($faqPosts)) : ?>
 	<section class="faq">
 		<div class="wrapper">
 			<h2 class="page__title-h2_small">Find Answers</h2>
@@ -12,8 +14,9 @@ if (!empty($items)) : ?>
 			<div class="faqFlexContainer">
 				<?php for ($num = 0; $num <= 1; $num++) : ?>
 					<div class="faqCol">
-						<?php for ($item = 0; $item <= count($items) - 1; $item++) :
-							$post = get_post($items[$item]->ID);
+						<?php for ($item = 0; $item <= count($faqPosts) - 1; $item++) :
+							$post = get_post($faqPosts[$item]->ID);
+							setup_postdata( $post );
 						?>
 							<?php if (($item % 2) == $num) : ?>
 								<div class="faqItem">
@@ -25,7 +28,7 @@ if (!empty($items)) : ?>
 									</div>
 								</div>
 							<?php endif; ?>
-						<?php endfor; ?>
+						<?php endfor; wp_reset_postdata(); ?>
 					</div>
 				<?php endfor; ?>
 			</div>

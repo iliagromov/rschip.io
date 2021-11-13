@@ -63,11 +63,11 @@
                         <?php wp_nav_custom_menu('headerNav', "headerLink"); ?>
                
                     </nav>
-                    <a class="headerNavCart" href="cart/cart.html">
+                    <a class="headerNavCart" href="/cart/">
                         <div class="icon-cart-png"></div>
                         <!-- <div class="headerNavCart__count">3</div> -->
                     </a>
-                    <div class="headerNavBtn"><a class="page__btn" href="shop/shop.html">Shop</a></div>
+                    <div class="headerNavBtn"><a class="page__btn" href="/shop/">Shop</a></div>
                     <div class="headerNavBurgerMenu">
                         <div class="line"></div>
                         <div class="line"></div>
@@ -113,3 +113,4 @@
             </div>
         </div>
     </section>
+    

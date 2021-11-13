@@ -1,6 +1,6 @@
 <?php
     add_action('init', function(){
-        register_post_type('newsPostType', [
+        register_post_type('news', [
             'labels' => [
                 'name'               => 'News',
                 'singular_name'      => 'News',

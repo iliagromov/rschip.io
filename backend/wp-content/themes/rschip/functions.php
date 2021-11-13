@@ -30,38 +30,88 @@
 
 	add_action('widgets_init', function () {
 		register_sidebar([
-			'name'          => 'Телефон1',
-			'id'            => 'phone-link1',
-			'description'   => 'Выводится в шапке',
-			'before_widget' => '<div class="page__link">',
-			'after_widget'  => "</div>\n",
-			'before_title'  => '',
-			'after_title'   => "",
-		]);
-		register_sidebar([
-			'name'          => 'Почта',
-			'id'            => 'mail1',
-			'description'   => 'Выводится в подвале сайта',
-			'before_widget' => '<div class="page__text">',
-			'after_widget'  => "</div>\n",
-			'before_title'  => '',
-			'after_title'   => "",
-		]);
-
-		register_sidebar([
-			'name'          => 'Соц.сети',
-			'id'            => 'footerSocial',
-			'description'   => 'Выводится в подвале сайта',
+			'name'          => 'Become a dealer',
+			'id'            => 'become-dealer',
+			'description'   => '',
 			'before_widget' => '',
 			'after_widget'  => "\n",
 			'before_title'  => '',
 			'after_title'   => "",
 		]);
+
+		register_sidebar([
+			'name'          => 'Phone',
+			'id'            => 'phone-number',
+			'description'   => 'Showed in footer',
+			'before_widget' => '',
+			'after_widget'  => "",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+		register_sidebar([
+			'name'          => 'Email',
+			'id'            => 'email-link',
+			'description'   => 'Showed in footer',
+			'before_widget' => '',
+			'after_widget'  => "",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+		register_sidebar([
+			'name'          => 'Address',
+			'id'            => 'address-text',
+			'description'   => 'Showed in footer',
+			'before_widget' => '',
+			'after_widget'  => "",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+
+		register_sidebar([
+			'name'          => 'Social',
+			'id'            => 'footer-social',
+			'description'   => '',
+			'before_widget' => '',
+			'after_widget'  => "\n",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+
+		register_sidebar([
+			'name'          => 'Footer Advantages Item 1',
+			'id'            => 'footer-advantages-item1',
+			'description'   => '',
+			'before_widget' => '',
+			'after_widget'  => "\n",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+		register_sidebar([
+			'name'          => 'Footer Advantages Item 2',
+			'id'            => 'footer-advantages-item2',
+			'description'   => '',
+			'before_widget' => '',
+			'after_widget'  => "\n",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+		register_sidebar([
+			'name'          => 'Footer Advantages Item 3',
+			'id'            => 'footer-advantages-item3',
+			'description'   => '',
+			'before_widget' => '',
+			'after_widget'  => "\n",
+			'before_title'  => '',
+			'after_title'   => "",
+		]);
+
+		
 	});
 
 	add_action('after_setup_theme', function () {
         register_nav_menu('headerNav', 'Header navigation');
         register_nav_menu('menuNav', 'Header menu mobile');
+        register_nav_menu('footerNav', 'Footer links privacy');
         register_nav_menu('footerLinksItem1', 'Footer nav links 1');
         register_nav_menu('footerLinksItem2', 'Footer nav links 2');
     });

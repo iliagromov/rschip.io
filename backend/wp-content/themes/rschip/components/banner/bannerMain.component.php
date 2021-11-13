@@ -7,8 +7,8 @@
                         car with RSCHIP</span></h1>
                 <p class="pageText">Increase power, save fuel, create dyno charts, Measure acceleration and more
                 </p>
-                <div class="socialIcons"><a class="icon svg-iconInstagramGray svg-iconInstagramGray-box" href="javascript:void(0)"></a><a class="icon svg-iconFacebookGray svg-iconFacebookGray-box" href="javascript:void(0)"></a><a class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
-                </div>
+                <?php include(TEMPLATEPATH . '/components/social/socialIcons.component.php'); ?>
+
             </div>
             <div class="bannerImgBg">
                 <picture>
@@ -20,7 +20,7 @@
             </div>
             <div class="bannerSelect">
                 <?php include(TEMPLATEPATH . '/components/selectBox/selectBox.component.php'); ?>
-    
+
             </div>
         </div>
     </div>

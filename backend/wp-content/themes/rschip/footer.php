@@ -1,3 +1,4 @@
+
 <footer>
     <div class="footer">
         <div class="wrapper">
@@ -5,42 +6,69 @@
                 <div class="footerLogo">
                     <img src="assets/images/svg/logoWhite.svg" alt="logo">
                 </div>
-                <div class="footerDealer"><a class="page__btn" href="javascript:void(0)">Become a dealer</a></div>
+                <div class="footerDealer">
+                    <?php if (is_active_sidebar('become-dealer')) : ?>
+                        <?php dynamic_sidebar('become-dealer') ?>
+                    <?php endif; ?>
+                    <!-- <a class="page__btn" href="javascript:void(0)">Become a dealer</a> -->
+                </div>
                 <div class="footerContacts">
-                    <div class="footerContactsItem"><i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i><a
-                            href="tel:+1 800 796 16 17">+1 800 796 16 17</a></div>
-                    <div class="footerContactsItem"><i class="svg-iconEmailGray svg-iconEmailGray-box"></i><a
-                            class="email" href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a></div>
-                    <div class="footerContactsItem"><i
-                            class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
-                        <address>1201 East 5th Street North Little Rock, Arkansas USA, 72114</address>
+                    <div class="footerContactsItem">
+                        <?php if (is_active_sidebar('phone-number')) : ?>
+                            <i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i>
+                            <?php dynamic_sidebar('phone-number') ?>
+                        <?php endif; ?>
+                        <!-- <a href="tel:+1 800 796 16 17">+1 800 796 16 17</a> -->
                     </div>
+                    <div class="footerContactsItem">
+                        <?php if (is_active_sidebar('email-link')) : ?>
+                            <i class="svg-iconEmailGray svg-iconEmailGray-box"></i>
+                            <?php dynamic_sidebar('email-link') ?>
+                            <!-- <a class="email" href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a> -->
+                        <?php endif; ?>
+                    </div>
+                    <div class="footerContactsItem">
+                        <?php if (is_active_sidebar('address-text')) : ?>
+                            <?php dynamic_sidebar('address-text') ?>
+                            <i class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
+                            <!-- <address>1201 East 5th Street North Little Rock, Arkansas USA, 72114</address> -->
+                        <?php endif; ?>
+                     </div>
                 </div>
             </div>
             <div class="footerFlexContainer footerAdvantages">
                 <div class="footerAdvantagesItem">
-                    <div class="footerAdvantagesItem__title"><i class="svg-iconShield svg-iconShield-box"></i>
+                    <?php if (is_active_sidebar('footer-advantages-item1')) : ?>
+                        <?php dynamic_sidebar('footer-advantages-item1') ?>
+                    <?php endif; ?>
+                    <!-- <div class="footerAdvantagesItem__title"><i class="svg-iconShield svg-iconShield-box"></i>
                         <h5>Lifetime warranty</h5>
                     </div>
                     <p class="page__text">We are confident in longevity and reliability of our products, and happy
                         to provide you with best possible terms and guarantees!</p><a href="javascript:void(0)">Read
-                        more </a>
+                        more </a> -->
                 </div>
                 <div class="footerAdvantagesItem">
-                    <div class="footerAdvantagesItem__title"><i
+                    <?php if (is_active_sidebar('footer-advantages-item2')) : ?>
+                        <?php dynamic_sidebar('footer-advantages-item2') ?>
+                    <?php endif; ?>
+                    <!-- <div class="footerAdvantagesItem__title"><i
                             class="svg-iconReturnCircle svg-iconReturnCircle-box"></i>
                         <h5>30 days return policy</h5>
                     </div>
                     <p class="page__text">Not convinced after the 30 days? Just send the produt back No questions
-                        asked.</p><a href="javascript:void(0)">Read more </a>
+                        asked.</p><a href="javascript:void(0)">Read more </a> -->
                 </div>
                 <div class="footerAdvantagesItem">
-                    <div class="footerAdvantagesItem__title"><i
+                    <?php if (is_active_sidebar('footer-advantages-item3')) : ?>
+                        <?php dynamic_sidebar('footer-advantages-item3') ?>
+                    <?php endif; ?>
+                    <!-- <div class="footerAdvantagesItem__title"><i
                             class="svg-iconFreeShipping svg-iconFreeShipping-box"></i>
                         <h5>Free shipping worldwide</h5>
                     </div>
                     <p class="page__text">Free shipping worldwide to any location with DHL express and USPS.</p><a
-                        href="javascript:void(0)">Read more </a>
+                        href="javascript:void(0)">Read more </a> -->
                 </div>
             </div>
             <div class="footerFlexContainer footerLinks">
@@ -116,25 +144,14 @@
         <div class="wrapper">
             <div class="footerPrivacy">
                 <div class="item1">
-                    <p>© Copyright 2016 - 2021 RSCHIP. All Rights Reserved.</p>
+                    <p>© Copyright 2016 - <?php the_date('Y'); ?> RSCHIP. All Rights Reserved.</p>
                 </div>
                 <div class="item2">
-                    <div class="socialIcons">
-                    <?php if (is_active_sidebar('footerSocial')) : ?>
-                        <?php dynamic_sidebar('footerSocial') ?>
-                    <?php endif; ?>
-                        <a class="icon svg-iconInstagramGray svg-iconInstagramGray-box"
-                            href="javascript:void(0)"></a>
-                        <a
-                            class="icon svg-iconFacebookGray svg-iconFacebookGray-box"
-                            href="javascript:void(0)"></a>
-                        <a
-                            class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
-                    </div>
+                    <?php include(TEMPLATEPATH . '/components/social/socialIcons.component.php'); ?>
                 </div>
                 <div class="item3"> 
-                    <a href="javascript:void(0)">Privacy PolicyApp </a><a
-                        href="javascript:void(0)">Privacy Policy</a></div>
+                    <?php wp_nav_custom_menu('footerNav',''); ?>
+                </div>
             </div>
         </div>
     </section>
@@ -187,6 +204,7 @@
     <script src="js/productBlocks/productSlider.component.js"></script>
     <script src="js/faq/faq.component.js"></script>
     <script src="js/modals/modalGallary.component.js"></script>
+    <script src="js/modals/modalNews.component.js"></script>
     <script src="js/select/select.component.js"></script>
     <?php wp_footer(); ?>
 </body>

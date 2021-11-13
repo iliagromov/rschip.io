@@ -11,6 +11,6 @@
         <p class="page__text"> <span class="page__text_underline">Follow us </span>on social media</p>
     </div>
     <div class="socialBlockIcons">
-        <div class="socialIcons"><a class="icon svg-iconInstagramWhite svg-iconInstagramWhite-box" href="javascript:void(0)"></a><a class="icon svg-iconFacebookWhite svg-iconFacebookWhite-box" href="javascript:void(0)"></a><a class="icon svg-iconYoutubeWhite svg-iconYoutubeWhite-box" href="javascript:void(0)"></a></div>
+        <?php include(TEMPLATEPATH . '/components/social/socialIcons.component.php'); ?>
     </div>
 </section>

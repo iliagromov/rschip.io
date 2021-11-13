@@ -2023,6 +2023,10 @@ html:not([data-scroll='0']) .header {
   display: none;
 }
 
+.newsItem .modalContent {
+  display: none;
+}
+
 .newsItemImg {
   display: -webkit-box;
   display: -webkit-flex;

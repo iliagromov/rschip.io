@@ -29,8 +29,9 @@
                     </div>
                     <div class="footerContactsItem">
                         <?php if (is_active_sidebar('address-text')) : ?>
-                            <?php dynamic_sidebar('address-text') ?>
                             <i class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
+                            
+                            <?php dynamic_sidebar('address-text') ?>
                             <!-- <address>1201 East 5th Street North Little Rock, Arkansas USA, 72114</address> -->
                         <?php endif; ?>
                      </div>

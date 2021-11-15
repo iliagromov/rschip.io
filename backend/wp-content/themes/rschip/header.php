@@ -2,15 +2,6 @@
 <html lang="en" data-scroll="0">
 
 <head>
-
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-   
-  
-
     <meta charset="<?php bloginfo('charset') ?>">
     <base href="<?php echo get_template_directory_uri(); ?>/">
 
@@ -53,7 +44,7 @@
         <div class="wrapper">
             <div class="headerFlexContainer">
                 <div class="headerLogo">
-                    <a href="/"> 
+                    <a href="/">
                         <img src="assets/images/svg/logoWhite.svg" alt="logo">
                     </a>
                 </div>
@@ -61,11 +52,14 @@
                 <div class="headerNav">
                     <nav class="headerNavLinks">
                         <?php wp_nav_custom_menu('headerNav', "headerLink"); ?>
-               
+
                     </nav>
                     <a class="headerNavCart" href="/cart/">
                         <div class="icon-cart-png"></div>
-                        <!-- <div class="headerNavCart__count">3</div> -->
+                        <?php $cartContentsCount = WC()->cart->get_cart_contents_count();
+                        if (!empty($cartContentsCount)) : ?>
+                            <div class="headerNavCart__count"><?php echo $cartContentsCount; ?></div>
+                        <?php endif; ?>
                     </a>
                     <div class="headerNavBtn"><a class="page__btn" href="/shop/">Shop</a></div>
                     <div class="headerNavBurgerMenu">
@@ -113,4 +107,3 @@
             </div>
         </div>
     </section>
-    

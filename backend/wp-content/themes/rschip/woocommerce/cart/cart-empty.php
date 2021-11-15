@@ -24,10 +24,10 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 					<span class="page_red">empty</span>
 			</div>
             <div class="cartEmptyDesc">Once selected your item well appear here</div>
-			<a class="page__btn" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>" >
+			<a class="page__btn" href="/shop/" >
 			<?php
 				/**
-				 * Filter "Return To Shop" text.
+				 * Filter "CONTINUE SHOPPING Return To Shop" text.
 				 *
 				 * @since 4.6.0
 				 * @param string $default_text Default text.

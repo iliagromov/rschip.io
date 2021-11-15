@@ -2,7 +2,7 @@
         <div class="wrapper">
             <div class="carSelectorRowFlex">
                 <div class="carSelectorContainer">
-                    <div class="carSelectorImg"> <img src="assets/images/png/imgCarSelectors.png" alt="imgCarSelectors"></div>
+                    <div class="carSelectorImg"> <img src="assets/images/png/chip/imgCarSelectors.png" alt="imgCarSelectors"></div>
                     <div class="carSelectorIcons">
                         <div class="carSelectorIconsItem">
                             <div class="carSelectorIconsItem__Icon">

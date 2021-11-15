@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying product content in the single-product.php template
  *
@@ -15,7 +16,7 @@
  * @version 3.6.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 global $product;
 
@@ -24,53 +25,89 @@ global $product;
  *
  * @hooked woocommerce_output_all_notices - 10
  */
-do_action( 'woocommerce_before_single_product' );
+do_action('woocommerce_before_single_product');
 
-if ( post_password_required() ) {
-	echo get_the_password_form(); // WPCS: XSS ok.
-	return;
+if (post_password_required()) {
+    echo get_the_password_form(); // WPCS: XSS ok.
+    return;
 }
+$productACF = get_fields();
+$productPrice = $product->get_price_html();
+$attachment_ids = $product->get_gallery_image_ids();
+$productImg = $product->get_image_id();
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+<!--content-ingle-products-->
+<section id="product-<?php the_ID(); ?>" class="productSlider">
+    <?php if ($productACF["download_btn"]) : ?>
+        <a download href="<?php echo $productACF["download_btn"]; ?>" class="page__btn page__btn_notTransparent">DOWLOAD THE GUIDE</a>
+    <?php endif; ?>
+    <div class="wrapper">
+        <h2 class="page__title-h2_small">easy and fast</h2>
+        <h3 class="page__title-h3">Throttle response with no delay </h3>
+        <div class="productSliderFlexContainer">
+            <div class="productSliderGallary">
+                <div class="productSliderGallary__Main gallery-top">
+                    <div class="swiper-wrapper">
+                        <?php if ($attachment_ids && $productImg) :
+                            foreach ($attachment_ids as $attachment_id) : ?>
+                                <div class="swiper-slide">
+                                    <?php echo wp_get_attachment_image($attachment_id, 'full', false); ?>
+                                </div>
+                            <?php endforeach; ?>
 
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action( 'woocommerce_before_single_product_summary' );
-	?>
+                        <?php else : ?>
+                            <div class="swiper-slide"><img src="assets/images/png/products/imgRsChipSliderMain.png" alt="productSliderGallary"></div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="productSliderGallary__Thumbnails gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <?php if ($attachment_ids && $productImg) :
+                            foreach ($attachment_ids as $attachment_id) : ?>
+                                <div class="swiper-slide">
+                                    <?php echo wp_get_attachment_image($attachment_id, array(60, 60), false); ?>
+                                </div>
+                            <?php endforeach; ?>
 
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
-
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
-</div>
-
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+                        <?php else : ?>
+                            <div class="swiper-slide"><img src="assets/images/png/products/imgChipSlidermin.png" alt="productSliderGallary"></div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="productSliderAdvantages">
+                <div class="productSliderAdvantagesItem">
+                    <div class="productSliderAdvantagesItemIcon svg-iconSpeedometerGray svg-iconSpeedometerGray-box">
+                    </div>
+                    <p>Better driving dynamic</p>
+                </div>
+                <div class="productSliderAdvantagesItem">
+                    <div class="productSliderAdvantagesItemIcon svg-iconWheel svg-iconWheel-box"></div>
+                    <p>Backup CPU</p>
+                </div>
+                <div class="productSliderAdvantagesItem">
+                    <div class="productSliderAdvantagesItemIcon svg-iconChipGray svg-iconChipGray-box"></div>
+                    <p>Five driving modes</p>
+                </div>
+                <div class="productSliderAdvantagesItem">
+                    <div class="productSliderAdvantagesItemIcon svg-iconPinion svg-iconPinion-box"></div>
+                    <p>No lag or delay</p>
+                </div>
+                <div class="productSliderAdvantagesItem">
+                    <div class="productSliderAdvantagesItemIcon svg-iconRudder svg-iconRudder-box"></div>
+                    <p>Easy to install</p>
+                </div>
+                <div class="productSliderAdvantagesItem">
+                    <div class="productSliderAdvantagesItemIcon svg-iconHybrEng svg-iconHybrEng-box"></div>
+                    <p>ICE, BEV and hybrid engines</p>
+                </div>
+                <div class="productSliderPrice"> <button class="page__btn">ADD TO BAG</button>
+                    <div class="productPrice__cost">$299</div>
+                </div>
+                <div class="productSliderText">*Real world gains may be less or more depending on a large number
+                    of contributing factors such as displacement, aspiration and selected tuning mode.</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--content-ingle-products-->

@@ -15,7 +15,8 @@
                     <source type="image/png" srcset="assets/images/png/main/imgBannerBg_1920.png" media="(min-width: 1441px)">
                     <source type="image/png" srcset="assets/images/png/main/imgBannerBg_1440.png" media="(min-width: 1440px)">
                     <source type="image/png" srcset="assets/images/png/main/imgBannerBg_992.png" media="(min-width: 992px)">
-                    <source type="image/png" srcset="assets/images/png/main/imgBannerBg_768.png" media="(min-width: 768px)"><img src="assets/images/png/main/imgBannerBg_320.png" alt="imgBannerBg">
+                    <source type="image/png" srcset="assets/images/png/main/imgBannerBg_768.png" media="(min-width: 768px)">
+                    <img src="assets/images/png/main/imgBannerBg_320.png" alt="imgBannerBg">
                 </picture>
             </div>
             <div class="bannerSelect">

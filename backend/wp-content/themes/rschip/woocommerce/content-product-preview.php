@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * The template for displaying product content within loops
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 3.6.0
+ */
+
+defined('ABSPATH') || exit;
+
+global $product;
+
+// Ensure visibility.
+if (empty($product) || !$product->is_visible()) {
+	return;
+}
+// echo '<pre>';
+// var_dump($product);
+// echo '</pre>';
+
+$tags_list = get_the_terms($product->id, 'product_tag');
+$productACF = get_fields();
+$productPreview = $productACF['products_preview'];
+
+?>
+<!--content-products-preview-->
+<div class="productsItem">
+	<h3 class="productsItemTitle"><?php echo $productPreview['title']; ?></h3>
+	<p class="productsItemTextBefore"><?php echo $product->get_short_description(); ?></p>
+	<?php if ($product->get_image_id()) {
+			$url = wp_get_attachment_url($product->get_image_id());
+			echo "<img class='productsItemImg' src=" . $url . " alt='product'>";
+		} ?>
+	<!-- <img class="productsItemImg" src="assets/images/png/products/product1.png" alt="product"> -->
+	<div class="productsItemGain">
+		<div class="productsItemGain__text">
+			<div class="text">up to</div>
+			<div class="number"><?php echo $productACF['productsItemGain_power'];?></div>
+			<div class="text">Power</div>
+		</div>
+		<div class="productsItemGain__text">
+			<div class="text">up to</div>
+			<div class="number"><?php echo $productACF['productsItemGain_torque'];?></div>
+			<div class="text">Torque</div>
+		</div>
+	</div>
+	<p class="productsItemTextAfter"><?php echo $productPreview['text_after']; ?></p>
+	<div class="productsItemActions"> 
+		<a class="page__btn" href="<?php echo $productPreview['link']; ?>">LEARN MORE</a>
+		<div class="productsItemActionsAddToCartWoocommerce">
+			<?php do_action('woocommerce_after_shop_loop_item', array('')); ?>
+		</div>
+		<!-- <button class="page__btn page__btn_notTransparent">USD&nbsp; <?php echo $product->get_price_html(); ?></button> -->
+	</div>
+</div>
+
+<!--/content-products-preview-->

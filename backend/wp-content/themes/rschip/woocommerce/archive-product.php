@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -15,91 +16,80 @@
  * @version 3.4.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-get_header( 'shop' );
+get_header('shop'); ?>
 
-/**
- * Hook: woocommerce_before_main_content.
- *
- * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
- * @hooked woocommerce_breadcrumb - 20
- * @hooked WC_Structured_Data::generate_website_data() - 30
- */
-do_action( 'woocommerce_before_main_content' );
+<main class="page pageShop">
+    <section class="products productsCart">
+        <div class="productsBg"><img src="assets/images/png/shared/imgShopBg.png" alt="imgShopBg"></div>
+        <h2 class="page__title-h2 page__title-h2_big">shop <span class="page__title-h2_small page__title-h2_absolute">Get Started</span></h2>
+        
+        <div class="productsTabs">
+            <div class="productsTabsItem">
+                <div class="productsTabsItem__icon">
+                    <div class="svg-iconRS svg-iconRS-box"></div>
+                </div>
+                <div class="productsTabsItem__text">RS</div>
+            </div>
+            <div class="productsTabsItem">
+                <div class="productsTabsItem__icon">
+                    <div class="svg-iconGTRWhite svg-iconGTRWhite-box"></div>
+                </div>
+                <div class="productsTabsItem__text">GTR</div>
+            </div>
+            <div class="productsTabsItem">
+                <div class="productsTabsItem__icon">
+                    <div class="svg-iconRSResponse svg-iconRSResponse-box"></div>
+                </div>
+                <div class="productsTabsItem__text">RS response</div>
+            </div>
+        </div>
 
-?>
-<header class="woocommerce-products-header">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
+        <div class="wrapper">
+            <div class="productsFlexContainer">
+                <?php if (woocommerce_product_loop()) {
+                    if (wc_get_loop_prop('total')) {
+                        while (have_posts()) {
+                            the_post();
+                            /**
+                             * Hook: woocommerce_shop_loop.
+                             */
+                            do_action('woocommerce_shop_loop');
+                            wc_get_template_part('content', 'product');
+                        }
+                    }
+                } else {
+                    /**
+                     * Hook: woocommerce_no_products_found.
+                     *
+                     * @hooked wc_no_products_found - 10
+                     */
+                    do_action('woocommerce_no_products_found');
+                } ?>
 
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</header>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="wrapper">
+        <div class="pageShop__textAfter">* Real world gains may be less or more depending on a large number of
+            contributing factors such as displacement, aspiration and selected tuning mode</div>
+    </div>
+
+    <section class="addToCart">
+        <div class="wrapper">
+            <div class="addToCartContainer">
+                <div>Free shipping</div>
+                <div>30 days money back</div>
+                <div class="addToCartPrice" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></div>
+                <a class="page__btn page__btn_notTransparent" href="/cart/">TO CART</a>
+            </div>
+        </div>
+    </section>
+
+</main>
 <?php
-if ( woocommerce_product_loop() ) {
-
-	/**
-	 * Hook: woocommerce_before_shop_loop.
-	 *
-	 * @hooked woocommerce_output_all_notices - 10
-	 * @hooked woocommerce_result_count - 20
-	 * @hooked woocommerce_catalog_ordering - 30
-	 */
-	do_action( 'woocommerce_before_shop_loop' );
-
-	woocommerce_product_loop_start();
-
-	if ( wc_get_loop_prop( 'total' ) ) {
-		while ( have_posts() ) {
-			the_post();
-
-			/**
-			 * Hook: woocommerce_shop_loop.
-			 */
-			do_action( 'woocommerce_shop_loop' );
-
-			wc_get_template_part( 'content', 'product' );
-		}
-	}
-
-	woocommerce_product_loop_end();
-
-	/**
-	 * Hook: woocommerce_after_shop_loop.
-	 *
-	 * @hooked woocommerce_pagination - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop' );
-} else {
-	/**
-	 * Hook: woocommerce_no_products_found.
-	 *
-	 * @hooked wc_no_products_found - 10
-	 */
-	do_action( 'woocommerce_no_products_found' );
-}
-
-/**
- * Hook: woocommerce_after_main_content.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
-do_action( 'woocommerce_after_main_content' );
-
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
-
-get_footer( 'shop' );
+get_footer('shop');
+?>

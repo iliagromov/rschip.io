@@ -15,7 +15,7 @@
                 <div class="howitworkChipText">The RSCHIP performance tuner temporarily replaces parts of this
                     map with parts from our highly tuned performance maps, and will safely unleash your engine's
                     full potential, without voiding the warranty.</div>
-                <div class="howitworkChipImg"> <img src="assets/images/png/imgHowitworkChip.png" alt="imgHowitworkChip"></div>
+                <div class="howitworkChipImg"> <img src="assets/images/png/chip/imgHowitworkChip.png" alt="imgHowitworkChip"></div>
             </div>
         </div>
     </div>

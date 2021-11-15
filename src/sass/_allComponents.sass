@@ -3201,6 +3201,224 @@ html
        
     .icon
         margin: 0 15px
+.accomplishments
+    padding: 60px 0
+    position: relative
+    .page__title-h2_small
+        text-align: center
+    .page__title-h3
+        text-align: center
+        font-size: 24px
+        line-height: 30px
+        margin-top: 10px
+        margin-bottom: 3%
+
+        +sm-block
+            font-size: 36px
+            line-height: 59px
+        +md-block
+            font-size: 36px
+            line-height: 59px
+        +lg-block
+            font-size: 36px
+            line-height: 59px
+    &::before, 
+    &::after
+        content: ''
+        transform: translate(-50%, -50%)
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+        position: absolute
+        width: 0
+        height: 0
+
+        +sm-block
+            width: 497px
+            height: 497px
+        +md-block
+            width: 497px
+            height: 497px
+        +lg-block
+            width: 497px
+            height: 497px
+    &::before
+        bottom: 0
+        +sm-block
+            left: -25%
+        +md-block
+            left: -20%
+        +lg-block
+            left: -20%
+        
+        // bottom: -68%
+       
+    &::after
+        top: 43%
+        +sm-block
+            right: -85%
+        +md-block
+            right: -53%
+        +lg-block
+            right: -53%
+
+.accomplishmentsRowFlex 
+    +row-flex
+    justify-content: center
+
+.accomplishmentsItem
+    +col
+    +size(9)
+    +size-sm(5)
+    +size-md(3.6)
+    +size-lg(3.6)
+
+    text-align: center
+    padding-top: 11%
+    margin-bottom: 3%
+    &:nth-child(odd)
+        .accomplishmentsItemImg
+            +md-block
+                justify-content: flex-end
+                padding-right: 50px
+            +lg-block
+                justify-content: flex-end
+                padding-right: 50px
+    &:nth-child(even)
+        .accomplishmentsItemImg
+            +md-block
+                justify-content: flex-start
+                padding-left: 50px
+            +lg-block
+                justify-content: flex-start
+                padding-left: 50px
+
+.accomplishmentsItemImg
+    display: flex
+    margin-bottom: 50px
+    justify-content: center
+        
+.accomplishmentsItemTitle
+    font-family: #{$SFUIDisplay}-Bold
+    margin-bottom: 16px
+
+    font-size: 18px
+    line-height: 26px
+    +sm-block
+        font-size: 24px
+        line-height: 52px
+    +md-block
+        font-size: 24px
+        line-height: 52px
+    +lg-block
+        font-size: 24px
+        line-height: 52px
+
+.accomplishmentsItemDescription
+    color: #B2B2B2
+    font-size: 15px
+    line-height: 26px
+    letter-spacing: 0.02em
+.appBlock
+    padding: 60px 0 150px
+    .page__title-h3
+        font-size: 36px
+        line-height: 59px
+        margin-top: 2%
+
+.appBlockRowFlex
+    +row-flex
+
+.appBlockContainer
+    position: relative
+    display: flex
+    border-radius: 15px
+    background: #111111
+    backdrop-filter: blur(35px)
+    padding: 20% 5% 2% 8%
+    +sm-block
+        padding: 12% 5%
+    +md-block
+        padding: 6% 5%
+    +lg-block
+        padding: 6% 5%
+.appBlockText
+    +col
+    +size(9)
+    +size-md(4)
+    +size-lg(4)
+
+.appBlockIcons 
+    display: flex
+
+.appBlockDescription
+    margin-top: 32px
+    margin-bottom: 37px
+.appBlockIconsItem 
+    display: flex
+    font-size: 15px
+    line-height: 22px
+    font-family: #{$SFUIDisplay}-Bold
+.appBlockImg
+    position: absolute
+    right: -66px
+    top: -105px
+.appBlockIcon
+    margin-right: 20px
+.carSelector
+    padding: 60px 0 150px
+
+.carSelectorRowFlex
+    +row-flex
+
+.carSelectorContainer
+    position: relative
+    display: flex
+    border-radius: 15px
+    background: #111111
+    backdrop-filter: blur(35px)
+    margin-right: 3%
+
+
+.carSelectorImg
+    position: relative
+    left: -10%
+    top: 16%
+    // width: 76%
+    +size(9)
+    +size-md(7)
+    +size-lg(7)
+    +shift-md-right(-2.2)
+    +shift-lg-right(-2.2)
+
+
+.carSelectorIcons
+    +col
+    +size(9)
+    +size-md(3.5)
+    +size-lg(3.5)
+
+    padding-top: 7%
+    .page__btn
+        margin-top: 8%
+        margin-left: 6%
+        margin-bottom: 2%
+
+.carSelectorIconsItem 
+    display: flex
+    margin-bottom: 6%
+    &__Icon 
+        margin-right: 28px
+    &__Text
+        padding-top: 2%
+
+.carSelectorTextAfter
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 14px
+    line-height: 59px
+    color: #B2B2B2
+    text-transform: uppercase
+    text-align: center
+
 .howitworkChip
     padding: 60px 0
     .page__title-h2_small
@@ -3578,224 +3796,6 @@ html
         justify-content: space-between
         span
             background: #54CA52
-
-.accomplishments
-    padding: 60px 0
-    position: relative
-    .page__title-h2_small
-        text-align: center
-    .page__title-h3
-        text-align: center
-        font-size: 24px
-        line-height: 30px
-        margin-top: 10px
-        margin-bottom: 3%
-
-        +sm-block
-            font-size: 36px
-            line-height: 59px
-        +md-block
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            font-size: 36px
-            line-height: 59px
-    &::before, 
-    &::after
-        content: ''
-        transform: translate(-50%, -50%)
-        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
-        filter: blur(500px)
-        position: absolute
-        width: 0
-        height: 0
-
-        +sm-block
-            width: 497px
-            height: 497px
-        +md-block
-            width: 497px
-            height: 497px
-        +lg-block
-            width: 497px
-            height: 497px
-    &::before
-        bottom: 0
-        +sm-block
-            left: -25%
-        +md-block
-            left: -20%
-        +lg-block
-            left: -20%
-        
-        // bottom: -68%
-       
-    &::after
-        top: 43%
-        +sm-block
-            right: -85%
-        +md-block
-            right: -53%
-        +lg-block
-            right: -53%
-
-.accomplishmentsRowFlex 
-    +row-flex
-    justify-content: center
-
-.accomplishmentsItem
-    +col
-    +size(9)
-    +size-sm(5)
-    +size-md(3.6)
-    +size-lg(3.6)
-
-    text-align: center
-    padding-top: 11%
-    margin-bottom: 3%
-    &:nth-child(odd)
-        .accomplishmentsItemImg
-            +md-block
-                justify-content: flex-end
-                padding-right: 50px
-            +lg-block
-                justify-content: flex-end
-                padding-right: 50px
-    &:nth-child(even)
-        .accomplishmentsItemImg
-            +md-block
-                justify-content: flex-start
-                padding-left: 50px
-            +lg-block
-                justify-content: flex-start
-                padding-left: 50px
-
-.accomplishmentsItemImg
-    display: flex
-    margin-bottom: 50px
-    justify-content: center
-        
-.accomplishmentsItemTitle
-    font-family: #{$SFUIDisplay}-Bold
-    margin-bottom: 16px
-
-    font-size: 18px
-    line-height: 26px
-    +sm-block
-        font-size: 24px
-        line-height: 52px
-    +md-block
-        font-size: 24px
-        line-height: 52px
-    +lg-block
-        font-size: 24px
-        line-height: 52px
-
-.accomplishmentsItemDescription
-    color: #B2B2B2
-    font-size: 15px
-    line-height: 26px
-    letter-spacing: 0.02em
-.appBlock
-    padding: 60px 0 150px
-    .page__title-h3
-        font-size: 36px
-        line-height: 59px
-        margin-top: 2%
-
-.appBlockRowFlex
-    +row-flex
-
-.appBlockContainer
-    position: relative
-    display: flex
-    border-radius: 15px
-    background: #111111
-    backdrop-filter: blur(35px)
-    padding: 20% 5% 2% 8%
-    +sm-block
-        padding: 12% 5%
-    +md-block
-        padding: 6% 5%
-    +lg-block
-        padding: 6% 5%
-.appBlockText
-    +col
-    +size(9)
-    +size-md(4)
-    +size-lg(4)
-
-.appBlockIcons 
-    display: flex
-
-.appBlockDescription
-    margin-top: 32px
-    margin-bottom: 37px
-.appBlockIconsItem 
-    display: flex
-    font-size: 15px
-    line-height: 22px
-    font-family: #{$SFUIDisplay}-Bold
-.appBlockImg
-    position: absolute
-    right: -66px
-    top: -105px
-.appBlockIcon
-    margin-right: 20px
-.carSelector
-    padding: 60px 0 150px
-
-.carSelectorRowFlex
-    +row-flex
-
-.carSelectorContainer
-    position: relative
-    display: flex
-    border-radius: 15px
-    background: #111111
-    backdrop-filter: blur(35px)
-    margin-right: 3%
-
-
-.carSelectorImg
-    position: relative
-    left: -10%
-    top: 16%
-    // width: 76%
-    +size(9)
-    +size-md(7)
-    +size-lg(7)
-    +shift-md-right(-2.2)
-    +shift-lg-right(-2.2)
-
-
-.carSelectorIcons
-    +col
-    +size(9)
-    +size-md(3.5)
-    +size-lg(3.5)
-
-    padding-top: 7%
-    .page__btn
-        margin-top: 8%
-        margin-left: 6%
-        margin-bottom: 2%
-
-.carSelectorIconsItem 
-    display: flex
-    margin-bottom: 6%
-    &__Icon 
-        margin-right: 28px
-    &__Text
-        padding-top: 2%
-
-.carSelectorTextAfter
-    font-family: #{$SFUIDisplay}-Bold
-    font-size: 14px
-    line-height: 59px
-    color: #B2B2B2
-    text-transform: uppercase
-    text-align: center
 
 /*howitwork*/
 .howitwork

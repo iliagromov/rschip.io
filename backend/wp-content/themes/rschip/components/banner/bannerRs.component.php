@@ -6,8 +6,8 @@
                 <h1 class="page__title-h1"><span class="page_red">Better acceleration </span><br> with RS
                     Response </h1>
                 <p class="pageText">Better acceleration and sportier thotlle response for your Car</p>
-                <div class="socialIcons"><a class="icon svg-iconInstagramGray svg-iconInstagramGray-box" href="javascript:void(0)"></a><a class="icon svg-iconFacebookGray svg-iconFacebookGray-box" href="javascript:void(0)"></a><a class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
-                </div>
+                <?php include(TEMPLATEPATH . '/components/social/socialIcons.component.php'); ?>
+
             </div>
             <div class="advantages">
                 <div class="advantagesFlexContainer">
@@ -41,8 +41,9 @@
                 <picture>
                     <source type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1920.png" media="(min-width: 1441px)">
                     <source type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1440.png" media="(min-width: 1440px)">
-                    <source type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1366.png" media="(min-width: 992px)">
-                    <source type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_768.png" media="(min-width: 768px)"><img src="assets/images/png/rs/imgBannerRsBg_320.png" alt="imgBannerRs">
+                    <source type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_992.png" media="(min-width: 992px)">
+                    <source type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_768.png" media="(min-width: 768px)">
+                    <img src="assets/images/png/rs/imgBannerRsBg_320.png" alt="imgBannerRs">
                 </picture>
             </div>
             <div class="bannerImgChip">

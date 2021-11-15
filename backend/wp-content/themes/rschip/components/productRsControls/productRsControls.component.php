@@ -8,8 +8,9 @@
                 </div>
                 <div class="productRsControlsImg">
                     <picture>
-                        <source type="image/png" srcset="assets/images/png/imgProductRsControls-lg.png" media="(min-width: 992px)">
-                        <source type="image/png" srcset="assets/images/png/imgProductRsControls-sm.png" media="(min-width: 768px)"><img src="assets/images/png/imgProductRsControls-xs.png" alt="imgProductRsControls">
+                        <source type="image/png" srcset="assets/images/png/rs/imgProductRsControls-lg.png" media="(min-width: 992px)">
+                        <source type="image/png" srcset="assets/images/png/rs/imgProductRsControls-sm.png" media="(min-width: 768px)">
+                        <img src="assets/images/png/rs/imgProductRsControls-xs.png" alt="imgProductRsControls">
                     </picture>
                 </div>
                 <div class="productRsControlsToggles">

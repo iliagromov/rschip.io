@@ -14,13 +14,13 @@
                             <div class="tab-link">Sport</div>
                             <div class="tab-link">Sport +</div>
                         </div>
-                        <div class="tab-content is-active"><img src="assets/images/png/optimizeBlockImgChart.png" alt="optimizeBlockImgChart">
+                        <div class="tab-content is-active"><img src="assets/images/png/chip/optimizeBlockImgChart.png" alt="optimizeBlockImgChart">
                         </div>
-                        <div class="tab-content"><img src="assets/images/png/optimizeBlockImgChart.png" alt="optimizeBlockImgChart"></div>
-                        <div class="tab-content"><img src="assets/images/png/optimizeBlockImgChart.png" alt="optimizeBlockImgChart"></div>
+                        <div class="tab-content"><img src="assets/images/png/chip/optimizeBlockImgChart.png" alt="optimizeBlockImgChart"></div>
+                        <div class="tab-content"><img src="assets/images/png/chip/optimizeBlockImgChart.png" alt="optimizeBlockImgChart"></div>
                     </div>
                 </div>
-                <div class="optimizeBlockImg"><img src="assets/images/png/imgOptimizeBlockPhone.png" alt="imgOptimizeBlockPhone"></div>
+                <div class="optimizeBlockImg"><img src="assets/images/png/chip/imgOptimizeBlockPhone.png" alt="imgOptimizeBlockPhone"></div>
             </div>
         </div>
     </div>

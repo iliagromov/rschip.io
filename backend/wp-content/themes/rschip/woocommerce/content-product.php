@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying product content within loops
  *
@@ -15,53 +16,149 @@
  * @version 3.6.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 global $product;
 
 // Ensure visibility.
-if ( empty( $product ) || ! $product->is_visible() ) {
+if (empty($product) || !$product->is_visible()) {
 	return;
 }
+
+// $attributes = $product->get_attributes();
+// echo '<pre>';
+// var_dump($attributes);
+// echo '</pre>';
+// $valuesAr = array();
+// foreach ($attributes as $attribute) {
+
+// 	$values = array();
+// 	if ($attribute->is_taxonomy()) {
+// 		$attribute_taxonomy = $attribute->get_taxonomy_object();
+// 		$attribute_values = wc_get_product_terms($product->get_id(), $attribute->get_name(), array('fields' => 'all'));
+// 		foreach ($attribute_values as $attribute_value) {
+// 			$value_name = esc_html($attribute_value->name);
+// 			if ($attribute_taxonomy->attribute_public) {
+// 				$values[] = '<a href="' . esc_url(get_term_link($attribute_value->term_id, $attribute->get_name())) . '" rel="tag">' . $value_name . '</a>';
+// 			} else {
+// 				$values[] = $value_name;
+// 			}
+// 		}
+// 	} else {
+// 		$values = $attribute->get_options();
+// 		foreach ($values as $value) {
+// 			$value = make_clickable(esc_html($value));
+// 		}
+// 	}
+// 	$valuesAr += $values;
+// 	// var_dump($values) ;
+// 	apply_filters('woocommerce_attribute', wpautop(wptexturize(implode(', ', $values))), $attribute, $values);
+// }
+$tags_list = get_the_terms($product->id, 'product_tag');
+$productACF = get_fields();
+
+$isProductCartBig = $productACF['product_cart_big'];
+
 ?>
-<li <?php wc_product_class( '', $product ); ?>>
-	<?php
-	/**
-	 * Hook: woocommerce_before_shop_loop_item.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
+<!--content-products-->
+<?php if (!$isProductCartBig) : ?>
+	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" class="productsItem productsItemCart">
+		<?php if ($tags_list) :
+			foreach ($tags_list as $tag) :
+		?>
+				<div class="productsItemCartLabel"><?php echo $tag->name ?></div>
+		<?php endforeach;
+		endif; ?>
+		<h3 class="productsItemCartTitle"><?php echo $product->name; ?></h3>
+		<p class="productsItemCartTextBefore"><?php echo $product->get_short_description(); ?></p>
+		<?php if ($product->get_image_id()) {
+			$url = wp_get_attachment_url($product->get_image_id());
+			echo "<img class='productsItemCartImg' src=" . $url . " alt='product'>";
+		} ?>
+		<div class="productsItemCartGain">
+			<div class="productsItemGain">
+				<div class="productsItemGain__text">
+					<div class="text">up to</div>
+					<div class="number"><?php echo $productACF['productsItemGain_power'];?></div>
+					<div class="text">Power</div>
+				</div>
+				<div class="productsItemGain__text">
+					<div class="text">up to</div>
+					<div class="number"><?php echo $productACF['productsItemGain_torque'];?></div>
+					<div class="text">Torque</div>
+				</div>
+			</div>
+			<?php echo $product->get_description(); ?>
 
-	/**
-	 * Hook: woocommerce_before_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
+		</div>
+		<div class="productsItemCartActions">
+			<div class="productPrice"><?php echo $product->get_price_html(); ?></div>
+			<div class="productsItemActionsAddToCartWoocommerce">
+				<?php do_action('woocommerce_after_shop_loop_item'); ?>
+			</div>
 
-	/**
-	 * Hook: woocommerce_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
+		</div>
+	</div>
+<?php else : ?>
+	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" class="productsItem productsItemCart productsItemCart__Big">
+		<div class="productsItemCart__text">
+			<h3 class="productsItemCartTitle"><?php echo $product->name; ?></h3>
+			<p class="productsItemCartTextBefore"> <span>
+				<?php echo $productACF['productsItemGain_power'];?>
+			</span>Better acceleration</p>
+		</div>
+		<div class="productsItemCart__img">
+			<?php if ($product->get_image_id()) {
+				$url = wp_get_attachment_url($product->get_image_id());
+				echo "<img class='productsItemCartImg' src=" . $url . " alt='product'>";
+			} ?>
 
-	/**
-	 * Hook: woocommerce_after_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
+		</div>
+		<div class="productsCartAdvatages">
+			<div class="productsCartAdvatagesItem">
+				<div class="productsCartAdvatagesItem__icon">
+					<div class="svg-iconSpeedometerGray svg-iconSpeedometerGray-box"> </div>
+				</div>
+				<div class="productsCartAdvatagesItem__text">
+					<h5 class="productsCartAdvatagesItem__title">Compatiable with all modern cars</h5>
+					<p>Electronic throttle controller works with ICE. BEV and hybridengines</p>
+				</div>
+			</div>
+			<div class="productsCartAdvatagesItem">
+				<div class="productsCartAdvatagesItem__icon">
+					<div class="svg-iconFuelGray svg-iconFuelGray-box"> </div>
+				</div>
+				<div class="productsCartAdvatagesItem__text">
+					<h5 class="productsCartAdvatagesItem__title">Better throttle response</h5>
+					<p>Save 10-18%* More fuel on Eco mode</p>
+				</div>
+			</div>
+			<div class="productsCartAdvatagesItem">
+				<div class="productsCartAdvatagesItem__icon">
+					<div class="svg-iconFuelGray svg-iconFuelGray-box"> </div>
+				</div>
+				<div class="productsCartAdvatagesItem__text">
+					<h5 class="productsCartAdvatagesItem__title">5 driving stages</h5>
+					<p>Free Companion app with an access to our tuning database</p>
+				</div>
+			</div>
+			<div class="productsCartAdvatagesItem">
+				<div class="productsCartAdvatagesItem__icon">
+					<div class="svg-iconCPU svg-iconCPU-box"> </div>
+				</div>
+				<div class="productsCartAdvatagesItem__text">
+					<h5 class="productsCartAdvatagesItem__title">Back CPU for the safest ride</h5>
+					<p>Change your vehicle and tune right from the phone anytime</p>
+				</div>
+			</div>
+		</div>
+		<div class="productsItemCartActions">
+			<div class="productPrice"><?php echo $product->get_price_html(); ?></div>
+			<div class="productsItemActionsAddToCartWoocommerce">
+				<?php do_action('woocommerce_after_shop_loop_item'); ?>
+			</div>
+		</div>
+	</div>
+<?php endif; ?>
 
-	/**
-	 * Hook: woocommerce_after_shop_loop_item.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
-	?>
-</li>
+<!--/content-products-->

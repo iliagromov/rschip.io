@@ -42,8 +42,8 @@
                 </div>
             </div>
         </div>
-        <div class="performanceImg"><img src="assets/images/png/imgPerformance.png" alt="imgPerformance"></div>
+        <div class="performanceImg"><img src="assets/images/png/shared/imgPerformance.png" alt="imgPerformance"></div>
     </div>
-    <?php include(TEMPLATEPATH . '/components/selectBox/selectBoxChip.component.php'); ?>
+    <?php include(TEMPLATEPATH . '/components/selectBox/selectBox.component.php'); ?>
     
 </section>

@@ -16,4 +16,5 @@
     </div>
 </main>
 
+<script src="js/cartProducts/cartProducts.component.js"></script>
 <?php get_footer(); ?>

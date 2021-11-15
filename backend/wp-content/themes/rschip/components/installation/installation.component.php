@@ -2,7 +2,7 @@
         <div class="wrapper">
             <h2 class="page__title-h2"> <span class="page_red">Easy installation </span>in a few steps</h2>
             <div class="installationRowFlex">
-                <div class="installationImg"><img src="assets/images/png/imgGraphicChip.png" alt="imgGraphicChip">
+                <div class="installationImg"><img src="assets/images/png/rs/imgGraphicChip.png" alt="imgGraphicChip">
                 </div>
                 <div class="installationText">
                     <p>Unplug the wire from the throttle at the connector. </p>

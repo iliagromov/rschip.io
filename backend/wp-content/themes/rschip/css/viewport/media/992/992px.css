@@ -4741,7 +4741,6 @@ html:not([data-scroll='0']) .header {
 }
 
 .cartEmpty {
-  display: none;
   text-align: center;
   padding: 50px 0;
 }

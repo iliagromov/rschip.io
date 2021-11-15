@@ -6,8 +6,8 @@
                 <h1 class="page__title-h1"><span class="page_red">Make your car</span><br> stand out </h1>
                 <p class="pageText">Performance tuning, on-board diagnostics, Acceleration and power meter, all
                     in one device</p>
-                <div class="socialIcons"><a class="icon svg-iconInstagramGray svg-iconInstagramGray-box" href="javascript:void(0)"></a><a class="icon svg-iconFacebookGray svg-iconFacebookGray-box" href="javascript:void(0)"></a><a class="icon svg-iconYoutubeGray svg-iconYoutubeGray-box" href="javascript:void(0)"></a>
-                </div>
+                <?php include(TEMPLATEPATH . '/components/social/socialIcons.component.php'); ?>
+
             </div>
             <div class="advantages">
                 <div class="advantagesFlexContainer">
@@ -42,7 +42,8 @@
                     <source type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1920.png" media="(min-width: 1441px)">
                     <source type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1440.png" media="(min-width: 1440px)">
                     <source type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_992.png" media="(min-width: 992px)">
-                    <source type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_768.png" media="(min-width: 768px)"><img src="assets/images/png/gtr/imgBannerGtrBg_320.png" alt="imgBannerGtrBg">
+                    <source type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_768.png" media="(min-width: 768px)">
+                    <img src="assets/images/png/gtr/imgBannerGtrBg_320.png" alt="imgBannerGtrBg">
                 </picture>
             </div>
             <div class="bannerImgChip">
@@ -51,7 +52,7 @@
                 </picture>
             </div>
             <div class="bannerSelect">
-                <?php include(TEMPLATEPATH . '/components/selectBox/selectBoxGtr.component.php'); ?>
+                <?php include(TEMPLATEPATH . '/components/selectBox/selectBox.component.php'); ?>
     
             </div>
         </div>

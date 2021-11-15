@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="appBlockImg"> <img src="assets/images/png/imgAppBlock.png" alt="imgAppBlock"></div>
+                <div class="appBlockImg"> <img src="assets/images/png/chip/imgAppBlock.png" alt="imgAppBlock"></div>
             </div>
         </div>
     </div>

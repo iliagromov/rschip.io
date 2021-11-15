@@ -5,8 +5,9 @@
                     <h2 class="page__titel-h2">How does it <span class="page_red">work?</span></h2>
                     <div class="howitworkImg">
                         <picture>
-                            <source type="image/png" srcset="assets/images/png/imgHowitwork-lg.png" media="(min-width: 992px)">
-                            <source type="image/png" srcset="assets/images/png/imgHowitwork-sm.png" media="(min-width: 768px)"><img src="assets/images/png/imgHowitwork-xs.png" alt="imgProductRsControls">
+                            <source type="image/png" srcset="assets/images/png/rs/imgHowitwork-lg.png" media="(min-width: 992px)">
+                            <source type="image/png" srcset="assets/images/png/rs/imgHowitwork-sm.png" media="(min-width: 768px)">
+                            <img src="assets/images/png/rs/imgHowitwork-xs.png" alt="imgProductRsControls">
                         </picture>
                     </div>
                     <div class="howitworkText">

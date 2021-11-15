@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+single-product
 
 <?php
 get_footer( 'shop' );

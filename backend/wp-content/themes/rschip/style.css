@@ -61,6 +61,9 @@ Version: 1.0
     border: none;
     padding: 12px 10px;
 }
+.socialBlockIcons .socialIcons .icon{
+    min-width: 26px;
+}
 /* .productsItemCartActionsBtn .added_to_cart {
     position: absolute;
     bottom: -28px;

@@ -8,7 +8,7 @@
     <?php include(TEMPLATEPATH . '/components/banner/bannerGtr.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/accomplishments/accomplishments.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/appBlock/appBlock.component.php'); ?>
-    <?php include(TEMPLATEPATH . '/components/steps/setpsProductGtr.component.component.php'); ?>
+    <?php include(TEMPLATEPATH . '/components/steps/setpsProductGtr.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/performance/performance.component.php'); ?>
     <?php include(TEMPLATEPATH . '/components/carSelector/carSelector.component.php'); ?>
     

@@ -1,3 +1,24 @@
+<?php
+
+$shared_posts = get_posts( array(
+	'numberposts' => 5,
+	'category'    => 0,
+	'orderby'     => 'date',
+	'order'       => 'DESC',
+	'include'     => array(),
+	'exclude'     => array(),
+	'meta_key'    => '',
+	'meta_value'  =>'',
+	'post_type'   => 'shared',
+	'suppress_filters' => true, 
+) );
+$sharedACF;
+foreach( $shared_posts as $post ){
+	setup_postdata( $post );
+    global $sharedACF;
+    $sharedACF = get_fields();
+}
+wp_reset_postdata(); ?>
 <!DOCTYPE html>
 <html lang="en" data-scroll="0">
 

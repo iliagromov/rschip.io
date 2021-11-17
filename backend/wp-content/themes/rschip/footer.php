@@ -1,4 +1,7 @@
-
+<?php
+global $sharedACF;
+$sharedFieldsACF = $sharedACF['shared_fields'];
+?>
 <footer>
     <div class="footer">
         <div class="wrapper">
@@ -7,32 +10,28 @@
                     <img src="assets/images/svg/logoWhite.svg" alt="logo">
                 </div>
                 <div class="footerDealer">
-                    <?php if (is_active_sidebar('become-dealer')) : ?>
-                        <?php dynamic_sidebar('become-dealer') ?>
+                    <?php if($sharedFieldsACF && $sharedFieldsACF["link-become-dealer"]['url']):?>
+                        <a class="page__btn" href="<?php echo $sharedFieldsACF["link-become-dealer"]['url'];?>"><?php echo $sharedFieldsACF["link-become-dealer"]['title'];?></a>
                     <?php endif; ?>
-                    <!-- <a class="page__btn" href="javascript:void(0)">Become a dealer</a> -->
                 </div>
                 <div class="footerContacts">
                     <div class="footerContactsItem">
-                        <?php if (is_active_sidebar('phone-number')) : ?>
+                        <?php if($sharedFieldsACF && $sharedFieldsACF["phone-number"]):?>
                             <i class="svg-iconPhoneGray svg-iconPhoneGray-box"></i>
-                            <?php dynamic_sidebar('phone-number') ?>
+                            <a href="tel:<?php echo $sharedFieldsACF["phone-number"]; ?>"><?php echo $sharedFieldsACF["phone-number"]; ?></a> 
                         <?php endif; ?>
-                        <!-- <a href="tel:+1 800 796 16 17">+1 800 796 16 17</a> -->
                     </div>
                     <div class="footerContactsItem">
-                        <?php if (is_active_sidebar('email-link')) : ?>
+                        <?php if($sharedFieldsACF && $sharedFieldsACF["email-link"]):?>
                             <i class="svg-iconEmailGray svg-iconEmailGray-box"></i>
-                            <?php dynamic_sidebar('email-link') ?>
-                            <!-- <a class="email" href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a> -->
+                            <a href="tel:<?php echo $sharedFieldsACF["email-link"]; ?>"><?php echo $sharedFieldsACF["email-link"]; ?></a> 
                         <?php endif; ?>
                     </div>
                     <div class="footerContactsItem">
-                        <?php if (is_active_sidebar('address-text')) : ?>
-                            <i class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
+                        <?php if($sharedFieldsACF && $sharedFieldsACF["address-text"]):?>
                             
-                            <?php dynamic_sidebar('address-text') ?>
-                            <!-- <address>1201 East 5th Street North Little Rock, Arkansas USA, 72114</address> -->
+                            <i class="svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
+                            <address><?php echo $sharedFieldsACF["address-text"]; ?></address>
                         <?php endif; ?>
                      </div>
                 </div>

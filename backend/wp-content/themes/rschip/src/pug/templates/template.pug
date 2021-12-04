@@ -1,0 +1,69 @@
+doctype html
+html(lang="en" data-scroll='0') 
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author" content="Ilia Gromov")
+        link(rel="icon", type="image/x-icon",  href="assets/images/png/favicon.ico")
+        block base
+        block title
+            title Chiptuning for you, +20% power and torque – RSchip chiptuning
+        block description
+            meta(name="description", content="Get extra 20% power and torque for your car. RSCHIP provides fuel saving and better MPG numbers. Try safe chiptuning today with free delivery for US and Canada.")
+        block style
+            //- add base styles
+            link(rel="stylesheet", href="css/base-styles.css", type="text/css")
+        block socialMetaTags
+            meta(property="fb:app_id" content="")
+            meta(property="og:locale", content="en_US")
+            meta(property="og:type", content="website")
+            meta(property="og:site_name", content="RSchip chiptuning")
+            meta(property="og:title", content="Chiptuning for you, +20% power and torque – RSchip chiptuning")
+            meta(property="og:description", content="Get extra 20% power and torque for your car. RSCHIP provides fuel saving and better MPG numbers. Try safe chiptuning today with free delivery for US and Canada.")
+
+            meta(property="og:url", content="https://rschipchiptuning.com/")
+            meta(property="og:image", content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png")
+            meta(property="vk:image", content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png")
+            meta(property="fb:image", content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png")
+            meta(property="twitter:image", content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png")
+            meta(property="og:image:secure_url", content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png")
+            meta(property="og:image:type", content="image/jpeg")
+            meta(property="og:image:width", content="500")
+            meta(property="og:image:height", content="300")
+        
+            meta(property="twitter:card", content="summary")
+            meta(property="twitter:site", content="https://rschipchiptuning.com/")
+            meta(property="twitter:title", content="Chiptuning for you, +20% power and torque – RSchip chiptuning")
+            meta(property="twitter:description", content="Get extra 20% power and torque for your car. RSCHIP provides fuel saving and better MPG numbers. Try safe chiptuning today with free delivery for US and Canada.")
+            meta(property="twitter:creator", content="Ilia Gromov")
+    body
+        include ../mixins/mixins.pug
+        include ../modules/header-module.pug
+
+        block content
+        include ../../components/footer/footer.component.pug
+        include ../../components/chat/chat.component.pug
+
+        block modals
+        //- for modals overlay
+        .overlay.js-overlay-modal
+
+        block style
+            //- link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
+            link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
+            link(rel="stylesheet", href="css/styles-calc.css", type="text/css")
+            //- each breakPoint in breakPoints
+            //-     link(rel="stylesheet", type="text/css" , media="screen and (min-width:"+breakPoint.width+"px)",  href="css/viewport/media/"+breakPoint.width+"/"+breakPoint.width+"px.css")
+	
+            
+        block scriptLibs 
+            script(src="libs/js/store-scroll.js")
+            script(src="libs/js/tabs.js")
+            script(src="libs/js/modal.js")
+          
+        block script
+            script(src="js/menu/menu.component.js")
+            script(src="js/chat/chat.component.js")
+            script(src="js/debuggrid/debuggrid.component.js")
+            script(src="js/main.js")

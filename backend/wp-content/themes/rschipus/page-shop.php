@@ -225,7 +225,7 @@ console.log(hasCookie);
 					</div>
 					<div class="shop-content__item">
 						Error code reader
-					</div>
+				</div>
 					<div class="shop-content__item">
 						Real time gauges
 					</div>
@@ -236,8 +236,8 @@ console.log(hasCookie);
 						Dyno meter
 					</div>
 				</div>
-				<a href="#" class="shop-content__btn btn-orange-border btn" id="gtr-select">
-					Select
+				<a href="#" class="shop-content__btn btn-orange-border btn" id="gtr-select" disabled>
+					Out of stock
 				</a>
 			</div>
 		</div>

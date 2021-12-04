@@ -147,26 +147,17 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
 
 <div class="overlay js-overlay-modal"></div>
 
-<link rel="stylesheet" href="css/viewport/mobileFirst-320px.css" type="text/css">
 <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
-<link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="css/viewport/media/768/768px.css">
-<link rel="stylesheet" type="text/css" media="screen and (min-width:992px)" href="css/viewport/media/992/992px.css">
-<link rel="stylesheet" type="text/css" media="screen and (min-width:1135px)" href="css/viewport/media/1135/1135px.css">
+<link rel="stylesheet" href="css/styles-calc.css" type="text/css">
 <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
-
 <script src="libs/js/store-scroll.js"></script>
 <script src="libs/js/tabs.js"></script>
 <script src="libs/js/modal.js"></script>
-
 <script src="js/menu/menu.component.js"></script>
 <script src="js/chat/chat.component.js"></script>
-
-
+<script src="js/debuggrid/debuggrid.component.js"></script>
 <script src="js/main.js"></script>
-
 <script src="libs/js/swiper-bundle.min.js"></script>
-
-<script src="js/productBlocks/productSlider.component.js"></script>
 <script src="js/faq/faq.component.js"></script>
 <script src="js/modals/modalGallary.component.js"></script>
 <script src="js/modals/modalNews.component.js"></script>

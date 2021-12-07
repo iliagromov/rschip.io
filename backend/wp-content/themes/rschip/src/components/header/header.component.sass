@@ -10,17 +10,10 @@ html
     top: 0
     z-index: 100
     background: #000
-    // padding-top: 31px
     +md-block
         background: transparent
-    +lg-block
-        background: transparent
-        // padding-top: 36px
     .social
         +md-block
-            position: absolute
-            bottom: 11%
-        +lg-block
             position: absolute
             bottom: 11%
 
@@ -38,10 +31,6 @@ html
     padding-top: 28px
     +sm-block
         text-align: left
-    +md-block
-        text-align: left
-    +lg-block
-        text-align: left
 .headerNav
     +col()
     +size(9)
@@ -55,17 +44,11 @@ html
     padding-top: 25px
     +sm-block
         justify-content: flex-end
-         
-    +md-block
-        justify-content: flex-end
-    +lg-block
-        justify-content: flex-end
+
 .headerNavLinks
     margin: 0 9px
     display: none
     +md-block
-        display: flex
-    +lg-block
         display: flex
 
 .headerLink
@@ -77,20 +60,14 @@ html
     color: rgba(255, 255, 255, 0.7)
     text-decoration: none
     margin: 0 11px
+
 .headerNavCart
     display: flex
     align-items: center
     +sm-block
-        margin-left: 4%
-        margin-left: 0
-    +md-block
-        margin-left: 5%
         margin-left: 0
         margin-right: 0
-    +lg-block
-        margin-left: 5%
-        margin-left: 0
-        margin-right: 0
+        
     &__count
         display: flex
         align-items: center
@@ -102,16 +79,14 @@ html
         margin-left: 6px
         font-family: '#{$SFUIText}-Regular'
         background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) -210%, rgba(255, 56, 57, 0.9) 100%)
+
 .headerNavBtn
     +col()
    
     +sm-block
         margin-left: 2%
+        
     +md-block
-        margin-left: 2%
-        margin-right: 0 !important
-    +lg-block
-        margin-left: 2%
         margin-right: 0 !important
     
 .headerNavBurgerMenu

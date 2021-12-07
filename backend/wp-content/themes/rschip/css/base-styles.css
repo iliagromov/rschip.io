@@ -313,19 +313,4 @@ address {
     padding-left: 23px;
     padding-right: 23px;
   }
-
-  h1 {
-    font-size: 48px;
-  }
-}
-
-@media screen and (min-width: 1135px) {
-  .wrapper {
-    padding-left: 23px;
-    padding-right: 23px;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
 }

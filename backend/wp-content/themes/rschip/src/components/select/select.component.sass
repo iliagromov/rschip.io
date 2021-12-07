@@ -13,10 +13,6 @@
     text-align: center
     +sm-block
         display: block
-    +md-block
-        display: block
-    +lg-block
-        display: block
 
 .selectBoxLink
     display: block
@@ -37,9 +33,6 @@
     align-items: center
     flex-wrap: wrap
     padding: 10px
-    // width: 280px
-    // height: 69px
-    // max-height: 189px
     max-width: 670px
     margin: 0 auto
 
@@ -51,19 +44,6 @@
 
     box-sizing: border-box
     border-radius: 15px
-
-    // +sm-block
-    //     width: 673px
-    //     height: 68px
-    //     padding: 20px 0px
-    // +md-block
-    //     width: 673px
-    //     height: 68px
-    //     padding: 20px 0px
-    // +lg-block
-    //     width: 673px
-    //     height: 68px
-    //     padding: 20px 0px
 
     &::after
         content: ''
@@ -102,21 +82,11 @@
                 border-right: 0
                 +sm-block
                     border-right: 1px solid rgba(255, 255, 255, 0.15)
-                +md-block
-                    border-right: 1px solid rgba(255, 255, 255, 0.15)
-                +lg-block
-                    border-right: 1px solid rgba(255, 255, 255, 0.15)
 
         &:nth-child(3)
             border-bottom: 0
 
         +sm-block
-            width: auto
-            border-bottom: 0
-        +md-block
-            width: auto
-            border-bottom: 0
-        +lg-block
             width: auto
             border-bottom: 0
 
@@ -128,10 +98,6 @@
             &.Selected
                 margin-top: 2%
                 +sm-block
-                    margin: 0
-                +md-block
-                    margin: 0
-                +lg-block
                     margin: 0
 
     .selectBoxAction
@@ -146,31 +112,11 @@
             width: auto
             margin: 0
 
-        +md-block
-            margin: 0 15px
-            width: auto
-            margin: 0
-
-        +lg-block
-            margin: 0 15px
-            width: auto
-            margin: 0
-
         &.Selected
             width: 50%
             margin-top: 2%
 
             +sm-block
-                margin: 0 15px
-                width: auto
-                margin: 0
-
-            +md-block
-                margin: 0 15px
-                width: auto
-                margin: 0
-
-            +lg-block
                 margin: 0 15px
                 width: auto
                 margin: 0
@@ -197,10 +143,6 @@
         padding: 0 10px
 
         +sm-block
-            margin: 3.5px 0px
-        +md-block
-            margin: 3.5px 0px
-        +lg-block
             margin: 3.5px 0px
 
         .selectBoxActionPrice
@@ -234,14 +176,6 @@
         // font-size: 18px
         position: relative
 
-    +md-block
-        // font-size: 18px
-        position: relative
-
-    +lg-block
-        // font-size: 18px
-        position: relative
-
     &__empty
         padding: 18px
         display: flex
@@ -267,10 +201,6 @@
         padding: 0 7px
         +sm-block
             padding: 0 15px
-        +md-block
-            padding: 0 15px
-        +lg-block
-            padding: 0 15px
 
         &:disabled
             cursor: not-allowed
@@ -294,10 +224,6 @@
         transition: 0.2s ease
 
         +sm-block
-            right: 15px
-        +md-block
-            right: 15px
-        +lg-block
             right: 15px
 
     &__value
@@ -361,22 +287,7 @@
             max-height: 200px
             border-radius: 16px
 
-        +md-block
-            position: absolute
-            bottom: auto
-            top: 40px
 
-
-            max-height: 200px
-            border-radius: 16px
-
-        +lg-block
-            position: absolute
-            bottom: auto
-            top: 40px
-
-            max-height: 200px
-            border-radius: 16px
 
     &__option
         display: block

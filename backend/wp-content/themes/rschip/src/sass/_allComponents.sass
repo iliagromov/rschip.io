@@ -4,16 +4,10 @@
 .addToCartContainer
     +size(9)
     +size-md(7.4)
-    +size-lg(7.4)
 
     display: flex
     flex-direction: column
-    +sm-block
-        flex-direction: row
-    +md-block
-        flex-direction: row
-    +lg-block
-        flex-direction: row
+    
     align-items: center
     justify-content: space-between
 
@@ -25,6 +19,9 @@
    
     margin: 0 auto 11px
     box-sizing: border-box
+    +sm-block
+        flex-direction: row
+        
     div
         font-size: 15px
         line-height: 26px
@@ -47,8 +44,6 @@
         padding: 15px 80px 50px
     +md-block
         padding: 84px 0 63px
-    +lg-block
-        padding: 84px 0 63px
 
 .advantagesFlexContainer
     +row-flex
@@ -58,7 +53,6 @@
     +size(9)
     +size-sm(9/2)
     +size-md(9/4)
-    +size-lg(9/4)
     display: flex
     align-items: center
     margin-bottom: 3%
@@ -76,10 +70,6 @@
         padding-bottom: 25%
         +sm-block
             padding-bottom: 0
-        +md-block
-            padding-bottom: 0
-        +lg-block
-            padding-bottom: 0
 
         .page__title-h1
             padding-left: 3%
@@ -94,21 +84,14 @@
             +md-block
                 left: 33%
 
-            +lg-block
-                left: 33%
-
         .bannerSelect
-            // bottom: -7%
             bottom: 0
 
             +sm-block
                 top: 82%
+
             +md-block
                 top: 58%
-                // left: 52%
-            +lg-block
-                top: 58%
-                // left: 52%
                 
     &.bannerGtr
         padding-bottom: 25%
@@ -130,29 +113,19 @@
             +md-block
                 right: 22px
                 top: 162px
-            +lg-block
-                right: 22px
-                top: 162px
 
         .bannerSelect
             bottom: -4%
 
             +sm-block
                 top: 82%
+
             +md-block
                 top: 58%
-                // left: 52%
-            +lg-block
-                top: 58%
-                // left: 52%
 
     &.bannerChip
         padding-bottom: 25%
         +sm-block
-            padding-bottom: 0
-        +md-block
-            padding-bottom: 0
-        +lg-block
             padding-bottom: 0
 
         .page__title-h1
@@ -168,14 +141,9 @@
             +md-block
                 left: 35.5%
 
-            +lg-block
-                left: 35.5%
         .bannerImgChip
 
             +md-block
-                right: -53px
-                top: 175px
-            +lg-block
                 right: -53px
                 top: 175px
 
@@ -187,10 +155,6 @@
                 top: 82%
             +md-block
                 top: 58%
-                // left: 52%
-            +lg-block
-                top: 58%
-                // left: 52%
 
 
     .page__title-h1
@@ -204,8 +168,6 @@
             +sm-block
                 top: 177px
             +md-block
-                top: 115px
-            +lg-block
                 top: 115px
 
         span.block
@@ -222,8 +184,6 @@
             margin-bottom: 58px
         +md-block
             width: 50%
-        +lg-block
-            width: 50%
 
     .socialIcons
         display: none
@@ -231,11 +191,6 @@
         +sm-block
             margin-bottom: 55px
         +md-block
-            display: flex
-            margin-bottom: 0
-            position: absolute
-            bottom: 70px
-        +lg-block
             display: flex
             margin-bottom: 0
             position: absolute
@@ -251,21 +206,11 @@
         left: 4%
         +sm-block
 
-            // left: 50%
-            // transform: translateX(-50%)
             top: 72%
             width: 100%
 
         +md-block
             top: 68%
-            // left: 52%
-            width: 100%
-            // transform: translateX(-50%)
-        +lg-block
-            top: 68%
-            // left: 52%
-            width: 100%
-            // transform: translateX(-50%)
 
         &.fixed
             position: fixed
@@ -278,28 +223,12 @@
                 top: 50%
                 transform: translate(-100%, -50%)
                 height: 20%
-            +md-block
-                width: auto
-                left: 100%
-                top: 50%
-                transform: translate(-100%, -50%)
-                height: 20%
-            +lg-block
-                width: auto
-                left: 100%
-                top: 50%
-                transform: translate(-100%, -50%)
-                height: 20%
             
-                
             .selectBoxActionSelected
 
                 +sm-block
                     flex-direction: column
-                +md-block
-                    flex-direction: column
-                +lg-block
-                    flex-direction: column
+
             .selectBoxText
                 display: none
             
@@ -311,30 +240,15 @@
                     flex-direction: column
                     border-radius: 16px
                     padding: 0
-                +md-block
-                    flex-direction: column
-                    border-radius: 16px
-                    padding: 0
-                +lg-block
-                    flex-direction: column
-                    border-radius: 16px
-                    padding: 0
+
                 .select 
                     .select-box
 
                         +sm-block
                             border-right: 0
-                        +md-block
-                            border-right: 0
-                        +lg-block
-                            border-right: 0
 
                         &__list
                             +sm-block
-                                top: 25px
-                            +md-block
-                                top: 25px
-                            +lg-block
                                 top: 25px
 
             .selectBoxLink
@@ -352,9 +266,6 @@
         margin-left: -30px
         margin-right: -30px
     +md-block
-        margin-left: -25px
-        margin-right: -25px
-    +lg-block
         margin-left: -25px
         margin-right: -25px
 
@@ -375,9 +286,6 @@
     +md-block
         padding-left: 0
         height: 768px
-    +lg-block
-        padding-left: 0
-        height: 768px
 
 .bannerImgBg
     display: flex
@@ -390,19 +298,12 @@
         top: 0
         left: 31.5%
 
-    +lg-block
-        position: absolute
-        top: 0
-        left: 31.5%
-
     picture
         display: flex
         width: 100%
     img
         width: 100%
         +md-block
-            width: auto
-        +lg-block
             width: auto
 .bannerImgChip
 
@@ -423,11 +324,6 @@
         right: -10px
         top: 135px
         width: auto
-    +lg-block
-        right: -10px
-        top: 135px
-        width: auto
-
 
 /*cartDetails*/
 
@@ -436,9 +332,7 @@
     +col
     +size(9)
     +size-md(3)
-    +size-lg(3)
     +shift-md-left(-.2)
-    +shift-lg-left(-.2)
     background: #111111
     border-radius: 15px
     text-align: center
@@ -493,15 +387,14 @@
     +col
     +size(9)
     +size-md(6.2)
-    +size-lg(6.2)
     border: 1px solid #474747
     border-radius: 15px
     padding: 25px 51px
     .page__input
         +col
         +size(9)
+        +size-sm(9)
         +size-md(9)
-        +size-lg(9)
         margin-bottom: 40px
     
     .name,
@@ -511,8 +404,8 @@
     .year
         +col
         +size(9)
+        +size-sm(9)
         +size-md(9/2)
-        +size-lg(9/2)
         
 .cartFormRow
     +row-flex
@@ -528,7 +421,6 @@
     +col
     +size(9)
     +size-md(6.2)
-    +size-lg(6.2)
 
 .cartProductThumbnails
     display: flex
@@ -539,15 +431,11 @@
     display: none
     +sm-block
         display: flex
-    +md-block
-        display: flex
-    +lg-block
-        display: flex
+        
     div
         +col
         +size(3)
         +size-md(3)
-        +size-lg(3)
         padding-left: 6%
 
         &:nth-child(2)
@@ -588,7 +476,6 @@
     +col
     +size(9)
     +size-md(2)
-    +size-lg(2)
     .quantityBox
         display: flex
         justify-content: space-around
@@ -634,7 +521,6 @@
     +col
     +size(9)
     +size-md(2)
-    +size-lg(2)
     font-family: #{$SFUIDisplay}-Bold
     font-size: 18px
     line-height: 59px
@@ -653,19 +539,12 @@
             
             +sm-block
                 width: 33%
-            +md-block
-                width: 33%
-            +lg-block
-                width: 33%
 
             .select-box
                 border-right: none
                 +sm-block
                     border-right: 1px solid rgba(255, 255, 255, 0.15)
-                +md-block
-                    border-right: 1px solid rgba(255, 255, 255, 0.15)
-                +lg-block
-                    border-right: 1px solid rgba(255, 255, 255, 0.15)
+                    
             &:nth-of-type(3)
                 .select-box
                     border-right: none
@@ -759,7 +638,6 @@
         +size(1)
         +size-sm(1)
         +size-md(1)
-        +size-lg(1)
         height: inherit
         outline:  1px solid #ff0
         background: rgba(0, 0, 0, 0.4)
@@ -808,8 +686,7 @@
         padding: 135px 0 115px
     +md-block
         padding: 94px 0 120px
-    +lg-block
-        padding: 94px 0 120px
+
     &::after
         content: ''
         position: absolute
@@ -823,12 +700,10 @@
         +md-block
             width: 442px
             height: 442px
-        +lg-block
-            width: 442px
-            height: 442px
 
     .page__title-h2_small
         text-align: center
+
     .page__title-h3
         text-align: center
         font-weight: 800
@@ -846,11 +721,6 @@
             font-size: 36px
             line-height: 164%
             margin-bottom: 54px
-        +lg-block
-            width: 44%
-            font-size: 36px
-            line-height: 164%
-            margin-bottom: 54px
 
         span
             color: #FF4C62
@@ -861,7 +731,6 @@
     +col
     +size(9)
     +size-md(4.5)
-    +size-lg(4.5)
 .faqItem
     margin-bottom: 16px
 
@@ -916,8 +785,6 @@
         padding: 90px 0 30px
     +md-block
         padding: 53px 0 66px
-    +lg-block
-        padding: 53px 0 66px
 
     &::before
         content: ''
@@ -934,14 +801,6 @@
         +sm-block
             width: 544px
             height: 261px
-        +md-block
-            width: 544px
-            height: 261px
-        +lg-block
-            width: 544px
-            height: 261px
-        
-        
 
 
     &::after
@@ -967,8 +826,6 @@
             margin-top: 36px
         +md-block
             margin-top: 66px
-        +lg-block
-            margin-top: 66px
     hr
         +col()
         width: 100%
@@ -983,27 +840,17 @@
     +size(9)
     +size-sm(3)
     +size-md(1.8)
-    +size-lg(1.8)
     text-align: center
     margin-bottom: 35px
 
     +sm-block
         text-align: left
         margin-bottom: 0
-    +md-block
-        text-align: left
-        padding-top: 10px
-        margin-bottom: 0
-    +lg-block
-        text-align: left
-        padding-top: 10px
-        margin-bottom: 0
 .footerDealer
     +col()
     +size(7)
     +size-sm(3)
     +size-md(2)
-    +size-lg(2)
     text-align: center
     margin: 0 auto 35px
     +sm-block
@@ -1013,16 +860,12 @@
     +md-block
         position: relative
         top: 0
-    +lg-block
-        position: relative
-        top: 0
 
 .footerContacts
     +col()
     +size(9)
     +size-sm(6)
     +size-md(5)
-    +size-lg(5)
     display: flex
     flex-wrap: wrap
     a,
@@ -1037,8 +880,6 @@
     +col()
     +size(9)
     +size-sm(4.5)
-    +size-md(4.5)
-    +size-lg(4.5)
     display: flex
     align-items: center
     margin-bottom: 20px
@@ -1047,30 +888,22 @@
         margin-bottom: 32px
     +md-block
         margin-bottom: 44px
-    +lg-block
-        margin-bottom: 44px
         
     &:last-child
         +size(9)
         +size-sm(9)
-        +size-md(9)
-        +size-lg(9)
+
 .footerAdvantages
     display: none
     +md-block
         display: flex
-    +lg-block
-          display: flex
 
 .footerAdvantagesItem
     +col()
     +size(9)
     +size-md(3)
-    +size-lg(3)
     padding-top: 30px
     +md-block
-        padding-top: 20px
-    +lg-block
         padding-top: 20px
     a
         background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #700ED2 , #FF3838)
@@ -1090,18 +923,12 @@
     display: none
     +sm-block
         display: flex
-    +md-block
-        display: flex
-    +lg-block
-        display: flex
+
 .footerLinksItem
     +col()
     +size-sm(2.25)
     +size-md(1)
-    +size-lg(1)
 
-
-    
     &:last-child
         display: none
         +md-block
@@ -1119,10 +946,6 @@
     padding: 30px 0
     +sm-block
         padding: 40px 0
-    +md-block
-        padding: 40px 0
-    +lg-block
-        padding: 40px 0
 
     align-items: center
     justify-content: space-between
@@ -1132,13 +955,9 @@
     .item1
         +size(9)
         +size-sm(4)
-        +size-md(4)
-        +size-lg(4)
     .item2
         +size(9)
         +size-sm(2)
-        +size-md(2)
-        +size-lg(2)
 
         display: flex
         justify-content: center
@@ -1146,8 +965,6 @@
     .item3
         +size(9)
         +size-sm(3)
-        +size-md(3)
-        +size-lg(3)
 
         
 
@@ -1156,10 +973,6 @@
 
         flex-direction: column
         +sm-block
-            flex-direction: row
-        +md-block
-            flex-direction: row
-        +lg-block
             flex-direction: row
 
 
@@ -1195,11 +1008,9 @@
         &:nth-child(1)
             +size-sm(4.5)
             +size-md(4.5)
-            +size-lg(4.5)
         &:nth-child(2)
             +size-sm(4.5)
             +size-md(4.5)
-            +size-lg(4.5)
             
     .page__textarea
         +col
@@ -1215,9 +1026,7 @@
     +col
     +size(9)
     +size-md(5.5)
-    +size-lg(5.5)
     +shift-md-right(0.5)
-    +shift-lg-right(0.5)
     display: flex
     flex-wrap: wrap
     align-items: flex-start
@@ -1227,11 +1036,8 @@
     +col
     +size(9)
     +size-md(3)
-    +size-lg(3)
     display: none
     +md-block
-        display: flex
-    +lg-block
         display: flex
 /*gallary*/
 .gallary
@@ -1252,7 +1058,6 @@
     +size(4.5)
     +size-sm(3)
     +size-md(3)
-    +size-lg(3)
     &:nth-child(2)
         .gallaryItem
             &:nth-of-type(1)
@@ -1261,21 +1066,16 @@
                     height: 180px
                 +md-block
                     height: 290px
-                +lg-block
-                    height: 290px
             &:nth-of-type(2)
                 height: 155px
                 +sm-block
                     height: 253px
                 +md-block
                     height: 407px
-                +lg-block
-                    height: 407px
     &:nth-child(3)
         +size(9)
         +size-sm(3)
         +size-md(3)
-        +size-lg(3)
         display: flex
         justify-content: space-between
         +sm-block
@@ -1284,25 +1084,17 @@
             width: calc(50% - 10px)
             +sm-block
                 width: 100%
-            +md-block
-                width: 100%
-            +lg-block
-                width: 100%
             &:nth-of-type(1)
                 height: 134px
                 +sm-block
                     height: 211px
                 +md-block
                     height: 339px
-                +lg-block
-                    height: 339px
             &:nth-of-type(2)
                 height: 134px
                 +sm-block
                     height: 223px
                 +md-block
-                    height: 359px
-                +lg-block
                     height: 359px
         
 .gallaryItem
@@ -1315,17 +1107,12 @@
     +md-block
         height: 407px
         margin-bottom: 49px
-    +lg-block
-        height: 407px
-        margin-bottom: 49px
 
     &:nth-of-type(2)
         height: 110px
         +sm-block
             height: 180px
         +md-block
-            height: 290px
-        +lg-block
             height: 290px
     picture
         display: flex
@@ -1345,17 +1132,10 @@ html
     top: 0
     z-index: 100
     background: #000
-    // padding-top: 31px
     +md-block
         background: transparent
-    +lg-block
-        background: transparent
-        // padding-top: 36px
     .social
         +md-block
-            position: absolute
-            bottom: 11%
-        +lg-block
             position: absolute
             bottom: 11%
 
@@ -1373,10 +1153,6 @@ html
     padding-top: 28px
     +sm-block
         text-align: left
-    +md-block
-        text-align: left
-    +lg-block
-        text-align: left
 .headerNav
     +col()
     +size(9)
@@ -1390,17 +1166,11 @@ html
     padding-top: 25px
     +sm-block
         justify-content: flex-end
-         
-    +md-block
-        justify-content: flex-end
-    +lg-block
-        justify-content: flex-end
+
 .headerNavLinks
     margin: 0 9px
     display: none
     +md-block
-        display: flex
-    +lg-block
         display: flex
 
 .headerLink
@@ -1412,20 +1182,14 @@ html
     color: rgba(255, 255, 255, 0.7)
     text-decoration: none
     margin: 0 11px
+
 .headerNavCart
     display: flex
     align-items: center
     +sm-block
-        margin-left: 4%
-        margin-left: 0
-    +md-block
-        margin-left: 5%
         margin-left: 0
         margin-right: 0
-    +lg-block
-        margin-left: 5%
-        margin-left: 0
-        margin-right: 0
+        
     &__count
         display: flex
         align-items: center
@@ -1437,16 +1201,14 @@ html
         margin-left: 6px
         font-family: '#{$SFUIText}-Regular'
         background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) -210%, rgba(255, 56, 57, 0.9) 100%)
+
 .headerNavBtn
     +col()
    
     +sm-block
         margin-left: 2%
+        
     +md-block
-        margin-left: 2%
-        margin-right: 0 !important
-    +lg-block
-        margin-left: 2%
         margin-right: 0 !important
     
 .headerNavBurgerMenu
@@ -1606,8 +1368,7 @@ html
     box-sizing: border-box
     +md-block
         width: 100%
-    +lg-block
-        width: 100%
+        
     &.active
         opacity: 1
         visibility: visible
@@ -1707,10 +1468,6 @@ html
     position: relative
     +sm-block
         padding: 104px 0 100px
-    +md-block
-        padding: 104px 0 100px
-    +lg-block
-        padding: 104px 0 100px
 
     &::after
         content: ''
@@ -1724,12 +1481,10 @@ html
         +md-block
             width: 544px
             height: 544px
-        +lg-block
-            width: 544px
-            height: 544px
             
     .page__title-h2_small
         text-align: center
+
     .page__title-h3
         text-align: center
         font-weight: 800
@@ -1743,12 +1498,6 @@ html
             line-height: 164%
         +md-block
             width: 44%  
-            font-size: 36px
-            line-height: 164%
-        +lg-block
-            width: 44%
-            font-size: 36px
-            line-height: 164%
 
 .newsFlexContainer 
     +row-flex
@@ -1771,8 +1520,7 @@ html
         display: none
         +md-block
             display: block
-        +lg-block
-            display: block
+            
     .modalContent
         display: none
         
@@ -1798,6 +1546,7 @@ html
         font-size: 36px
         line-height: 59px
         margin-top: 10px
+
 .performanceTable
     padding-top: 38px
     &__Header
@@ -1819,14 +1568,12 @@ html
     +size(9/2)
     +size-sm(2)
     +size-md(2)
-    +size-lg(2)
 
     text-align: center
 
     &:nth-child(1)
         +size-sm(3)
         +size-md(3)
-        +size-lg(3)
         text-align: left
         div
             width: auto
@@ -1838,9 +1585,6 @@ html
             width: 80%
         +md-block
             width: 60%
-        +lg-block
-            width: 60%
-        
 
 .performanceTableItem 
     display: flex
@@ -1897,8 +1641,7 @@ html
         padding: 122px 0 110px
     +md-block
         padding: 114px 0 0
-    +lg-block
-        padding: 114px 0 0
+
     .page__title-h2_small
         text-align: center
 
@@ -1915,16 +1658,7 @@ html
             margin: 10px auto 30px
             font-size: 36px
             line-height: 59px
-        +md-block
-            width: 30%
-            margin: 15px auto -40px
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            width: 30%
-            margin: 15px auto -40px
-            font-size: 36px
-            line-height: 59px
+
     &.productChip
         .page__title-h3
             width: 50%
@@ -1939,12 +1673,9 @@ html
     +col
     +size(9)
     +size-md(4)
-    +size-lg(4)
 
     text-align: center
 
-    +lg-block
-        padding-right: 6%
     +md-block
         padding-right: 6%
    
@@ -1953,7 +1684,6 @@ html
     +col
     +size(9)
     +size-md(5)
-    +size-lg(5)
     .page__title-h4
         font-family: #{$SFUIDisplay}-Bold
         
@@ -1974,16 +1704,8 @@ html
 
             margin-top: 117px
             margin-bottom: 60px
-            font-size: 24px
-            line-height: 43px
             text-align: left
-        +lg-block
-            margin-top: 117px
-            margin-bottom: 60px
-            font-size: 24px
-            line-height: 43px
-            text-align: left
-        
+
     .page__ul 
         display: flex
         flex-wrap: wrap
@@ -1995,11 +1717,6 @@ html
             padding-left: 0
         +md-block
             width: 100%
-            padding-left: 0
-            margin-bottom: 58px
-        +lg-block
-            width: 100%
-            padding-left: 0
             margin-bottom: 58px
                
         .page__li
@@ -2011,10 +1728,6 @@ html
             width: 100%
             +sm-block
                 width: 50%
-            +md-block
-                width: 50%
-            +lg-block
-                width: 50%
             
 
 .productPrice
@@ -2022,13 +1735,11 @@ html
     display: flex
     flex-direction: column-reverse
     align-items: center
+
     +sm-block
         display: block
+
     +md-block
-        display: block
-        text-align: left
-    +lg-block
-        display: block
         text-align: left
 
     &__cost
@@ -2036,29 +1747,28 @@ html
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 59px
+        
         +sm-block
             margin-left: 60px
+
         +md-block
-            margin-left: 33px
-        +lg-block
             margin-left: 33px
 
 .productSlider
     background: #111111
     padding: 80px 0
+
     +sm-block
         padding: 107px 0
+
     +md-block
         padding: 138px 0
-    +lg-block
-        padding: 138px 0
+
     text-align: center
     .page__title-h2_small
         text-align: center
         margin-top: 22%
         +md-block
-            margin-top: 10%
-        +lg-block
             margin-top: 10%
 
     .page__title-h3
@@ -2074,16 +1784,10 @@ html
             margin: 10px auto 30px
             font-size: 36px
             line-height: 59px
+
         +md-block
-            width: 100%
             margin: 10px auto 0px
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            width: 100%
-            margin: 10px auto 0px
-            font-size: 36px
-            line-height: 59px
+
     .productSliderPrice
         text-align: center
         display: flex
@@ -2096,52 +1800,39 @@ html
             display: block
             margin-top: 5%
         +md-block
-            display: block
-            text-align: left
-            margin-top: 13%
-        +lg-block
-            display: block
             text-align: left
             margin-top: 13%
        
     .productPrice__cost
         +sm-block
             margin-left: 75px
-        +md-block
-            margin-left: 75px
-        +lg-block
-            margin-left: 75px
 
 .productSliderFlexContainer
     +row-flex
     padding-top: 3%
-    +sm-block
-        padding-top: 3%
+
     +md-block
         padding-top: 6%
-    +lg-block
-        padding-top: 6%
+
 .productSliderGallary
     +col
     +size(9)
     +size-md(3.8)
-    +size-lg(3.8)
     &__Main
         overflow: hidden
         margin-bottom: 45px
+
         +sm-block
             margin-bottom: 45px
+
         +md-block
             margin-bottom: 30px
-        +lg-block
-            margin-bottom: 30px
+
     &__Thumbnails
         +sm-block
             width: 65%
             margin: 0 auto
         +md-block   
-            width: 100%
-        +lg-block   
             width: 100%
 
         &.gallery-thumbs
@@ -2162,9 +1853,7 @@ html
     +col
     +size(9)
     +size-md(5)
-    +size-lg(5)
     +shift-md-left(0.2)
-    +shift-lg-left(0.2)
     display: flex
     flex-wrap: wrap
     align-self: flex-start
@@ -2172,10 +1861,8 @@ html
     padding-top: 5%
     +sm-block
         padding-left: 7%
+
     +md-block
-        padding-top: 12px
-        padding-left: 0
-    +lg-block
         padding-top: 12px
         padding-left: 0
 
@@ -2184,10 +1871,6 @@ html
     align-items: center
     padding: 14px 0
     +sm-block
-        width: 50%
-    +md-block
-        width: 50%
-    +lg-block
         width: 50%
     p
         font-family: #{$SFUIDisplay}-Bold
@@ -2210,16 +1893,9 @@ html
         
    
     +md-block
-        width: 100%
         text-align: left
         margin-top: 13%
-        margin-top: 45px
 
-    +lg-block
-        width: 100%
-        text-align: left
-        margin-top: 13%
-        margin-top: 45px
   
 .setps
     .page__title-h2_small
@@ -2243,20 +1919,12 @@ html
         +md-block
             margin: 8px auto 60px
             width: 48%
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            margin: 8px auto 60px
-            width: 48%
-            font-size: 36px
-            line-height: 59px
+
     &.productGTR  
         .page__title-h3
             +sm-block
                 margin: 8px auto 50px
             +md-block
-                margin: 8px auto 100px
-            +lg-block
                 margin: 8px auto 100px
 
 .stepsItems
@@ -2267,16 +1935,12 @@ html
     +md-block
         flex-direction: row
         align-items: flex-start
-    +lg-block
-        flex-direction: row
-        align-items: flex-start
 
 .stepsItem
     +col
     +size(9)
     +size-sm(9/2)
     +size-md(3)
-    +size-lg(3)
 
     margin-bottom: 8%
     
@@ -2312,13 +1976,13 @@ html
     +size(9)
     +size-sm(6)
     +size-md(3)
-    +size-lg(3)
 
     margin-bottom: 8%
     background: #111111
     border-radius: 15px
     position: relative
     padding: 2% 4%
+
     &__Icon
         position: absolute
         right: 9%
@@ -2332,12 +1996,14 @@ html
         justify-content: center
         background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) 0%, rgba(255, 56, 57, 0.9) 100%)
         mix-blend-mode: normal
+
     &__Title
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 52px
         margin-bottom: 16px
         margin-top: 2%
+        
     &__Description
         color: #B2B2B2
         font-size: 15px
@@ -2355,8 +2021,6 @@ html
         padding: 61px 0 122px
     +md-block
         padding: 133px 0 122px
-    +lg-block
-        padding: 133px 0 122px
 
     .page__title-h2
         margin-bottom: 44px
@@ -2364,8 +2028,7 @@ html
             margin-bottom: 62px
         +md-block
             margin-bottom: 30px
-        +lg-block
-            margin-bottom: 30px
+
     &.productsCart
         padding-bottom: 0
 
@@ -2388,7 +2051,6 @@ html
     +col()
     +size-sm(4.5)
     +size-md(3.6)
-    +size-lg(3.6)
     cursor: pointer
     border: 1px solid #474747
     border-image-slice: 20
@@ -2404,10 +2066,7 @@ html
         margin-bottom: 0
     +md-block
         padding: 70px 28px 46px
-        margin-bottom: 0
-    +lg-block
-        padding: 70px 28px 46px
-        margin-bottom: 0
+
     &:hover
         // border: 1px solid #FF3838
         background: #111
@@ -2428,9 +2087,6 @@ html
     +md-block
         font-size: 30px
         padding-bottom: 6px
-    +lg-block
-        font-size: 30px
-        padding-bottom: 6px
 
 .productsItemTextBefore
     font-family: #{$SFUIText}-Regular
@@ -2448,8 +2104,6 @@ html
         padding: 0 0 34px
     +md-block
         padding: 0 56px 30px
-    +lg-block
-        padding: 0 56px 30px
 
 .productsItemImg
     display: flex
@@ -2465,8 +2119,7 @@ html
         padding-bottom: 27px
     +md-block
         margin-top: -16px
-    +lg-block
-        margin-top: -16px
+
     &__text
         width: 50%
 
@@ -2483,10 +2136,7 @@ html
             line-height: 136%
             +sm-block
                 font-size: 36px
-            +md-block
-                font-size: 36px
-            +lg-block
-                font-size: 36px
+
 .productsItemTextAfter
     font-size: 15px
     line-height: 176%
@@ -2496,8 +2146,6 @@ html
         text-align: center
     +md-block
         padding: 0 33px 29px
-    +lg-block
-        padding: 0 33px 29px
 
 .productsItemActions
     display: flex
@@ -2505,8 +2153,7 @@ html
     justify-content: center
     +md-block
         flex-wrap: nowrap
-    +lg-block
-        flex-wrap: nowrap
+
     .page__btn
         margin-bottom: 20px
         width: 100%
@@ -2517,9 +2164,6 @@ html
             width: 50%
             margin: 0 8px
 
-        +lg-block
-            width: 50%
-            margin: 0 8px
 .productsItemCart
     position: relative
     text-align: center
@@ -2527,12 +2171,6 @@ html
     padding: 42px 17px 30px
 
     +sm-block
-        padding: 88px 50px 38px
-        margin-bottom: 43px
-    +md-block
-        padding: 88px 50px 38px
-        margin-bottom: 43px
-    +lg-block
         padding: 88px 50px 38px
         margin-bottom: 43px
 
@@ -2545,7 +2183,6 @@ html
     &__Big
         +size(9)
         +size-md(7.15)
-        +size-lg(7.15)
 
         display: flex
         flex-wrap: wrap
@@ -2571,14 +2208,12 @@ html
     &__text
         +size(9)
         +size-md(9/2)
-        +size-lg(9/2)
         text-align: left
         padding-top: 7%
         padding-left: 5%
     &__img
         +size(9)
         +size-md(9/2)
-        +size-lg(9/2)
 
 .productsItemCartLabel
     font-family: #{$SFUIDisplay}-Bold
@@ -2659,7 +2294,6 @@ html
     +col
     +size(9)
     +size-md(9/2)
-    +size-lg(9/2)
     display: flex
     margin-bottom: 4%
     &__icon
@@ -2728,10 +2362,6 @@ html
     text-align: center
     +sm-block
         display: block
-    +md-block
-        display: block
-    +lg-block
-        display: block
 
 .selectBoxLink
     display: block
@@ -2752,9 +2382,6 @@ html
     align-items: center
     flex-wrap: wrap
     padding: 10px
-    // width: 280px
-    // height: 69px
-    // max-height: 189px
     max-width: 670px
     margin: 0 auto
 
@@ -2766,19 +2393,6 @@ html
 
     box-sizing: border-box
     border-radius: 15px
-
-    // +sm-block
-    //     width: 673px
-    //     height: 68px
-    //     padding: 20px 0px
-    // +md-block
-    //     width: 673px
-    //     height: 68px
-    //     padding: 20px 0px
-    // +lg-block
-    //     width: 673px
-    //     height: 68px
-    //     padding: 20px 0px
 
     &::after
         content: ''
@@ -2817,21 +2431,11 @@ html
                 border-right: 0
                 +sm-block
                     border-right: 1px solid rgba(255, 255, 255, 0.15)
-                +md-block
-                    border-right: 1px solid rgba(255, 255, 255, 0.15)
-                +lg-block
-                    border-right: 1px solid rgba(255, 255, 255, 0.15)
 
         &:nth-child(3)
             border-bottom: 0
 
         +sm-block
-            width: auto
-            border-bottom: 0
-        +md-block
-            width: auto
-            border-bottom: 0
-        +lg-block
             width: auto
             border-bottom: 0
 
@@ -2843,10 +2447,6 @@ html
             &.Selected
                 margin-top: 2%
                 +sm-block
-                    margin: 0
-                +md-block
-                    margin: 0
-                +lg-block
                     margin: 0
 
     .selectBoxAction
@@ -2861,31 +2461,11 @@ html
             width: auto
             margin: 0
 
-        +md-block
-            margin: 0 15px
-            width: auto
-            margin: 0
-
-        +lg-block
-            margin: 0 15px
-            width: auto
-            margin: 0
-
         &.Selected
             width: 50%
             margin-top: 2%
 
             +sm-block
-                margin: 0 15px
-                width: auto
-                margin: 0
-
-            +md-block
-                margin: 0 15px
-                width: auto
-                margin: 0
-
-            +lg-block
                 margin: 0 15px
                 width: auto
                 margin: 0
@@ -2912,10 +2492,6 @@ html
         padding: 0 10px
 
         +sm-block
-            margin: 3.5px 0px
-        +md-block
-            margin: 3.5px 0px
-        +lg-block
             margin: 3.5px 0px
 
         .selectBoxActionPrice
@@ -2949,14 +2525,6 @@ html
         // font-size: 18px
         position: relative
 
-    +md-block
-        // font-size: 18px
-        position: relative
-
-    +lg-block
-        // font-size: 18px
-        position: relative
-
     &__empty
         padding: 18px
         display: flex
@@ -2982,10 +2550,6 @@ html
         padding: 0 7px
         +sm-block
             padding: 0 15px
-        +md-block
-            padding: 0 15px
-        +lg-block
-            padding: 0 15px
 
         &:disabled
             cursor: not-allowed
@@ -3009,10 +2573,6 @@ html
         transition: 0.2s ease
 
         +sm-block
-            right: 15px
-        +md-block
-            right: 15px
-        +lg-block
             right: 15px
 
     &__value
@@ -3076,22 +2636,7 @@ html
             max-height: 200px
             border-radius: 16px
 
-        +md-block
-            position: absolute
-            bottom: auto
-            top: 40px
 
-
-            max-height: 200px
-            border-radius: 16px
-
-        +lg-block
-            position: absolute
-            bottom: auto
-            top: 40px
-
-            max-height: 200px
-            border-radius: 16px
 
     &__option
         display: block
@@ -3125,12 +2670,6 @@ html
         margin-top: 95px
        
         +sm-block
-            font-size: 144px
-            margin-top: 77px
-        +md-block
-            font-size: 144px
-            margin-top: 77px
-        +lg-block
             font-size: 144px
             margin-top: 77px
         
@@ -3167,15 +2706,8 @@ html
                 width: 100%
                 font-size: 36px
                 margin-top: -62px
-            +md-block
-                width: 100%
-                font-size: 36px
-                margin-top: -62px
             +lg-block
-                width: 100%
-                font-size: 36px
                 line-height: 164%
-                margin-top: -62px
             
             &_underline
                 border-bottom: 1px solid #fff
@@ -3207,8 +2739,7 @@ html
         text-align: center
         +md-block   
             text-align: left
-        +lg-block   
-            text-align: left
+            
     .page__title-h3
         font-family: #{$SFUIDisplay}-Bold
         font-size: 36px
@@ -3221,9 +2752,6 @@ html
         +md-block   
             margin-bottom: 52px
             text-align: left
-        +lg-block   
-            margin-bottom: 52px
-            text-align: left
 
 .howitworkChipRowFlex
     +row-flex
@@ -3232,7 +2760,6 @@ html
     +col
     +size(9)
     +size-md(9/2)
-    +size-lg(9/2)
 
 .howitworkChipText
     margin-bottom: 54px
@@ -3241,8 +2768,6 @@ html
     line-height: 26px
     letter-spacing: 0.02em
     +md-block
-        padding-right: 14%
-    +lg-block
         padding-right: 14%
 
 .howitworkChipImg 
@@ -3254,17 +2779,11 @@ html
         margin-top: 9%
     +md-block
         margin-top: 16%
-    +lg-block
-        margin-top: 16%
 
 .optimizeBlock
     padding: 64px 0
     .page__title-h2_small
         padding-left: 6%
-        +md-block
-            padding-left: 6%
-        +lg-block
-            padding-left: 6%
     .page__title-h3
         font-size: 24px
         line-height: 30px
@@ -3278,26 +2797,10 @@ html
             margin-bottom: 6%
             font-size: 36px
             line-height: 59px
-        +md-block
-            padding-left: 6%
-            margin-bottom: 4%
-            margin-top: 1%
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            padding-left: 6%
-            margin-bottom: 4%
-            margin-top: 1%
-            font-size: 36px
-            line-height: 59px
 .optimizeBlockTextDescription
     margin-top: 11%
     padding-left: 6%
     +sm-block
-        margin-top: 4%
-    +md-block
-        margin-top: 4%
-    +lg-block
         margin-top: 4%
 
 .optimizeRowFlex
@@ -3316,12 +2819,6 @@ html
     +sm-block
         margin-right: 28px
         padding: 8% 0
-    +md-block
-        margin-right: 40px
-        padding: 6% 4% 0 0 
-    +lg-block
-        margin-right: 40px
-        padding: 6% 4% 0 0
     
 .optimizeBlockChart
 
@@ -3334,8 +2831,6 @@ html
     +sm-block
         margin: 13% -15px -50px -15px
     +md-block
-        margin: 8% 0 -50px 6%
-    +lg-block
         margin: 8% 0 -50px 6%
 
     .tab-nav
@@ -3356,15 +2851,11 @@ html
         letter-spacing: 0.05em
 
         padding: 0px 18px
+
         +sm-block   
             padding: 0px 42px
             line-height: 42px
-        +md-block   
-            padding: 0px 42px
-            line-height: 42px
-        +lg-block   
-            padding: 0px 42px
-            line-height: 42px
+
         &.is-active
             background: linear-gradient(90deg, #710FD1 0%, #FF3839 100%)
     .tab-content
@@ -3376,21 +2867,16 @@ html
     +size(9)
     +size-sm(9)
     +size-md(7)
-    +size-lg(7)
 
 .optimizeBlockImg
     +col
     +size-md(3)
-    +size-lg(3)
 
     +shift-md-left(-.7)
-    +shift-lg-left(-.7)
     display: none
     text-align: right
     padding-top: 4%
     +md-block
-        display: block
-    +lg-block
         display: block
    
 .power
@@ -3410,8 +2896,6 @@ html
         margin-right: 4%
     +md-block
         margin: 0px 20px
-    +lg-block
-        margin: 0px 20px
     // &::after
     //     content: ''
 
@@ -3427,15 +2911,13 @@ html
     +size(9)
     +size-sm(4.1)
     +size-md(7)
-    +size-lg(7)
     padding: 20% 5% 2% 8%
+    z-index: 1
     +sm-block
         padding: 12% 5%
     +md-block
         padding: 6% 5%
-    +lg-block
-        padding: 6% 5%
-    z-index: 1
+    
 
     .page__title-h3
 
@@ -3453,13 +2935,6 @@ html
             width: 260%
 
         +md-block
-            font-size: 36px
-            line-height: 59px
-            width: 80%
-            margin-top: 2%
-        +lg-block
-            font-size: 36px
-            line-height: 59px
             width: 80%
             margin-top: 2%
 
@@ -3470,12 +2945,10 @@ html
     +size(9)
     +size-sm(5.7)
     +size-md(4)
-    +size-lg(4)
 
 
     +shift-sm-left(-.9)
     +shift-md-left(-2)
-    +shift-lg-left(-2)
 
     padding-left: 3%
     text-align: center
@@ -3484,8 +2957,6 @@ html
         align-items: flex-end
         margin-top: 47%
     +md-block
-        margin-top: -7%
-    +lg-block
         margin-top: -7%
 
     
@@ -3499,16 +2970,11 @@ html
         padding-right: 0
     +md-block
         padding-top: 9%
-        padding-right: 0
-    +lg-block
-        padding-top: 9%
-        padding-right: 0
 
 .powerTextItem
     +col
     +size(9)
     +size-md(3)
-    +size-lg(3)
 
     position: relative
     font-family: #{$SFUIDisplay}-Bold
@@ -3520,41 +2986,40 @@ html
     padding: 9px 14px
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 77.6%, rgba(255, 255, 255, 0) 100%)
     margin-bottom: 15%
+
     +sm-block
         padding: 7px 19px
         margin-bottom: 15%
     +md-block
         margin-bottom: 0
-    +lg-block
-        margin-bottom: 0
-    
-    &::before
+    &::before,
+    &::after
         content: ''
         position: absolute
         top: 0
         right: 0
         bottom: 0
         left: 0
+        z-index: -1
+
+    &::before
+        
         margin: -8px
         border-radius: 15px
         background: linear-gradient(to right, #700ED2, #FF3838)
         z-index: -1
+
     &::after
-        content: ''
-        position: absolute
         
         background: #000
         
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
         margin: -6px
-        z-index: -1
+        
         border-radius: 14px
 
     div
         margin: 0 -3px
+        
     span
 
         display: inline-block
@@ -3594,12 +3059,6 @@ html
         +sm-block
             font-size: 36px
             line-height: 59px
-        +md-block
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-            font-size: 36px
-            line-height: 59px
     &::before, 
     &::after
         content: ''
@@ -3613,30 +3072,19 @@ html
         +sm-block
             width: 497px
             height: 497px
-        +md-block
-            width: 497px
-            height: 497px
-        +lg-block
-            width: 497px
-            height: 497px
     &::before
         bottom: 0
         +sm-block
             left: -25%
         +md-block
             left: -20%
-        +lg-block
-            left: -20%
         
-        // bottom: -68%
        
     &::after
         top: 43%
         +sm-block
             right: -85%
         +md-block
-            right: -53%
-        +lg-block
             right: -53%
 
 .accomplishmentsRowFlex 
@@ -3648,7 +3096,6 @@ html
     +size(9)
     +size-sm(5)
     +size-md(3.6)
-    +size-lg(3.6)
 
     text-align: center
     padding-top: 11%
@@ -3658,15 +3105,9 @@ html
             +md-block
                 justify-content: flex-end
                 padding-right: 50px
-            +lg-block
-                justify-content: flex-end
-                padding-right: 50px
     &:nth-child(even)
         .accomplishmentsItemImg
             +md-block
-                justify-content: flex-start
-                padding-left: 50px
-            +lg-block
                 justify-content: flex-start
                 padding-left: 50px
 
@@ -3682,12 +3123,6 @@ html
     font-size: 18px
     line-height: 26px
     +sm-block
-        font-size: 24px
-        line-height: 52px
-    +md-block
-        font-size: 24px
-        line-height: 52px
-    +lg-block
         font-size: 24px
         line-height: 52px
 
@@ -3717,13 +3152,11 @@ html
         padding: 12% 5%
     +md-block
         padding: 6% 5%
-    +lg-block
-        padding: 6% 5%
+
 .appBlockText
     +col
     +size(9)
     +size-md(4)
-    +size-lg(4)
 
 .appBlockIcons 
     display: flex
@@ -3731,15 +3164,18 @@ html
 .appBlockDescription
     margin-top: 32px
     margin-bottom: 37px
+
 .appBlockIconsItem 
     display: flex
     font-size: 15px
     line-height: 22px
     font-family: #{$SFUIDisplay}-Bold
+
 .appBlockImg
     position: absolute
     right: -66px
     top: -105px
+    
 .appBlockIcon
     margin-right: 20px
 .carSelector
@@ -3764,16 +3200,13 @@ html
     // width: 76%
     +size(9)
     +size-md(7)
-    +size-lg(7)
     +shift-md-right(-2.2)
-    +shift-lg-right(-2.2)
 
 
 .carSelectorIcons
     +col
     +size(9)
     +size-md(3.5)
-    +size-lg(3.5)
 
     padding-top: 7%
     .page__btn
@@ -3784,8 +3217,10 @@ html
 .carSelectorIconsItem 
     display: flex
     margin-bottom: 6%
+    
     &__Icon 
         margin-right: 28px
+
     &__Text
         padding-top: 2%
 
@@ -3811,30 +3246,25 @@ html
     backdrop-filter: blur(35px)
     display: flex
     flex-wrap: wrap
-    +sm-block
-        padding: 60px 0
+
     +md-block
         padding: 60px 62px
-    +lg-block
-        padding: 60px 62px
+
     .page__titel-h2
         width: 100%
         font-family: #{$SFUIDisplay}-Bold
         text-align: center
         width: 100%
         margin-bottom: 2%
+        
 .howitworkImg 
     +col
     +size(12)
     +size-md(9/2)
-    +size-lg(9/2)
     order: 2
     margin: 7% auto
     text-align: center
     +md-block
-        margin: auto
-        order: 0
-    +lg-block
         margin: auto
         order: 0
 
@@ -3842,22 +3272,17 @@ html
     +col
     +size(12)
     +size-md(9/2)
-    +size-lg(9/2)
     
     +md-block
         padding-left: 5%
-    +lg-block
-        padding-left: 5%
+
     p 
         font-family: #{$SFUIDisplay}-Bold
         font-size: 20px
         line-height: 31px
-
-        
         margin-top: 10%
+
         +md-block
-            width: 65%
-        +lg-block
             width: 65%
     
 /*installation*/
@@ -3873,18 +3298,14 @@ html
     +col
     +size(12)
     +size-md(9/2)
-    +size-lg(9/2)
     order: 2
     text-align: center
     +md-block
-        order: 0
-    +lg-block
         order: 0
 .installationText
     +col
     +size(12)
     +size-md(9/2)
-    +size-lg(9/2)
 
     padding-top: 9%
     padding-left: 0
@@ -3892,8 +3313,6 @@ html
     +sm-block   
         padding-left: 9%
     +md-block
-        padding-left: 5%
-    +lg-block
         padding-left: 5%
     p 
         font-family: #{$SFUIDisplay}-Bold
@@ -3903,8 +3322,6 @@ html
         margin-bottom: 6%
         padding-right: 0
         +md-block
-            padding-right: 40%
-        +lg-block
             padding-right: 40%
     
 /*productRsControls*/
@@ -3924,10 +3341,10 @@ html
     flex-wrap: wrap
     +sm-block
         margin-right: 4%
+
     +md-block
         margin: 0px 20px
-    +lg-block
-        margin: 0px 20px
+
     &::after
         content: ''
         
@@ -3958,11 +3375,6 @@ html
         margin-top: 7%
         margin-left: 6%
         padding-right: 0
-    +lg-block
-        width: 33%
-        margin-top: 7%
-        margin-left: 6%
-        padding-right: 0
 
     .page__title-h4 
         font-family: #{$SFUIDisplay}-Bold
@@ -3970,14 +3382,6 @@ html
         line-height: 36px
 
         +sm-block
-            font-size: 36px
-            line-height: 59px
-            letter-spacing: 0.11em
-        +md-block
-            font-size: 36px
-            line-height: 59px
-            letter-spacing: 0.11em
-        +lg-block
             font-size: 36px
             line-height: 59px
             letter-spacing: 0.11em
@@ -3990,10 +3394,6 @@ html
         width: auto
         margin-left: -3%
     +md-block
-        width: auto
-        margin-left: -10%
-    +lg-block
-        width: auto
         margin-left: -10%
 
 
@@ -4019,12 +3419,6 @@ html
         width: 25%
         margin-top: 8% 
         margin-left: 0
-        margin-bottom: 0
-    +lg-block
-        width: 25%
-        margin-top: 8% 
-        margin-left: 0
-        margin-bottom: 0
 
 
 .productRsControlsToggelsItem
@@ -4053,19 +3447,15 @@ html
     +col
     +size(9)
     +size-md(9/2)
-    +size-lg(9/2)
     text-align: center
 .productRsSafestText
     +col
     +size(9)
     +size-md(9/2)
-    +size-lg(9/2)
 
     padding-left: 6%
     padding-top: 3%
     +md-block
-        padding: 0
-    +lg-block
         padding: 0
 
     .page__title-h4 
@@ -4084,24 +3474,8 @@ html
             margin-bottom: 7%
             font-size: 36px
             line-height: 59px
-        +md-block
-
-            margin-top: 3%
-            margin-bottom: 7%
-            font-size: 36px
-            line-height: 59px
-        +lg-block
-
-            margin-top: 3%
-            margin-bottom: 7%
-            font-size: 36px
-            line-height: 59px
         span
             +sm-block
-                display: block
-            +md-block
-                display: block
-            +lg-block
                 display: block
     .page__text
         margin-left: 0
@@ -4112,16 +3486,10 @@ html
     padding-top: 6%
     +md-block
         padding-top: 2%
-    +lg-block
-        padding-top: 2%
    
 .productRsSafestIconsItem
     margin-right: 14%
     +sm-block
-        margin-right: 18%
-    +md-block
-        margin-right: 18%
-    +lg-block
         margin-right: 18%
 
 .productRsSafestIconsText

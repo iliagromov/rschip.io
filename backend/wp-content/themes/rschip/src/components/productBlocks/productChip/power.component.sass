@@ -15,8 +15,6 @@
         margin-right: 4%
     +md-block
         margin: 0px 20px
-    +lg-block
-        margin: 0px 20px
     // &::after
     //     content: ''
 
@@ -32,15 +30,13 @@
     +size(9)
     +size-sm(4.1)
     +size-md(7)
-    +size-lg(7)
     padding: 20% 5% 2% 8%
+    z-index: 1
     +sm-block
         padding: 12% 5%
     +md-block
         padding: 6% 5%
-    +lg-block
-        padding: 6% 5%
-    z-index: 1
+    
 
     .page__title-h3
 
@@ -58,13 +54,6 @@
             width: 260%
 
         +md-block
-            font-size: 36px
-            line-height: 59px
-            width: 80%
-            margin-top: 2%
-        +lg-block
-            font-size: 36px
-            line-height: 59px
             width: 80%
             margin-top: 2%
 
@@ -75,12 +64,10 @@
     +size(9)
     +size-sm(5.7)
     +size-md(4)
-    +size-lg(4)
 
 
     +shift-sm-left(-.9)
     +shift-md-left(-2)
-    +shift-lg-left(-2)
 
     padding-left: 3%
     text-align: center
@@ -89,8 +76,6 @@
         align-items: flex-end
         margin-top: 47%
     +md-block
-        margin-top: -7%
-    +lg-block
         margin-top: -7%
 
     
@@ -104,16 +89,11 @@
         padding-right: 0
     +md-block
         padding-top: 9%
-        padding-right: 0
-    +lg-block
-        padding-top: 9%
-        padding-right: 0
 
 .powerTextItem
     +col
     +size(9)
     +size-md(3)
-    +size-lg(3)
 
     position: relative
     font-family: #{$SFUIDisplay}-Bold
@@ -125,41 +105,40 @@
     padding: 9px 14px
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 77.6%, rgba(255, 255, 255, 0) 100%)
     margin-bottom: 15%
+
     +sm-block
         padding: 7px 19px
         margin-bottom: 15%
     +md-block
         margin-bottom: 0
-    +lg-block
-        margin-bottom: 0
-    
-    &::before
+    &::before,
+    &::after
         content: ''
         position: absolute
         top: 0
         right: 0
         bottom: 0
         left: 0
+        z-index: -1
+
+    &::before
+        
         margin: -8px
         border-radius: 15px
         background: linear-gradient(to right, #700ED2, #FF3838)
         z-index: -1
+
     &::after
-        content: ''
-        position: absolute
         
         background: #000
         
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
         margin: -6px
-        z-index: -1
+        
         border-radius: 14px
 
     div
         margin: 0 -3px
+        
     span
 
         display: inline-block

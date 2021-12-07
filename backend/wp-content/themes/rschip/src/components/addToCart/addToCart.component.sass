@@ -4,16 +4,10 @@
 .addToCartContainer
     +size(9)
     +size-md(7.4)
-    +size-lg(7.4)
 
     display: flex
     flex-direction: column
-    +sm-block
-        flex-direction: row
-    +md-block
-        flex-direction: row
-    +lg-block
-        flex-direction: row
+    
     align-items: center
     justify-content: space-between
 
@@ -25,6 +19,9 @@
    
     margin: 0 auto 11px
     box-sizing: border-box
+    +sm-block
+        flex-direction: row
+        
     div
         font-size: 15px
         line-height: 26px

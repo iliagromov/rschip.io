@@ -13,9 +13,7 @@
 
         },
         "lg": {
-            "width": "1135px",
-            "fields": "23px",
-            "offset": "46px"
+            "width": "1135px"
         }
     }
 }

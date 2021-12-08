@@ -488,7 +488,7 @@ function getResponse(url, selectBox, selectName) {
     renderSelectBox(selectBox, selectName, arrayResults);
   });
 }
-
+// FIXME: переписать нормально, а не хардкод
 
 function renderSelectBox(currenSelect, selectName, options) {
 
@@ -551,10 +551,14 @@ function renderSelectBox(currenSelect, selectName, options) {
       selectBoxInput.setAttribute('value', `${option.title}`);
       selectBoxInput.setAttribute('data-id', `${option.id}`);
       selectBoxInput.setAttribute('data-selectname', `${value}`);
+      selectBoxInput.setAttribute('data-hp', `${option.hp}`);
+      selectBoxInput.setAttribute('data-nm', `${option.nm}`);
       selectBoxInput.addEventListener('click', e => {
         let dataId = e.target.dataset.id,
           dataSelectName = e.target.dataset.selectname,
           dataProductName = e.target.closest('.selectBox').dataset.productname ? e.target.closest('.selectBox').dataset.productname : 'default',
+          dataHp = e.target.dataset.hp,
+          dataNm = e.target.dataset.nm,
           thisSelectBox = e.target.closest('.selectBox'),
           thisCartProduct = e.target.closest('.cartProduct'),
           modelsBox = thisSelectBox.querySelector('.Models'),
@@ -594,6 +598,9 @@ function renderSelectBox(currenSelect, selectName, options) {
           case 'Modification':
             localStorage.setItem(`Modification_${dataProductName}`, e.target.value);
             localStorage.setItem(`Modification_${dataProductName}_id`, dataId);
+            localStorage.setItem(`HP_${dataProductName}`, dataHp);
+            localStorage.setItem(`NM_${dataProductName}`, dataNm);
+            renderPerformance();
 
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
             thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';

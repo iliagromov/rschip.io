@@ -1,0 +1,48 @@
+mixin performance(props)
+    section.performance(data-productname=props.productname)
+        .wrapper 
+            h2.page__title-h2_small Сomparison
+            h3.page__title-h3 Performance figures
+            .performanceTable 
+                .performanceTable__Header
+                    .performanceTableItemTd State
+                    .performanceTableItemTd Power
+                    .performanceTableItemTd Torque
+                    .performanceTableItemTd 0-60 mph
+                .performanceTable__Body
+                    .performanceTableItem.default
+                        .performanceTableItemTd 
+                            div.stock Stock
+                            div.carName Porsche 911 Carrera
+                        .performanceTableItemTd 
+                            div
+                                span.hp 385 
+                                | HP
+                        .performanceTableItemTd 
+                            div 
+                                span.nm 450 
+                                | NM
+                        .performanceTableItemTd 
+                            div 
+                                span.sec 4.2 
+                                | sec
+                    .performanceTableItem.withRs
+                        .performanceTableItemTd 
+                            div.stock With RS
+                            div.carName Porsche 911 Carrera
+                        .performanceTableItemTd 
+                            div 
+                                span.hp 410* 
+                                | HP
+                        .performanceTableItemTd 
+                            div 
+                                span.nm 475* 
+                                | NM
+                        .performanceTableItemTd 
+                            div 
+                                span.sec -0.39* 
+                                | sec
+            .performanceImg
+                img(src="assets/images/png/shared/imgPerformance.png", alt="imgPerformance")
+        include ../select/selectBox.mixin.pug
+        +selectBox(props.productname)

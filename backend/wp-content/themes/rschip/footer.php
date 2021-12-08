@@ -93,7 +93,37 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
             <div class="footerFlexContainer footerLinks">
                 <h4>Tuning </h4>
                 <hr>
-                <div class="footerLinksItem">
+                <?php 
+                 $result = file_get_contents('http://tuning34.ru/api/v1/catalog/brands/');
+                 $result = json_decode($result);
+                 $result = $result->data;
+                 // $result = $wpdb->get_results('SELECT name, id FROM brand ORDER BY name ASC');
+                 // var_dump($result);
+                 $letter_array = array();
+                 foreach ($result as $brand) {
+                   $brand_name = $brand->title;
+                   $brand_id = $brand->id;
+                   $letter = mb_substr($brand_name, 0, 1);
+                   $letter_array[$letter][$brand_id] = $brand_name;
+                 }
+                 $k=-1;
+                 foreach ($letter_array as $letterkey => $brands) {
+                   $k++;
+
+                   if( ($k % 3) == 0 || $k == 0) {
+                     echo '<div class="footerLinksItem">';
+                   }
+                   echo '<ul>';
+                   foreach ($brands as $brandId => $brandname) {
+                     echo '<li><a class="brand-link" data-brand="'.$brandname.'" data-brand-id="'.$brandId.'" href="/shop/'.str_replace(' ', '_', strtolower($brandname)).'">'.$brandname.'</a></li>';
+                   }
+                   echo '</ul>';
+                 if((($k+1) % 3) == 0) {
+                   echo '</div>';
+                 }
+                 }
+               ?>
+                <!-- <div class="footerLinksItem">
                     <a href="javascript:void(0)">Acura </a>
                     <a href="javascript:void(0)">Alfa Romeo </a><a href="javascript:void(0)">Alpina </a><a href="javascript:void(0)">Aston Martin</a><a href="javascript:void(0)">Audi </a><a href="javascript:void(0)">Baojun </a><a href="javascript:void(0)">Beiben </a><a href="javascript:void(0)">Beijing </a><a href="javascript:void(0)">Bentley </a><a href="javascript:void(0)">BMW </a><a href="javascript:void(0)">Borgward </a><a href="javascript:void(0)">Buick </a><a href="javascript:void(0)">BYD </a>
                 </div>
@@ -105,6 +135,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
                 <div class="footerLinksItem"><a href="javascript:void(0)">Pontiac </a><a href="javascript:void(0)">Porsche </a><a href="javascript:void(0)">Proton </a><a href="javascript:void(0)">Qoros </a><a href="javascript:void(0)">Renault </a><a href="javascript:void(0)">Roewe </a><a href="javascript:void(0)">Rolls-Royce </a><a href="javascript:void(0)">Rover </a><a href="javascript:void(0)">Saab </a><a href="javascript:void(0)">Sag </a><a href="javascript:void(0)">SAIC </a><a href="javascript:void(0)">Sany </a><a href="javascript:void(0)">Saturn </a></div>
                 <div class="footerLinksItem"><a href="javascript:void(0)">Scion </a><a href="javascript:void(0)">Seat </a><a href="javascript:void(0)">Sino Truck</a><a href="javascript:void(0)">Skoda </a><a href="javascript:void(0)">Smart </a><a href="javascript:void(0)">Soueast </a><a href="javascript:void(0)">SsangYong </a><a href="javascript:void(0)">Subaru </a><a href="javascript:void(0)">Suzuki </a><a href="javascript:void(0)">TATA </a><a href="javascript:void(0)">Toyota </a><a href="javascript:void(0)">Troller </a><a href="javascript:void(0)">UAZ </a></div>
                 <div class="footerLinksItem"><a href="javascript:void(0)">Vauxhall </a><a href="javascript:void(0)">Vinfast </a><a href="javascript:void(0)">Volvo </a><a href="javascript:void(0)">Vortex </a><a href="javascript:void(0)">VW </a><a href="javascript:void(0)">Wey </a><a href="javascript:void(0)">XCMG </a><a href="javascript:void(0)">Zotye</a></div>
+             -->
             </div>
         </div>
     </div>

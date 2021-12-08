@@ -1,46 +1,28 @@
-include ../advantages/advantages.mixin.pug
+include ./banner.mixin.pug
++banner({
+    bannerClass: "bannerChip",
+    title: {
+        big: "RSCHIP",
+        span1: "Introducing",
+        span3: "RS CHIP"
+    },
+    description: "Unleash your engine hidden potential with RSCHIP plug & Play performance Tuner",
+    imageName: "chip/imgBannerChipBg",
+    imageChipName: "chip/imgBannerRsChip",
+    advantages: [
+                    {
+                        "icon":"iconSpeedometer", 
+                        "text":"More power and torque"
+                    }, 
+                    {
+                        "icon":"iconPhoneWhite", 
+                        "text": "App controllable"
+                    },
+                    {
+                        "icon":"iconArrowsLR", 
+                        "text": "Сopatible wit ICE, BEV and hybrids"
+                    },
+                ],
+    selectName: 'Chip'
+})
 
-section.banner.bannerChip
-    .wrapper
-        .bannerFlexContainer
-            .bannerText
-                h1.page__title-h1_big RSCHIP
-                h1.page__title-h1
-                    span.page_red Introducing 
-                    | RS CHIP
-                p.pageText Unleash your engine hidden potential with RSCHIP plug & Play performance Tuner
-                include ../socialIcons/socialIcons.component.pug
-
-            .advantages
-                .advantagesFlexContainer
-                    +itemsAdvantages([
-                        {
-                            "icon":"iconSpeedometer", 
-                            "text":"More power and torque"
-                        }, 
-                        {
-                            "icon":"iconPhoneWhite", 
-                            "text": "App controllable"
-                        },
-                        {
-                            "icon":"iconArrowsLR", 
-                            "text": "Сopatible wit ICE, BEV and hybrids"
-                        },
-                    ])
-
-            .bannerImgBg
-                picture 
-                    source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_1920.png" media="(min-width: 1441px)")
-                    source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_1440.png" media="(min-width: 1440px)")
-                    source(type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_992.png" media="(min-width: 992px)")
-                    source( type="image/png" srcset="assets/images/png/chip/imgBannerChipBg_768.png" media="(min-width: 768px)")
-                    img(src="assets/images/png/chip/imgBannerChipBg-xs.png", alt="imgBannerChipBg_320")
-            .bannerImgChip
-                picture 
-                    source(type="image/png" srcset="assets/images/png/chip/imgBannerRsChipLg@1x.png 1x, assets/images/png/chip/imgBannerRsChipLg@2x 2x" media="(min-width: 992px)")
-                    source(type="image/png" srcset="assets/images/png/chip/imgBannerRsChipSm@1x.png 1x, assets/images/png/chip/imgBannerRsChipSm@2x.png 2x" media="(min-width: 768px)")
-                    img(src="assets/images/png/chip/imgBannerRsChipXs@1x.png" srcset="assets/images/png/chip/imgBannerChipXs@2x.png 2x" alt="imgBannerRsChipXs")
-                
-            .bannerSelect
-                include ../select/selectBox.mixin.pug
-                +selectBox('Chip')

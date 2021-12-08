@@ -1,51 +1,31 @@
-include ../advantages/advantages.mixin.pug
-
-section.banner.bannerRs
-    .wrapper
-        .bannerFlexContainer
-            .bannerText
-                h1.page__title-h1_big RSCHIP
-                h1.page__title-h1
-                    span.page_red Better acceleration 
-                    | <br> with RS Response 
-                p.pageText Better acceleration and sportier thotlle response for your Car
-                include ../socialIcons/socialIcons.component.pug
-            
-            .advantages
-                .advantagesFlexContainer
-                    +itemsAdvantages([
-                        {
-                            "icon":"iconSpeedometer", 
-                            "text":"Better throttle response"
-                        }, 
-                        {
-                            "icon":"iconArrowsUp", 
-                            "text": "5 stages"
-                        },
-                        {
-                            "icon":"iconPhoneWhite", 
-                            "text": "2nd backup CPU"
-                        },
-                        {
-                            "icon":"iconArrowsLR", 
-                            "text": "Сopatible wit ICE, BEV and hybrids"
-                        },
-                    ])
-
-            .bannerImgBg
-                picture 
-                    source(type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1920.png" media="(min-width: 1441px)")
-                    source(type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1440.png" media="(min-width: 1440px)")
-                    source(type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_1366.png" media="(min-width: 992px)")
-                    source( type="image/png" srcset="assets/images/png/rs/imgBannerRsBg_768.png" media="(min-width: 768px)")
-                    img(src="assets/images/png/rs/imgBannerRsBg_320.png", alt="imgBannerRs")
-            .bannerImgChip
-                picture 
-                    source(type="image/png" srcset="assets/images/png/rs/imgBannerRsChipLg@1x.png 1x, assets/images/png/rs/imgBannerRsChipLg@2x.png 2x" media="(min-width: 992px)")
-                    source(type="image/png" srcset="assets/images/png/rs/imgBannerRsChipSm@1x.png 1x, assets/images/png/rs/imgBannerRsChipSm@2x.png 2x" media="(min-width: 768px)")
-                    img(src="assets/images/png/rs/imgBannerRsChipXs@1x.png" srcset="assets/images/png/rs/imgBannerRsChipXs@2x.png 2x" alt="imgBannerRsChipXs")
-                
-                //- object(type="image/svg+xml" data="assets/images/png/rs/imgBannerRsChipLg.svg" )  Your browser does not support SVG
-            .bannerSelect
-                include ../select/selectBox.mixin.pug
-                +selectBox('Rs')
+include ./banner.mixin.pug
++banner({
+    bannerClass: "bannerRs",
+    title: {
+        big: "RSCHIP",
+        span1: "More power",
+        span2: "Better acceleration"
+    },
+    description: "Better acceleration and sportier thotlle response for your Car",
+    imageName: "rs/imgBannerRsBg",
+    imageChipName: "rs/imgBannerRsChip",
+    advantages: [
+                    {
+                        "icon":"iconSpeedometer", 
+                        "text":"Better throttle response"
+                    }, 
+                    {
+                        "icon":"iconArrowsUp", 
+                        "text": "5 stages"
+                    },
+                    {
+                        "icon":"iconPhoneWhite", 
+                        "text": "2nd backup CPU"
+                    },
+                    {
+                        "icon":"iconArrowsLR", 
+                        "text": "Сopatible wit ICE, BEV and hybrids"
+                    },
+                ],
+    selectName: 'Rs'
+})

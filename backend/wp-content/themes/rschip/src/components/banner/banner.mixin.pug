@@ -1,0 +1,37 @@
+//-banner mixin
+mixin banner(props)
+    section.banner(class=props.bannerClass)
+        .wrapper
+            .bannerFlexContainer
+                .bannerText
+                    h1.page__title-h1_big #{props.title.big}
+                    h1.page__title-h1
+                        span.page_red #{props.title.span1}    
+                        | #{props.title.span2} 
+                        span.block #{props.title.span3} 
+                    p.pageText #{props.description}
+                    include ../socialIcons/socialIcons.component.pug
+                if props.advantages
+                    .advantages
+                        .advantagesFlexContainer
+                            include ../advantages/advantages.mixin.pug
+                            +itemsAdvantages(props.advantages)
+                .bannerImgBg
+                    picture 
+                        source(type="image/png" srcset=`assets/images/png/${props.imageName}_1920.png` media="(min-width: 1441px)")
+                        source(type="image/png" srcset=`assets/images/png/${props.imageName}_1440.png` media="(min-width: 1440px)")
+                        source(type="image/png" srcset=`assets/images/png/${props.imageName}_992.png` media="(min-width: 992px)")
+                        source( type="image/png" srcset=`assets/images/png/${props.imageName}_768.png` media="(min-width: 768px)")
+                        img(src=`assets/images/png/${props.imageName}_320.png`, alt="imgBannerBg")
+                if props.imageChipName
+                    .bannerImgChip 
+                        picture 
+                            source(type="image/png" srcset=`assets/images/png/${props.imageChipName}Lg@1x.png 1x, assets/images/png/${props.imageChipName}Lg@2x.png 2x` media="(min-width: 992px)")
+                            source(type="image/png" srcset=`assets/images/png/${props.imageChipName}Sm@1x.png 1x, assets/images/png/${props.imageChipName}Sm@2x.png 2x` media="(min-width: 768px)")
+                            img(src=`assets/images/png/${props.imageChipName}@1x.png` srcset=`assets/images/png/${props.imageChipName}Xs@2x.png 2x` alt="imgBannerRsChipXs")
+                        
+                .bannerSelect
+                    include ../select/selectBox.mixin.pug
+                    +selectBox(props.selectName)
+
+        

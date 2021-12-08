@@ -1,49 +1,31 @@
-include ../advantages/advantages.mixin.pug
-
-section.banner.bannerGtr
-    .wrapper
-        .bannerFlexContainer
-            .bannerText
-                h1.page__title-h1_big GTR chip
-                h1.page__title-h1
-                    span.page_red Make your car
-                    | <br> stand out 
-                p.pageText Performance tuning, on-board diagnostics, Acceleration and power meter, all in one device
-                include ../socialIcons/socialIcons.component.pug
-
-            .advantages
-                .advantagesFlexContainer
-                    +itemsAdvantages([
-                        {
-                            "icon":"iconPower", 
-                            "text":"More power and torque"
-                        }, 
-                        {
-                            "icon":"iconFuel", 
-                            "text": "Better fuel economy"
-                        },
-                        {
-                            "icon":"iconErrors", 
-                            "text": "Error code reader"
-                        },
-                        {
-                            "icon":"iconSpeedometrLight", 
-                            "text": "Performance meter"
-                        },
-                    ])
-
-            .bannerImgBg
-                picture 
-                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1920.png" media="(min-width: 1441px)")
-                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_1440.png" media="(min-width: 1440px)")
-                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_992.png" media="(min-width: 992px)")
-                    source( type="image/png" srcset="assets/images/png/gtr/imgBannerGtrBg_768.png" media="(min-width: 768px)")
-                    img(src="assets/images/png/gtr/imgBannerGtrBg_320.png", alt="imgBannerGtrBg")
-            .bannerImgChip
-                picture 
-                    source(type="image/png" srcset="assets/images/png/gtr/imgBannerGtrChipSm@1x.png 1x, assets/images/png/gtr/imgBannerGtrChipSm@2x.png 2x" media="(min-width: 768px)")
-                    img(src="assets/images/png/gtr/imgBannerGtrChipXs@1x.png"  alt="imgBannerGtrChipXs")
-                
-            .bannerSelect
-                include ../select/selectBox.mixin.pug
-                +selectBox('Gtr')
+include ./banner.mixin.pug
++banner({
+    bannerClass: "bannerGtr",
+    title: {
+        big: "GTR chip",
+        span1: "Make your car",
+        span3: "stand out"
+    },
+    description: "Performance tuning, on-board diagnostics, Acceleration and power meter, all in one device",
+    imageName: "gtr/imgBannerGtrBg",
+    imageChipName: "gtr/imgBannerGtrChip",
+    advantages: [
+                    {
+                        "icon":"iconPower", 
+                        "text":"More power and torque"
+                    }, 
+                    {
+                        "icon":"iconFuel", 
+                        "text": "Better fuel economy"
+                    },
+                    {
+                        "icon":"iconErrors", 
+                        "text": "Error code reader"
+                    },
+                    {
+                        "icon":"iconSpeedometrLight", 
+                        "text": "Performance meter"
+                    },
+                ],
+    selectName: 'Gtr'
+})

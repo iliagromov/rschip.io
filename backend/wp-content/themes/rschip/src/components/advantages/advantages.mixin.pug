@@ -8,11 +8,11 @@
     ])
 
 //- mixin advantages
-mixin itemsAdvantages(items)
-    each item in items
+mixin itemsAdvantages(advantages)
+    each advantage in advantages
         .advantagesItem 
             .advantagesItem__icon
-                div(class=`svg-${item.icon} svg-${item.icon}-box`)
-            .advantagesItem__text=item.text
+                div(class=`svg-${advantage.icon} svg-${advantage.icon}-box`)
+            .advantagesItem__text=advantage.text
 
 

@@ -167,8 +167,8 @@
         &_big
             +sm-block
                 top: 177px
-            +md-block
-                top: 115px
+            // +md-block
+            //     top: 115px
 
         span.block
             display: block
@@ -686,7 +686,7 @@
     +sm-block
         padding: 135px 0 115px
     +md-block
-        padding: 94px 0 120px
+        padding: 115px 0 120px
 
     &::after
         content: ''
@@ -718,7 +718,7 @@
             margin-bottom: 32px
             line-height: 164%
         +md-block
-            width: 44%
+            width: 50%
             font-size: 36px
             line-height: 164%
             margin-bottom: 54px
@@ -881,6 +881,7 @@
     +col()
     +size(9)
     +size-sm(4.5)
+    +size-md(4.5)
     display: flex
     align-items: center
     margin-bottom: 20px
@@ -956,9 +957,11 @@
     .item1
         +size(9)
         +size-sm(4)
+        +size-md(4)
     .item2
         +size(9)
         +size-sm(2)
+        +size-md(2)
 
         display: flex
         justify-content: center
@@ -966,6 +969,7 @@
     .item3
         +size(9)
         +size-sm(3)
+        +size-md(3)
 
         
 
@@ -2021,14 +2025,14 @@ html
     +sm-block
         padding: 61px 0 122px
     +md-block
-        padding: 133px 0 122px
+        padding: 114px 0 122px
 
     .page__title-h2
         margin-bottom: 44px
         +sm-block
             margin-bottom: 62px
         +md-block
-            margin-bottom: 30px
+            margin-bottom: 45px
 
     &.productsCart
         padding-bottom: 0
@@ -2066,7 +2070,7 @@ html
         padding: 48px 17px 30px
         margin-bottom: 0
     +md-block
-        padding: 70px 28px 46px
+        padding: 74px 28px 46px
 
     &:hover
         // border: 1px solid #FF3838
@@ -2087,7 +2091,7 @@ html
         padding-bottom: 21px
     +md-block
         font-size: 30px
-        padding-bottom: 6px
+        padding-bottom: 20px
 
 .productsItemTextBefore
     font-family: #{$SFUIText}-Regular
@@ -2120,6 +2124,7 @@ html
         padding-bottom: 27px
     +md-block
         margin-top: -16px
+        padding-bottom: 40px
 
     &__text
         width: 50%

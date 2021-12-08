@@ -4428,7 +4428,7 @@ html:not([data-scroll='0']) .header {
 }
 
 .page__title-h2_big {
-  font-family: SFUIDisplay-Bold;
+  font-family: SFUIDisplay-Heavy;
   font-size: 64px;
   line-height: 100%;
   color: rgba(255, 255, 255, 0.04);
@@ -6131,10 +6131,6 @@ html:not([data-scroll='0']) .header {
     top: 58%;
   }
 
-  .banner .page__title-h1_big {
-    top: 115px;
-  }
-
   .banner .pageText {
     width: 50%;
   }
@@ -6318,7 +6314,7 @@ html:not([data-scroll='0']) .header {
   }
 
   .faq {
-    padding: 94px 0 120px;
+    padding: 115px 0 120px;
   }
 
   .faq::after {
@@ -6327,7 +6323,7 @@ html:not([data-scroll='0']) .header {
   }
 
   .faq .page__title-h3 {
-    width: 44%;
+    width: 50%;
     font-size: 36px;
     line-height: 164%;
     margin-bottom: 54px;
@@ -6412,6 +6408,11 @@ html:not([data-scroll='0']) .header {
   }
 
   .footerContactsItem {
+    width: -webkit-calc(50% - 46px);
+    width: calc(50% - 46px);
+  }
+
+  .footerContactsItem {
     margin-bottom: 44px;
   }
 
@@ -6458,6 +6459,21 @@ html:not([data-scroll='0']) .header {
   .footerPrivacy div {
     margin-left: 23px;
     margin-right: 23px;
+  }
+
+  .footerPrivacy .item1 {
+    width: -webkit-calc(44.44444% - 46px);
+    width: calc(44.44444% - 46px);
+  }
+
+  .footerPrivacy .item2 {
+    width: -webkit-calc(22.22222% - 46px);
+    width: calc(22.22222% - 46px);
+  }
+
+  .footerPrivacy .item3 {
+    width: -webkit-calc(33.33333% - 46px);
+    width: calc(33.33333% - 46px);
   }
 
   .form .page__from {
@@ -6859,11 +6875,11 @@ html:not([data-scroll='0']) .header {
   }
 
   .products {
-    padding: 133px 0 122px;
+    padding: 114px 0 122px;
   }
 
   .products .page__title-h2 {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
   }
 
   .productsFlexContainer {
@@ -6882,12 +6898,12 @@ html:not([data-scroll='0']) .header {
   }
 
   .productsItem {
-    padding: 70px 28px 46px;
+    padding: 74px 28px 46px;
   }
 
   .productsItemTitle {
     font-size: 30px;
-    padding-bottom: 6px;
+    padding-bottom: 20px;
   }
 
   .productsItemTextBefore {
@@ -6896,6 +6912,7 @@ html:not([data-scroll='0']) .header {
 
   .productsItemGain {
     margin-top: -16px;
+    padding-bottom: 40px;
   }
 
   .productsItemTextAfter {

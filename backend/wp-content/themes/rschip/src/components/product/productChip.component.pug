@@ -1,32 +1,19 @@
 //-productRs
-section.product.productChip
-    .wrapper
-        h2.page__title-h2_small More Power
-        h3.page__title-h3 Increase your 
-            span.page_red engine power 
-            | with RS CHIP
-        .productFlexContainer 
-            .productImg
-                picture 
-                    source(type="image/png" srcset="assets/images/png/chip/imgProductChip1-lg.png" media="(min-width: 992px)")
-                    source( type="image/png" srcset="assets/images/png/chip/imgProductChip1-sm.png" media="(min-width: 768px)")
-                    img(src="assets/images/png/chip/imgProductChip1-xs.png", alt="imgRsChip")
-            .productText
-                h4.page__title-h4 Performance Tuning made easy
-                ul.page__ul 
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | 3 driving modes
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | unlimited tunings
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | free companion app
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | Easy to install
-                .productPrice 
-                    button.page__btn SHOP NOW
-
-            
+include ./product.mixin.pug
++product({
+    className: "productChip",
+    title: {
+        span1: "Increase your",
+        span2: "engine power",
+        span3: "with RS CHIP"
+    },
+    imageName: "imgProductChip1",
+    text: "Performance Tuning made easy",
+    advantages: [
+        "3 driving modes",
+        "unlimited tunings",
+        "free companion app",
+        "Easy to install"
+    ],
+    cost: "$299"
+})

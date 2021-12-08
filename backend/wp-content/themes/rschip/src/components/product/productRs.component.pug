@@ -1,33 +1,20 @@
 //-productRs
-section.product.productRs
-    .wrapper
-        h2.page__title-h2_small More Power
-        h3.page__title-h3 Throttle 
-            span.page_red tuning 
-            | made easy
-        .productFlexContainer 
-            .productImg
-                picture 
-                    source(type="image/png" srcset="assets/images/png/products/imgRsChip1.png" media="(min-width: 992px)")
-                    source( type="image/png" srcset="assets/images/png/products/imgRsChip1-sm.png" media="(min-width: 768px)")
-                    img(src="assets/images/png/products/imgRsChip1-xs.png", alt="imgRsChip")
-            .productText
-                h4.page__title-h4 Improved acceleration and sportier drive
-                ul.page__ul 
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | 5 driving modes
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | 2x CPUs system
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | Sporty throttle response
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | Easy to install
-                .productPrice 
-                    button.page__btn ADD TO BAG
-                    .productPrice__cost $299
-
+include ./product.mixin.pug
++product({
+    className: "productRs",
+    title: {
+        span1: "Throttle",
+        span2: "tuning",
+        span3: "made easy"
+    },
+    imageName: "imgRsChip1",
+    text: "Improved acceleration and sportier drive",
+    advantages: [
+        "5 driving modes",
+        "2x CPUs system",
+        "Sporty throttle response",
+        "Easy to install"
+    ],
+    cost: "$299"
+})
             

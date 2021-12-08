@@ -46,6 +46,9 @@ html(lang="en" data-scroll='0')
         include ../../components/chat/chat.component.pug
 
         block modals
+            include ../../components/modals/modalsMainPage.component.pug
+            include ../../components/modals/modalsSelect.component.pug
+
         //- for modals overlay
         .overlay.js-overlay-modal
 
@@ -53,11 +56,15 @@ html(lang="en" data-scroll='0')
             //- link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
             link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
             link(rel="stylesheet", href="css/styles-calc.css", type="text/css")
+            link(rel="stylesheet", href="libs/css/swiper-bundle.min.css", type="text/css")
+            
             //- each breakPoint in breakPoints
             //-     link(rel="stylesheet", type="text/css" , media="screen and (min-width:"+breakPoint.width+"px)",  href="css/viewport/media/"+breakPoint.width+"/"+breakPoint.width+"px.css")
 	
             
         block scriptLibs 
+
+            script(src="libs/js/swiper-bundle.min.js")
             script(src="libs/js/store-scroll.js")
             script(src="libs/js/tabs.js")
             script(src="libs/js/modal.js")
@@ -67,3 +74,11 @@ html(lang="en" data-scroll='0')
             script(src="js/chat/chat.component.js")
             script(src="js/debuggrid/debuggrid.component.js")
             script(src="js/main.js")
+
+            script(src="js/faq/faq.component.js")
+            script(src="js/modals/modalGallary.component.js")
+            script(src="js/modals/modalNews.component.js")
+            script(src="js/select/select.component.js")
+            script(src="js/productSlider/productSlider.component.js")
+            script(src="js/cartProducts/cartProducts.component.js")
+            

@@ -1,33 +1,27 @@
 //-productMixin
-section.product.productRs
-    .wrapper
-        h2.page__title-h2_small More Power
-        h3.page__title-h3 Throttle 
-            span.page_red tuning 
-            | made easy
-        .productFlexContainer 
-            .productImg
-                picture 
-                    source(type="image/png" srcset="assets/images/png/imgRsChip1.png" media="(min-width: 992px)")
-                    source( type="image/png" srcset="assets/images/png/imgRsChip1-sm.png" media="(min-width: 768px)")
-                    img(src="assets/images/png/imgRsChip1-xs.png", alt="imgRsChip")
-            .productText
-                h4.page__title-h4 Improved acceleration and sportier drive
-                ul.page__ul 
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | 5 driving modes
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | 2x CPUs system
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | Sporty throttle response
-                    li.page__li 
-                        i.svg-iconMarker.svg-iconMarker-box
-                        | Easy to install
-                .productPrice 
-                    button.page__btn ADD TO BAG
-                    .productPrice__cost $299
+mixin product(props)
+    section.product(class=props.className)
+        .wrapper
+            h2.page__title-h2_small More Power
+            h3.page__title-h3 #{props.title.span1}
+                span.page_red #{props.title.span2} 
+                | #{props.title.span3}
+            .productFlexContainer 
+                .productImg
+                    picture 
+                        source(type="image/png" srcset=`assets/images/png/products/${props.imageName}-lg.png` media="(min-width: 992px)")
+                        source( type="image/png" srcset=`assets/images/png/products/${props.imageName}-sm.png` media="(min-width: 768px)")
+                        img(src=`assets/images/png/products/${props.imageName}-xs.png`, alt="imgRsChip")
+                .productText
+                    h4.page__title-h4 #{props.text}
+                    ul.page__ul 
+                        each advantage in props.advantages
+                            li.page__li 
+                                i.svg-iconMarker.svg-iconMarker-box
+                                | #{advantage}
+                        
+                    .productPrice 
+                        button.page__btn ADD TO BAG
+                        .productPrice__cost 
 
             

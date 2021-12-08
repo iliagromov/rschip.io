@@ -1,60 +1,36 @@
 //-mixin
-section.productSlider
-    button.page__btn.page__btn_notTransparent DOWLOAD THE GUIDE
-    .wrapper 
-        h2.page__title-h2_small easy and fast
-        h3.page__title-h3 Throttle response with no delay 
-        .productSliderFlexContainer 
-            .productSliderGallary
-                .productSliderGallary__Main.gallery-top
-                    .swiper-wrapper
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgRsChipSliderMain.png", alt="productSliderGallary")
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgRsChipSliderMain.png", alt="productSliderGallary")
-                
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgRsChipSliderMain.png", alt="productSliderGallary")
-                
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgRsChipSliderMain.png", alt="productSliderGallary")
-                
+- var main = 0;
+- var thumb = 0;
+
+mixin productSlider(props)
+    section.productSlider
+        button.page__btn.page__btn_notTransparent DOWLOAD THE GUIDE
+        .wrapper 
+            h2.page__title-h2_small easy and fast
+            h3.page__title-h3 Throttle response with no delay 
+            .productSliderFlexContainer 
+                .productSliderGallary
+                    .productSliderGallary__Main.gallery-top
+                        .swiper-wrapper
+                            while main < 4
+                                .swiper-slide
+                                    img(src=`assets/images/png/products/${props.imageName}.png`, alt="productSliderGallary")
+                                div(data-num=main++)
+                        
+                    .productSliderGallary__Thumbnails.gallery-thumbs
+                        .swiper-wrapper
+                            while thumb < 4
+                                .swiper-slide
+                                    img(src=`assets/images/png/products/${props.thumbs}.png`, alt="productSliderGallary")
+                                div(data-num=thumb++)
+                            
+                .productSliderAdvantages
+                    each advantage in props.advantages
+                        .productSliderAdvantagesItem 
+                            .productSliderAdvantagesItemIcon(class=`svg-${advantage.iconName} svg-${advantage.iconName}-box`)
+                            p #{advantage.text}
                     
-                .productSliderGallary__Thumbnails.gallery-thumbs
-                    .swiper-wrapper
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgChipSlidermin.png", alt="productSliderGallary")
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgChipSlidermin.png", alt="productSliderGallary")
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgChipSlidermin.png", alt="productSliderGallary")
-                        .swiper-slide
-                            img(src="assets/images/png/shared/imgChipSlidermin.png", alt="productSliderGallary")
-            
-            .productSliderAdvantages
-                .productSliderAdvantagesItem 
-                    .productSliderAdvantagesItemIcon.svg-iconSpeedometerGray.svg-iconSpeedometerGray-box
-                    p Better driving dynamic
-                .productSliderAdvantagesItem 
-                    .productSliderAdvantagesItemIcon.svg-iconWheel.svg-iconWheel-box
-                    p Backup CPU
-
-                .productSliderAdvantagesItem 
-                    .productSliderAdvantagesItemIcon.svg-iconChipGray.svg-iconChipGray-box
-                    p Five driving modes
-                .productSliderAdvantagesItem 
-                    .productSliderAdvantagesItemIcon.svg-iconPinion.svg-iconPinion-box
-                    p No lag or delay
-
-                .productSliderAdvantagesItem 
-                    .productSliderAdvantagesItemIcon.svg-iconRudder.svg-iconRudder-box
-                    p Easy to install
-                .productSliderAdvantagesItem 
-                    .productSliderAdvantagesItemIcon.svg-iconHybrEng.svg-iconHybrEng-box
-                    p ICE, BEV and hybrid engines
-
-                .productSliderPrice 
-                    button.page__btn ADD TO BAG
-                    .productPrice__cost $299
-                .productSliderText *Real world gains may be less or more depending on a large number of contributing factors such as displacement, aspiration and selected tuning mode.
-
+                    .productSliderPrice 
+                        button.page__btn ADD TO BAG
+                        .productPrice__cost $299
+                    .productSliderText *Real world gains may be less or more depending on a large number of contributing factors such as displacement, aspiration and selected tuning mode.

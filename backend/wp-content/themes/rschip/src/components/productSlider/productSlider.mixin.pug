@@ -27,10 +27,18 @@ mixin productSlider(props)
                 .productSliderAdvantages
                     each advantage in props.advantages
                         .productSliderAdvantagesItem 
-                            .productSliderAdvantagesItemIcon(class=`svg-${advantage.iconName} svg-${advantage.iconName}-box`)
+                            img.productSliderAdvantagesItemIcon(src=`assets/images/svg/${advantage.iconName}.svg`, alt="")
                             p #{advantage.text}
                     
                     .productSliderPrice 
                         button.page__btn ADD TO BAG
                         .productPrice__cost $299
+                        .productSliderPrice__App 
+                            
+                            a(href="https://play.google.com/store/apps/details?id=com.montetuning.monte" target="_black") 
+                                img(src="assets/images/png/shared/imgGooglePlay.png", alt="imgGooglePlay")
+                            
+                            a(href="https://apps.apple.com/us/app/monte-gt/id1582142065" target="_black") 
+                                img(src="assets/images/png/shared/imgAppStore.png", alt="imgAppStore")
+                            
                     .productSliderText *Real world gains may be less or more depending on a large number of contributing factors such as displacement, aspiration and selected tuning mode.

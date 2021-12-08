@@ -12,7 +12,8 @@ mixin itemsAdvantages(advantages)
     each advantage in advantages
         .advantagesItem 
             .advantagesItem__icon
-                div(class=`svg-${advantage.icon} svg-${advantage.icon}-box`)
+                img(src=`assets/images/svg/${advantage.icon}.svg`, alt="")
+                
             .advantagesItem__text=advantage.text
 
 

@@ -9,31 +9,13 @@ block title
 block append style
 
 block content
-	main.page.pageContacts
+	main.page
 		.wrapper
 			h2.page__title-h2.page__title-h2_big WELLCOME 
 				span.page__title-h2_small.page__title-h2_absolute Get in touch 
 			h2 Contact Us
-		section.contactCards
-			.wrapper
-				.contactCardsFlexContainer
-					.contactCard
-						.contactCardIcon
-							.svg-iconMarkLocationPurple.svg-iconMarkLocationPurple-box
-						.contactCardTitle Our office and warehouse
-						.contactCardDescriptin 1201 East 5th Street North Little Rock, Arkansas USA, 72114
-					.contactCard
-						.contactCardIcon
-							.svg-iconPhonePurple.svg-iconPhonePurple-box
-						.contactCardTitle Our Phone Number
-						.contactCardDescriptin +1 800 796 16 17 -USA Toll Free
-					.contactCard
-						.contactCardIcon
-							.svg-iconEmalPurple.svg-iconEmalPurple-box
-						.contactCardTitle Email Address
-						.contactCardDescriptin rschiphelp@gmail.com
-
+		
+		include ../../components/contactCards/contactCards.component.pug
 		include ../../components/form/form.component.pug
-		section.map 
-			img(src="assets/images/png/shared/imgContactMap.png", alt="imgContactMap")
+		include ../../components/map/map.component.pug
 		include ../../components/social/social.component.pug

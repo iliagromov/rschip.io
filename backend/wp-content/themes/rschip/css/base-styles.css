@@ -189,14 +189,6 @@ img {
 }
 
 @font-face {
-  font-family: "SFUIDisplay-Black";
-  src: url("../fonts/SFUIDisplay/SFUIDisplay-Black.ttf") format("truetype"), url("../fonts/SFUIDisplay/SFUIDisplay-Black.woff") format("woff"), url("../fonts/SFUIDisplay/SFUIDisplay-Black.eot") format("eot");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "SFUIText-Regular";
   src: url("../fonts/SFUIText/SFUIText-Regular.ttf") format("truetype"), url("../fonts/SFUIText/SFUIText-Regular.woff") format("woff"), url("../fonts/SFUIText/SFUIText-Regular.eot") format("eot");
   font-weight: normal;
@@ -210,6 +202,11 @@ img {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+html {
+  scrollbar-color: #ff3a3a #fff;
+  scrollbar-width: thin;
 }
 
 body {

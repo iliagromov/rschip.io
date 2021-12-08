@@ -190,6 +190,10 @@
   line-height: 28px;
 }
 
+.advantagesItem__icon img {
+  margin: 0 10px;
+}
+
 .appBlock {
   padding: 60px 0 150px;
 }
@@ -1025,6 +1029,57 @@
   margin: 0 auto;
 }
 
+/*contactCards*/
+
+.contactCards {
+  padding: 80px 0 120px;
+}
+
+.contactCardsFlexContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.contactCard {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+  background: #111111;
+  border-radius: 15px;
+  padding: 54px 46px 36px;
+}
+
+.contactCardIcon {
+  margin-bottom: 25px;
+}
+
+.contactCardTitle {
+  font-family: SFUIText-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 59px;
+}
+
+.contactCardDescriptin {
+  font-family: SFUIText-Regular;
+  font-size: 15px;
+  line-height: 26px;
+  color: #B2B2B2;
+  letter-spacing: 0.02em;
+}
+
 /* __debugGrid__ */
 
 .debugGrid {
@@ -1733,6 +1788,7 @@ html:not([data-scroll='0']) .header {
   top: 0;
   z-index: 100;
   background: #000;
+  height: 0;
 }
 
 .headerFlexContainer {
@@ -2049,6 +2105,12 @@ html:not([data-scroll='0']) .header {
   line-height: 31px;
   margin-bottom: 6%;
   padding-right: 0;
+}
+
+/*map*/
+
+.map img {
+  width: 100%;
 }
 
 /*menu*/
@@ -3238,6 +3300,18 @@ html:not([data-scroll='0']) .header {
   margin-top: 6%;
 }
 
+.productSlider .productSliderPrice__App {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.productSlider .productSliderPrice__App a {
+  margin: 0 10px;
+}
+
 .productSliderFlexContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4369,6 +4443,40 @@ html:not([data-scroll='0']) .header {
   margin-bottom: 3%;
 }
 
+/*usEmail*/
+
+.usEmail {
+  padding: 0 0 131px;
+  position: relative;
+}
+
+.usEmail .page__text {
+  font-family: SFUIDisplay-Bold;
+  font-size: 36px;
+  line-height: 164%;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.usEmail .page__text a {
+  font-size: inherit;
+}
+
+.usEmail::before {
+  content: '';
+  position: absolute;
+  right: -60%;
+  bottom: -22%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF4587), to(#FF5438));
+  background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%);
+  -webkit-filter: blur(500px);
+  filter: blur(500px);
+  width: 299px;
+  height: 180px;
+}
+
 /*socialIcons*/
 
 .socialIcons {
@@ -4385,20 +4493,8 @@ html:not([data-scroll='0']) .header {
 
 /* __page__ */
 
-.mainPage {
-  margin-top: -70px;
-}
-
-.pageRs {
-  margin-top: -70px;
-}
-
-.pageGtr {
-  margin-top: -70px;
-}
-
-.pageChip {
-  margin-top: -70px;
+.pageFaq .faq::after {
+  width: 0;
 }
 
 .page {
@@ -4616,95 +4712,6 @@ html:not([data-scroll='0']) .header {
 }
 
 /* __page__ */
-
-.pageFaq .faq::after {
-  width: 0;
-}
-
-.usEmail {
-  padding: 0 0 131px;
-  position: relative;
-}
-
-.usEmail .page__text {
-  font-family: SFUIDisplay-Bold;
-  font-size: 36px;
-  line-height: 164%;
-  letter-spacing: 0.05em;
-  color: #fff;
-}
-
-.usEmail .page__text a {
-  font-size: inherit;
-}
-
-.usEmail::before {
-  content: '';
-  position: absolute;
-  right: -60%;
-  bottom: -22%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background: -webkit-gradient(linear, left top, right top, from(#FF4587), to(#FF5438));
-  background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%);
-  -webkit-filter: blur(500px);
-  filter: blur(500px);
-  width: 299px;
-  height: 180px;
-}
-
-.contactCards {
-  padding: 80px 0 120px;
-}
-
-.contactCardsFlexContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.contactCard {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: -webkit-calc(100% - 20px);
-  width: calc(100% - 20px);
-  background: #111111;
-  border-radius: 15px;
-  padding: 54px 46px 36px;
-}
-
-.contactCardIcon {
-  margin-bottom: 25px;
-}
-
-.contactCardTitle {
-  font-family: SFUIText-Regular;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 59px;
-}
-
-.contactCardDescriptin {
-  font-family: SFUIText-Regular;
-  font-size: 15px;
-  line-height: 26px;
-  color: #B2B2B2;
-  letter-spacing: 0.02em;
-}
-
-.map img {
-  width: 100%;
-}
 
 .pageShop__textAfter {
   width: -webkit-calc(100% - 20px);
@@ -5063,6 +5070,16 @@ html:not([data-scroll='0']) .header {
 
   .cartProductSelect .selectBoxContainer .select .select-box {
     border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .contactCardsFlexContainer {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .contactCard {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .debugGrid .parentFlex {
@@ -5824,7 +5841,7 @@ html:not([data-scroll='0']) .header {
   }
 
   .productSlider .productPrice__cost {
-    margin-left: 75px;
+    margin-left: 50px;
   }
 
   .productSliderFlexContainer {
@@ -6039,6 +6056,11 @@ html:not([data-scroll='0']) .header {
     width: calc(66.66667% - 30px);
   }
 
+  .usEmail::before {
+    width: 544px;
+    height: 544px;
+  }
+
   .page__title-h1_big {
     top: 115px;
     right: 20px;
@@ -6047,21 +6069,6 @@ html:not([data-scroll='0']) .header {
 
   .page__title-h2_big {
     font-size: 96px;
-  }
-
-  .usEmail::before {
-    width: 544px;
-    height: 544px;
-  }
-
-  .contactCardsFlexContainer {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  .contactCard {
-    margin-left: 15px;
-    margin-right: 15px;
   }
 
   .cartTable {
@@ -6377,6 +6384,21 @@ html:not([data-scroll='0']) .header {
   .cartProductPrice {
     width: -webkit-calc(22.22222% - 46px);
     width: calc(22.22222% - 46px);
+  }
+
+  .contactCardsFlexContainer {
+    margin-left: -23px;
+    margin-right: -23px;
+  }
+
+  .contactCard {
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+
+  .contactCard {
+    width: -webkit-calc(33.33333% - 46px);
+    width: calc(33.33333% - 46px);
   }
 
   .debugGrid .parentFlex {
@@ -7321,21 +7343,6 @@ html:not([data-scroll='0']) .header {
   }
 
   .stepsItemGTR {
-    width: -webkit-calc(33.33333% - 46px);
-    width: calc(33.33333% - 46px);
-  }
-
-  .contactCardsFlexContainer {
-    margin-left: -23px;
-    margin-right: -23px;
-  }
-
-  .contactCard {
-    margin-left: 23px;
-    margin-right: 23px;
-  }
-
-  .contactCard {
     width: -webkit-calc(33.33333% - 46px);
     width: calc(33.33333% - 46px);
   }

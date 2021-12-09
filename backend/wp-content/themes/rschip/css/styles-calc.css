@@ -1080,6 +1080,12 @@
   letter-spacing: 0.02em;
 }
 
+/*contacts*/
+
+.contacts {
+  padding: 120px 0;
+}
+
 /* __debugGrid__ */
 
 .debugGrid {
@@ -1228,10 +1234,6 @@
   width: calc(100% - 20px);
 }
 
-.faqItem {
-  margin-bottom: 16px;
-}
-
 .faqItemDetails {
   cursor: pointer;
 }
@@ -1263,13 +1265,15 @@
 }
 
 .faqItemDetails__Content {
-  display: none;
+  height: 0;
+  opacity: 0;
   font-size: 15px;
   line-height: 26px;
   /* or 173% */
   letter-spacing: 0.025em;
   color: #B2B2B2;
-  padding-top: 34px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .faqItemDetails.active .faqItemDetails__Summary {
@@ -1281,7 +1285,10 @@
 }
 
 .faqItemDetails.active .faqItemDetails__Content {
-  display: block;
+  padding-top: 34px;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
 }
 
 .faqItemDetails.active .icon-arrow-white-details {

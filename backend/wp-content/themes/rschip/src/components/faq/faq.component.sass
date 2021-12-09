@@ -52,7 +52,7 @@
     +size(9)
     +size-md(4.5)
 .faqItem
-    margin-bottom: 16px
+    // margin-bottom: 16px
 
 .faqItemDetails
     cursor: pointer
@@ -76,7 +76,10 @@
             margin-right: 12px
 
     &__Content
-        display: none
+        // display: none
+        height: 0
+        opacity: 0
+        // visibility: hidden
         font-size: 15px
         line-height: 26px
 
@@ -84,14 +87,21 @@
         letter-spacing: 0.025em
 
         color: #B2B2B2
-        padding-top: 34px
+        
+        transition: all .5s ease
     &.active
 
         .faqItemDetails__Summary
             color: transparent
             background-image: linear-gradient(to right, #FF624A , #FF4686)
             background-clip: text
+
         .faqItemDetails__Content
-            display: block
+            // display: block
+            padding-top: 34px
+            height: 100%
+            opacity: 1
+            visibility: visible
+
         .icon-arrow-white-details
             transform: rotate(180deg)

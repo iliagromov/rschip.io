@@ -8,7 +8,12 @@
 // FIXME: если я добавил поле для страницы, а потом его удалил, то поле нужно отвязывать, иначе оно остается на этой же странице
 // Регистрирую список компонентов ACF
 $fieldsACF =  [
-    '_advantages_scroll', 
+    '_banner', 
+    '_products_preview', 
+    '_faq', 
+    '_news', 
+    '_social', 
+    '_gallary', 
 ];
 $fields = array();
 
@@ -30,6 +35,7 @@ function cmp_function($a, $b)
 }
 // Делаю сортировку блоков По возрастанию:
 uasort($fields, 'cmp_function');
+// var_dump($fields);
 ?>
 
 <main class="page">

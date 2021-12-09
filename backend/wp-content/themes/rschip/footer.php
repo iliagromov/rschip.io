@@ -181,6 +181,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
 <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
 <link rel="stylesheet" href="css/styles-calc.css" type="text/css">
 <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
+<script src="libs/js/swiper-bundle.min.js"></script>
 <script src="libs/js/store-scroll.js"></script>
 <script src="libs/js/tabs.js"></script>
 <script src="libs/js/modal.js"></script>
@@ -188,11 +189,13 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
 <script src="js/chat/chat.component.js"></script>
 <script src="js/debuggrid/debuggrid.component.js"></script>
 <script src="js/main.js"></script>
-<script src="libs/js/swiper-bundle.min.js"></script>
 <script src="js/faq/faq.component.js"></script>
 <script src="js/modals/modalGallary.component.js"></script>
 <script src="js/modals/modalNews.component.js"></script>
 <script src="js/select/select.component.js"></script>
+<script src="js/productSlider/productSlider.component.js"></script>
+<script src="js/cartProducts/cartProducts.component.js"></script>
+<script src="js/performance/performance.component.js"></script>
 <?php wp_footer(); ?>
 </body>
 

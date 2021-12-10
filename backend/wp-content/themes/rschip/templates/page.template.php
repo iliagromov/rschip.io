@@ -14,6 +14,22 @@ $fieldsACF =  [
     '_news', 
     '_social', 
     '_gallary', 
+    '_product_on_page',
+    '_product_rs_controls',
+    '_product_rs_safest',
+    '_howitwork',
+    '_installation',
+    '_product_slider',
+    '_accomplishments',
+    '_app_block',
+    '_setps_product_gtr',
+    '_setps_product_chip',
+    '_performance',
+    '_car_selector',
+    '_power',
+    '_howitwork_сhip',
+    '_optimize',
+    '_contact_cards',
 ];
 $fields = array();
 
@@ -58,5 +74,9 @@ uasort($fields, 'cmp_function');
         // }
     } ?>
 </main>
+<?php include(TEMPLATEPATH . '/components/modals/modalCarCantfind.php'); ?>
+<?php include(TEMPLATEPATH . '/components/modals/modalNews.php'); ?>
+<?php include(TEMPLATEPATH . '/components/modals/modalGallary.php'); ?>
+
 
 <?php get_footer(); ?>

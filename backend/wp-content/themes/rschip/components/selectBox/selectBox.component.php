@@ -2,7 +2,7 @@
 $thisProduct = get_field_object('select_product')["value"][0];
 
 if(!empty($thisProduct)) :
-
+    // echo $thisProduct->ID;
     $post = get_post($thisProduct->ID);
     setup_postdata($post);
 

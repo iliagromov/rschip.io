@@ -23,14 +23,24 @@
 
 	add_action('init', 'do_rewrite', 20, 0);
 
-	//page brand id 336
-	//page model id 338
-	//page shop id 250
+	//page brand id 336 || 438
+	//page model id 338 || 440
+	//page shop id 250 || 19
+
 	function do_rewrite(){
 		global $wp_rewrite;
-		add_rewrite_rule( '^shop/(.+)/(.+)/(.+)', 'index.php?page_id=250&brand=$matches[1]&model=$matches[2]&modification=$matches[3]', 'top' );
-		add_rewrite_rule( '^shop/(.+)/(.+)', 'index.php?page_id=338&brand=$matches[1]&model=$matches[2]', 'top' );
-		add_rewrite_rule( '^shop/(.+)', 'index.php?page_id=336&brand=$matches[1]', 'top' );
+
+		// $brandId = 336;
+		// $modelId = 338;
+		// $shopId = 250;
+
+		$brandId = 438;
+		$modelId = 440;
+		$shopId = 19;
+
+		add_rewrite_rule( '^shop/(.+)/(.+)/(.+)', 'index.php?page_id='.$shopId.'&brand=$matches[1]&model=$matches[2]&modification=$matches[3]', 'top' );
+		add_rewrite_rule( '^shop/(.+)/(.+)', 'index.php?page_id='.$modelId.'&brand=$matches[1]&model=$matches[2]', 'top' );
+		add_rewrite_rule( '^shop/(.+)', 'index.php?page_id='.$brandId.'&brand=$matches[1]', 'top' );
 
 		add_filter( 'query_vars', function( $vars ){
 			$vars[] = 'brand';

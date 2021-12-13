@@ -4508,6 +4508,36 @@ html:not([data-scroll='0']) .header {
   padding-top: 100px;
 }
 
+.catalog__list {
+  margin: 0 0 20px -20px;
+}
+
+.catalog__list-item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: -webkit-calc(50% - 20px);
+  width: calc(50% - 20px);
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+  margin: 0 -0.25em 5px 0;
+  padding-left: 20px;
+}
+
+.catalog__list-link {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid #ebebeb;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
 .page {
   overflow: hidden;
 }
@@ -6072,6 +6102,20 @@ html:not([data-scroll='0']) .header {
     height: 544px;
   }
 
+  .catalog__list {
+    margin: 30px 0 20px -20px;
+  }
+
+  .catalog__list-item {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .catalog__list-item {
+    width: -webkit-calc(33.33333% - 30px);
+    width: calc(33.33333% - 30px);
+  }
+
   .page__title-h1_big {
     top: 115px;
     right: 20px;
@@ -7354,6 +7398,16 @@ html:not([data-scroll='0']) .header {
   }
 
   .stepsItemGTR {
+    width: -webkit-calc(33.33333% - 46px);
+    width: calc(33.33333% - 46px);
+  }
+
+  .catalog__list-item {
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+
+  .catalog__list-item {
     width: -webkit-calc(33.33333% - 46px);
     width: calc(33.33333% - 46px);
   }

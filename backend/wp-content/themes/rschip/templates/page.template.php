@@ -30,6 +30,8 @@ $fieldsACF =  [
     '_howitwork_сhip',
     '_optimize',
     '_contact_cards',
+    '_brands',
+    '_models',
 ];
 $fields = array();
 

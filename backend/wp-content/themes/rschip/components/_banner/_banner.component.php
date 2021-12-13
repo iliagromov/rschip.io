@@ -46,17 +46,19 @@ if (!empty($bannerACF)) :
 
                     </div>
 
-                    <?php if($bannerACF['advantages']) :?>
+                    <?php if($bannerACF['isAdvantages']) : ?>
                         <div class="advantages">
                             <div class="advantagesFlexContainer">
 
-                                <?php foreach($advantages as $advantage) : ?>
-                                    <div class="advantagesItem">
-                                        <div class="advantagesItem__icon">
-                                            <img src="<?php echo $advantage['icon']; ?>" alt="">
+                                <?php foreach($bannerACF['adv'] as $advantage) : ?>
+                                    <?php if(!empty($advantage['icon'])):?>
+                                        <div class="advantagesItem">
+                                            <div class="advantagesItem__icon">
+                                                <img src="<?php echo $advantage['icon']; ?>" alt="">
+                                            </div>
+                                            <div class="advantagesItem__text"><?php echo $advantage['text']; ?></div>
                                         </div>
-                                        <div class="advantagesItem__text"><?php echo $advantage['text']; ?></div>
-                                    </div>
+                                    <?php endif; ?>
                                 <?php endforeach;?>
                                
                             </div>
@@ -66,10 +68,18 @@ if (!empty($bannerACF)) :
                     <?php if($bannerACF['imagesBg']) :?>
                         <div class="bannerImgBg">
                             <picture>
-                                <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img5']; ?>" media="(min-width: 1441px)">
-                                <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img4']; ?>" media="(min-width: 1440px)">
-                                <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img3']; ?>" media="(min-width: 992px)">
-                                <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img2']; ?>" media="(min-width: 768px)">
+                                <?php if(!empty($bannerACF['imagesBg']['img5'])):?> 
+                                    <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img5']; ?>" media="(min-width: 1441px)">
+                                <?php endif; ?>
+                                <?php if(!empty($bannerACF['imagesBg']['img4'])):?> 
+                                    <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img4']; ?>" media="(min-width: 1440px)">
+                                <?php endif; ?>
+                                <?php if(!empty($bannerACF['imagesBg']['img3'])):?>
+                                    <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img3']; ?>" media="(min-width: 992px)">
+                                <?php endif; ?>
+                                <?php if(!empty($bannerACF['imagesBg']['img2'])):?>
+                                    <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img2']; ?>" media="(min-width: 768px)">
+                                <?php endif; ?>
                                 <img src="<?php echo $bannerACF['imagesBg']['img1']; ?>" alt="imgBannerBg">
                             </picture>
                         </div>
@@ -78,16 +88,20 @@ if (!empty($bannerACF)) :
                     <?php if($bannerACF['isImageChip']) :?>
                         <div class="bannerImgChip">
                             <picture>
-                                <source type="image/png" 
+                                <?php if(!empty($bannerACF['imagesChip']['md@1'])):?>
+                                    <source type="image/png" 
+                                            srcset="
+                                            <?php echo $bannerACF['imagesChip']['md@1'] . ' 1x, ' . $bannerACF['imagesChip']['md@2'] . ' 2x' ?>" 
+                                            media="(min-width: 992px)">
+                                <?php endif; ?>
+
+                                <?php if(!empty($bannerACF['imagesChip']['sm@1'])):?>
+                                    <source type="image/png"
                                         srcset="
-                                        <?php echo $bannerACF['imagesChip']['md@1']; ?> 1x, 
-                                        <?php echo $bannerACF['imagesChip']['md@2']; ?>  2x" 
-                                        media="(min-width: 992px)">
-                                <source type="image/png"
-                                    srcset="
-                                    <?php echo $bannerACF['imagesChip']['sm@1']; ?> 1x, 
-                                    <?php echo $bannerACF['imagesChip']['sm@2']; ?> 2x"
-                                    media="(min-width: 768px)">
+                                        <?php echo $bannerACF['imagesChip']['sm@1'] . ' 1x, ' . $bannerACF['imagesChip']['sm@2'] . ' 2x'?>"
+                                        media="(min-width: 768px)">
+                                <?php endif; ?>
+                                
                                 <img src="<?php echo $bannerACF['imagesChip']['xs@1']; ?>"
                                     srcset="<?php echo $bannerACF['imagesChip']['xs@2']; ?> 2x" 
                                     alt="imgBannerRsChipXs">

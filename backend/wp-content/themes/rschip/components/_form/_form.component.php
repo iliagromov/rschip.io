@@ -1,8 +1,6 @@
 <?php
 $formACF = get_field('_form');
-echo '<pre>';
-// var_dump($bannerACF);
-echo '</pre>';
+
 if (!empty($formACF)) :
 ?>
     <?php if ($formACF["isShow"]) : ?>

@@ -1,17 +1,11 @@
 <?php
 $faqACF = get_field('_faq');
-echo '<pre>';
-// var_dump($bannerACF);
-echo '</pre>';
 if (!empty($faqACF)) :
 ?>
     <?php if ($faqACF["isShow"]) : ?>
         <?php
-            // $faqACF = get_fields();
-            // echo $faqACF['faq_items'];
-            // echo get_field('faq_items');
 
-            $faqPosts = get_field_object('faq_items')["value"];
+            $faqPosts = $faqACF['faq_items'];
 
 
             if (!empty($faqPosts)) : ?>

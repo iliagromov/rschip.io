@@ -48,7 +48,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
                 </div>
             </div>
             <div class="footerFlexContainer footerAdvantages">
-                <?php foreach ($footerAdvantages as $item) : 
+                <?php /* foreach ($footerAdvantages as $item) : 
                     if(!empty($item)):
                     ?>
                     <div class="footerAdvantagesItem">
@@ -60,34 +60,36 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
                         <a href="<?php echo $item['link']['url']; ?>">Read more </a>
 
                     </div>
-                <?php endif; endforeach; ?>
+                <?php endif; endforeach; */?>
+
                 <div class="footerAdvantagesItem">
 
-                    <!-- <div class="footerAdvantagesItem__title">
+                    <div class="footerAdvantagesItem__title">
                         <i class="svg-iconShield svg-iconShield-box"></i>
                         <h5>Lifetime warranty</h5>
                     </div>
                     <p class="page__text">We are confident in longevity and reliability of our products, and happy
                         to provide you with best possible terms and guarantees!</p><a href="javascript:void(0)">Read
-                        more </a> -->
+                        more </a>
                 </div>
                 <div class="footerAdvantagesItem">
 
-                    <!-- <div class="footerAdvantagesItem__title"><i
+                    <div class="footerAdvantagesItem__title"><i
                             class="svg-iconReturnCircle svg-iconReturnCircle-box"></i>
                         <h5>30 days return policy</h5>
                     </div>
                     <p class="page__text">Not convinced after the 30 days? Just send the produt back No questions
-                        asked.</p><a href="javascript:void(0)">Read more </a> -->
+                        asked.</p><a href="javascript:void(0)">Read more </a>
+                
                 </div>
                 <div class="footerAdvantagesItem">
 
-                    <!-- <div class="footerAdvantagesItem__title"><i
+                     <div class="footerAdvantagesItem__title"><i
                             class="svg-iconFreeShipping svg-iconFreeShipping-box"></i>
                         <h5>Free shipping worldwide</h5>
                     </div>
                     <p class="page__text">Free shipping worldwide to any location with DHL express and USPS.</p><a
-                        href="javascript:void(0)">Read more </a> -->
+                        href="javascript:void(0)">Read more </a>
                 </div>
             </div>
             <div class="footerFlexContainer footerLinks">

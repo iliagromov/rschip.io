@@ -8,7 +8,10 @@ if (!empty($productsPreviewACF)) :
 ?>
     <?php if ($productsPreviewACF["isShow"]) : ?>
         <?php
-            $thisProducts = get_field_object('products_preview')["value"];
+            $thisProducts = $productsPreviewACF["products"];
+            // echo '<pre>';
+            // var_dump($thisProducts);
+            // echo '</pre>';
             if (!empty($thisProducts)) : ?>
                 <section class="products">
                     <h2 class="page__title-h2 page__title-h2_big">shop

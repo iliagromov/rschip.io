@@ -5,9 +5,12 @@
 ?>
 <?php get_header(); ?>
 <main class="page pageFaq">
-	<div class="wrapper">
-		<h2 class="page__title-h2 page__title-h2_big">SUPPORT <span class="page__title-h2_small page__title-h2_absolute">Find Answers</span><span>FAQ</span></h2>
-	</div>
+	<section class="pageTitle">
+		<div class="wrapper">
+			<h2 class="page__title-h2 page__title-h2_big">SUPPORT <span class="page__title-h2_small page__title-h2_absolute">Find Answers</span><span>FAQ</span></h2>
+		</div>
+	</section>
+	
 	<br>
 	<?php include(TEMPLATEPATH . '/components/_faq/_faq.component.php'); ?>
 	<section class="usEmail">

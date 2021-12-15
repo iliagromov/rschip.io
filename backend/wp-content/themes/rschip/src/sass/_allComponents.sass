@@ -87,6 +87,8 @@
     letter-spacing: 0.02em
 /*addToCart*/
 .addToCart
+    &.hidden
+        display: none
 
 .addToCartContainer
     +size(9)
@@ -983,7 +985,7 @@
         // display: none
         height: 0
         opacity: 0
-        // visibility: hidden
+        visibility: hidden
         font-size: 15px
         line-height: 26px
 
@@ -1648,7 +1650,7 @@ html
 .menuLogo
     display: flex
     justify-content: center
-    width: 100%
+    width: 80%
     margin-bottom: 13%
     +sm-block
         margin: 0
@@ -1812,7 +1814,10 @@ html
         margin: 0
 
 .modalContent
-    overflow: scroll
+    overflow-y: scroll
+    scrollbar-color: #ff3a3a #fff
+    scrollbar-width: thin
+
     height: inherit
     margin: 0 -10px
     img
@@ -3068,7 +3073,9 @@ html
 /*select*/
 .selectBox
     width: 100%
-
+    &.noSelected
+        .selectBoxContainer
+            border-color: #ff3a3a 
 .selectBoxText
     display: none
     font-family: #{$SFUIText}-Regular

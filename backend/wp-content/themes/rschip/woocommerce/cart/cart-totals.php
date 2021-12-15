@@ -112,7 +112,7 @@ defined('ABSPATH') || exit;
 		<img src="assets/images/png/shared/imgPaymentsSafty.png" alt="imgPaymentsSafty">
 	</div>
 
-	<a class="page__btn page__btn_notTransparent" href="/checkout/">PROCEED TO PAYMENT</a>
+	<a id="cartTotalsBtn" class="page__btn page__btn_notTransparent" href="/checkout/">PROCEED TO PAYMENT</a>
 
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>

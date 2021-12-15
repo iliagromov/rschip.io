@@ -94,6 +94,10 @@
 
 /*addToCart*/
 
+.addToCart.hidden {
+  display: none;
+}
+
 .addToCartContainer {
   width: -webkit-calc(100% - 20px);
   width: calc(100% - 20px);
@@ -1267,6 +1271,7 @@
 .faqItemDetails__Content {
   height: 0;
   opacity: 0;
+  visibility: hidden;
   font-size: 15px;
   line-height: 26px;
   /* or 173% */
@@ -2180,7 +2185,7 @@ html:not([data-scroll='0']) .header {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   margin-bottom: 13%;
 }
 
@@ -2425,7 +2430,9 @@ html:not([data-scroll='0']) .header {
 }
 
 .modalContent {
-  overflow: scroll;
+  overflow-y: scroll;
+  scrollbar-color: #ff3a3a #fff;
+  scrollbar-width: thin;
   height: inherit;
   margin: 0 -10px;
 }
@@ -3859,6 +3866,10 @@ html:not([data-scroll='0']) .header {
 
 .selectBox {
   width: 100%;
+}
+
+.selectBox.noSelected .selectBoxContainer {
+  border-color: #ff3a3a;
 }
 
 .selectBoxText {

@@ -506,8 +506,10 @@ function renderSelectBox(currenSelect, selectName, options) {
   }
   if(selectBox.querySelector('.Modification').classList.contains('Selected')){
     selectBox.querySelector('.selectBoxAction') && selectBox.querySelector('.selectBoxAction').classList.add('Selected')
+    selectBox.classList.add('Selected');
   } else {
     selectBox.querySelector('.selectBoxAction') && selectBox.querySelector('.selectBoxAction').classList.remove('Selected')
+    selectBox.classList.remove('Selected');
   }
   if (getCarName && carName && carName.textContent.indexOf(getCarName) == -1) {
     carName.textContent += `${getCarName} `;
@@ -612,6 +614,7 @@ function renderSelectBox(currenSelect, selectName, options) {
             thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             selectBoxAction && thisSelectBox.closest('.selectBox').querySelector('.selectBoxAction').classList.add('Selected')
             thisSelectBox.querySelector('.Modification').classList.add('Selected');
+            thisSelectBox.closest('.selectBox').classList.add('Selected');
             break;
 
           default:

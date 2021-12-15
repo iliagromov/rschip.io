@@ -80,7 +80,7 @@ get_header('shop');
             contributing factors such as displacement, aspiration and selected tuning mode</div>
     </div>
 
-    <section class="addToCart">
+    <section class="addToCart <?php echo WC()->cart->get_cart_contents_count() == 0 ? 'hidden' : ''; ?>">
         <div class="wrapper">
             <div class="addToCartContainer">
                 <div>Free shipping</div>

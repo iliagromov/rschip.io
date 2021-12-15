@@ -17,10 +17,13 @@
  */
 
 defined('ABSPATH') || exit;
-// do_action('woocommerce_before_cart');
+do_action('woocommerce_before_cart');
 
 ?>
-
+<div class="pageCartTitle">
+    <h2 class="page__title-h2 page__title-h2_big">ORDERS <span class="page__title-h2_small page__title-h2_absolute">Shopping</span></h2>
+    <h3>Cart </h3>
+</div>
 <div class="cartTable">
     <form class="cartProducts" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
 
@@ -134,7 +137,7 @@ defined('ABSPATH') || exit;
                         ?>
                     </div>
                     <div class="cartProductSelect">
-                        <div class="selectBox selectBoxCart" data-productname="<?php echo $_product->get_name();?>">
+                        <div class="selectBox selectBoxCart" data-productname="<?php echo $_product->sku;?>">
                             <div class="selectBoxContainer">
                                 <div class="select Brands">
                                     <div class="select-box"></div>

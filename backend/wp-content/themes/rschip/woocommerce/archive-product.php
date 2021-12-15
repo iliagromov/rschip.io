@@ -18,8 +18,9 @@
 
 defined('ABSPATH') || exit;
 
-get_header('shop'); ?>
-
+get_header('shop');
+?>
+<!--shop-->
 <main class="page pageShop">
     <section class="products productsCart">
         <div class="productsBg"><img src="assets/images/png/shared/imgShopBg.png" alt="imgShopBg"></div>
@@ -49,6 +50,7 @@ get_header('shop'); ?>
         <div class="wrapper">
             <div class="productsFlexContainer">
                 <?php if (woocommerce_product_loop()) {
+                    
                     if (wc_get_loop_prop('total')) {
                         while (have_posts()) {
                             the_post();
@@ -90,6 +92,8 @@ get_header('shop'); ?>
     </section>
 
 </main>
+<!--/shop-->
+
 <?php
 get_footer('shop');
 ?>

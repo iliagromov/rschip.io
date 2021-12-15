@@ -205,7 +205,7 @@ img {
 }
 
 html {
-  scrollbar-color: #ff3a3a #fff;
+  scrollbar-color: #ff3a3a #000;
   scrollbar-width: thin;
 }
 

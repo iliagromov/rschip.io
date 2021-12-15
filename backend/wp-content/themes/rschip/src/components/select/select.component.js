@@ -494,6 +494,8 @@ function renderSelectBox(currenSelect, selectName, options) {
 
   let selectValue = selectName.slice(0, selectName.indexOf('_'));
   // render name car for productCart
+  
+  let productName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.productName');
   let carName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.carName');
   getCarName = localStorage.getItem(selectName) ? localStorage.getItem(selectName) : false;
   let selectBox = currenSelect.closest('.selectBox');
@@ -509,6 +511,8 @@ function renderSelectBox(currenSelect, selectName, options) {
   }
   if (getCarName && carName && carName.textContent.indexOf(getCarName) == -1) {
     carName.textContent += `${getCarName} `;
+    
+    localStorage.setItem('car-name_'+productName.textContent.trim(), carName.textContent);
   }
 
   function renderBox(name, value, options) {
@@ -603,6 +607,8 @@ function renderSelectBox(currenSelect, selectName, options) {
             renderPerformance();
 
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
+            carName && (localStorage.setItem('car-name_'+productName.textContent.trim(), carName.textContent));
+
             thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             selectBoxAction && thisSelectBox.closest('.selectBox').querySelector('.selectBoxAction').classList.add('Selected')
             thisSelectBox.querySelector('.Modification').classList.add('Selected');

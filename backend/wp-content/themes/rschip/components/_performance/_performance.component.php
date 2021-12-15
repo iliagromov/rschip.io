@@ -8,7 +8,6 @@ if($thisProduct ){
     $productId =  $product->id;
     $productSku = $product->sku;
     $productPrice = $product->get_price_html();
-    $productDataName =  get_field('data_productname');
 }
 
 
@@ -19,7 +18,7 @@ if (!empty($performanceACF)) :
     
 ?>
     <?php if ($performanceACF["isShow"]) : ?>
-        <section class="performance" data-productname="<?php echo $productDataName; ?>">
+        <section class="performance" data-productname="<?php echo $productSku; ?>">
             <div class="wrapper">
                 <h2 class="page__title-h2_small">Сomparison</h2>
                 <h3 class="page__title-h3">Performance figures</h3>
@@ -68,11 +67,11 @@ if (!empty($performanceACF)) :
             </div>
            
             
-            <?php
+                <?php
 
                     if(!empty($thisProduct)) :
                     ?>
-                    <div class="selectBox" data-productname="<?php echo $productDataName; ?>">
+                    <div class="selectBox" data-productname="<?php echo $productSku; ?>">
                         <div class="selectBoxText">Find out how many Horsepowers you can add to your Car</div>
                         <div class="selectBoxContainer">
                             <?php include(TEMPLATEPATH . '/components/select/select.component.php'); ?>

@@ -101,8 +101,12 @@ $productImg = $product->get_image_id();
                     <div class="productSliderAdvantagesItemIcon svg-iconHybrEng svg-iconHybrEng-box"></div>
                     <p>ICE, BEV and hybrid engines</p>
                 </div>
-                <div class="productSliderPrice"> <button class="page__btn">ADD TO BAG</button>
-                    <div class="productPrice__cost">$299</div>
+                <div class="productSliderPrice"> 
+                    <div class="productsItemActionsAddToCartWoocommerce">
+                        <?php do_action('woocommerce_after_shop_loop_item'); ?>
+                        <div class="productPrice__cost"><?php echo $productPrice; ?></div>
+                    </div>
+                    
                 </div>
                 <div class="productSliderText">*Real world gains may be less or more depending on a large number
                     of contributing factors such as displacement, aspiration and selected tuning mode.</div>

@@ -2,9 +2,9 @@
 
 /*
 Theme Name: RsChip 
-Theme URI: http://u1514014.isp.regruhosting.ru/themes/rschip/
+Theme URI: http://rschipperformance.com/themes/rschip/
 Author: @gromov_ilia https://t.me/gromov_ilia
-Author URI: http://u1514014.isp.regruhosting.ru/
+Author URI: http://rschipperformance.com/
 Description: Site Aroma RsChip
 Version: 1.0
 */
@@ -64,8 +64,66 @@ Version: 1.0
 .socialBlockIcons .socialIcons .icon{
     min-width: 26px;
 }
-/* .productsItemCartActionsBtn .added_to_cart {
-    position: absolute;
-    bottom: -28px;
-} */
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment{
+    background: transparent;
+}
 
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order{
+    width: 100%;
+}
+.select2-container--default .select2-selection--single{
+    background: #000;
+    color: #fff;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #fff;
+}
+.select2-search--dropdown,
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-results__option[aria-selected], .select2-results__option[data-selected],
+.select2-container--default .select2-results__option[aria-selected="true"], .select2-container--default .select2-results__option[data-selected="true"]{
+    background: #000;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected]{
+    background: linear-gradient(45deg,#700ED2,#FF3838) border-box
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+    background: #000;
+    color: #fff;
+}
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods{
+    padding: 0;
+    margin-bottom: 11%;
+}
+#add_payment_method #payment div.form-row, .woocommerce-cart #payment div.form-row, .woocommerce-checkout #payment div.form-row{
+    padding: 0;
+}
+.woocommerce table.shop_table th{
+    padding: 0%;
+    padding-bottom: 7%;
+}
+.woocommerce table.shop_table td{
+    padding: 0%;
+    padding-bottom: 7%;
+}
+.woocommerce table.shop_table{
+    margin: 24px -1px 24px 0;
+}
+
+.woocommerce-order-details.cartDetails{
+    margin: 0 auto;
+    width: calc(50.33333% - 46px);
+}
+
+.woocommerce ul.order_details{
+    display: flex;
+    justify-content: center;
+}
+.woocommerce-order p,
+.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received{
+    text-align: center;
+    margin-bottom: 3%;
+}

@@ -208,3 +208,53 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 	} 
 
 	
+/**
+ * Добавляем поле на страницу оформления заказа
+ */
+add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+
+function my_custom_checkout_field( $checkout ) {
+
+    echo '<div id="my_custom_checkout_field"><h2>' . __('Write Selected car') . '</h2>';
+
+    woocommerce_form_field( 'selected_car', array(
+        'type'          => 'text',
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Ex: Rs:Acura CL 500 5.0i Gtr:Acura CL 500 5.0i'),
+        'placeholder'   => __('Write this field'),
+        ), $checkout->get_value( 'selected_car' ));
+
+    echo '</div>';
+
+}
+
+/**
+ * Выполнение формы заказа
+ */
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+
+function my_custom_checkout_field_process() {
+    // Проверяем, заполнено ли поле, если же нет, добавляем ошибку.
+    if ( ! $_POST['selected_car'] )
+        wc_add_notice( __( 'Pleace write field Selected car.' ), 'error' );
+}
+
+/**
+ * Обновляем метаданные заказа со значением поля
+ */
+add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
+
+function my_custom_checkout_field_update_order_meta( $order_id ) {
+    if ( ! empty( $_POST['selected_car'] ) ) {
+        update_post_meta( $order_id, 'My Field', sanitize_text_field( $_POST['selected_car'] ) );
+    }
+}
+
+/**
+ * Выводим значение поля на странице редактирования заказа
+ */
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+
+function my_custom_checkout_field_display_admin_order_meta($order){
+    echo '<p><strong>'.__('Selectrd car').':</strong> ' . get_post_meta( $order->id, 'My Field', true ) . '</p>';
+}

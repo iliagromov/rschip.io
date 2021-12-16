@@ -1,3 +1,71 @@
+/*addToCart*/
+.addToCart
+    &.hidden
+        display: none
+
+.addToCartContainer
+    +size(9)
+    +size-md(7.4)
+
+    display: flex
+    flex-direction: column
+    
+    align-items: center
+    justify-content: space-between
+
+    color: #000000
+    background: #FFFFFF
+
+    padding: 11px 30px
+    border-radius: 15px
+   
+    margin: 0 auto 11px
+    box-sizing: border-box
+    +sm-block
+        flex-direction: row
+        
+    div
+        font-size: 15px
+        line-height: 26px
+
+    .page__btn
+        border-radius: 8px
+        height: 28px
+
+.addToCartPrice
+    font-family: #{$SFUIDisplay}-Bold
+    font-size: 18px
+    line-height: 59px
+/*advantages*/
+.advantages
+    position: relative
+    background: #000
+    width: 100%
+    padding: 13px 16px 50px
+    +sm-block
+        padding: 15px 80px 50px
+    +md-block
+        padding: 84px 0 63px
+
+.advantagesFlexContainer
+    +row-flex
+    justify-content: center
+.advantagesItem 
+    +col
+    +size(9)
+    +size-sm(9/2)
+    +size-md(9/4)
+    display: flex
+    align-items: center
+    margin-bottom: 3%
+    &__text
+        font-family: #{$SFUIText}-Regular
+        font-weight: bold
+        font-size: 15px
+        line-height: 28px
+    &__icon
+        img
+            margin: 0 10px
 .accomplishments
     padding: 60px 0
     position: relative
@@ -85,74 +153,6 @@
     font-size: 15px
     line-height: 26px
     letter-spacing: 0.02em
-/*addToCart*/
-.addToCart
-    &.hidden
-        display: none
-
-.addToCartContainer
-    +size(9)
-    +size-md(7.4)
-
-    display: flex
-    flex-direction: column
-    
-    align-items: center
-    justify-content: space-between
-
-    color: #000000
-    background: #FFFFFF
-
-    padding: 11px 30px
-    border-radius: 15px
-   
-    margin: 0 auto 11px
-    box-sizing: border-box
-    +sm-block
-        flex-direction: row
-        
-    div
-        font-size: 15px
-        line-height: 26px
-
-    .page__btn
-        border-radius: 8px
-        height: 28px
-
-.addToCartPrice
-    font-family: #{$SFUIDisplay}-Bold
-    font-size: 18px
-    line-height: 59px
-/*advantages*/
-.advantages
-    position: relative
-    background: #000
-    width: 100%
-    padding: 13px 16px 50px
-    +sm-block
-        padding: 15px 80px 50px
-    +md-block
-        padding: 84px 0 63px
-
-.advantagesFlexContainer
-    +row-flex
-    justify-content: center
-.advantagesItem 
-    +col
-    +size(9)
-    +size-sm(9/2)
-    +size-md(9/4)
-    display: flex
-    align-items: center
-    margin-bottom: 3%
-    &__text
-        font-family: #{$SFUIText}-Regular
-        font-weight: bold
-        font-size: 15px
-        line-height: 28px
-    &__icon
-        img
-            margin: 0 10px
 .appBlock
     padding: 60px 0 150px
     .page__title-h3
@@ -1366,113 +1366,6 @@
     img
         object-fit: cover
         width: 100%
-/*header*/
-html 
-  &:not([data-scroll='0']) 
-    .header 
-      background: rgba(2, 2, 2, 0.4)
-      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
-    
-.header
-    position: sticky
-    top: 0
-    z-index: 100
-    background: #000
-    height: 0
-    +md-block
-        background: transparent
-    .social
-        +md-block
-            position: absolute
-            bottom: 11%
-
-
-.headerFlexContainer
-    +row-flex()
-    align-items: center
-.headerLogo
-    +col()
-    +size(9)
-    +size-sm(4.5)
-    +size-md(2)
-    +size-lg(2.8)
-    text-align: center
-    padding-top: 28px
-    +sm-block
-        text-align: left
-.headerNav
-    +col()
-    +size(9)
-    +size-sm(4.5)
-    +size-md(7)
-    +size-lg(6.2)
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    justify-content: space-between
-    padding-top: 25px
-    +sm-block
-        justify-content: flex-end
-
-.headerNavLinks
-    margin: 0 9px
-    display: none
-    +md-block
-        display: flex
-
-.headerLink
-    font-family: '#{$SFUIText}-Regular'
-    font-style: normal
-    font-weight: normal
-    font-size: 15px
-    line-height: 100%
-    color: rgba(255, 255, 255, 0.7)
-    text-decoration: none
-    margin: 0 11px
-
-.headerNavCart
-    display: flex
-    align-items: center
-    +sm-block
-        margin-left: 0
-        margin-right: 0
-        
-    &__count
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 20px
-        height: 20px
-        border-radius: 100%
-        font-size: 12px
-        margin-left: 6px
-        font-family: '#{$SFUIText}-Regular'
-        background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) -210%, rgba(255, 56, 57, 0.9) 100%)
-
-.headerNavBtn
-    +col()
-   
-    +sm-block
-        margin-left: 2%
-        
-    +md-block
-        margin-right: 0 !important
-    
-.headerNavBurgerMenu
-    +col()
-    +size(1)
-    margin-right: 0 !important
-    width: 35px
-    height: 22px
-    +md-block
-        display: none
-
-    .line
-        height: 2px
-        width: 32px
-        background: #fff
-        margin-bottom: 8px
-    
 /*howitwork*/
 .howitwork
     padding: 84px 0
@@ -1611,6 +1504,113 @@ html
         padding-right: 0
         +md-block
             padding-right: 40%
+    
+/*header*/
+html 
+  &:not([data-scroll='0']) 
+    .header 
+      background: rgba(2, 2, 2, 0.4)
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
+    
+.header
+    position: sticky
+    top: 0
+    z-index: 100
+    background: #000
+    height: 0
+    +md-block
+        background: transparent
+    .social
+        +md-block
+            position: absolute
+            bottom: 11%
+
+
+.headerFlexContainer
+    +row-flex()
+    align-items: center
+.headerLogo
+    +col()
+    +size(9)
+    +size-sm(4.5)
+    +size-md(2)
+    +size-lg(2.8)
+    text-align: center
+    padding-top: 28px
+    +sm-block
+        text-align: left
+.headerNav
+    +col()
+    +size(9)
+    +size-sm(4.5)
+    +size-md(7)
+    +size-lg(6.2)
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    padding-top: 25px
+    +sm-block
+        justify-content: flex-end
+
+.headerNavLinks
+    margin: 0 9px
+    display: none
+    +md-block
+        display: flex
+
+.headerLink
+    font-family: '#{$SFUIText}-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 100%
+    color: rgba(255, 255, 255, 0.7)
+    text-decoration: none
+    margin: 0 11px
+
+.headerNavCart
+    display: flex
+    align-items: center
+    +sm-block
+        margin-left: 0
+        margin-right: 0
+        
+    &__count
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        font-size: 12px
+        margin-left: 6px
+        font-family: '#{$SFUIText}-Regular'
+        background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) -210%, rgba(255, 56, 57, 0.9) 100%)
+
+.headerNavBtn
+    +col()
+   
+    +sm-block
+        margin-left: 2%
+        
+    +md-block
+        margin-right: 0 !important
+    
+.headerNavBurgerMenu
+    +col()
+    +size(1)
+    margin-right: 0 !important
+    width: 35px
+    height: 22px
+    +md-block
+        display: none
+
+    .line
+        height: 2px
+        width: 32px
+        background: #fff
+        margin-bottom: 8px
     
 /*map*/
 .map
@@ -2763,6 +2763,14 @@ html
     position: relative
     .wrapper
         position: relative
+        
+    .tab-content
+        width: 100%
+
+    .cartShopSelect
+        width: 100%
+
+
 .productsBg
     position: absolute
     top: 11%
@@ -2793,7 +2801,7 @@ html
 
     +md-block
         padding: 74px 28px 46px
-
+    &.is-active,
     &:hover
         // border: 1px solid #FF3838
         background: #111
@@ -3047,7 +3055,11 @@ html
 .productsTabs
     display: flex
     justify-content: center
-    width: 42%
+    flex-wrap: wrap
+    width: 100%
+    +md-block
+        flex-wrap: nowrap
+        width: 42%
 
     margin: 0 auto
 
@@ -3070,8 +3082,20 @@ html
     padding: 0 9.5%
     border-right: 1px solid rgba(255, 255, 255, 0.15)
 
+    // width: 50%
+    .md-block
+        width: auto
     &__text
         white-space: nowrap
+    .productsTabsItem__icon
+        .active
+            display: none
+    &.is-active
+        .productsTabsItem__icon
+            img
+                display: none
+            .active
+                display: block
 
     &:last-child
         border: none

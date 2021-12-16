@@ -2,11 +2,11 @@ function getPowerGain(value, percent, maxIncrease){
     const increase = Math.round((+value / 100) * percent)
     return increase > maxIncrease ? maxIncrease : increase
 }
-
+//FIXME: Optimizate
 function renderPerformance(){
     const performance = document.querySelector('.performance');
     if(performance){
-        let gt = {
+        const gt = {
             hp: {
                 percent: 13,
                 maxIncrease: 33,
@@ -15,7 +15,9 @@ function renderPerformance(){
                 percent: 13,
                 maxIncrease: 46,
             }
-            };
+        };
+
+        
         let productname = performance.dataset.productname;
         let Brand = localStorage.getItem('Brand_'+productname);
         let Model = localStorage.getItem('Model_'+productname);

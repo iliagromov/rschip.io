@@ -62,7 +62,7 @@ $isProductCartBig = $productACF['product_cart_big'];
 ?>
 <!--content-products-->
 <?php if (!$isProductCartBig) : ?>
-	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" class="productsItem productsItemCart">
+	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" class="productsItem productsItemCart ">
 		<?php if ($tags_list) :
 			foreach ($tags_list as $tag) :
 		?>
@@ -79,12 +79,12 @@ $isProductCartBig = $productACF['product_cart_big'];
 			<div class="productsItemGain">
 				<div class="productsItemGain__text">
 					<div class="text">up to</div>
-					<div class="number"><?php echo $productACF['productsItemGain_power'];?></div>
+					<div class="number hp"><?php echo $productACF['productsItemGain_power'];?></div>
 					<div class="text">Power</div>
 				</div>
 				<div class="productsItemGain__text">
 					<div class="text">up to</div>
-					<div class="number"><?php echo $productACF['productsItemGain_torque'];?></div>
+					<div class="number nm"><?php echo $productACF['productsItemGain_torque'];?></div>
 					<div class="text">Torque</div>
 				</div>
 			</div>
@@ -103,7 +103,7 @@ $isProductCartBig = $productACF['product_cart_big'];
 	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" class="productsItem productsItemCart productsItemCart__Big">
 		<div class="productsItemCart__text">
 			<h3 class="productsItemCartTitle"><?php echo $product->name; ?></h3>
-			<p class="productsItemCartTextBefore"> <span>
+			<p class="productsItemCartTextBefore"> <span class="">
 				<?php echo $productACF['productsItemGain_power'];?>
 			</span>Better acceleration</p>
 		</div>

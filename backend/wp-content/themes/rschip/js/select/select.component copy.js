@@ -126,7 +126,6 @@ function renderSelectBox(currenSelect, selectName, options) {
             localStorage.setItem(`HP_${dataProductName}`, dataHp);
             localStorage.setItem(`NM_${dataProductName}`, dataNm);
             renderPerformance();
-            renderGainProductItem();
 
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
             carName && (localStorage.setItem('car-name_'+productName.textContent.trim(), carName.textContent));
@@ -215,20 +214,20 @@ selectBoxes.forEach(selectBox => {
   idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
 
 });
-// let banner = document.querySelector('.banner');
+let banner = document.querySelector('.banner');
 
-// if(banner && banner.length !==0){
-//   document.addEventListener('scroll', function(e){
-//     let y =  window.scrollY;
-//     let clientHeight = banner.clientHeight;
-//     let getBoundingClientRect = banner.getBoundingClientRect();
-//     let bannerPositionBottom = getBoundingClientRect.bottom;
-//     // console.log(getBoundingClientRect);
-//     // console.log(y);
-//     if( y >= bannerPositionBottom){
-//       banner.querySelector('.bannerSelect').classList.add('fixed')
-//     } else {
-//       banner.querySelector('.bannerSelect').classList.remove('fixed')
-//     }
-//   });
-// }
+if(banner && banner.length !==0){
+  document.addEventListener('scroll', function(e){
+    let y =  window.scrollY;
+    let clientHeight = banner.clientHeight;
+    let getBoundingClientRect = banner.getBoundingClientRect();
+    let bannerPositionBottom = getBoundingClientRect.bottom;
+    // console.log(getBoundingClientRect);
+    // console.log(y);
+    if( y >= bannerPositionBottom){
+      banner.querySelector('.bannerSelect').classList.add('fixed')
+    } else {
+      banner.querySelector('.bannerSelect').classList.remove('fixed')
+    }
+  });
+}

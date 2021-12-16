@@ -93,40 +93,57 @@ function renderSelectBox(currenSelect, selectName, options) {
 
         switch (dataSelectName) {
           case 'Brand':
-            localStorage.setItem(`Brand_${dataProductName}`, e.target.value);
-            localStorage.setItem(`Brand_${dataProductName}_id`, dataId);
-            localStorage.removeItem(`Model_${dataProductName}`);
-            localStorage.removeItem(`Model_${dataProductName}_id`);
-            localStorage.removeItem(`Modification_${dataProductName}`);
-            localStorage.removeItem(`Modification_${dataProductName}_id`);
+            
+            state.products[dataProductName].brand.name = e.target.value;
+            state.products[dataProductName].brand.id = dataId;
+
+            state.products[dataProductName].model.name = '';
+            state.products[dataProductName].model.id = '';
+
+            state.products[dataProductName].modifiacation.name = '';
+            state.products[dataProductName].modifiacation.id = '';
+
+            setStorage();
 
             renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
             getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Model_${dataProductName}`);
+
+
+            //добавляем название бренда если это корзина
             carName && (carName.textContent = localStorage.getItem(`Brand_${dataProductName}`));
+
+            // добавляем иконку выбрано и класс
             thisSelectBox.querySelector('.Brands .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             thisSelectBox.querySelector('.Brands').classList.add('Selected');
+            
             break;
 
           case 'Model':
-            localStorage.setItem(`Model_${dataProductName}`, e.target.value);
-            localStorage.setItem(`Model_${dataProductName}_id`, dataId);
+            
+            state.products[dataProductName].model.name = e.target.value;
+            state.products[dataProductName].model.id = dataId;
 
-            localStorage.removeItem(`Modification_${dataProductName}`);
-            localStorage.removeItem(`Modification_${dataProductName}_id`);
+            state.products[dataProductName].modifiacation.name = '';
+            state.products[dataProductName].modifiacation.id = '';
+            setStorage();
 
             getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification_${dataProductName}`);
+            //добавляем название модели  если это корзина
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)}`);
+            
+            // добавляем иконку выбрано и класс
             thisSelectBox.querySelector('.Models .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             thisSelectBox.querySelector('.Models').classList.add('Selected');
             break;
 
           case 'Modification':
-            localStorage.setItem(`Modification_${dataProductName}`, e.target.value);
-            localStorage.setItem(`Modification_${dataProductName}_id`, dataId);
-            localStorage.setItem(`HP_${dataProductName}`, dataHp);
-            localStorage.setItem(`NM_${dataProductName}`, dataNm);
+            
+            state.products[dataProductName].modifiacation.name = e.target.value;
+            state.products[dataProductName].hp = dataHp;
+            state.products[dataProductName].nm = dataNm;
+            setStorage();
+
             renderPerformance();
-            renderGainProductItem();
 
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
             carName && (localStorage.setItem('car-name_'+productName.textContent.trim(), carName.textContent));
@@ -215,20 +232,23 @@ selectBoxes.forEach(selectBox => {
   idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
 
 });
-// let banner = document.querySelector('.banner');
 
-// if(banner && banner.length !==0){
-//   document.addEventListener('scroll', function(e){
-//     let y =  window.scrollY;
-//     let clientHeight = banner.clientHeight;
-//     let getBoundingClientRect = banner.getBoundingClientRect();
-//     let bannerPositionBottom = getBoundingClientRect.bottom;
-//     // console.log(getBoundingClientRect);
-//     // console.log(y);
-//     if( y >= bannerPositionBottom){
-//       banner.querySelector('.bannerSelect').classList.add('fixed')
-//     } else {
-//       banner.querySelector('.bannerSelect').classList.remove('fixed')
-//     }
-//   });
-// }
+
+//закреп 
+let banner = document.querySelector('.banner');
+
+if(banner && banner.length !==0){
+  document.addEventListener('scroll', function(e){
+    let y =  window.scrollY;
+    let clientHeight = banner.clientHeight;
+    let getBoundingClientRect = banner.getBoundingClientRect();
+    let bannerPositionBottom = getBoundingClientRect.bottom;
+    // console.log(getBoundingClientRect);
+    // console.log(y);
+    if( y >= bannerPositionBottom){
+      banner.querySelector('.bannerSelect').classList.add('fixed')
+    } else {
+      banner.querySelector('.bannerSelect').classList.remove('fixed')
+    }
+  });
+}

@@ -50,118 +50,137 @@ section.products.productsCart
         img(src="assets/images/png/shared/imgShopBg.png", alt="imgShopBg")
     h2.page__title-h2.page__title-h2_big shop 
         span.page__title-h2_small.page__title-h2_absolute Get Started
-    
-    .productsTabs
-        .productsTabsItem
-            .productsTabsItem__icon 
-                .svg-iconRS.svg-iconRS-box
-            .productsTabsItem__text RS
+    #tabs.tab-contents
+        .wrapper
+            .productsTabs.tab-nav
+                .productsTabsItem.tab-link.is-active
+                    .productsTabsItem__icon 
+                        img(src="assets/images/svg/iconRS.svg", alt="")
+                        img.active(src="assets/images/svg/iconRS-active.svg", alt="")
+                    .productsTabsItem__text RS
 
-        .productsTabsItem
-            .productsTabsItem__icon 
-                .svg-iconGTRWhite.svg-iconGTRWhite-box
-            .productsTabsItem__text GTR
+                .productsTabsItem.tab-link
+                    .productsTabsItem__icon 
+                        img(src="assets/images/svg/iconGTRWhite.svg", alt="")
+                        img.active(src="assets/images/svg/iconGTR-active.svg", alt="")
+                    .productsTabsItem__text GTR
 
-        .productsTabsItem
-            .productsTabsItem__icon 
-                .svg-iconRSResponse.svg-iconRSResponse-box
-            .productsTabsItem__text RS response
-    
-    include ../select/selectBox.mixin.pug
-    +selectBox() 
+                .productsTabsItem.tab-link
+                    .productsTabsItem__icon 
+                        img(src="assets/images/svg/iconRSResponse.svg", alt="")
+                        img.active(src="assets/images/svg/iconRSResponse-active.svg", alt="")
+                    .productsTabsItem__text RS response
+            .tab-content.is-active
+                .cartShopSelect
+                    .selectBox.selectBoxCart(data-productname="Rs")
+                        .selectBoxText Select for Rs
+                        .selectBoxContainer
+                            include ../select/select.component.pug
+            .tab-content
+                .cartShopSelect
+                    .selectBox.selectBoxCart(data-productname="Gtr")
+                        .selectBoxText Select for Gtr
+                        .selectBoxContainer
+                            include ../select/select.component.pug
+            .tab-content
+                .cartShopSelect
+                    .selectBox.selectBoxCart(data-productname="Chip")
+                        .selectBoxText Select for Chip
+                        .selectBoxContainer
+                            include ../select/select.component.pug
 
-    .wrapper
-        .productsFlexContainer
-            
-            .productsItem.productsItemCart
-                .productsItemCartLabel BEST SELLER
-                h3.productsItemCartTitle RS
-                p.productsItemCartTextBefore Engine tuning on your smartphone with free IOS/Android apps
-                img.productsItemCartImg(src="assets/images/png/products/productCart1.png", alt="product")
+        .wrapper
+            .productsFlexContainer
+                
+                .productsItem.productsItemCart.is-active(data-sku="Rs" )
+                    .productsItemCartLabel BEST SELLER
+                    h3.productsItemCartTitle RS
+                    p.productsItemCartTextBefore Engine tuning on your smartphone with free IOS/Android apps
+                    img.productsItemCartImg(src="assets/images/png/products/productCart1.png", alt="product")
 
-            
-                .productsItemCartGain
-                    .productsItemGain
-                        .productsItemGain__text
-                            div.text up to
-                            div.number 10%
-                            div.text Power
-                        .productsItemGain__text
-                            div.text up to
-                            div.number 10%
-                            div.text Torque
-                    ul 
-                        li ICE end hybrid engiens 
-                        li iOS, Android apps 
-                        li 18%* fuel saving 
-                        li 3 driving modes
+                
+                    .productsItemCartGain
+                        .productsItemGain
+                            .productsItemGain__text
+                                div.text up to
+                                div.hp 10%
+                                div.text Power
+                            .productsItemGain__text
+                                div.text up to
+                                div.nm 10%
+                                div.text Torque
+                        ul 
+                            li ICE end hybrid engiens 
+                            li iOS, Android apps 
+                            li 18%* fuel saving 
+                            li 3 driving modes
 
-                .productsItemCartActions
-                    .productPrice $229
-                    button.page__btn.page__btn_notTransparent ADD TO BAG
+                    .productsItemCartActions
+                        .productPrice $229
+                        button.page__btn.page__btn_notTransparent ADD TO BAG
 
-            .productsItem.productsItemCart
-                h3.productsItemCartTitle Gtr
-                p.productsItemCartTextBefore Tune your engine and dispaly car readings on 3.5 inch touch screen
-                img.productsItemCartImg(src="assets/images/png/products/productCart2.png", alt="product")
+                .productsItem.productsItemCart(data-sku="Gtr")
+                    h3.productsItemCartTitle Gtr
+                    p.productsItemCartTextBefore Tune your engine and dispaly car readings on 3.5 inch touch screen
+                    img.productsItemCartImg(src="assets/images/png/products/productCart2.png", alt="product")
 
-            
-                .productsItemCartGain
-                    .productsItemGain
-                        .productsItemGain__text
-                            div.text up to
-                            div.number 10%
-                            div.text Power
-                        .productsItemGain__text
-                            div.text up to
-                            div.number 10%
-                            div.text Torque
-                    ul 
-                        li ICE end hybrid engiens 
-                        li PC programmer 
-                        li 18%* fuel saving 
-                        li 6 driving modes 
+                
+                    .productsItemCartGain
+                        .productsItemGain
+                            .productsItemGain__text
+                                div.text up to
+                                div.hp 10%
+                                div.text Power
+                            .productsItemGain__text
+                                div.text up to
+                                div.nm 10%
+                                div.text Torque
+                        ul 
+                            li ICE end hybrid engiens 
+                            li PC programmer 
+                            li 18%* fuel saving 
+                            li 6 driving modes 
 
-                .productsItemCartActions
-                    .productPrice $369
-                    button.page__btn.page__btn_notTransparent ADD TO BAG
-                    
-            .productsItem.productsItemCart.productsItemCart__Big
-                .productsItemCart__text
-                    h3.productsItemCartTitle RS RESPONSE gas pedal tuning
-                    p.productsItemCartTextBefore 
-                        span +10%
-                        | Better acceleration
+                    .productsItemCartActions
+                        .productPrice $369
+                        button.page__btn.page__btn_notTransparent ADD TO BAG
+                        
+                .productsItem.productsItemCart.productsItemCart__Big(data-sku="Chip")
+                    .productsItemCart__text
+                        h3.productsItemCartTitle RS RESPONSE gas pedal tuning
+                        p.productsItemCartTextBefore 
+                            span.nm +10%
+                            | Better acceleration
 
-                .productsItemCart__img
-                    img.productsItemCartImg(src="assets/images/png/products/productCart3.png", alt="product")
-                .productsCartAdvatages
-                    .productsCartAdvatagesItem 
-                        .productsCartAdvatagesItem__icon
-                            .svg-iconSpeedometerGray.svg-iconSpeedometerGray-box 
-                        .productsCartAdvatagesItem__text
-                            h5.productsCartAdvatagesItem__title Compatiable with all modern cars
-                            p Electronic throttle controller works with ICE. BEV and hybridengines
-                    .productsCartAdvatagesItem 
-                        .productsCartAdvatagesItem__icon
-                            .svg-iconFuelGray.svg-iconFuelGray-box 
-                        .productsCartAdvatagesItem__text
-                            h5.productsCartAdvatagesItem__title Better throttle response
-                            p Save 10-18%* More fuel on Eco mode
-                    .productsCartAdvatagesItem 
-                        .productsCartAdvatagesItem__icon
-                            .svg-iconFuelGray.svg-iconFuelGray-box 
-                        .productsCartAdvatagesItem__text
-                            h5.productsCartAdvatagesItem__title 5 driving stages
-                            p Free Companion app with an access to our tuning database
-                    .productsCartAdvatagesItem 
-                        .productsCartAdvatagesItem__icon
-                            .svg-iconCPU.svg-iconCPU-box 
-                        .productsCartAdvatagesItem__text
-                            h5.productsCartAdvatagesItem__title Back CPU for the safest ride
-                            p Change your vehicle and tune right from the phone anytime
+                    .productsItemCart__img
+                        img.productsItemCartImg(src="assets/images/png/products/productCart3.png", alt="product")
+                    .productsCartAdvatages
+                        .productsCartAdvatagesItem 
+                            .productsCartAdvatagesItem__icon
+                                .svg-iconSpeedometerGray.svg-iconSpeedometerGray-box 
+                            .productsCartAdvatagesItem__text
+                                h5.productsCartAdvatagesItem__title Compatiable with all modern cars
+                                p Electronic throttle controller works with ICE. BEV and hybridengines
+                        .productsCartAdvatagesItem 
+                            .productsCartAdvatagesItem__icon
+                                .svg-iconFuelGray.svg-iconFuelGray-box 
+                            .productsCartAdvatagesItem__text
+                                h5.productsCartAdvatagesItem__title Better throttle response
+                                p Save 10-18%* More fuel on Eco mode
+                        .productsCartAdvatagesItem 
+                            .productsCartAdvatagesItem__icon
+                                .svg-iconFuelGray.svg-iconFuelGray-box 
+                            .productsCartAdvatagesItem__text
+                                h5.productsCartAdvatagesItem__title 5 driving stages
+                                p Free Companion app with an access to our tuning database
+                        .productsCartAdvatagesItem 
+                            .productsCartAdvatagesItem__icon
+                                .svg-iconCPU.svg-iconCPU-box 
+                            .productsCartAdvatagesItem__text
+                                h5.productsCartAdvatagesItem__title Back CPU for the safest ride
+                                p Change your vehicle and tune right from the phone anytime
 
 
-                .productsItemCartActions
-                    .productPrice $369
-                    button.page__btn.page__btn_notTransparent ADD TO BAG
+                    .productsItemCartActions
+                        .productPrice $369
+                        button.page__btn.page__btn_notTransparent ADD TO BAG

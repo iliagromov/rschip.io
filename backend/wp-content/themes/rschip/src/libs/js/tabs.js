@@ -15,6 +15,7 @@ function tab () {
         if(el) {
             var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
             var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
+            var tabItems = el.querySelectorAll(options.tabItems);
             var activeIndex = 0;
             var initCalled = false;
        
@@ -64,6 +65,10 @@ function tab () {
                 tabNavigationLinks[index].classList.add('is-active');
                 tabContentContainers[activeIndex] ? tabContentContainers[activeIndex].classList.remove('is-active') : undefined;
                 tabContentContainers[index] ? tabContentContainers[index].classList.add('is-active') : undefined;
+                
+                tabItems[activeIndex] ? tabItems[activeIndex].classList.remove('is-active') : undefined;
+                tabItems[index] ? tabItems[index].classList.add('is-active') : undefined;
+                
                 activeIndex = index;
             }
         };
@@ -105,7 +110,8 @@ setTimeout(()=>{
     var myTabs = tabs({
         el: '#tabs',
         tabNavigationLinks: '.tab-link',
-        tabContentContainers: '.tab-content'
+        tabContentContainers: '.tab-content',
+        tabItems: '.productsItem'
     });
     if(myTabs){
         myTabs.init();
@@ -115,3 +121,10 @@ setTimeout(()=>{
 
 // // Initialise Set 2 
 // myTabs2.init();
+setTimeout(()=>{
+    let productsItem = document.querySelector('.productsItem');
+    if(productsItem){
+        productsItem.classList.add('is-active')
+    }
+}, 100);
+

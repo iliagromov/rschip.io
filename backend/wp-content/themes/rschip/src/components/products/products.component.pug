@@ -7,23 +7,25 @@ section.products
     .wrapper
         .productsFlexContainer
             +item([
-                {
+                {   
+                    "sku" : "default",
                     "title":"Performance Tuning",
                     "textBefore":"Engine tuning on your smartphone with free IOS/Android apps",
                     "imgSrc":"assets/images/png/products/product1.png",
                     "productsItemGains": [
-                        {"number": "+20%", "text": "Power"}, 
-                        {"number": "+20%", "text": "Torque"}
+                        {"number": "+20%", "text": "Power", "class": "hp"}, 
+                        {"number": "+20%", "text": "Torque", "class": "nm"}
                     ],
                     "textAfter":"Comaptibility : ICE and hybrids engines",
                     "textBtn":"USD 249"
                 },
                 {
+                    "sku": "default",
                     "title":"Gas Pedal Tuning",
                     "textBefore":"Improve your acceleration, and customize your driving dynamic",
                     "imgSrc":"assets/images/png/products/product2.png",
                     "productsItemGains": [
-                        {"number": "+10%", "text": "Faster Acceleration"}
+                        {"number": "+10%", "text": "Faster Acceleration", "class": "hp"}
                     ],
                     "textAfter":"Comaptibility : ICE and hybrids engines",
                     "textBtn":"USD 249"

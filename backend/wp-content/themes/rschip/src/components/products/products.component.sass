@@ -24,6 +24,14 @@
     position: relative
     .wrapper
         position: relative
+        
+    .tab-content
+        width: 100%
+
+    .cartShopSelect
+        width: 100%
+
+
 .productsBg
     position: absolute
     top: 11%
@@ -54,7 +62,7 @@
 
     +md-block
         padding: 74px 28px 46px
-
+    &.is-active,
     &:hover
         // border: 1px solid #FF3838
         background: #111
@@ -308,7 +316,11 @@
 .productsTabs
     display: flex
     justify-content: center
-    width: 42%
+    flex-wrap: wrap
+    width: 100%
+    +md-block
+        flex-wrap: nowrap
+        width: 42%
 
     margin: 0 auto
 
@@ -331,8 +343,20 @@
     padding: 0 9.5%
     border-right: 1px solid rgba(255, 255, 255, 0.15)
 
+    // width: 50%
+    .md-block
+        width: auto
     &__text
         white-space: nowrap
+    .productsTabsItem__icon
+        .active
+            display: none
+    &.is-active
+        .productsTabsItem__icon
+            img
+                display: none
+            .active
+                display: block
 
     &:last-child
         border: none

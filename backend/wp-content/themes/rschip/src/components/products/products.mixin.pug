@@ -12,7 +12,7 @@
     },
 mixin item(items)
     each item in items
-        .productsItem
+        .productsItem(data-sku=item.sku)
             h3.productsItemTitle=item.title
             p.productsItemTextBefore=item.textBefore
             img.productsItemImg(src=item.imgSrc, alt="product")
@@ -22,7 +22,7 @@ mixin item(items)
                 each gain in item.productsItemGains
                     .productsItemGain__text
                         div.text up to
-                        div.number=gain.number
+                        div.number(class=gain.class)=gain.number
                         div.text=gain.text
 
             

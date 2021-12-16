@@ -920,7 +920,6 @@
 /*chat*/
 
 .chat {
-  display: none;
   position: fixed;
   right: 60px;
   bottom: 60px;
@@ -991,6 +990,9 @@
   line-height: 26px;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
+  text-align: center;
+  z-index: 100;
+  display: none;
 }
 
 .chatContainer .email {
@@ -1005,11 +1007,13 @@
   -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+  display: block;
 }
 
 .chatItems {
   width: 50%;
   margin: 0 auto 30px;
+  text-align: left;
 }
 
 .chatItem {
@@ -3862,9 +3866,14 @@ html:not([data-scroll='0']) .header {
   border: none;
 }
 
+.cartShopSelect {
+  margin: 3% 0;
+}
+
 /*select*/
 
 .selectBox {
+  position: relative;
   width: 100%;
 }
 
@@ -4775,6 +4784,21 @@ html:not([data-scroll='0']) .header {
   background-image: linear-gradient(to right, #FF4587, #FF5438);
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.page__link {
+  font-family: SFUIText-Regular;
+  color: transparent;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FF4587), to(#FF5438));
+  background-image: linear-gradient(to right, #FF4587, #FF5438);
+  -webkit-background-clip: text;
+  background-clip: text;
+  border: none;
 }
 
 /* __page__ */

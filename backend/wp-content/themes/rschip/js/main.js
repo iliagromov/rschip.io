@@ -10,22 +10,24 @@ if (selectedCar) {
 
 const cartTotalsBtn = document.getElementById('cartTotalsBtn');
 
-cartTotalsBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    let isSelect = false;
-
-    document.querySelectorAll('.selectBox').forEach(item => {
-        if (!item.classList.contains('Selected')) {
-            item.classList.add('noSelected');
-            isSelect = false;
-        } else {
-            item.classList.remove('noSelected');
-            isSelect = true;
+if(cartTotalsBtn){
+    cartTotalsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let isSelect = false;
+    
+        document.querySelectorAll('.selectBox').forEach(item => {
+            if (!item.classList.contains('Selected')) {
+                item.classList.add('noSelected');
+                isSelect = false;
+            } else {
+                item.classList.remove('noSelected');
+                isSelect = true;
+            }
+        });
+    
+        if (isSelect) {
+            window.location = e.target.href;
         }
+    
     });
-
-    if (isSelect) {
-        window.location = e.target.href;
-    }
-
-});
+}

@@ -47,6 +47,22 @@ get_header('shop');
             </div>
         </div>
 
+        <div class="cartShopSelect">
+            <div class="selectBox selectBoxCart" data-productname="<?php echo $_product->sku;?>">
+                <div class="selectBoxContainer">
+                    <div class="select Brands">
+                        <div class="select-box"></div>
+                    </div>
+                    <div class="select Models">
+                        <div class="select-box"> </div>
+                    </div>
+                    <div class="select Modification">
+                        <div class="select-box"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="wrapper">
             <div class="productsFlexContainer">
                 <?php if (woocommerce_product_loop()) {

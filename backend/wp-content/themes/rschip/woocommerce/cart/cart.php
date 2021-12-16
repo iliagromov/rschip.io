@@ -167,11 +167,16 @@ do_action('woocommerce_before_cart');
                     <!-- <input type="text" placeholder="EVQQ-LIJ1-DASJ-12KF">
                     <p>Apply</p> -->
 
-                    <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e('EVQQ-LIJ1-DASJ-12KF', 'woocommerce');?>" />
-                    <button type="submit" class="page__link" name="apply_coupon" value="<?php esc_attr_e('Apply coupon', 'woocommerce');?>">
-                        <?php esc_attr_e('Apply', 'woocommerce'); ?>
-                    </button>
-                    <?php do_action('woocommerce_cart_coupon'); ?>
+                    <?php if ( wc_coupons_enabled() ) { ?>
+						<div class="coupon">
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" pattern="[a-z]{1}" placeholder="<?php esc_attr_e( 'EVQQ-LIJ1-DASJ-12KF', 'woocommerce' ); ?>" /> 
+                            <button type="submit" class=" page__link" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">
+                                <?php esc_attr_e( 'Apply', 'woocommerce' ); ?>
+                            </button>
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+						</div>
+					<?php } ?>
+
                 </div>
             <?php endif; ?>
 

@@ -744,7 +744,7 @@
 
 /*chat*/
 .chat
-    display: none
+    // display: none
     position: fixed
     right: 60px
     bottom: 60px
@@ -792,6 +792,10 @@
     font-size: 15px
     line-height: 26px
     transition: opacity .5s ease
+    text-align: center
+    z-index: 100
+    display: none
+
     .email
         color: #000
     .phone
@@ -799,10 +803,12 @@
     &.active
         transform: scale(1)
         opacity: 1
+        display: block
         
 .chatItems
     width: 50%
     margin: 0 auto 30px
+    text-align: left
 .chatItem
     display: flex
     align-items: center
@@ -3070,8 +3076,11 @@ html
     &:last-child
         border: none
 
+.cartShopSelect
+    margin: 3% 0
 /*select*/
 .selectBox
+    position: relative
     width: 100%
     &.noSelected
         .selectBoxContainer

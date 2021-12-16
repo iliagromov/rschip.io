@@ -191,6 +191,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
 <script src="js/chat/chat.component.js"></script>
 <script src="js/debuggrid/debuggrid.component.js"></script>
 <script src="js/main.js"></script>
+<script src="js/ajax-add-to-cart.js"></script>
 <script src="js/faq/faq.component.js"></script>
 <script src="js/modals/modalGallary.component.js"></script>
 <script src="js/modals/modalNews.component.js"></script>

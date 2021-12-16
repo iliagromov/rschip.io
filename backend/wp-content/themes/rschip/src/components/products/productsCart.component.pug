@@ -50,6 +50,7 @@ section.products.productsCart
         img(src="assets/images/png/shared/imgShopBg.png", alt="imgShopBg")
     h2.page__title-h2.page__title-h2_big shop 
         span.page__title-h2_small.page__title-h2_absolute Get Started
+    
     .productsTabs
         .productsTabsItem
             .productsTabsItem__icon 
@@ -66,6 +67,8 @@ section.products.productsCart
                 .svg-iconRSResponse.svg-iconRSResponse-box
             .productsTabsItem__text RS response
     
+    include ../select/selectBox.mixin.pug
+    +selectBox() 
 
     .wrapper
         .productsFlexContainer

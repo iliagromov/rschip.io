@@ -1,3 +1,30 @@
+const gt = {
+    hp: {
+        percent: 10,
+        maxIncrease: 25,
+      },
+    nm: {
+    percent: 13,
+    maxIncrease: 47,
+    },
+};
+
+const gtr = {
+    hp: {
+        percent: 13,
+        maxIncrease: 33,
+    },
+    nm: {
+        percent: 13,
+        maxIncrease: 46,
+    }
+}
+
+function getPowerGain(value, percent, maxIncrease){
+    const increase = Math.round((parseInt(value) / 100) * percent)
+    return increase > maxIncrease ? maxIncrease : increase
+}
+
 const selectedCar = document.getElementById('selected_car');
 
 if (selectedCar) {

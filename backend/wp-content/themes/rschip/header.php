@@ -66,7 +66,7 @@ wp_reset_postdata(); ?>
             <div class="headerFlexContainer">
                 <div class="headerLogo">
                     <a href="/">
-                        <img src="assets/images/svg/logoWhite.svg" alt="logo">
+                        <img src="assets/images/svg/logo.svg" alt="logo">
                     </a>
                 </div>
 

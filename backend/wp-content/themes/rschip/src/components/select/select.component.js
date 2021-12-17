@@ -102,6 +102,8 @@ function renderSelectBox(currenSelect, selectName, options) {
 
             renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
             getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Model_${dataProductName}`);
+            clearGainProductItem();
+            
             carName && (carName.textContent = localStorage.getItem(`Brand_${dataProductName}`));
             thisSelectBox.querySelector('.Brands .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             thisSelectBox.querySelector('.Brands').classList.add('Selected');
@@ -115,6 +117,8 @@ function renderSelectBox(currenSelect, selectName, options) {
             localStorage.removeItem(`Modification_${dataProductName}_id`);
 
             getResponse(`${modificationsApiUrl}${dataId}`, modificationBox, `Modification_${dataProductName}`);
+            clearGainProductItem();
+
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)}`);
             thisSelectBox.querySelector('.Models .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             thisSelectBox.querySelector('.Models').classList.add('Selected');

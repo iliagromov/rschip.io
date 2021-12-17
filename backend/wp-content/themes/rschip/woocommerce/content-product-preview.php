@@ -34,7 +34,7 @@ $productPreview = $productACF['products_preview'];
 
 ?>
 <!--content-products-preview-->
-<div class="productsItem">
+<div class="productsItem" id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" >
 	<h3 class="productsItemTitle"><?php echo $productPreview['title']; ?></h3>
 	<p class="productsItemTextBefore"><?php echo $product->get_short_description(); ?></p>
 	<?php if ($product->get_image_id()) {

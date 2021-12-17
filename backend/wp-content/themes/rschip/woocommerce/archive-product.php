@@ -28,58 +28,41 @@ get_header('shop');
         <h2 class="page__title-h2 page__title-h2_big">shop <span class="page__title-h2_small page__title-h2_absolute">Get Started</span></h2>
         <div class="tab-contents" id="tabs">
             <div class="wrapper">
-                
-                    <div class="productsTabs tab-nav">
-                        <div class="productsTabsItem tab-link is-active">
-                            <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconGTRWhite.svg"
-                                    alt=""><img class="active" src="assets/images/svg/iconGTR-active.svg" alt=""></div>
-                            <div class="productsTabsItem__text">GTR</div>
+                <div class="productsTabs tab-nav">
+                    <div class="productsTabsItem tab-link is-active">
+                        <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconRS.svg" alt=""><img
+                                class="active" src="assets/images/svg/iconRS-active.svg" alt=""></div>
+                        <div class="productsTabsItem__text">RS</div>
+                    </div>
+                    <div class="productsTabsItem tab-link">
+                        <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconGTRWhite.svg"
+                                alt=""><img class="active" src="assets/images/svg/iconGTR-active.svg" alt=""></div>
+                        <div class="productsTabsItem__text">GTR</div>
+                    </div>
+                    <div class="productsTabsItem tab-link">
+                        <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconRSResponse.svg"
+                                alt=""><img class="active" src="assets/images/svg/iconRSResponse-active.svg" alt="">
                         </div>
-                        <div class="productsTabsItem tab-link">
-                            <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconRS.svg" alt=""><img
-                                    class="active" src="assets/images/svg/iconRS-active.svg" alt=""></div>
-                            <div class="productsTabsItem__text">RS</div>
-                        </div>
-                       
-                        <div class="productsTabsItem tab-link">
-                            <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconRSResponse.svg"
-                                    alt=""><img class="active" src="assets/images/svg/iconRSResponse-active.svg" alt="">
+                        <div class="productsTabsItem__text">RS response</div>
+                    </div>
+                </div>
+                <div class="cartShopSelect">
+                    <div class="selectBox selectBoxCart" data-productname="default">
+                        <div class="selectBoxContainer">
+                            <div class="select Brands">
+                                <div class="select-box"></div>
                             </div>
-                            <div class="productsTabsItem__text">RS response</div>
+                            <div class="select Models">
+                                <div class="select-box"> </div>
+                            </div>
+                            <div class="select Modification">
+                                <div class="select-box"> </div>
+                            </div>
                         </div>
                     </div>
-                    <?php 
-                    
-                    $i = 0;
-                    if (wc_get_loop_prop('total')) :
-                        while (have_posts()) :
-                            the_post();
-                        ?>
-                        <div class="tab-content <?php echo $i == 0 ? 'is-active' : ''; ?>">
-                            <div class="cartShopSelect">
-                                <div class="selectBox selectBoxCart" data-productname="<?php echo $product->sku;?>">
-                                    <div class="selectBoxText">Select for <?php echo $product->name;?></div>
-                                    <div class="selectBoxContainer">
-                                        <div class="select Brands">
-                                            <div class="select-box"></div>
-                                        </div>
-                                        <div class="select Models">
-                                            <div class="select-box"> </div>
-                                        </div>
-                                        <div class="select Modification">
-                                            <div class="select-box"> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php   
-                    $i++;
-                    endwhile;
-                            endif;?>
-                    
-                   
+                </div>
             </div>
+           
             <div class="wrapper">
                 <div class="productsFlexContainer">
                     <?php if (woocommerce_product_loop()) {

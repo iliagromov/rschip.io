@@ -152,6 +152,21 @@ $isProductCartBig = $productACF['product_cart_big'];
 				</div>
 			</div>
 		</div>
+		<div class="cartShopSelect">
+			<div class="selectBox selectBoxCart" data-productname="<?php echo $product->sku; ?>">
+				<div class="selectBoxContainer">
+					<div class="select Brands">
+						<div class="select-box"></div>
+					</div>
+					<div class="select Models">
+						<div class="select-box"> </div>
+					</div>
+					<div class="select Modification">
+						<div class="select-box"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="productsItemCartActions">
 			<div class="productPrice"><?php echo $product->get_price_html(); ?></div>
 			<div class="productsItemActionsAddToCartWoocommerce">

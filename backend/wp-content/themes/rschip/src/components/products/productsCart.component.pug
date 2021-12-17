@@ -70,29 +70,17 @@ section.products.productsCart
                         img(src="assets/images/svg/iconRSResponse.svg", alt="")
                         img.active(src="assets/images/svg/iconRSResponse-active.svg", alt="")
                     .productsTabsItem__text RS response
-            .tab-content.is-active
-                .cartShopSelect
-                    .selectBox.selectBoxCart(data-productname="Rs")
-                        .selectBoxText Select for Rs
-                        .selectBoxContainer
-                            include ../select/select.component.pug
-            .tab-content
-                .cartShopSelect
-                    .selectBox.selectBoxCart(data-productname="Gtr")
-                        .selectBoxText Select for Gtr
-                        .selectBoxContainer
-                            include ../select/select.component.pug
-            .tab-content
-                .cartShopSelect
-                    .selectBox.selectBoxCart(data-productname="Chip")
-                        .selectBoxText Select for Chip
-                        .selectBoxContainer
-                            include ../select/select.component.pug
+
+            .cartShopSelect
+                .selectBox.selectBoxCart(data-productname="default")
+                    .selectBoxContainer
+                        include ../select/select.component.pug
+                
 
         .wrapper
             .productsFlexContainer
                 
-                .productsItem.productsItemCart.is-active(data-sku="Rs" )
+                .productsItem.productsItemCart.is-active(data-sku="Rs")
                     .productsItemCartLabel BEST SELLER
                     h3.productsItemCartTitle RS
                     p.productsItemCartTextBefore Engine tuning on your smartphone with free IOS/Android apps
@@ -103,11 +91,11 @@ section.products.productsCart
                         .productsItemGain
                             .productsItemGain__text
                                 div.text up to
-                                div.hp 10%
+                                div.number.hp 10%
                                 div.text Power
                             .productsItemGain__text
                                 div.text up to
-                                div.nm 10%
+                                div.number.nm 10%
                                 div.text Torque
                         ul 
                             li ICE end hybrid engiens 
@@ -129,11 +117,11 @@ section.products.productsCart
                         .productsItemGain
                             .productsItemGain__text
                                 div.text up to
-                                div.hp 10%
+                                div.number.hp 10%
                                 div.text Power
                             .productsItemGain__text
                                 div.text up to
-                                div.nm 10%
+                                div.number.nm 10%
                                 div.text Torque
                         ul 
                             li ICE end hybrid engiens 
@@ -179,7 +167,11 @@ section.products.productsCart
                             .productsCartAdvatagesItem__text
                                 h5.productsCartAdvatagesItem__title Back CPU for the safest ride
                                 p Change your vehicle and tune right from the phone anytime
-
+                    
+                    .cartShopSelect
+                        .selectBox.selectBoxCart(data-productname="Chip")
+                            .selectBoxContainer
+                                include ../select/select.component.pug
 
                     .productsItemCartActions
                         .productPrice $369

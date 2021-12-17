@@ -58,11 +58,12 @@ $tags_list = get_the_terms($product->id, 'product_tag');
 $productACF = get_fields();
 
 $isProductCartBig = $productACF['product_cart_big'];
+$productGain = $productACF['data_product_gain'];
 
 ?>
 <!--content-products-->
 <?php if (!$isProductCartBig) : ?>
-	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" class="productsItem productsItemCart ">
+	<div id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" data-productgain="<?php echo $productGain; ?>" class="productsItem productsItemCart ">
 		<?php if ($tags_list) :
 			foreach ($tags_list as $tag) :
 		?>

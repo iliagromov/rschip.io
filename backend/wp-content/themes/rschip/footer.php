@@ -158,24 +158,27 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
     </section>
 </footer>
 <section class="chat">
-    <div class="btnChat">
-        <div class="iconChat svg-iconChat svg-iconChat-box"></div>
-    </div>
-    <div class="chatContainer">
-        <div class="chatBtnClose">x</div>
-        <h3 class="chatTitle"> <span class="page_red">Chat </span>with us</h3>
-        <div class="chatItems">
-            <div class="chatItem"><i class="icon svg-iconEmailGray svg-iconEmailGray-box"></i><a class="email" href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a></div>
-            <div class="chatItem"><i class="icon svg-iconPhoneGray svg-iconPhoneGray-box"></i><a class="phone" href="tel:+1 800 796 16 17">+1 800 796 16 17</a></div>
-            <div class="chatItem"><i class="icon svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
-                <address>Monte Little Rock, AR USA 72114 Monday-Friday 9AM - 4PM CST </address>
-            </div>
-            <div class="chatItem"><i class="icon svg-iconChatGray svg-iconChatGray-box"></i>
-                <p>Online chat support 24/7</p>
-            </div>
-        </div><a class="chatBtn page__btn page__btn_notTransparent" href="javascript:void(0)">CHAT VIA FACEBOOK</a>
-    </div>
-</section>
+        <div class="btnChat">
+            <div class="iconChat svg-iconChat svg-iconChat-box"></div>
+        </div>
+        <div class="chatContainer">
+            <div class="chatBtnClose"> </div>
+            <h3 class="chatTitle"> <span class="page_red">Chat </span>with us</h3>
+            <div class="chatItems">
+                <div class="chatItem"><i class="icon svg-iconEmailGray svg-iconEmailGray-box"></i><a class="email"
+                        href="mailto:rschiphelp@gmail.com">rschiphelp@gmail.com</a></div>
+                <div class="chatItem"><i class="icon svg-iconPhoneGray svg-iconPhoneGray-box"></i><a class="phone"
+                        href="tel:+1 800 796 16 17">+1 800 796 16 17</a></div>
+                <div class="chatItem"><i class="icon svg-iconMarkLocationGray svg-iconMarkLocationGray-box"></i>
+                    <address>Monte Little Rock, AR USA 72114 Monday-Friday 9AM - 4PM CST </address>
+                </div>
+                <div class="chatItem"><i class="icon svg-iconChatGray svg-iconChatGray-box"></i>
+                    <p>Online chat support 24/7</p>
+                </div>
+            </div><a class="chatBtn page__btn page__btn_notTransparent"
+                href="https://www.facebook.com/rschipchiptuningusa/" target="_blank">CHAT VIA FACEBOOK</a>
+        </div>
+    </section>
 
 
 <div class="overlay js-overlay-modal"></div>

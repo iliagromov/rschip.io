@@ -31,10 +31,11 @@ if (empty($product) || !$product->is_visible()) {
 $tags_list = get_the_terms($product->id, 'product_tag');
 $productACF = get_fields();
 $productPreview = $productACF['products_preview'];
-
+$productGain = $productACF['data_product_gain'];
+// echo $productGain;
 ?>
 <!--content-products-preview-->
-<div class="productsItem" id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" >
+<div class="productsItem" id="<?php echo $product->id; ?>" data-sku="<?php echo $product->sku; ?>" data-productgain="<?php echo $productGain; ?>">
 	<h3 class="productsItemTitle"><?php echo $productPreview['title']; ?></h3>
 	<p class="productsItemTextBefore"><?php echo $product->get_short_description(); ?></p>
 	<?php if ($product->get_image_id()) {
@@ -45,12 +46,12 @@ $productPreview = $productACF['products_preview'];
 	<div class="productsItemGain">
 		<div class="productsItemGain__text">
 			<div class="text">up to</div>
-			<div class="number"><?php echo $productACF['productsItemGain_power'];?></div>
+			<div class="number hp"><?php echo $productACF['productsItemGain_power'];?></div>
 			<div class="text">Power</div>
 		</div>
 		<div class="productsItemGain__text">
 			<div class="text">up to</div>
-			<div class="number"><?php echo $productACF['productsItemGain_torque'];?></div>
+			<div class="number nm"><?php echo $productACF['productsItemGain_torque'];?></div>
 			<div class="text">Torque</div>
 		</div>
 	</div>

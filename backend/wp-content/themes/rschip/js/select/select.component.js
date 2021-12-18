@@ -13,17 +13,17 @@ function renderSelectBox(currenSelect, selectName, options) {
 
   let selectValue = selectName.slice(0, selectName.indexOf('_'));
   // render name car for productCart
-  
+
   let productName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.productName');
   let carName = currenSelect.closest('.cartProduct') && currenSelect.closest('.cartProduct').querySelector('.carName');
   getCarName = localStorage.getItem(selectName) ? localStorage.getItem(selectName) : false;
   let selectBox = currenSelect.closest('.selectBox');
-  if( localStorage.getItem(selectName) ){
+  if (localStorage.getItem(selectName)) {
     currenSelect.classList.add('Selected');
   } else {
     currenSelect.classList.remove('Selected');
   }
-  if(selectBox.querySelector('.Modification').classList.contains('Selected')){
+  if (selectBox.querySelector('.Modification').classList.contains('Selected')) {
     selectBox.querySelector('.selectBoxAction') && selectBox.querySelector('.selectBoxAction').classList.add('Selected')
     selectBox.classList.add('Selected');
   } else {
@@ -32,8 +32,8 @@ function renderSelectBox(currenSelect, selectName, options) {
   }
   if (getCarName && carName && carName.textContent.indexOf(getCarName) == -1) {
     carName.textContent += `${getCarName} `;
-    
-    localStorage.setItem('car-name_'+productName.textContent.trim(), carName.textContent);
+
+    localStorage.setItem('car-name_' + productName.textContent.trim(), carName.textContent);
   }
 
   function renderBox(name, value, options) {
@@ -42,7 +42,7 @@ function renderSelectBox(currenSelect, selectName, options) {
     let selectBoxCurrent = document.createElement('div');
     selectBoxCurrent.classList.add('select-box__current');
 
-    
+
 
     // render inputs & input default
     let inputValueDefault = localStorage.getItem(name) ? localStorage.getItem(name) : value;
@@ -50,22 +50,26 @@ function renderSelectBox(currenSelect, selectName, options) {
     let isSelectBoxCurrentChild = currenSelect.querySelector('.select-box__current');
     isSelectBoxCurrentChild && selectBox.removeChild(isSelectBoxCurrentChild);
 
-    
+
     selectBoxCurrent.setAttribute('tabindex', 1);
-   
-    let thisName =  document.getElementById(name) ? name+1 : name;
+
+    let thisName = document.getElementById(name) ? name + 1 : name;
     selectBoxCurrent.innerHTML = `<div class="select-box__value">
                                     <input class="select-box__input" 
                                     type="radio" 
                                     id="${thisName}" 
                                     value="${inputValueDefault}" 
                                     name="${thisName}" 
+                                   
                                     checked/>
                                     <p class="select-box__input-text">${inputValueDefault}</p>
                                   </div>`;
 
     options && options.forEach(option => {
       let selectBoxValue = document.createElement('div');
+      let nm = option.nm ? option.nm+' HP' : '';
+      let hp = option.hp ? option.hp+' NM'  : '';
+
       selectBoxValue.classList.add('select-box__value');
       //
       let selectBoxInput = document.createElement('input');
@@ -73,11 +77,14 @@ function renderSelectBox(currenSelect, selectName, options) {
       selectBoxInput.setAttribute('type', 'radio');
       selectBoxInput.setAttribute('id', `${thisName}_id_${option.id}`);
       selectBoxInput.setAttribute('name', `${thisName}`);
-      selectBoxInput.setAttribute('value', `${option.title}`);
+
+
+      selectBoxInput.setAttribute('data-nm', `${option.nm}`);
+      selectBoxInput.setAttribute('data-hp', `${option.hp}`);
+
+      selectBoxInput.setAttribute('value', `${option.title} ${nm} ${hp}`);
       selectBoxInput.setAttribute('data-id', `${option.id}`);
       selectBoxInput.setAttribute('data-selectname', `${value}`);
-      selectBoxInput.setAttribute('data-hp', `${option.hp}`);
-      selectBoxInput.setAttribute('data-nm', `${option.nm}`);
       selectBoxInput.addEventListener('click', e => {
         let dataId = e.target.dataset.id,
           dataSelectName = e.target.dataset.selectname,
@@ -103,7 +110,7 @@ function renderSelectBox(currenSelect, selectName, options) {
             renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
             getResponse(`${modelsApiUrl}${dataId}`, modelsBox, `Model_${dataProductName}`);
             clearGainProductItem();
-            
+
             carName && (carName.textContent = localStorage.getItem(`Brand_${dataProductName}`));
             thisSelectBox.querySelector('.Brands .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             thisSelectBox.querySelector('.Brands').classList.add('Selected');
@@ -133,7 +140,7 @@ function renderSelectBox(currenSelect, selectName, options) {
             renderGainProductItem();
 
             carName && (carName.textContent = `${localStorage.getItem(`Brand_${dataProductName}`)} ${localStorage.getItem(`Model_${dataProductName}`)} ${localStorage.getItem(`Modification_${dataProductName}`)}`);
-            carName && (localStorage.setItem('car-name_'+productName.textContent.trim(), carName.textContent));
+            carName && (localStorage.setItem('car-name_' + productName.textContent.trim(), carName.textContent));
 
             thisSelectBox.querySelector('.Modification .select-box__icon').innerHTML = '<i class="iconSuccess"></i>';
             selectBoxAction && thisSelectBox.closest('.selectBox').querySelector('.selectBoxAction').classList.add('Selected')
@@ -150,7 +157,7 @@ function renderSelectBox(currenSelect, selectName, options) {
       //
       let selectBoxInputText = document.createElement('p');
       selectBoxInputText.classList.add('select-box__input-text');
-      selectBoxInputText.textContent = option.title;
+      selectBoxInputText.textContent = `${option.title} ${hp} ${nm}`;
       selectBoxValue.appendChild(selectBoxInputText);
       //
       selectBoxCurrent.appendChild(selectBoxValue);
@@ -166,7 +173,7 @@ function renderSelectBox(currenSelect, selectName, options) {
 
     selectBoxCurrent.appendChild(selectBoxIcon);
 
-    
+
     selectBox.appendChild(selectBoxCurrent);
 
     //render lists
@@ -179,7 +186,10 @@ function renderSelectBox(currenSelect, selectName, options) {
     if (options && options.length !== 0) {
       options.forEach((option) => {
         let li = document.createElement('li');
-        li.innerHTML = `<label class="select-box__option" for="${thisName}_id_${option.id}" aria-hidden>${option.title}</label>`;
+        let nm = option.nm ? option.nm+' HP' : '';
+        let hp = option.hp ? option.hp+' NM'  : '';
+        
+        li.innerHTML = `<label class="select-box__option" for="${thisName}_id_${option.id}" aria-hidden data-hp="${hp}" data-nm="${nm}">${option.title} ${hp} ${hp}</label>`;
         selectListBox.appendChild(li);
       });
     } else {
@@ -214,22 +224,23 @@ selectBoxes.forEach(selectBox => {
 
   let isBrandId = localStorage.getItem(`Brand_${dataProductName}_id`);
   isBrandId && getResponse(`${modelsApiUrl}${isBrandId}`, modelsBox, `Model_${dataProductName}`);
-  
+
   let idModelId = localStorage.getItem(`Model_${dataProductName}_id`);
   idModelId && getResponse(`${modificationsApiUrl}${idModelId}`, modificationBox, `Modification_${dataProductName}`);
 
 });
+
 let banner = document.querySelector('.banner');
 
-if(banner && banner.length !==0){
-  document.addEventListener('scroll', function(e){
-    let y =  window.scrollY;
+if (banner && banner.length !== 0) {
+  document.addEventListener('scroll', function (e) {
+    let y = window.scrollY;
     let clientHeight = banner.clientHeight;
     let getBoundingClientRect = banner.getBoundingClientRect();
     let bannerPositionBottom = getBoundingClientRect.bottom;
     // console.log(getBoundingClientRect);
     // console.log(y);
-    if( y >= bannerPositionBottom){
+    if (y >= bannerPositionBottom) {
       banner.querySelector('.bannerSelect').classList.add('fixed')
     } else {
       banner.querySelector('.bannerSelect').classList.remove('fixed')

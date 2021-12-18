@@ -72,7 +72,9 @@ wp_reset_postdata(); ?>
 
                 <div class="headerNav">
                     <nav class="headerNavLinks">
-                        <?php wp_nav_custom_menu('headerNav', "headerLink"); ?>
+
+                        <?php 
+                        wp_nav_custom_menu('headerNavigation', "headerLink"); ?>
 
                     </nav>
                     <a class="headerNavCart" href="/cart/">
@@ -104,7 +106,7 @@ wp_reset_postdata(); ?>
             </div>
         </div>
         <nav class="menuNav">
-            <?php wp_nav_custom_menu('menuNav', 'menuLink'); ?>
+            <?php wp_nav_custom_menu('mobileNavigation', 'menuLink'); ?>
         </nav>
         <div class="menuConacts">
             <div class="menuConactsItem">

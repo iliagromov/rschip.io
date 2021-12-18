@@ -149,8 +149,8 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 	});
 
 	add_action('after_setup_theme', function () {
-        register_nav_menu('headerNav', 'Header navigation');
-        register_nav_menu('menuNav', 'Header menu mobile');
+        register_nav_menu('headerNavigation', 'Header navigation');
+        register_nav_menu('mobileNavigation', 'Header menu mobile');
         register_nav_menu('footerNav', 'Footer links privacy');
         register_nav_menu('footerLinksItem1', 'Footer nav links 1');
         register_nav_menu('footerLinksItem2', 'Footer nav links 2');

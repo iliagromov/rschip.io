@@ -1,5 +1,5 @@
 function renderGainProductItem() {
-    const productsItem = document.querySelectorAll('.productsItem');
+    const productsItem = document.querySelectorAll('.productsItemCart');
     if (productsItem) {
 
         productsItem.forEach(item => {
@@ -25,7 +25,7 @@ function renderGainProductItem() {
 }
 
 function clearGainProductItem() {
-    const productsItem = document.querySelectorAll('.productsItem');
+    const productsItem = document.querySelectorAll('.productsItemCart');
     if (productsItem) {
 
         productsItem.forEach(item => {

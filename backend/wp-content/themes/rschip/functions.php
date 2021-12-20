@@ -328,3 +328,32 @@ function selectBox($productName){
 					data-modal='modalCarCantfind'>Can’t find my Car</a>
 		</div>";
 }
+
+// Поля должны заводиться через админку
+// Ajax-отправка формы обратной связи
+add_action('wp_ajax_order', 'orderFormHandler');
+add_action('wp_ajax_nopriv_order', 'orderFormHandler');
+
+function orderFormHandler() {
+    if(!wp_verify_nonce($_POST['_wpnonce'], THEME_NONCE)){
+		die('Stop hacker!');
+	}
+
+    if ($_POST['_url'] == "https://rschipperformance.com/mform/") {
+        $name = sanitize_text_field($_POST['name']);
+        $phone = sanitize_text_field($_POST['phone']);
+        $email = sanitize_email($_POST['email']);
+        $message = sanitize_textarea_field($_POST['comment']);
+
+        $to = 'ilia.workproffile@gmail.com';
+        $subject = 'Test request Rschip';
+        $body = 'Name: '.$name.' <br> Phone: '.$phone.' <br> Email: '.$email.' <br> Comment: '.$message.'';
+        $headers = array('Content-Type: text/html; charset=UTF-8');
+
+        wp_mail( $to, $subject, $body, $headers );
+
+        wp_send_json_success([
+            'message' => 'Thanks!',
+        ]);
+    } 
+}

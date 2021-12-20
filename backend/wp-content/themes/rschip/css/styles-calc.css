@@ -2440,10 +2440,14 @@ html:not([data-scroll='0']) .header {
   margin: 0;
 }
 
-.modalCarCantfind .page__input {
+.modalCarCantfind .wpcf7-form-control-wrap {
   margin: 0 10px;
+  text-align: left;
+}
+
+.modalCarCantfind .page__input {
   width: 100%;
-  max-width: 109px;
+  color: #000;
 }
 
 .modalCarCantfind .page__input::-webkit-input-placeholder {

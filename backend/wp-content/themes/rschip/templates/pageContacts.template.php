@@ -18,6 +18,7 @@
 	<?php include(TEMPLATEPATH . '/components/_form/_form.component.php'); ?>
 	
 	<?php include(TEMPLATEPATH . '/components/_social/_social.component.php'); ?>
+	<?php include(TEMPLATEPATH . '/components/_map/_map.component.php'); ?>
 
 </main>
 <?php get_footer(); ?>

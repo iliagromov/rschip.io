@@ -32,6 +32,7 @@ $fieldsACF =  [
     '_contact_cards',
     '_brands',
     '_models',
+    '_map'
 ];
 $fields = array();
 

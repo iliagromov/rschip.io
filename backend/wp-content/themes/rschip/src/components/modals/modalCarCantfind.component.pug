@@ -1,38 +1,52 @@
 //-modals
+include ../form/field.mixin.pug
+
+    
 +modal("modalCarCantfind")
     h2.modalTitle Can’t find 
         span.page_red my car
     p Please fill in the fields below and we will call you back
     form(action="")
         .formRow
-            span.wpcf7-form-control-wrap
-                label
-                    div Your car *
-                input.page__input(type="text" placeholder="Your Car") 
-
-            span.wpcf7-form-control-wrap
-                label
-                    div Year *
-                input.page__input(type="text" placeholder="Year")
-
-            span.wpcf7-form-control-wrap
-                label 
-                    div Horsepower (hp)
-                input.page__input(type="text" placeholder="Horsepower") 
-
-            span.wpcf7-form-control-wrap
-                label   
-                    div Torque (Nm)
-                input.page__input(type="text" placeholder="Torque") 
+            +fields([
+                {
+                    label: "Your car *",
+                    input: {
+                        placeholder: "Your Car"
+                    }
+                },
+                {
+                    label: "Year *",
+                    input: {
+                        placeholder: "Year"
+                    }
+                },
+                {
+                    label: "Horsepower (hp)",
+                    input: {
+                        placeholder: "Horsepower"
+                    }
+                },
+                {
+                    label: "Torque (Nm)",
+                    input: {
+                        placeholder: "Torque"
+                    }
+                }
+            ])
         .formRow
-            span.wpcf7-form-control-wrap
-                label
-                    div email*
-                input.page__input(type="email" placeholder="Email") 
+            +field({
+                    label: "Email*",
+                    input: {
+                        placeholder: "Email"
+                    }
+            })
             img(src="assets/images/png/shared/imgCodeCaptcha.png", alt="imgCodeCaptcha")
-            span.wpcf7-form-control-wrap
-                label
-                    div Captcha
-                input.page__input(type="text" placeholder="code") 
+            +field({
+                    label: "Captcha*",
+                    input: {
+                        placeholder: "Captcha"
+                    }
+            })
 
         button.page__btn SUBMIT

@@ -1,0 +1,13 @@
+mixin field(props)
+    .field
+        .field__label
+            label  #{props.label}
+        .field__input
+            span.wpcf7-form-control-wrap
+                if props.input
+                    input.page__input(type="text" placeholder=props.input.placeholder) 
+                if props.textarea
+                    input.page__input(type="text" placeholder=props.textarea.placeholder)
+mixin fields(fields)
+    each field in fields 
+        +field(field)

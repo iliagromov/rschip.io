@@ -1291,7 +1291,8 @@
 
     .page__from
         +row-flex
-    .page__input
+        
+    .field
         +col
         +size(9)
         margin-bottom: 36px
@@ -1327,6 +1328,7 @@
     +size(9)
     +size-md(3)
     display: none
+    align-items: center
     +md-block
         display: flex
 /*gallary*/
@@ -1846,20 +1848,13 @@ html
         line-height: 59px
 
 
-    .formRow
-        display: flex
-        align-items: center
-        margin-bottom: 5%
-
     .modalContent
         img 
             margin: 0
 
-    .wpcf7-form-control-wrap
-        margin: 0 10px
-        text-align: left
 
-    .page__input
+    .page__input,
+    input   
         
         width: 100%
         

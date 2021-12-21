@@ -6,33 +6,34 @@ section.form
             .formAction
                 h2.page__title-h2 Get in touch. 
                     span.page_red Let’s Say Hi!
-                form(action="javascript:void(0)").page__from
-                    +fields([
-                        {
-                            label: "First Name *",
-                            input: {
-                                placeholder: "First Name"
+                form(action="javascript:void(0)")
+                    .page__from
+                        +fields([
+                            {
+                                label: "First Name *",
+                                input: {
+                                    placeholder: "First Name"
+                                }
+                            },
+                            {
+                                label: "Last Name *",
+                                input: {
+                                    placeholder: "Last Name"
+                                }
+                            },
+                            {
+                                label: "Email *",
+                                input: {
+                                    placeholder: "Email"
+                                }
+                            },
+                            {
+                                label: "Message",
+                                textarea: {
+                                    placeholder: "Message"
+                                }
                             }
-                        },
-                        {
-                            label: "Last Name *",
-                            input: {
-                                placeholder: "Last Name"
-                            }
-                        },
-                        {
-                            label: "Email *",
-                            input: {
-                                placeholder: "Email"
-                            }
-                        },
-                        {
-                            label: "Message",
-                            textarea: {
-                                placeholder: "Message"
-                            }
-                        }
-                    ])
-                    button.page__btn send Message
+                        ])
+                        button.page__btn send Message
             .formImg
                  img(src="assets/images/png/shared/imgForm.png", alt="imgForm")

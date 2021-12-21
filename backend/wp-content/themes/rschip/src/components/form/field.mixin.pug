@@ -7,7 +7,7 @@ mixin field(props)
                 if props.input
                     input.page__input(type="text" placeholder=props.input.placeholder) 
                 if props.textarea
-                    input.page__input(type="text" placeholder=props.textarea.placeholder)
+                    textarea.page__input(type="text" placeholder=props.textarea.placeholder)
 mixin fields(fields)
     each field in fields 
         +field(field)

@@ -19,7 +19,7 @@ mixin banner(props)
                 .bannerImgBg
                     picture 
                         source(type="image/png" srcset=`assets/images/png/${props.imageName}_1920.png` media="(min-width: 1441px)")
-                        source(type="image/png" srcset=`assets/images/png/${props.imageName}_1440.png` media="(min-width: 1440px)")
+                        source(type="image/png" srcset=`assets/images/png/${props.imageName}_1440.png` media="(min-width: 1366px)")
                         source(type="image/png" srcset=`assets/images/png/${props.imageName}_992.png` media="(min-width: 992px)")
                         source( type="image/png" srcset=`assets/images/png/${props.imageName}_768.png` media="(min-width: 768px)")
                         img(src=`assets/images/png/${props.imageName}_320.png`, alt="imgBannerBg")

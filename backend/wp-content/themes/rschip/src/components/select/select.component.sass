@@ -102,9 +102,13 @@
 
             &.Selected
                 margin-top: 2%
+                width: 100%
                 +sm-block
+                    width: auto
                     margin: 0
 
+                .select-box
+                    border-right: 0
     .selectBoxAction
         display: flex
         align-items: center
@@ -118,7 +122,8 @@
             margin: 0
 
         &.Selected
-            width: 50%
+            // width: 50%
+            width: 100%
             margin-top: 2%
 
             +sm-block

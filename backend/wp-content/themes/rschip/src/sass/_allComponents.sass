@@ -162,10 +162,12 @@
 
 .appBlockRowFlex
     +row-flex
-
+   
 .appBlockContainer
     position: relative
     display: flex
+    flex-wrap: wrap
+
     border-radius: 15px
     background: #111111
     backdrop-filter: blur(35px)
@@ -182,6 +184,7 @@
 
 .appBlockIcons 
     display: flex
+    flex-wrap: wrap
 
 .appBlockDescription
     margin-top: 32px
@@ -192,11 +195,14 @@
     font-size: 15px
     line-height: 22px
     font-family: #{$SFUIDisplay}-Bold
+    +size(9)
+    +size-sm(9/2)
 
 .appBlockImg
-    position: absolute
-    right: -66px
-    top: -105px
+    +md-block
+        position: absolute
+        right: -66px
+        top: -105px
     
 .appBlockIcon
     margin-right: 20px
@@ -337,7 +343,7 @@
     .bannerSelect
         position: absolute
         bottom: 10%
-        z-index: 100
+        z-index: 50
 
         width: 90%
         margin: 0 auto
@@ -746,8 +752,10 @@
 .chat
     // display: none
     position: fixed
-    right: 60px
-    bottom: 60px
+    // right: 60px
+    // bottom: 60px
+    right: 20px
+    bottom: 40px
     z-index: 100
 
 .btnChat
@@ -762,7 +770,8 @@
     justify-content: center
     position: fixed
    
-    bottom: 80px
+    // bottom: 80px
+    bottom: 25px
     transition: all 0.5s ease
     
     right: 10px
@@ -1062,60 +1071,6 @@
         .icon-arrow-white-details
             transform: rotate(180deg)
 
-/*form*/
-
-.form
-    background: #111111
-    padding: 100px 0
-    .page__title-h2
-        font-size: 36px
-        line-height: 164%
-        letter-spacing: 0.05em
-        font-weight: bold
-        margin-bottom: 10px
-
-    .page__from
-        +row-flex
-        
-    .field
-        +col
-        +size(9)
-        margin-bottom: 36px
-        &:nth-of-type(1)
-            +size-sm(4.5)
-            +size-md(4.5)
-        &:nth-of-type(2)
-            +size-sm(4.5)
-            +size-md(4.5)
-            
-    .page__textarea
-        +col
-        +size(9)
-        margin-bottom: 46px
-    .page__btn
-        +col
-
-.formFlexContaier
-    +row-flex
-
-.formAction
-    +col
-    +size(9)
-    +size-md(5.5)
-    +shift-md-right(0.5)
-    display: flex
-    flex-wrap: wrap
-    align-items: flex-start
-    
-
-.formImg
-    +col
-    +size(9)
-    +size-md(3)
-    display: none
-    align-items: center
-    +md-block
-        display: flex
 /*footer*/
 .footer
     position: relative
@@ -1332,6 +1287,60 @@
         font-size: 15px
         line-height: 29px
         letter-spacing: .6px
+/*form*/
+
+.form
+    background: #111111
+    padding: 100px 0
+    .page__title-h2
+        font-size: 36px
+        line-height: 164%
+        letter-spacing: 0.05em
+        font-weight: bold
+        margin-bottom: 10px
+
+    .page__from
+        +row-flex
+        
+    .field
+        +col
+        +size(9)
+        margin-bottom: 36px
+        &:nth-of-type(1)
+            +size-sm(4.5)
+            +size-md(4.5)
+        &:nth-of-type(2)
+            +size-sm(4.5)
+            +size-md(4.5)
+            
+    .page__textarea
+        +col
+        +size(9)
+        margin-bottom: 46px
+    .page__btn
+        +col
+
+.formFlexContaier
+    +row-flex
+
+.formAction
+    +col
+    +size(9)
+    +size-md(5.5)
+    +shift-md-right(0.5)
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    
+
+.formImg
+    +col
+    +size(9)
+    +size-md(3)
+    display: none
+    align-items: center
+    +md-block
+        display: flex
 /*gallary*/
 .gallary
     padding: 54px 0 43px
@@ -1417,7 +1426,7 @@
 html 
   &:not([data-scroll='0']) 
     .header 
-      background: rgba(2, 2, 2, 0.4)
+      background: rgba(2, 2, 2, 0.6)
       box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
     
 .header
@@ -1425,7 +1434,8 @@ html
     top: 0
     z-index: 100
     background: #000
-    height: 0
+    +sm-block
+        height: 0
     +md-block
         background: transparent
     .social
@@ -1445,8 +1455,10 @@ html
     +size-lg(2.8)
     text-align: center
     padding-top: 28px
+    display: none
     +sm-block
         text-align: left
+        display: block
     img
         max-width: 147px
         
@@ -1461,6 +1473,7 @@ html
     align-items: center
     justify-content: space-between
     padding-top: 25px
+    padding-bottom: 15px
     +sm-block
         justify-content: flex-end
 
@@ -2091,7 +2104,9 @@ html
 .performanceTable
     padding-top: 38px
     &__Header
-        display: flex
+        display: none
+        +sm-block
+            display: flex
         
         color: #B2B2B2
         margin-bottom: 16px
@@ -2106,22 +2121,32 @@ html
 
 .performanceTableItemTd
     +col
-    +size(9/2)
+    +size(9)
     +size-sm(2)
     +size-md(2)
 
-    text-align: center
+    display: flex
+    flex-wrap: wrap
+    // text-align: center
 
     &:nth-child(1)
         +size-sm(3)
         +size-md(3)
         text-align: left
         div
-            width: auto
-    div
-       
+            width: 100%
+
+    .title
+        display: block
+        +size(9/2)
+        +sm-block
+            display: none
+
+    .number
+        +size(9/2)
         margin: 0 auto
         height: 48px
+        text-align: center
         +sm-block
             width: 80%
         +md-block
@@ -2162,11 +2187,7 @@ html
        
 
     &.withRs
-        .performanceTableItemTd:nth-child(1)
-            div
-                background: none
-
-        div > div
+        .number
             background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) 0%, rgba(255, 56, 57, 0.9) 100%);
             mix-blend-mode: normal
             border-radius: 8px
@@ -2684,6 +2705,7 @@ html
     &__App 
         display: inline-flex
         vertical-align: middle
+        padding-top: 30px
         a
             margin: 0 10px
     &__cost
@@ -2768,6 +2790,7 @@ html
     display: flex
     align-items: center
     padding: 14px 0
+    width: 100%
     +sm-block
         width: 50%
     p
@@ -2827,7 +2850,9 @@ html
 
     .cartShopSelect
         width: 100%
-
+        .select:last-child
+            .select-box
+                border-right: none
 
 .productsBg
     position: absolute
@@ -3006,6 +3031,8 @@ html
 
         .productsItemCartActions
             justify-content: center
+            +md-block
+                width: 50%
 
             .productPrice
                 margin-right: 25%
@@ -3085,13 +3112,21 @@ html
 
 .productsItemCartActions
     display: flex
-    justify-content: space-between
+    flex-wrap: wrap
+    justify-content: center
+    width: 100%
     align-items: center
     margin: 0 auto
+    +sm-block
+        justify-content: space-between
+       
     .productPrice
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 59px
+        width: 100%
+        +sm-block
+            width: auto
 
 .productsCartAdvatages
     +row-flex
@@ -3273,9 +3308,13 @@ html
 
             &.Selected
                 margin-top: 2%
+                width: 100%
                 +sm-block
+                    width: auto
                     margin: 0
 
+                .select-box
+                    border-right: 0
     .selectBoxAction
         display: flex
         align-items: center
@@ -3289,7 +3328,8 @@ html
             margin: 0
 
         &.Selected
-            width: 50%
+            // width: 50%
+            width: 100%
             margin-top: 2%
 
             +sm-block

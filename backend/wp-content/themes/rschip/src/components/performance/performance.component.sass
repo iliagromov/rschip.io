@@ -7,7 +7,9 @@
 .performanceTable
     padding-top: 38px
     &__Header
-        display: flex
+        display: none
+        +sm-block
+            display: flex
         
         color: #B2B2B2
         margin-bottom: 16px
@@ -22,22 +24,32 @@
 
 .performanceTableItemTd
     +col
-    +size(9/2)
+    +size(9)
     +size-sm(2)
     +size-md(2)
 
-    text-align: center
+    display: flex
+    flex-wrap: wrap
+    // text-align: center
 
     &:nth-child(1)
         +size-sm(3)
         +size-md(3)
         text-align: left
         div
-            width: auto
-    div
-       
+            width: 100%
+
+    .title
+        display: block
+        +size(9/2)
+        +sm-block
+            display: none
+
+    .number
+        +size(9/2)
         margin: 0 auto
         height: 48px
+        text-align: center
         +sm-block
             width: 80%
         +md-block
@@ -78,11 +90,7 @@
        
 
     &.withRs
-        .performanceTableItemTd:nth-child(1)
-            div
-                background: none
-
-        div > div
+        .number
             background: linear-gradient(90deg, rgba(113, 15, 209, 0.9) 0%, rgba(255, 56, 57, 0.9) 100%);
             mix-blend-mode: normal
             border-radius: 8px

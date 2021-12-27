@@ -7,10 +7,12 @@
 
 .appBlockRowFlex
     +row-flex
-
+   
 .appBlockContainer
     position: relative
     display: flex
+    flex-wrap: wrap
+
     border-radius: 15px
     background: #111111
     backdrop-filter: blur(35px)
@@ -27,6 +29,7 @@
 
 .appBlockIcons 
     display: flex
+    flex-wrap: wrap
 
 .appBlockDescription
     margin-top: 32px
@@ -37,11 +40,14 @@
     font-size: 15px
     line-height: 22px
     font-family: #{$SFUIDisplay}-Bold
+    +size(9)
+    +size-sm(9/2)
 
 .appBlockImg
-    position: absolute
-    right: -66px
-    top: -105px
+    +md-block
+        position: absolute
+        right: -66px
+        top: -105px
     
 .appBlockIcon
     margin-right: 20px

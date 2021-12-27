@@ -36,13 +36,16 @@ if (!empty($performanceACF)) :
                                 <div class="carName">Porsche 911 Carrera</div>
                             </div>
                             <div class="performanceTableItemTd">
-                                <div><span class="hp">385 </span>HP</div>
+                                <div class="title">Power</div>
+                                <div class="number"><span class="hp">385 </span>HP</div>
                             </div>
                             <div class="performanceTableItemTd">
-                                <div> <span class="nm">450 </span>NM</div>
+                                <div class="title">Torque</div>
+                                <div class="number"> <span class="nm">450 </span>NM</div>
                             </div>
                             <div class="performanceTableItemTd">
-                                <div> <span class="sec">4.2 </span>sec</div>
+                                <div class="title">0-60 mph</div>
+                                <div class="number"><span class="sec">4.2 </span>sec</div>
                             </div>
                         </div>
                         <div class="performanceTableItem withRs">
@@ -51,13 +54,16 @@ if (!empty($performanceACF)) :
                                 <div class="carName">Porsche 911 Carrera</div>
                             </div>
                             <div class="performanceTableItemTd">
-                                <div> <span class="hp">410* </span>HP</div>
+                                <div class="title">Power</div>
+                                <div class="number"> <span class="hp">410* </span>HP</div>
                             </div>
                             <div class="performanceTableItemTd">
-                                <div> <span class="nm">475* </span>NM</div>
+                                <div class="title">Torque</div>
+                                <div class="number"> <span class="nm">475* </span>NM</div>
                             </div>
                             <div class="performanceTableItemTd">
-                                <div> <span class="sec">-0.39* </span>sec</div>
+                                <div class="title">0-60 mph</div>
+                                <div class="number"><span class="sec">-0.39* </span>sec</div>
                             </div>
                         </div>
                     </div>

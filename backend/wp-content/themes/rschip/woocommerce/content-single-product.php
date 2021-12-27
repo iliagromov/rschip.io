@@ -105,7 +105,14 @@ $productImg = $product->get_image_id();
                     <div class="productsItemActionsAddToCartWoocommerce">
                         <?php do_action('woocommerce_after_shop_loop_item'); ?>
                         <div class="productSliderPrice__cost"><?php echo $productPrice; ?></div>
+                       
                     </div>
+                    <div class="productSliderPrice__App"> <a
+                                    href="https://play.google.com/store/apps/details?id=com.montetuning.monte"
+                                    target="_black"> <img src="assets/images/png/shared/imgGooglePlay.png"
+                                        alt="imgGooglePlay"></a><a
+                                    href="https://apps.apple.com/us/app/monte-gt/id1582142065" target="_black"> <img
+                                        src="assets/images/png/shared/imgAppStore.png" alt="imgAppStore"></a></div>
                     
                 </div>
                 <div class="productSliderText">*Real world gains may be less or more depending on a large number

@@ -30,7 +30,9 @@
 
     .cartShopSelect
         width: 100%
-
+        .select:last-child
+            .select-box
+                border-right: none
 
 .productsBg
     position: absolute
@@ -209,6 +211,8 @@
 
         .productsItemCartActions
             justify-content: center
+            +md-block
+                width: 50%
 
             .productPrice
                 margin-right: 25%
@@ -288,13 +292,21 @@
 
 .productsItemCartActions
     display: flex
-    justify-content: space-between
+    flex-wrap: wrap
+    justify-content: center
+    width: 100%
     align-items: center
     margin: 0 auto
+    +sm-block
+        justify-content: space-between
+       
     .productPrice
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 59px
+        width: 100%
+        +sm-block
+            width: auto
 
 .productsCartAdvatages
     +row-flex

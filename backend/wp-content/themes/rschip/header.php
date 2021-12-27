@@ -19,6 +19,25 @@ foreach( $shared_posts as $post ){
     $sharedACF = get_fields();
 }
 wp_reset_postdata(); ?>
+
+<?php 
+
+$ip = file_get_contents('http://ip-api.com/json/'.$_SERVER['REMOTE_ADDR']);
+$ip = json_decode($ip, true);
+$country = $ip['country'];
+// echo $ip ;
+// var_dump($ip);
+
+// завести поля для товара под конкретную страну
+// определять страну или выбирать ее с помощью селекта 
+// выводить цену
+/** 
+ * + Все страны 299 RS Response 349 RSCHIP 499 
+*GTR
+*+США. пуэрто рико, канада мексика  
+*299 RS Response 299 RSCHIP 349 GTR
+*/
+?>
 <!DOCTYPE html>
 <html lang="en" data-scroll="0">
 
@@ -28,7 +47,7 @@ wp_reset_postdata(); ?>
 
     <title><?php echo wp_get_document_title(); ?></title>
     <meta name="description" content="<?php bloginfo('description') ?>" />
-    
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ilia Gromov">
@@ -118,11 +137,12 @@ wp_reset_postdata(); ?>
     </header>
     <section class="menu">
         <div class="menuHeader">
-            <a href="<?php echo get_home_url(); ?>">
-                <div class="menuLogo">
+            <div class="menuLogo">
+                <a href="<?php echo get_home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/logoBlack.svg" alt="logo">
-                </div>
-            </a>
+                </a>
+            </div>
+           
             <div class="menuClose">
                 <div class="icon-close"></div>
             </div>

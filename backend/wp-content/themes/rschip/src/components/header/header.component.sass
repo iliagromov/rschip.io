@@ -2,7 +2,7 @@
 html 
   &:not([data-scroll='0']) 
     .header 
-      background: rgba(2, 2, 2, 0.4)
+      background: rgba(2, 2, 2, 0.6)
       box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
     
 .header
@@ -10,7 +10,8 @@ html
     top: 0
     z-index: 100
     background: #000
-    height: 0
+    +sm-block
+        height: 0
     +md-block
         background: transparent
     .social
@@ -30,8 +31,10 @@ html
     +size-lg(2.8)
     text-align: center
     padding-top: 28px
+    display: none
     +sm-block
         text-align: left
+        display: block
     img
         max-width: 147px
         
@@ -46,6 +49,7 @@ html
     align-items: center
     justify-content: space-between
     padding-top: 25px
+    padding-bottom: 15px
     +sm-block
         justify-content: flex-end
 

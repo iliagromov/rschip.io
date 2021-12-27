@@ -72,7 +72,7 @@ if (!empty($bannerACF)) :
                                     <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img5']; ?>" media="(min-width: 1441px)">
                                 <?php endif; ?>
                                 <?php if(!empty($bannerACF['imagesBg']['img4'])):?> 
-                                    <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img4']; ?>" media="(min-width: 1440px)">
+                                    <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img4']; ?>" media="(min-width: 1366px)">
                                 <?php endif; ?>
                                 <?php if(!empty($bannerACF['imagesBg']['img3'])):?>
                                     <source type="image/png" srcset="<?php echo $bannerACF['imagesBg']['img3']; ?>" media="(min-width: 992px)">
@@ -134,7 +134,13 @@ if (!empty($bannerACF)) :
                                     <div class="selectBoxActionSelected">
                                         <div class="selectBoxActionPrice"><?php echo $productPrice; ?></div>
                                         <div class="selectBoxActionSelectedAddToCartWoocommerce">
-                                            <?php do_action('woocommerce_after_shop_loop_item'); ?>
+                                            <?php do_action('woocommerce_after_shop_loop_item', 'replace_add_to_cart'); 
+                                            function replace_add_to_cart() {
+                                                global $product;
+                                                $link = $product->get_permalink();
+                                                echo do_shortcode('<a href="'.$link.'" class="button addtocartbutton">Learn more</a>');
+                                            }
+                                            ?>
                                         </div>
                                         <!-- <a class="page__btn page__btn_notTransparent" href="cart/cart.html">To cart</a> -->
                                     </div>

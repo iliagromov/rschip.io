@@ -55,6 +55,8 @@
     border-radius: 10px
     margin-bottom: 21px
     padding: 42px 17px 30px
+   
+    
 
     +sm-block
         padding: 48px 17px 30px
@@ -165,7 +167,8 @@
     position: relative
     text-align: center
 
-    padding: 42px 17px 30px
+    // padding: 42px 17px 30px4
+    padding: 75px 19px 37px
 
     +sm-block
         padding: 88px 50px 38px
@@ -180,10 +183,14 @@
 
     &__Big
         +size(9)
+        +size-sm(9)
         +size-md(7.15)
 
         display: flex
         flex-wrap: wrap
+
+        justify-content: center
+        +sm-block
 
         .productsItemCartTextBefore
             font-family: #{$SFUIDisplay}-Bold
@@ -194,8 +201,11 @@
                 margin-right: 5%
 
         .productsItemCartImg
-            margin-top: 16%
-            margin-left: 18%
+            margin: 20px auto
+            +md-block
+                margin-top: 16%
+                margin-left: 18%
+            
 
         .productsItemCartActions
             justify-content: center
@@ -212,6 +222,7 @@
     &__img
         +size(9)
         +size-md(9/2)
+        img
 
 .productsItemCartLabel
     font-family: #{$SFUIDisplay}-Bold

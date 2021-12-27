@@ -16,8 +16,8 @@ function renderGainProductItem() {
                 let percentHp = getPowerGain(hp, product.hp.percent, product.hp.maxIncrease);
                 let percentNm = getPowerGain(nm, product.nm.percent, product.nm.maxIncrease);
 
-                productsItemHP && (productsItemHP.textContent = `${percentHp}%`);
-                productsItemNM && (productsItemNM.textContent = `${percentNm}%`);
+                productsItemHP && (productsItemHP.textContent = `${percentHp} HP`);
+                productsItemNM && (productsItemNM.textContent = `${percentNm} NM`);
 
             }
         });

@@ -104,7 +104,7 @@ $productImg = $product->get_image_id();
                 <div class="productSliderPrice"> 
                     <div class="productsItemActionsAddToCartWoocommerce">
                         <?php do_action('woocommerce_after_shop_loop_item'); ?>
-                        <div class="productPrice__cost"><?php echo $productPrice; ?></div>
+                        <div class="productSliderPrice__cost"><?php echo $productPrice; ?></div>
                     </div>
                     
                 </div>

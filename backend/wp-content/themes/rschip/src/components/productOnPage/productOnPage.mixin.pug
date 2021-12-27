@@ -1,18 +1,18 @@
-//-productMixin
+//-productMixin product on page
 mixin product(props)
-    section.product(class=props.className)
+    section.productOnPage
         .wrapper
             h2.page__title-h2_small More Power
             h3.page__title-h3 #{props.title.span1}
                 span.page_red #{props.title.span2} 
                 | #{props.title.span3}
-            .productFlexContainer 
-                .productImg
+            .productOnPageFlexContainer 
+                .productOnPageImg
                     picture 
                         source(type="image/png" srcset=`assets/images/png/products/${props.imageName}-lg.png` media="(min-width: 992px)")
                         source( type="image/png" srcset=`assets/images/png/products/${props.imageName}-sm.png` media="(min-width: 768px)")
                         img(src=`assets/images/png/products/${props.imageName}-xs.png`, alt="imgRsChip")
-                .productText
+                .productOnPageText
                     h4.page__title-h4 #{props.text}
                     ul.page__ul 
                         each advantage in props.advantages
@@ -20,8 +20,8 @@ mixin product(props)
                                 i.svg-iconMarker.svg-iconMarker-box
                                 | #{advantage}
                         
-                    .productPrice 
+                    .productOnPagePrice 
                         button.page__btn ADD TO BAG
-                        .productPrice__cost 
+                        .productOnPagePrice__cost 
 
             

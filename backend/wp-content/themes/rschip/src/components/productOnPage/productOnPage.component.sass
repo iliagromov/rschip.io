@@ -1,5 +1,5 @@
-/*product*/
-.product
+/*productOnPage*/
+.productOnPage
     background: #111111
     padding: 92px 0 62px
     +sm-block
@@ -24,17 +24,10 @@
             font-size: 36px
             line-height: 59px
 
-    &.productChip
-        .page__title-h3
-            width: 50%
-            margin: 15px auto 0
-        .page__title-h4
-            margin-top: 50px
-
-.productFlexContainer 
+.productOnPageFlexContainer 
     +row-flex
 
-.productImg
+.productOnPageImg
     +col
     +size(9)
     +size-md(4)
@@ -45,10 +38,14 @@
         padding-right: 6%
    
 
-.productText
+.productOnPageText
     +col
     +size(9)
     +size-md(5)
+
+    +md-block
+        padding-bottom: 114px
+
     .page__title-h4
         font-family: #{$SFUIDisplay}-Bold
         
@@ -95,7 +92,7 @@
                 width: 50%
             
 
-.productPrice
+.productOnPagePrice
     text-align: center
     display: flex
     flex-direction: column-reverse

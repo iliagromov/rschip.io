@@ -215,6 +215,7 @@ selectBoxes.forEach(selectBox => {
   let modificationBox = selectBox.querySelector('.Modification');
 
   //init selects
+  // обработать если нет ответа от сервера
   renderSelectBox(brandsBox, `Brand_${dataProductName}`, brandsArrayDeafult);
   renderSelectBox(modelsBox, `Model_${dataProductName}`, []);
   renderSelectBox(modificationBox, `Modification_${dataProductName}`, []);
@@ -232,18 +233,18 @@ selectBoxes.forEach(selectBox => {
 
 let banner = document.querySelector('.banner');
 
-if (banner && banner.length !== 0) {
-  document.addEventListener('scroll', function (e) {
-    let y = window.scrollY;
-    let clientHeight = banner.clientHeight;
-    let getBoundingClientRect = banner.getBoundingClientRect();
-    let bannerPositionBottom = getBoundingClientRect.bottom;
-    // console.log(getBoundingClientRect);
-    // console.log(y);
-    if (y >= bannerPositionBottom) {
-      banner.querySelector('.bannerSelect').classList.add('fixed')
-    } else {
-      banner.querySelector('.bannerSelect').classList.remove('fixed')
-    }
-  });
-}
+// if (banner && banner.length !== 0) {
+//   document.addEventListener('scroll', function (e) {
+//     let y = window.scrollY;
+//     let clientHeight = banner.clientHeight;
+//     let getBoundingClientRect = banner.getBoundingClientRect();
+//     let bannerPositionBottom = getBoundingClientRect.bottom;
+//     // console.log(getBoundingClientRect);
+//     // console.log(y);
+//     if (y >= bannerPositionBottom) {
+//       banner.querySelector('.bannerSelect').classList.add('fixed')
+//     } else {
+//       banner.querySelector('.bannerSelect').classList.remove('fixed')
+//     }
+//   });
+// }

@@ -29,7 +29,8 @@ wp_reset_postdata(); ?>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ilia Gromov">
-    <link rel="icon" type="image/x-icon" href="assets/images/png/shared/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/png/shared/favicon.png">
+    <!-- <link rel="icon" type="image/x-icon" href="assets/images/png/shared/favicon.ico"> -->
     <!-- <title>Chiptuning for you, +20% power and torque – RSchip chiptuning</title> -->
     <title><?php echo wp_get_document_title(); ?></title>
     <meta name="description" content="<?php bloginfo('description') ?>" />

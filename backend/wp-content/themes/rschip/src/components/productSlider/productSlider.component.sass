@@ -33,26 +33,38 @@
         +md-block
             margin: 10px auto 0px
 
-    .productSliderPrice
-        text-align: center
-        display: flex
-        flex-direction: column-reverse
-        align-items: center
-        width: 100%
-        margin-top: 6%
+.productSliderPrice
+    text-align: center
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    width: 100%
+    margin-top: 6%
 
+    +sm-block
+        display: block
+        margin-top: 5%
+    +md-block
+        text-align: left
+        margin-top: 13%
+
+    &__App 
+        display: inline-flex
+        vertical-align: middle
+        a
+            margin: 0 10px
+    &__cost
+        display: inline-flex
+        font-family: #{$SFUIDisplay}-Bold
+        font-size: 24px
+        line-height: 59px
+        
         +sm-block
-            display: block
-            margin-top: 5%
-        +md-block
-            text-align: left
-            margin-top: 13%
+            margin-left: 60px
 
-        &__App 
-            display: inline-flex
-            vertical-align: middle
-            a
-                margin: 0 10px
+        +md-block
+            margin-left: 33px
+
 
        
     .productPrice__cost

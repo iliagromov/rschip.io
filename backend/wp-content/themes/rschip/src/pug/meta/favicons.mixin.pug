@@ -1,0 +1,6 @@
+each favicon in favicons 
+    if favicon.sizes
+        each size in favicon.sizes
+            link(rel=favicon.rel, type=favicon.type,  sizes=`${size}x${size}` href=favicon.href+size+favicon.format)
+    else
+        link(rel=favicon.rel, type=favicon.type, href=favicon.href)

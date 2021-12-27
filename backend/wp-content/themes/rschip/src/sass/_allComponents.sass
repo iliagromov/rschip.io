@@ -1062,6 +1062,60 @@
         .icon-arrow-white-details
             transform: rotate(180deg)
 
+/*form*/
+
+.form
+    background: #111111
+    padding: 100px 0
+    .page__title-h2
+        font-size: 36px
+        line-height: 164%
+        letter-spacing: 0.05em
+        font-weight: bold
+        margin-bottom: 10px
+
+    .page__from
+        +row-flex
+        
+    .field
+        +col
+        +size(9)
+        margin-bottom: 36px
+        &:nth-of-type(1)
+            +size-sm(4.5)
+            +size-md(4.5)
+        &:nth-of-type(2)
+            +size-sm(4.5)
+            +size-md(4.5)
+            
+    .page__textarea
+        +col
+        +size(9)
+        margin-bottom: 46px
+    .page__btn
+        +col
+
+.formFlexContaier
+    +row-flex
+
+.formAction
+    +col
+    +size(9)
+    +size-md(5.5)
+    +shift-md-right(0.5)
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    
+
+.formImg
+    +col
+    +size(9)
+    +size-md(3)
+    display: none
+    align-items: center
+    +md-block
+        display: flex
 /*footer*/
 .footer
     position: relative
@@ -1278,60 +1332,6 @@
         font-size: 15px
         line-height: 29px
         letter-spacing: .6px
-/*form*/
-
-.form
-    background: #111111
-    padding: 100px 0
-    .page__title-h2
-        font-size: 36px
-        line-height: 164%
-        letter-spacing: 0.05em
-        font-weight: bold
-        margin-bottom: 10px
-
-    .page__from
-        +row-flex
-        
-    .field
-        +col
-        +size(9)
-        margin-bottom: 36px
-        &:nth-of-type(1)
-            +size-sm(4.5)
-            +size-md(4.5)
-        &:nth-of-type(2)
-            +size-sm(4.5)
-            +size-md(4.5)
-            
-    .page__textarea
-        +col
-        +size(9)
-        margin-bottom: 46px
-    .page__btn
-        +col
-
-.formFlexContaier
-    +row-flex
-
-.formAction
-    +col
-    +size(9)
-    +size-md(5.5)
-    +shift-md-right(0.5)
-    display: flex
-    flex-wrap: wrap
-    align-items: flex-start
-    
-
-.formImg
-    +col
-    +size(9)
-    +size-md(3)
-    display: none
-    align-items: center
-    +md-block
-        display: flex
 /*gallary*/
 .gallary
     padding: 54px 0 43px
@@ -1767,86 +1767,6 @@ html
         padding-top: 11%
 .isMenuShow
     overflow: hidden
-/*news*/
-.news 
-    background: #111111
-    padding: 67px 0 0
-    position: relative
-    +sm-block
-        padding: 104px 0 100px
-
-    &::after
-        content: ''
-        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
-        filter: blur(500px)
-       
-        position: absolute
-        left: -500px
-        bottom: -191px
-        // transform: translate(-95%, 40%)
-        +md-block
-            width: 544px
-            height: 544px
-            
-    .page__title-h2_small
-        text-align: center
-
-    .page__title-h3
-        text-align: center
-        font-weight: 800
-        font-size: 24px
-        line-height: 125%
-        
-        width: 75%
-        margin: 9px auto 50px
-        +sm-block
-            font-size: 36px
-            line-height: 164%
-        +md-block
-            width: 44%  
-
-.newsFlexContainer 
-    +row-flex
-
-.newsItem
-    +col
-    +size(7.5)
-    +size-sm(4.5)
-    +size-md(3)
-    +size-lg(3)
-    cursor: pointer
-    margin: 0 auto 50px
-    &:hover
-        .newsItemImg
-            img
-            // border-bottom: 2px solid transparent
-            // border-image-slice: 1
-            // border-image: linear-gradient(to right, #700ED2 , #FF3838)
-    &:last-child
-        display: none
-        +md-block
-            display: block
-            
-    .modalContent
-        display: none
-        
-
-.newsItemImg
-    display: flex
-    border-bottom: 2px solid transparent
-    border-image: linear-gradient(to right, #700ED2 , #FF3838)
-    border-image-slice: 1
-    margin-bottom: 26px
-    &:hover
-        border-image: linear-gradient(to right, #700ED2 , #FF3838)
-    // img
-        //    box-shadow: 15px -16px 0px linear-gradient(to right, #700ED2 , #FF3838)
-
-.newsItemTitle
-    font-weight: bold
-    font-size: 18px
-    line-height: 178%
-    letter-spacing: 0.06em
 /*modal*/
 .overlay
     opacity: 0
@@ -1983,6 +1903,86 @@ html
 .isModalShow
     overflow: hidden
 
+/*news*/
+.news 
+    background: #111111
+    padding: 67px 0 0
+    position: relative
+    +sm-block
+        padding: 104px 0 100px
+
+    &::after
+        content: ''
+        background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
+        filter: blur(500px)
+       
+        position: absolute
+        left: -500px
+        bottom: -191px
+        // transform: translate(-95%, 40%)
+        +md-block
+            width: 544px
+            height: 544px
+            
+    .page__title-h2_small
+        text-align: center
+
+    .page__title-h3
+        text-align: center
+        font-weight: 800
+        font-size: 24px
+        line-height: 125%
+        
+        width: 75%
+        margin: 9px auto 50px
+        +sm-block
+            font-size: 36px
+            line-height: 164%
+        +md-block
+            width: 44%  
+
+.newsFlexContainer 
+    +row-flex
+
+.newsItem
+    +col
+    +size(7.5)
+    +size-sm(4.5)
+    +size-md(3)
+    +size-lg(3)
+    cursor: pointer
+    margin: 0 auto 50px
+    &:hover
+        .newsItemImg
+            img
+            // border-bottom: 2px solid transparent
+            // border-image-slice: 1
+            // border-image: linear-gradient(to right, #700ED2 , #FF3838)
+    &:last-child
+        display: none
+        +md-block
+            display: block
+            
+    .modalContent
+        display: none
+        
+
+.newsItemImg
+    display: flex
+    border-bottom: 2px solid transparent
+    border-image: linear-gradient(to right, #700ED2 , #FF3838)
+    border-image-slice: 1
+    margin-bottom: 26px
+    &:hover
+        border-image: linear-gradient(to right, #700ED2 , #FF3838)
+    // img
+        //    box-shadow: 15px -16px 0px linear-gradient(to right, #700ED2 , #FF3838)
+
+.newsItemTitle
+    font-weight: bold
+    font-size: 18px
+    line-height: 178%
+    letter-spacing: 0.06em
 .optimizeBlock
     padding: 64px 0
     .page__title-h2_small

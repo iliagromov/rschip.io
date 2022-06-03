@@ -10,13 +10,24 @@ mixin banner(props)
                         | #{props.title.span2} 
                         span.block #{props.title.span3} 
                     p.pageText #{props.description}
+                    if props.imageChipMain 
+                        .bannerImgChipMain
+                            picture 
+                                img(src=`assets/images/png/${props.imageChipMain}@1x.png` srcset=`assets/images/png/${props.imageChipMain}@2x.png 2x` alt="imgBannerImgChipMain")
+                            div
+                                a.page__btn(href="") LEARN MORE
                     include ../social/socialIcons/socialIcons.component.pug
+                
                 if props.advantages
                     .advantages
                         .advantagesFlexContainer
                             include ../advantages/advantages.mixin.pug
                             +itemsAdvantages(props.advantages)
+                
+                
                 .bannerImgBg
+                    .bannerImgBg__logo 
+                        img(src="assets/images/svg/logo-banner.svg", alt="")
                     picture 
                         source(type="image/png" srcset=`assets/images/png/${props.imageName}_1920.png` media="(min-width: 1441px)")
                         source(type="image/png" srcset=`assets/images/png/${props.imageName}_1440.png` media="(min-width: 1366px)")
@@ -29,9 +40,10 @@ mixin banner(props)
                             source(type="image/png" srcset=`assets/images/png/${props.imageChipName}Lg@1x.png 1x, assets/images/png/${props.imageChipName}Lg@2x.png 2x` media="(min-width: 992px)")
                             source(type="image/png" srcset=`assets/images/png/${props.imageChipName}Sm@1x.png 1x, assets/images/png/${props.imageChipName}Sm@2x.png 2x` media="(min-width: 768px)")
                             img(src=`assets/images/png/${props.imageChipName}@1x.png` srcset=`assets/images/png/${props.imageChipName}Xs@2x.png 2x` alt="imgBannerRsChipXs")
-                        
+                
                 .bannerSelect
                     include ../select/selectBox.mixin.pug
-                    +selectBox(props.selectName)
+                    //- +selectBox(props.selectName)
+                
 
         

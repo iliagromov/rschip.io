@@ -209,7 +209,16 @@
 /*banner*/
 .banner
     position: relative
-    
+    overflow: hidden
+    &.bannerMain
+        .pageText
+            margin-bottom: 0
+        .bannerImgBg__logo
+            display: flex
+            img
+                transform: scale(1.5)
+                +md-block
+                    transform: scale(1)
     &.bannerRs
         padding-bottom: 25%
         +sm-block
@@ -236,7 +245,7 @@
 
             +md-block
                 top: 58%
-                
+
     &.bannerGtr
         padding-bottom: 25%
         +sm-block
@@ -299,7 +308,6 @@
                 top: 82%
             +md-block
                 top: 58%
-
 
     .page__title-h1
 
@@ -367,7 +375,7 @@
                 top: 50%
                 transform: translate(-100%, -50%)
                 height: 20%
-            
+
             .selectBoxActionSelected
 
                 +sm-block
@@ -375,7 +383,7 @@
 
             .selectBoxText
                 display: none
-            
+
             .selectBoxContainer
 
                 border-bottom-left-radius: 0
@@ -385,7 +393,7 @@
                     border-radius: 16px
                     padding: 0
 
-                .select 
+                .select
                     .select-box
 
                         +sm-block
@@ -397,8 +405,6 @@
 
             .selectBoxLink
                 display: none
-    
-
 
 .bannerFlexContainer
     display: flex
@@ -432,6 +438,7 @@
         height: 768px
 
 .bannerImgBg
+    position: relative
     display: flex
     width: 100%
     height: 100%
@@ -449,12 +456,23 @@
         width: 100%
         +md-block
             width: auto
-            
+
+    &__logo
+        display: none
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        +lg-block
+            top: 65%
+            left: 50%
+            transform: translate(-73%, -50%)
+
 .bannerImgChip
 
     position: absolute
     width: 100%
-    top: 65%
+    top: 60%
     right: 0
 
     picture
@@ -470,6 +488,47 @@
         top: 135px
         width: auto
 
+.bannerImgChipMain
+    display: flex
+    align-items: center
+
+    margin-left: -35px
+   
+.banner.bannerMain
+    .bannerText
+        .pageText
+            +sm-block
+                width: 60%
+            +md-block
+                width: 50%
+    .bannerImgChipMain
+        flex-direction: row-reverse
+        margin-top: 5%
+        +sm-block
+            margin-top: -60px
+        +md-block
+            flex-direction: row
+            margin-top: 0
+        img
+            margin-left: -10px
+            +sm-block
+                margin-left: 0
+        div
+            +sm-block
+                margin-right: 17%
+            +md-block
+                margin-right: 0
+    .socialIcons
+        display: flex
+        position: relative
+        left: 5%
+        bottom: 7%
+        +sm-block
+            bottom: 20%
+            
+        +md-block
+            left: 25%
+            bottom: 90px
 .carSelector
     padding: 60px 0 150px
 
@@ -2747,17 +2806,24 @@ html
 
         +md-block
             margin-bottom: 30px
-
+    
     &__Thumbnails
+        overflow: hidden
         +sm-block
             width: 65%
             margin: 0 auto
         +md-block   
             width: 100%
 
+        &-buttons
+            position: relative
+            top: -40px
+            .swiper-button-next, 
+            .swiper-button-prev
+                color: $color_2
         &.gallery-thumbs
             .swiper-wrapper
-                transform: translate3d(0px,0,0) !important
+                // transform: translate3d(0px,0,0) !important
             .swiper-slide
                 opacity: 0.4
                 height: 100px
@@ -2853,6 +2919,10 @@ html
         .select:last-child
             .select-box
                 border-right: none
+    .page__title-h2
+        .page__title-h3
+            color: #fff
+            text-transform: capitalize
 
 .productsBg
     position: absolute

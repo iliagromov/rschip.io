@@ -5,9 +5,17 @@ Theme Name: RsChip
 Theme URI: http://rschipperformance.com/themes/rschip/
 Author: @gromov_ilia https://t.me/gromov_ilia
 Author URI: http://rschipperformance.com/
-Description: Site Aroma RsChip
+Description: Site RsChip
 Version: 1.0
 */
+
+@media screen and (max-width:768px) {
+    .productsItemActionsAddToCartWoocommerce,
+.productsItemActionsAddToCartWoocommerce a
+{
+    width: 100%;
+}
+}
 .productsItemActionsAddToCartWoocommerce .add_to_cart_button,
 .productsItemActionsAddToCartWoocommerce .added_to_cart,
 .selectBoxActionSelectedAddToCartWoocommerce .add_to_cart_button,
@@ -126,4 +134,9 @@ Version: 1.0
 .woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received{
     text-align: center;
     margin-bottom: 3%;
+}
+
+.productsItem .page__title-h3{
+    font-size: 20px;
+    text-align: center;
 }

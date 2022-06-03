@@ -93,17 +93,24 @@
 
         +md-block
             margin-bottom: 30px
-
+    
     &__Thumbnails
+        overflow: hidden
         +sm-block
             width: 65%
             margin: 0 auto
         +md-block   
             width: 100%
 
+        &-buttons
+            position: relative
+            top: -40px
+            .swiper-button-next, 
+            .swiper-button-prev
+                color: $color_2
         &.gallery-thumbs
             .swiper-wrapper
-                transform: translate3d(0px,0,0) !important
+                // transform: translate3d(0px,0,0) !important
             .swiper-slide
                 opacity: 0.4
                 height: 100px

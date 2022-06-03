@@ -24,10 +24,15 @@ get_header('shop');
 <!--shop-->
 <main class="page pageShop">
     <section class="products productsCart">
-        <div class="productsBg"><img src="assets/images/png/shared/imgShopBg.png" alt="imgShopBg"></div>
-        <h2 class="page__title-h2 page__title-h2_big">shop <span class="page__title-h2_small page__title-h2_absolute">Get Started</span></h2>
+        <div class="productsBg">
+            <img src="assets/images/png/shared/imgShopBg.png" alt="imgShopBg"></div>
+        <h2 class="page__title-h2 page__title-h2_big">shop 
+            <span class="page__title-h2_small page__title-h2_absolute">Get Started</span>
+            <div class="page__title-h3">Select your product</div>
+        </h2>
+      
         <div class="tab-contents" id="tabs">
-            <div class="wrapper">
+            <?php /* <div class="wrapper">
                 <div class="productsTabs tab-nav">
                     <div class="productsTabsItem tab-link is-active">
                         <div class="productsTabsItem__icon"> <img src="assets/images/svg/iconRS.svg" alt=""><img
@@ -61,7 +66,7 @@ get_header('shop');
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>*/?>
            
             <div class="wrapper">
                 <div class="productsFlexContainer">

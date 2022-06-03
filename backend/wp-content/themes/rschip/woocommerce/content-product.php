@@ -77,7 +77,7 @@ $productGain = $productACF['data_product_gain'];
 			echo "<img class='productsItemCartImg' src=" . $url . " alt='product'>";
 		} ?>
 		<div class="productsItemCartGain">
-			<div class="productsItemGain">
+			<?php /*	<div class="productsItemGain">
 				<div class="productsItemGain__text">
 					<div class="text">up to</div>
 					<div class="number hp"><?php echo $productACF['productsItemGain_power'];?></div>
@@ -88,7 +88,7 @@ $productGain = $productACF['data_product_gain'];
 					<div class="number nm"><?php echo $productACF['productsItemGain_torque'];?></div>
 					<div class="text">Torque</div>
 				</div>
-			</div>
+			</div>*/?>
 			<?php echo $product->get_description(); ?>
 
 		</div>

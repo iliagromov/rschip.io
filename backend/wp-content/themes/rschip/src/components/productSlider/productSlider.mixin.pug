@@ -12,18 +12,20 @@ mixin productSlider(props)
                 .productSliderGallary
                     .productSliderGallary__Main.gallery-top
                         .swiper-wrapper
-                            while main < 4
+                            while main < 6
                                 .swiper-slide
                                     img(src=`assets/images/png/products/${props.imageName}.png`, alt="productSliderGallary")
                                 div(data-num=main++)
                         
                     .productSliderGallary__Thumbnails.gallery-thumbs
                         .swiper-wrapper
-                            while thumb < 4
+                            while thumb < 6
                                 .swiper-slide
                                     img(src=`assets/images/png/products/${props.thumbs}.png`, alt="productSliderGallary")
                                 div(data-num=thumb++)
-                            
+                        .productSliderGallary__Thumbnails-buttons
+                            .swiper-button-prev.js--swiper-button-prev
+                            .swiper-button-next.js--swiper-button-next
                 .productSliderAdvantages
                     each advantage in props.advantages
                         .productSliderAdvantagesItem 
@@ -42,3 +44,4 @@ mixin productSlider(props)
                                 img(src="assets/images/png/shared/imgAppStore.png", alt="imgAppStore")
                             
                     .productSliderText *Real world gains may be less or more depending on a large number of contributing factors such as displacement, aspiration and selected tuning mode.
+        

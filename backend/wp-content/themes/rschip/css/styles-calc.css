@@ -281,6 +281,23 @@
 
 .banner {
   position: relative;
+  overflow: hidden;
+}
+
+.banner.bannerMain .pageText {
+  margin-bottom: 0;
+}
+
+.banner.bannerMain .bannerImgBg__logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner.bannerMain .bannerImgBg__logo img {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .banner.bannerRs {
@@ -421,6 +438,7 @@
 }
 
 .bannerImgBg {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -442,10 +460,19 @@
   width: 100%;
 }
 
+.bannerImgBg__logo {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .bannerImgChip {
   position: absolute;
   width: 100%;
-  top: 65%;
+  top: 60%;
   right: 0;
 }
 
@@ -459,6 +486,41 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.bannerImgChipMain {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: -35px;
+}
+
+.banner.bannerMain .bannerImgChipMain {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-top: 5%;
+}
+
+.banner.bannerMain .bannerImgChipMain img {
+  margin-left: -10px;
+}
+
+.banner.bannerMain .socialIcons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 5%;
+  bottom: 7%;
 }
 
 .carSelector {
@@ -3410,9 +3472,18 @@ html:not([data-scroll='0']) .header {
   margin-bottom: 45px;
 }
 
-.productSliderGallary__Thumbnails.gallery-thumbs .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0) !important;
-  transform: translate3d(0px, 0, 0) !important;
+.productSliderGallary__Thumbnails {
+  overflow: hidden;
+}
+
+.productSliderGallary__Thumbnails-buttons {
+  position: relative;
+  top: -40px;
+}
+
+.productSliderGallary__Thumbnails-buttons .swiper-button-next,
+.productSliderGallary__Thumbnails-buttons .swiper-button-prev {
+  color: #FF3838;
 }
 
 .productSliderGallary__Thumbnails.gallery-thumbs .swiper-slide {
@@ -3524,6 +3595,11 @@ html:not([data-scroll='0']) .header {
 
 .productsCart .cartShopSelect .select:last-child .select-box {
   border-right: none;
+}
+
+.productsCart .page__title-h2 .page__title-h3 {
+  color: #fff;
+  text-transform: capitalize;
 }
 
 .productsBg {
@@ -5201,6 +5277,26 @@ textarea::placeholder {
     top: 61%;
   }
 
+  .banner.bannerMain .bannerText .pageText {
+    width: 60%;
+  }
+
+  .banner.bannerMain .bannerImgChipMain {
+    margin-top: -60px;
+  }
+
+  .banner.bannerMain .bannerImgChipMain img {
+    margin-left: 0;
+  }
+
+  .banner.bannerMain .bannerImgChipMain div {
+    margin-right: 17%;
+  }
+
+  .banner.bannerMain .socialIcons {
+    bottom: 20%;
+  }
+
   .carSelectorRowFlex {
     margin-left: -15px;
     margin-right: -15px;
@@ -6457,6 +6553,11 @@ textarea::placeholder {
     top: -105px;
   }
 
+  .banner.bannerMain .bannerImgBg__logo img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
   .banner.bannerRs .bannerImgBg {
     left: 33%;
   }
@@ -6543,6 +6644,28 @@ textarea::placeholder {
     right: -10px;
     top: 135px;
     width: auto;
+  }
+
+  .banner.bannerMain .bannerText .pageText {
+    width: 50%;
+  }
+
+  .banner.bannerMain .bannerImgChipMain {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .banner.bannerMain .bannerImgChipMain div {
+    margin-right: 0;
+  }
+
+  .banner.bannerMain .socialIcons {
+    left: 25%;
+    bottom: 90px;
   }
 
   .carSelectorRowFlex {
@@ -7701,6 +7824,13 @@ textarea::placeholder {
   .bannerText {
     width: -webkit-calc(66.66667% - 46px);
     width: calc(66.66667% - 46px);
+  }
+
+  .bannerImgBg__logo {
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-73%, -50%);
+    transform: translate(-73%, -50%);
   }
 
   .cartProductName {

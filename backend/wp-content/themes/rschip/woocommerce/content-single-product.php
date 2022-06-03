@@ -70,8 +70,13 @@ $productImg = $product->get_image_id();
                             <?php endforeach; ?>
 
                         <?php else : ?>
-                            <div class="swiper-slide"><img src="assets/images/png/products/imgChipSlidermin.png" alt="productSliderGallary"></div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/png/products/imgChipSlidermin.png" alt="productSliderGallary"></div>
                         <?php endif; ?>
+                    </div>
+                    <div class="productSliderGallary__Thumbnails-buttons">
+                        <div class="swiper-button-prev js--swiper-button-prev"></div>
+                        <div class="swiper-button-next js--swiper-button-next"></div>
                     </div>
                 </div>
             </div>
@@ -107,12 +112,12 @@ $productImg = $product->get_image_id();
                         <div class="productSliderPrice__cost"><?php echo $productPrice; ?></div>
                        
                     </div>
-                    <div class="productSliderPrice__App"> <a
+                    <!-- <div class="productSliderPrice__App"> <a
                                     href="https://play.google.com/store/apps/details?id=com.montetuning.monte"
                                     target="_black"> <img src="assets/images/png/shared/imgGooglePlay.png"
                                         alt="imgGooglePlay"></a><a
                                     href="https://apps.apple.com/us/app/monte-gt/id1582142065" target="_black"> <img
-                                        src="assets/images/png/shared/imgAppStore.png" alt="imgAppStore"></a></div>
+                                        src="assets/images/png/shared/imgAppStore.png" alt="imgAppStore"></a></div> -->
                     
                 </div>
                 <div class="productSliderText">*Real world gains may be less or more depending on a large number

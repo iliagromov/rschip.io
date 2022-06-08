@@ -9,6 +9,13 @@ Description: Site RsChip
 Version: 1.0
 */
 
+.productsItemActionsAddToCartWoocommerce{
+    width: 50%;
+}
+.productsItemActionsAddToCartWoocommerce a{
+    width: 100%;
+}
+
 @media screen and (max-width:768px) {
     .productsItemActionsAddToCartWoocommerce,
 .productsItemActionsAddToCartWoocommerce a

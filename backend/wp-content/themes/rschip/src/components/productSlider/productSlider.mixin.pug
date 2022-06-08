@@ -16,6 +16,9 @@ mixin productSlider(props)
                                 .swiper-slide
                                     img(src=`assets/images/png/products/${props.imageName}.png`, alt="productSliderGallary")
                                 div(data-num=main++)
+                        .productSliderGallary__Thumbnails-buttons
+                            .swiper-button-prev.js--swiper-button-prev
+                            .swiper-button-next.js--swiper-button-next
                         
                     .productSliderGallary__Thumbnails.gallery-thumbs
                         .swiper-wrapper
@@ -23,9 +26,7 @@ mixin productSlider(props)
                                 .swiper-slide
                                     img(src=`assets/images/png/products/${props.thumbs}.png`, alt="productSliderGallary")
                                 div(data-num=thumb++)
-                        .productSliderGallary__Thumbnails-buttons
-                            .swiper-button-prev.js--swiper-button-prev
-                            .swiper-button-next.js--swiper-button-next
+                        
                 .productSliderAdvantages
                     each advantage in props.advantages
                         .productSliderAdvantagesItem 

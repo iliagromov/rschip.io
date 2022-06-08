@@ -97,15 +97,10 @@ function tab () {
 // Set 1 
 
 
-// Set 2
-// var myTabs2 = tabs({
-//     el: '#tabs2',
-//     tabNavigationLinks: '.tab-link',
-//     tabContentContainers: '.tab-content'
-// });
+
 
 // Initialise Set 1
-setTimeout(()=>{
+// setTimeout(()=>{
     tab();
     var myTabs = tabs({
         el: '#tabs',
@@ -117,7 +112,8 @@ setTimeout(()=>{
         myTabs.init();
         
     }
- },100);
+//  },100);
+
 
 // // Initialise Set 2 
 // myTabs2.init();
@@ -128,3 +124,15 @@ setTimeout(()=>{
     }
 }, 100);
 
+
+
+// Set 2
+var myTabs2 = tabs({
+    el: '#tabs-productRsControlsContainer',
+    tabNavigationLinks: '.tab-link',
+    tabContentContainers: '.tab-content'
+});
+if(myTabs2){
+    myTabs2.init();
+    
+}

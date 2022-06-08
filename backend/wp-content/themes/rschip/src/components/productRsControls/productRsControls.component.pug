@@ -7,14 +7,24 @@ section.productRsControls
                     h4.page__title-h4 
                         span.page_red Control your driving 
                         | dynamic on the go
-                .productRsControlsImg
-                    picture 
-                        source(type="image/png" srcset="assets/images/png/products/imgProductRsControls-lg.png" media="(min-width: 992px)")
-                        source( type="image/png" srcset="assets/images/png/products/imgProductRsControls-sm.png" media="(min-width: 768px)")
-                        img(src="assets/images/png/products/imgProductRsControls-xs.png", alt="imgProductRsControls")
-                .productRsControlsToggles
-                    .productRsControlsToggelsItem Sport plus
-                    .productRsControlsToggelsItem.prev Sport
-                    .productRsControlsToggelsItem.active Factory
-                    .productRsControlsToggelsItem.next Eco
-                    .productRsControlsToggelsItem Eco plus
+                .productRsControlsImg.productRsControlsImgGallary
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="assets/images/png/products/imgProductRsControls-lg.png", alt="imgProductRsControls")
+                        .swiper-slide
+                            img(src="assets/images/png/products/imgProductRsControls-lg.png", alt="imgProductRsControls")
+                        .swiper-slide
+                            img(src="assets/images/png/products/imgProductRsControls-lg.png", alt="imgProductRsControls")
+                        .swiper-slide
+                            img(src="assets/images/png/products/imgProductRsControls-lg.png", alt="imgProductRsControls")
+                        .swiper-slide
+                            img(src="assets/images/png/products/imgProductRsControls-lg.png", alt="imgProductRsControls")
+                        
+                   
+                .productRsControlsToggles.productRsControlsImgGallary-thumbs
+                    .swiper-wrapper
+                        .swiper-slide.productRsControlsToggelsItem.page_bgRed Sport plus
+                        .swiper-slide.productRsControlsToggelsItem.page_bgYellow Sport
+                        .swiper-slide.productRsControlsToggelsItem.page_bgGray Factory
+                        .swiper-slide.productRsControlsToggelsItem.page_bgBlue Eco
+                        .swiper-slide.productRsControlsToggelsItem.page_bgGreen Eco plus

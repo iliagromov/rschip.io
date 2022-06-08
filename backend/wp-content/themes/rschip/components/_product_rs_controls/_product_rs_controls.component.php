@@ -6,34 +6,51 @@ echo '</pre>';
 if (!empty($productRsControlsACF)) :
 ?>
     <?php if ($productRsControlsACF["isShow"]) : ?>
+
         <section class="productRsControls">
             <div class="wrapper">
                 <div class="productRsControlsRowFlex">
                     <div class="productRsControlsContainer">
                         <div class="productRsControlsTitle">
-                            <h4 class="page__title-h4"> <span class="page_red">Control your driving </span>dynamic on
-                                the go</h4>
+                            <h4 class="page__title-h4"> <span class="page_red">Control your driving </span>dynamic on the go</h4>
                         </div>
-                        <div class="productRsControlsImg">
-                            <picture>
-                                <source type="image/png" srcset="assets/images/png/products/imgProductRsControls-lg.png"
-                                    media="(min-width: 992px)">
-                                <source type="image/png" srcset="assets/images/png/products/imgProductRsControls-sm.png"
-                                    media="(min-width: 768px)"><img
-                                    src="assets/images/png/products/imgProductRsControls-xs.png"
-                                    alt="imgProductRsControls">
-                            </picture>
+                        <div class="productRsControlsImg productRsControlsImgGallary">
+                        <?php /*<div class="swiper-wrapper">
+                               
+                                if ($productRsControlsACF['slides']) :
+                                    foreach ($productRsControlsACF['slides'] as $slide) : ?>
+                                        <div class="swiper-slide">
+                                            <img src="<?php echo $slide->guid ?>" alt="imgProductRsControls">
+                                        </div>
+                                <?php endforeach;
+                                endif; 
+                              
+                            </div>  */?>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="assets/images/png/products/imgProductRsControls-lg.png"
+                                    alt="imgProductRsControls"></div>
+                                <div class="swiper-slide"><img src="assets/images/png/products/imgProductRsControls-lg.png"
+                                    alt="imgProductRsControls"></div>
+                                <div class="swiper-slide"><img src="assets/images/png/products/imgProductRsControls-lg.png"
+                                    alt="imgProductRsControls"></div>
+                                <div class="swiper-slide"><img src="assets/images/png/products/imgProductRsControls-lg.png"
+                                    alt="imgProductRsControls"></div>
+                                <div class="swiper-slide"><img src="assets/images/png/products/imgProductRsControls-lg.png"
+                                    alt="imgProductRsControls"></div>
+                            </div>
                         </div>
-                        <div class="productRsControlsToggles">
-                            <div class="productRsControlsToggelsItem">Sport plus</div>
-                            <div class="productRsControlsToggelsItem prev">Sport</div>
-                            <div class="productRsControlsToggelsItem active">Factory</div>
-                            <div class="productRsControlsToggelsItem next">Eco</div>
-                            <div class="productRsControlsToggelsItem">Eco plus</div>
+                        <div class="productRsControlsToggles productRsControlsImgGallary-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide productRsControlsToggelsItem page_bgRed">Sport plus</div>
+                                <div class="swiper-slide productRsControlsToggelsItem page_bgYellow">Sport</div>
+                                <div class="swiper-slide productRsControlsToggelsItem page_bgGray">Factory</div>
+                                <div class="swiper-slide productRsControlsToggelsItem page_bgBlue">Eco</div>
+                                <div class="swiper-slide productRsControlsToggelsItem page_bgGreen">Eco plus</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <?php endif; ?>
+    <?php endif; ?>
 <?php endif; ?>

@@ -205,6 +205,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
 <script src="js/cartProducts/cartProducts.component.js"></script>
 <script src="js/performance/performance.component.js"></script>
 <script src="js/products/productsCart.component.js"></script>
+<script src="js/productRsControls/productRsControls.component.js"></script>
 <?php wp_footer(); ?>
 </body>
 

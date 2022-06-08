@@ -1,16 +1,13 @@
 const galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 0,
-    slidesPerView: 4,
+    slidesPerView: 3,
     freeMode: true,
-    watchSlidesProgress: true,
-    centeredSlides: true,
+    // watchSlidesProgress: true,
+    // centeredSlides: true,
     touchRatio: 0.2,
-    slideToClickedSlide: true,
+    // slideToClickedSlide: true,
     loop: false,
-    navigation: {
-        nextEl: '.js--swiper-button-next',
-        prevEl: '.js--swiper-button-prev',
-    },
+   
 });
 
 const galleryTop = new Swiper('.gallery-top', {
@@ -19,5 +16,13 @@ const galleryTop = new Swiper('.gallery-top', {
     loop: false,
     thumbs: {
         swiper: galleryThumbs,
+    },
+    navigation: {
+        nextEl: '.js--swiper-button-next',
+        prevEl: '.js--swiper-button-prev',
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
     },
 });

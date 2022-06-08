@@ -83,17 +83,17 @@ $country = $ip['country'];
     <meta property="og:site_name" content="RSchip chiptuning">
     <meta property="og:title" content="<?php echo wp_get_document_title(); ?>">
     <meta property="og:description" content="<?php bloginfo('description') ?>">
-    <meta property="og:url" content="https://rschipchiptuning.com/">
-    <meta property="og:image" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
-    <meta property="vk:image" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
-    <meta property="fb:image" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
-    <meta property="twitter:image" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
-    <meta property="og:image:secure_url" content="https://rschipchiptuning.com/wp-content/themes/rschipus/assets/img/offer-index.png">
+    <meta property="og:url" content="<?php echo get_template_directory_uri(); ?>/">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgRsChip1-xs.png">
+    <meta property="vk:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgRsChip1-xs.pngg">
+    <meta property="fb:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgRsChip1-xs.png">
+    <meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgRsChip1-xs.png">
+    <meta property="og:image:secure_url" content="<?php echo get_template_directory_uri(); ?>/assets/images/png/imgRsChip1-xs.png">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="500">
     <meta property="og:image:height" content="300">
     <meta property="twitter:card" content="summary">
-    <meta property="twitter:site" content="https://rschipchiptuning.com/">
+    <meta property="twitter:site" content="<?php echo wp_get_document_title(); ?>">
     <meta property="twitter:title" content="<?php echo wp_get_document_title(); ?>">
     <meta property="twitter:description" content="<?php bloginfo('description') ?>">
     <meta property="twitter:creator" content="Ilia Gromov">

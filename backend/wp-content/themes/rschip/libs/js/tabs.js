@@ -117,12 +117,6 @@ function tab () {
 
 // // Initialise Set 2 
 // myTabs2.init();
-setTimeout(()=>{
-    let productsItem = document.querySelector('.productsItem');
-    if(productsItem){
-        productsItem.classList.add('is-active')
-    }
-}, 100);
 
 
 

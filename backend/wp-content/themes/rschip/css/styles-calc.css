@@ -476,18 +476,6 @@
   right: 0;
 }
 
-.bannerImgChip picture {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .bannerImgChipMain {
   display: -webkit-box;
   display: -webkit-flex;
@@ -498,6 +486,19 @@
   -ms-flex-align: center;
   align-items: center;
   margin-left: -35px;
+}
+
+.bannerImgChipMain picture {
+  max-width: 195px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .banner.bannerMain .bannerImgChipMain {
@@ -3292,7 +3293,9 @@ html:not([data-scroll='0']) .header {
   box-sizing: border-box;
 }
 
-.productRsControlsToggelsItem:hover {
+.productRsControlsToggelsItem:hover,
+.productRsControlsToggelsItem:active,
+.productRsControlsToggelsItem:focus {
   background: rgba(196, 196, 196, 0.2);
   border-radius: 20px 0px 0px 20px;
 }
@@ -3310,8 +3313,10 @@ html:not([data-scroll='0']) .header {
   height: 368.41px;
   top: 90%;
   right: 0;
-  -webkit-filter: blur(164px);
   filter: blur(164px);
+  -webkit-filter: blur(164px);
+  -moz-filter: blur(164px);
+  -ms-filter: blur(164px);
   opacity: 0;
 }
 

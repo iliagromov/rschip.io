@@ -40,7 +40,7 @@
 				</a>
 			</li>
 			<li class="chat-widget__info-item">
-				<a class="chat-widget__info-link" href="tel:+1-800-796-1617">
+				<a class="chat-widget__info-link" href="tel:+1 307 223 9101">
 					<i class="chat-widget__info-icon">
 						<svg role="img" width="1em" height="1em">
 							<title>Icon</title>
@@ -49,7 +49,7 @@
 					</i>
 					<dl class="chat-widget__info-content" href="https://facebook.com/rschip" target="_blank">
 						<dt class="chat-widget__info-title">Phone</dt>
-						<dd class="chat-widget__info-text">+1-800-796-1617</dd>
+						<dd class="chat-widget__info-text">+1 307 223 9101</dd>
 					</dl>
 				</a>
 				

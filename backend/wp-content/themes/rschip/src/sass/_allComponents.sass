@@ -475,11 +475,7 @@
     top: 60%
     right: 0
 
-    picture
-        display: flex
-        width: 100%
-        justify-content: center
-
+    
     +sm-block
         top: 61%
 
@@ -493,6 +489,12 @@
     align-items: center
 
     margin-left: -35px
+    picture
+        max-width: 195px
+        display: flex
+        width: 100%
+        justify-content: center
+
    
 .banner.bannerMain
     .bannerText
@@ -2645,7 +2647,9 @@ html
     transition: all .3s ease
     box-sizing: border-box
 
-    &:hover
+    &:hover,
+    &:active,
+    &:focus
         background: rgba(196, 196, 196, 0.2)
         border-radius: 20px 0px 0px 20px
     &.swiper-slide-thumb-active
@@ -2655,6 +2659,7 @@ html
     // &.prev,
     // &.next
         opacity: 0.7
+    
 
     &::after
         content: ''
@@ -2666,6 +2671,9 @@ html
         // background: linear-gradient(90deg, #B2B2B2 0%, #F4F7F7 100%)
         // filter: blur(500px)
         filter: blur(164px)
+        -webkit-filter: blur(164px)
+        -moz-filter: blur(164px)
+        -ms-filter: blur(164px)
         opacity: 0
         
     &.swiper-slide-thumb-active

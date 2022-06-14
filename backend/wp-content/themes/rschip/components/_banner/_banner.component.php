@@ -43,8 +43,11 @@ if (!empty($bannerACF)) :
                         <?php endif; ?>
                         <?php if ($bannerACF["isBannerImgChipMain"]) : ?>
                         <div class="bannerImgChipMain">
-                            <picture> 
-                                <img src="assets/images/png/main/imgBannerImgChipMain@1x.png" srcset="assets/images/png/main/imgBannerImgChipMain@2x.png 2x" alt="imgBannerImgChipMain">
+                            <picture
+                                class="bannerImgChipMain__img"> 
+                                <img 
+                                src="assets/images/png/main/imgBannerImgChipMain1.png"
+                                alt="imgBannerImgChipMain">
                             </picture>
                             <a class="page__btn" href="/rs/">LEARN MORE</a>
                         </div>

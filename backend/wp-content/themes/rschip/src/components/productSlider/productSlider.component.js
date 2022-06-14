@@ -2,10 +2,10 @@ const galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 0,
     slidesPerView: 4,
     freeMode: true,
-    // watchSlidesProgress: true,
+    watchSlidesProgress: true,
     // centeredSlides: true,
     touchRatio: 0.2,
-    // slideToClickedSlide: true,
+    slideToClickedSlide: true,
     loop: false,
    
 });

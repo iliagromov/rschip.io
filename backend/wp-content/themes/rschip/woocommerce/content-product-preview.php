@@ -59,10 +59,15 @@ $productGain = $productACF['data_product_gain'];
 	<p class="productsItemTextAfter"><?php echo $productPreview['text_after']; ?></p>
 	<div class="productsItemActions"> 
 		<a class="page__btn" href="<?php echo $productPreview['link']; ?>">LEARN MORE</a>
-		<div class="productsItemActionsAddToCartWoocommerce">
-			<?php do_action('woocommerce_after_shop_loop_item', array('')); ?>
-		</div>
-		<!-- <button class="page__btn page__btn_notTransparent">USD&nbsp; <?php echo $product->get_price_html(); ?></button> -->
+		<?php if($productPreview['isCommingSoon']) : ?>
+			<button class="page__btn page__btn_border-gray" disabled> Comming soon</button>
+		<?php else : ?>
+			<div class="productsItemActionsAddToCartWoocommerce">
+				<?php do_action('woocommerce_after_shop_loop_item', array('')); ?>
+			</div> 
+		<?php endif;?>
+		
+		
 	</div>
 </div>
 

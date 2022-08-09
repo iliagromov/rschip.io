@@ -16,7 +16,9 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
         <div class="wrapper">
             <div class="footerFlexContainer">
                 <div class="footerLogo">
-                    <img src="assets/images/svg/logoWhite.svg" alt="logo">
+                    <a href="/">
+                        <img src="assets/images/svg/logo.svg" alt="logo">
+                    </a>
                 </div>
                 <div class="footerDealer">
                     <?php if ($sharedFieldsACF && $sharedFieldsACF["link-become-dealer"]['url']) : ?>
@@ -35,7 +37,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
                     <div class="footerContactsItem">
                         <?php if ($sharedFieldsACF && $sharedFieldsACF["email-link"]) : ?>
                             <i class="svg-iconEmailGray svg-iconEmailGray-box"></i>
-                            <a href="tel:<?php echo $sharedFieldsACF["email-link"]; ?>"><?php echo $sharedFieldsACF["email-link"]; ?></a>
+                            <a href="mailto:<?php echo $sharedFieldsACF["email-link"]; ?>"><?php echo $sharedFieldsACF["email-link"]; ?></a>
                         <?php endif; ?>
                     </div>
                     <div class="footerContactsItem">
@@ -145,7 +147,7 @@ update_field($footerAdvantages['footer_advantages1']['title'], 'test', "user_".$
         <div class="wrapper">
             <div class="footerPrivacy">
                 <div class="item1">
-                    <p>© Copyright 2016 - <?php the_date('Y'); ?> RSCHIP. All Rights Reserved.</p>
+                    <p>© Copyright 2016 - 2022 RSCHIP. All Rights Reserved.</p>
                 </div>
                 <div class="item2">
                     <?php include(TEMPLATEPATH . '/components/social/socialIcons.component.php'); ?>

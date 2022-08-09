@@ -56,6 +56,7 @@ if (empty($product) || !$product->is_visible()) {
 // }
 $tags_list = get_the_terms($product->id, 'product_tag');
 $productACF = get_fields();
+$productPreview = $productACF['products_preview'];
 
 $isProductCartBig = $productACF['product_cart_big'];
 $productGain = $productACF['data_product_gain'];
@@ -94,9 +95,13 @@ $productGain = $productACF['data_product_gain'];
 		</div>
 		<div class="productsItemCartActions">
 			<div class="productPrice"><?php echo $product->get_price_html(); ?></div>
-			<div class="productsItemActionsAddToCartWoocommerce">
-				<?php do_action('woocommerce_after_shop_loop_item'); ?>
-			</div>
+			<?php if($productPreview['isCommingSoon']) : ?>
+				<button class="page__btn page__btn_border-gray" disabled> Comming soon</button>
+			<?php else : ?>
+				<div class="productsItemActionsAddToCartWoocommerce">
+					<?php do_action('woocommerce_after_shop_loop_item', array('')); ?>
+				</div> 
+			<?php endif;?>
 
 		</div>
 	</div>

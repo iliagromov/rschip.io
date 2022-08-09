@@ -67,8 +67,8 @@ function renderSelectBox(currenSelect, selectName, options) {
 
     options && options.forEach(option => {
       let selectBoxValue = document.createElement('div');
-      let nm = option.nm ? option.nm+' HP' : '';
-      let hp = option.hp ? option.hp+' NM'  : '';
+      let nm = option.nm ? 'HP ' + option.nm : '';
+      let hp = option.hp ? 'NM ' + option.hp : '';
 
       selectBoxValue.classList.add('select-box__value');
       //
@@ -186,8 +186,8 @@ function renderSelectBox(currenSelect, selectName, options) {
     if (options && options.length !== 0) {
       options.forEach((option) => {
         let li = document.createElement('li');
-        let nm = option.nm ? option.nm+' HP' : '';
-        let hp = option.hp ? option.hp+' NM'  : '';
+        let nm = option.nm ? 'HP ' + option.nm : '';
+        let hp = option.hp ? 'NM ' + option.hp : '';
         
         li.innerHTML = `<label class="select-box__option" for="${thisName}_id_${option.id}" aria-hidden data-hp="${hp}" data-nm="${nm}">${option.title} ${hp} ${hp}</label>`;
         selectListBox.appendChild(li);

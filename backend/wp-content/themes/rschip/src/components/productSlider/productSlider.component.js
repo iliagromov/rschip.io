@@ -1,6 +1,6 @@
 const galleryThumbs = new Swiper('.gallery-thumbs', {
-    spaceBetween: 0,
-    slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
     // centeredSlides: true,

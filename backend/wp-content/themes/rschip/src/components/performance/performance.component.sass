@@ -17,17 +17,24 @@
         .performanceTableItemTd
             font-size: 14px
             line-height: 29px
+
+            &:last-child
+                display: none
             
     &__Body
         display: flex
         flex-wrap: wrap
+        .performanceTableItemTd
+            &:last-child
+                display: none
 
 .performanceTableItemTd
     +col
     +size(9)
-    +size-sm(2)
-    +size-md(2)
-
+    // +size-sm(2)
+    // +size-md(2)
+    +size-sm(3)
+    +size-md(3)
     display: flex
     flex-wrap: wrap
     // text-align: center
@@ -38,6 +45,7 @@
         text-align: left
         div
             width: 100%
+        
 
     .title
         display: block

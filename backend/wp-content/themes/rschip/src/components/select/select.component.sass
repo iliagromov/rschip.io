@@ -6,7 +6,7 @@
     width: 100%
     &.noSelected
         .selectBoxContainer
-            border-color: #ff3a3a 
+            border-color: #ff3a3a
 .selectBoxText
     display: none
     font-family: #{$SFUIText}-Regular
@@ -295,11 +295,9 @@
             position: absolute
             bottom: auto
             top: 40px
-            
+
             max-height: 200px
             border-radius: 16px
-
-
 
     &__option
         display: block
@@ -309,6 +307,8 @@
         white-space: nowrap
 
         border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+        overflow: hidden
+        text-overflow: ellipsis
         &:hover,
         &:focus
             color: #546c84

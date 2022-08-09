@@ -32,6 +32,8 @@ if (post_password_required()) {
     return;
 }
 $productACF = get_fields();
+$productPreview = $productACF['products_preview'];
+
 $productPrice = $product->get_price_html();
 $attachment_ids = $product->get_gallery_image_ids();
 $productImg = $product->get_image_id();
@@ -81,7 +83,10 @@ $productImg = $product->get_image_id();
                 </div>
             </div>
             <div class="productSliderAdvantages">
-                <div class="productSliderAdvantagesItem">
+                <?php echo $productACF['productsItemGain_Html'];?>
+                <!-- 
+                    TODO: сделать нормально, сейчас это вставка html 
+                    <div class="productSliderAdvantagesItem">
                     <div class="productSliderAdvantagesItemIcon svg-iconSpeedometerGray svg-iconSpeedometerGray-box">
                     </div>
                     <p>Better driving dynamic</p>
@@ -105,19 +110,15 @@ $productImg = $product->get_image_id();
                 <div class="productSliderAdvantagesItem">
                     <div class="productSliderAdvantagesItemIcon svg-iconHybrEng svg-iconHybrEng-box"></div>
                     <p>ICE, BEV and hybrid engines</p>
-                </div>
+                </div> -->
                 <div class="productSliderPrice"> 
-                    <div class="productsItemActionsAddToCartWoocommerce">
-                        <?php do_action('woocommerce_after_shop_loop_item'); ?>
-                        <div class="productSliderPrice__cost"><?php echo $productPrice; ?></div>
-                       
-                    </div>
-                    <!-- <div class="productSliderPrice__App"> <a
-                                    href="https://play.google.com/store/apps/details?id=com.montetuning.monte"
-                                    target="_black"> <img src="assets/images/png/shared/imgGooglePlay.png"
-                                        alt="imgGooglePlay"></a><a
-                                    href="https://apps.apple.com/us/app/monte-gt/id1582142065" target="_black"> <img
-                                        src="assets/images/png/shared/imgAppStore.png" alt="imgAppStore"></a></div> -->
+                    <?php if($productPreview['isCommingSoon']) : ?>
+                        <button class="page__btn page__btn_border-gray" disabled> Comming soon</button>
+                    <?php else : ?>
+                        <div class="productsItemActionsAddToCartWoocommerce">
+                            <?php do_action('woocommerce_after_shop_loop_item', array('')); ?>
+                        </div> 
+                    <?php endif;?>
                     
                 </div>
                 <div class="productSliderText">*Real world gains may be less or more depending on a large number

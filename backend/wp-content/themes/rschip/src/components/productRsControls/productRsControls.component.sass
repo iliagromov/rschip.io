@@ -18,8 +18,6 @@
 
     +md-block
         margin: 0px 20px
-    
-
 
 .productRsControlsTitle
     width: 100%
@@ -41,7 +39,7 @@
         margin-left: 6%
         padding-right: 0
 
-    .page__title-h4 
+    .page__title-h4
         font-family: #{$SFUIDisplay}-Bold
         font-size: 24px
         line-height: 36px
@@ -50,7 +48,6 @@
             font-size: 36px
             line-height: 59px
             letter-spacing: 0.11em
-        
 
 .productRsControlsImg
     width: 100%
@@ -61,13 +58,12 @@
         margin-left: -3%
     +md-block
         margin-left: -10%
-    
+
     .swiper-slide
         img
             width: 100%
             height: 100%
             object-fit: cover
-
 
 .productRsControlsToggles
     display: block
@@ -76,26 +72,24 @@
     line-height: 28px
     font-weight: bold
     max-height: 250px
-   
+
     margin-top: 12%
     margin-left: 11%
 
     margin-bottom: 10%
-
 
     +sm-block
         width: 40%
         margin-top: 7%
         margin-left: 3%
         margin-bottom: 0
-    +md-block  
+    +md-block
         width: 25%
-        margin-top: 8% 
+        margin-top: 8%
         margin-left: 0
-    
+
     .swiper-wrapper
         // transform: translate3d(0px,0,0) !important
-
 
 .productRsControlsToggelsItem
     display: flex
@@ -105,20 +99,20 @@
     cursor: pointer
     transition: all .3s ease
     box-sizing: border-box
+    outline: none
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
 
     &:hover,
     &:active,
     &:focus
         background: rgba(196, 196, 196, 0.2)
         border-radius: 20px 0px 0px 20px
+    
     &.swiper-slide-thumb-active
         background: rgba(196, 196, 196, 0.2)
         border-radius: 20px 0px 0px 20px
-        opacity: 1
-    // &.prev,
-    // &.next
+        // opacity: 1
         opacity: 0.7
-    
 
     &::after
         content: ''
@@ -133,27 +127,40 @@
         -webkit-filter: blur(164px)
         -moz-filter: blur(164px)
         -ms-filter: blur(164px)
-        opacity: 0
-        
+        opacity: 1
+
+        backdrop-filter: blur(164px)
+        -webkit-backdrop-filter: blur(164px)
+        -ms-backdrop-filter: blur(164px)
+        -moz-backdrop-filter: blur(164px)
+
     &.swiper-slide-thumb-active
         &::after
             opacity: 1
-            
-
 
 .page
     &_bgRed
         &::after
+            background: -ms-filter(linear, left top, right top, from(#FF4587), to(#FF5438))
+            background: -moz-filter(linear, left top, right top, from(#FF4587), to(#FF5438))
             background: linear-gradient(90deg, #FF4587 0%, #FF5438 100%)
     &_bgYellow
         &::after
+            background: -ms-filter(linear, left top, right top, from(#FDE720), to(#FF9838))
+            background: -moz-filter(linear, left top, right top, from(#FDE720), to(#FF9838))
             background: linear-gradient(90deg, #FDE720 0%, #FF9838 100%)
     &_bgGray
         &::after
+            background: -ms-filter(linear, left top, right top, from(#B2B2B2), to(#F4F7F7))
+            background: -moz-filter(linear, left top, right top, from(#B2B2B2), to(#F4F7F7))
             background: linear-gradient(90deg, #B2B2B2 0%, #F4F7F7 100%)
     &_bgBlue
         &::after
+            background: -ms-filter(linear, left top, right top, from(#01D1FF), to(#38FFFF))
+            background: -moz-filter(linear, left top, right top, from(#01D1FF), to(#38FFFF))
             background: linear-gradient(90deg, #01D1FF 0%, #38FFFF 100%)
     &_bgGreen
         &::after
+            background: -ms-filter(linear, left top, right top, from(#25FF01), to(#60FF38))
+            background: -moz-filter(linear, left top, right top, from(#25FF01), to(#60FF38))
             background: linear-gradient(90deg, #25FF01 0%, #60FF38 100%)

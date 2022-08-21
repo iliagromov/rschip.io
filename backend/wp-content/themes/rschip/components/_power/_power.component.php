@@ -1,8 +1,8 @@
 <?php
 $powerACF = get_field('_power');
-echo '<pre>';
+// echo '<pre>';
 // var_dump($bannerACF);
-echo '</pre>';
+// echo '</pre>';
 if (!empty($powerACF)) :
 ?>
     <?php if ($powerACF["isShow"]) : ?>

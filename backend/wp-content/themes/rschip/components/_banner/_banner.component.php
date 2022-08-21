@@ -1,8 +1,8 @@
 <?php
 $bannerACF = get_field('_banner');
-echo '<pre>';
+// echo '<pre>';
 // var_dump($bannerACF);
-echo '</pre>';
+// echo '</pre>';
 if (!empty($bannerACF)) :
 
 ?>

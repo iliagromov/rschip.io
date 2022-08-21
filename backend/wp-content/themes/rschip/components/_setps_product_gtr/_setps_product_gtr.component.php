@@ -1,8 +1,8 @@
 <?php
 $setpsACF = get_field('_setps_product_gtr');
-echo '<pre>';
+// echo '<pre>';
 // var_dump($bannerACF);
-echo '</pre>';
+// echo '</pre>';
 if (!empty($appBlockACF)) :
 ?>
     <?php if ($appBlockACF["isShow"]) : ?>

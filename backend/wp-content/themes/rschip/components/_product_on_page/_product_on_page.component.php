@@ -12,10 +12,10 @@ if (!empty($productOnPageACF)) :
             // $thisProduct = get_field_object('select_product')["value"][0];
             $thisProduct = $productOnPageACF['select_product'];
           
-            echo '<pre>';
+            // echo '<pre>';
             // var_dump($thisProduct);
             // echo $thisProduct->ID;
-            echo '</pre>';
+            // echo '</pre>';
 
             if (!empty($thisProduct)) :
 

@@ -38,7 +38,7 @@ $productPrice = $product->get_price_html();
 $attachment_ids = $product->get_gallery_image_ids();
 $productImg = $product->get_image_id();
 ?>
-<!--content-ingle-products-->
+<!--content-single-products-->
 <section id="product-<?php the_ID(); ?>" class="productSlider">
     <?php if ($productACF["download_btn"]) : ?>
         <a download href="<?php echo $productACF["download_btn"]; ?>" class="page__btn page__btn_notTransparent">DOWLOAD THE GUIDE</a>
@@ -127,4 +127,4 @@ $productImg = $product->get_image_id();
         </div>
     </div>
 </section>
-<!--content-ingle-products-->
+<!--content-single-products-->
